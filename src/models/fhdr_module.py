@@ -26,6 +26,7 @@ class FHDRLitModule(LightningModule):
         net: torch.nn.Module,
         optimizer: torch.optim.Optimizer,
         scheduler: torch.optim.lr_scheduler,
+        loss
     ):
         super().__init__()
 
@@ -59,7 +60,7 @@ class FHDRLitModule(LightningModule):
         pred = self.forward(x)
         for output in pred:
             loss += self.criterion(mu_tonemap(output), gt_mu_tm)
-        
+
         return loss
 
     def training_step(self, batch: Any, batch_idx: int):
