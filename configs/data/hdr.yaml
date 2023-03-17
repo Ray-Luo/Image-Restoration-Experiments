@@ -1,0 +1,5 @@
+_target_: src.data.hdr_datamodule.HDRDataModule
+data_dir: /home/ray/Documents/Image-Restoration-Experiments/data/HDR_toy/
+batch_size: 4
+num_workers: 0
+pin_memory: False
