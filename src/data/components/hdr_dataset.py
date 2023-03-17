@@ -10,7 +10,7 @@ from torch.utils.data import Dataset
 
 class HDRDataset(Dataset):
     """
-    Custom HDR dataset that returns a dictionary of LDR input image, HDR ground truth image and file path. 
+    Custom HDR dataset that returns a dictionary of LDR input image, HDR ground truth image and file path.
     """
 
     def __init__(self, mode, data_root, batch_size):
