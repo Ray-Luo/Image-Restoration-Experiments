@@ -1,5 +1,7 @@
 _target_: src.models.fhdr_module.FHDRLitModule
 
+loss: ${loss}
+
 optimizer:
   _target_: torch.optim.Adam
   _partial_: true
