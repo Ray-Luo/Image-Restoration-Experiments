@@ -42,7 +42,6 @@ class HDRDataset(Dataset):
         transform_list = [
             transforms.ToTensor(),
             transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
-            transforms.Resize((256,256)),
         ]
         transform_ldr = transforms.Compose(transform_list)
         ldr_tensor = transform_ldr(ldr_sample)

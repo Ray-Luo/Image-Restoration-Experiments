@@ -2,9 +2,7 @@ from typing import Any, List
 
 import torch
 from pytorch_lightning import LightningModule
-from torchmetrics import MaxMetric, MeanMetric
-from torchmetrics.classification.accuracy import Accuracy
-from src.utils.hdr_utils import mu_tonemap
+from torchmetrics import MeanMetric
 
 
 class FHDRLitModule(LightningModule):
@@ -26,7 +24,8 @@ class FHDRLitModule(LightningModule):
         net: torch.nn.Module,
         optimizer: torch.optim.Optimizer,
         scheduler: torch.optim.lr_scheduler,
-        loss
+        representation: torch.nn.Module,
+        loss: torch.nn.Module,
     ):
         super().__init__()
 
@@ -37,7 +36,9 @@ class FHDRLitModule(LightningModule):
         self.net = net
 
         # loss function
-        self.criterion = torch.nn.L1Loss()
+        self.criterion = loss
+
+        self.representation = representation
 
         # for averaging loss across batches
         self.train_loss = MeanMetric()
@@ -55,11 +56,11 @@ class FHDRLitModule(LightningModule):
 
     def model_step(self, batch: Any):
         x, gt = batch["ldr_image"], batch["hdr_image"]
-        gt_mu_tm = mu_tonemap(gt)
+        gt_mu_tm = self.representation(gt)
         loss = 0
         pred = self.forward(x)
         for output in pred:
-            loss += self.criterion(mu_tonemap(output), gt_mu_tm)
+            loss += self.criterion(self.representation(output), gt_mu_tm)
 
         return loss
 

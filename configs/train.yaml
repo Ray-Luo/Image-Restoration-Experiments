@@ -13,6 +13,7 @@ defaults:
   - extras: default.yaml
   - hydra: default.yaml
   - loss: l1.yaml
+  - representation: mu_tonemap.yaml
 
   # experiment configs allow for version control of specific hyperparameters
   # e.g. best hyperparameters for given model and datamodule

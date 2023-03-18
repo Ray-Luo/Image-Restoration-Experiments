@@ -10,6 +10,7 @@ defaults:
   - override /trainer: gpu.yaml
   - override /logger: tensorboard.yaml
   - override /loss: perceptual.yaml
+  - override /representation: mu_tonemap.yaml
 
 # all parameters below will be merged with parameters from default configurations set above
 # this allows you to overwrite only specified parameters
@@ -20,7 +21,7 @@ seed: 12345
 
 trainer:
   min_epochs: 0
-  max_epochs: 10
+  max_epochs: 1
   gradient_clip_val: 0.5
 
 model:
