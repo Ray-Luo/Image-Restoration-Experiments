@@ -1,10 +1,7 @@
-from typing import Any, Dict, Optional, Tuple
+from typing import Any, Dict, Optional
 
-import torch
 from pytorch_lightning import LightningDataModule
-from torch.utils.data import ConcatDataset, DataLoader, Dataset, random_split
-from torchvision.datasets import MNIST
-from torchvision.transforms import transforms
+from torch.utils.data import DataLoader, Dataset
 from .components.hdr_dataset import HDRDataset
 
 
