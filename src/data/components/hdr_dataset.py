@@ -13,7 +13,9 @@ class HDRDataset(Dataset):
     Custom HDR dataset that returns a dictionary of LDR input image, HDR ground truth image and file path.
     """
 
-    def __init__(self, mode, data_root, batch_size):
+    def __init__(self, representation, mode, data_root, batch_size):
+
+        self.representation = representation
 
         self.batch_size = batch_size
 
@@ -57,6 +59,7 @@ class HDRDataset(Dataset):
         # transforms.ToTensor() is used for 8-bit [0, 255] range images; can't be used for [0, ∞) HDR images
         transform_list = [
             transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
+            transforms.Lambda(lambda img: self.representation(img)),
             transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
         ]
         transform_hdr = transforms.Compose(transform_list)

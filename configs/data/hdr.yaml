@@ -1,4 +1,5 @@
 _target_: src.data.hdr_datamodule.HDRDataModule
+representation: ${representation}
 data_dir: ${paths.data_dir}
 batch_size: 4
 num_workers: 0

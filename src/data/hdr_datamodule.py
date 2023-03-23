@@ -35,6 +35,7 @@ class HDRDataModule(LightningDataModule):
 
     def __init__(
         self,
+        representation,
         data_dir: str = "data/",
         batch_size: int = 64,
         num_workers: int = 0,
@@ -46,8 +47,8 @@ class HDRDataModule(LightningDataModule):
         # also ensures init params will be stored in ckpt
         self.save_hyperparameters(logger=False)
 
-        self.data_train = HDRDataset("train", data_dir, batch_size)
-        self.data_val = HDRDataset("test", data_dir, batch_size)
+        self.data_train = HDRDataset(representation, "train", data_dir, batch_size)
+        self.data_val = HDRDataset(representation, "test", data_dir, batch_size)
         self.data_test: Optional[Dataset] = None
 
     def train_dataloader(self):
