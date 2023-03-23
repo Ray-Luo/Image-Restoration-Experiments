@@ -1,8 +1,6 @@
-import torch
-
-class Linear(torch.nn.Module):
+class Linear:
     def __init__(self):
-        super(Linear, self).__init__()
+        pass
 
-    def forward(self, x):
+    def __call__(self, x):
         return x

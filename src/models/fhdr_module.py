@@ -24,7 +24,6 @@ class FHDRLitModule(LightningModule):
         net: torch.nn.Module,
         optimizer: torch.optim.Optimizer,
         scheduler: torch.optim.lr_scheduler,
-        representation: torch.nn.Module,
         loss: torch.nn.Module,
     ):
         super().__init__()
@@ -37,8 +36,6 @@ class FHDRLitModule(LightningModule):
 
         # loss function
         self.criterion = loss
-
-        self.representation = representation
 
         # for averaging loss across batches
         self.train_loss = MeanMetric()
@@ -56,11 +53,10 @@ class FHDRLitModule(LightningModule):
 
     def model_step(self, batch: Any):
         x, gt = batch["ldr_image"], batch["hdr_image"]
-        gt_mu_tm = self.representation(gt)
         loss = 0
         pred = self.forward(x)
         for output in pred:
-            loss += self.criterion(self.representation(output), gt_mu_tm)
+            loss += self.criterion(output, gt)
 
         return loss
 

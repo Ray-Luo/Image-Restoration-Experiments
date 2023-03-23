@@ -9,11 +9,11 @@ C2 = 18.8515625
 C3 = 18.6875
 
 
-class PQ(torch.nn.Module):
+class PQ:
     def __init__(self):
-        super(PQ, self).__init__()
+        pass
 
-    def forward(self, x):
-        im_t = np.power(np.clip(x,0,L_MAX)/L_MAX, N)
-        out = np.power((C2 * im_t + C1) / (1 + C3 * im_t), M)
+    def __call__(self, x):
+        im_t = torch.pow(torch.clip(x, 0, L_MAX) / L_MAX, N)
+        out = torch.pow((C2 * im_t + C1) / (1 + C3 * im_t), M)
         return out

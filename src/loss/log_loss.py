@@ -1,12 +1,13 @@
 import torch
-import torch.nn.L1Loss as l1_loss
+from torch.nn import L1Loss
 
-class LogLoss(torch.nn.Module):
+
+class LogLoss:
     def __init__(self):
-        super(LogLoss, self).__init__()
+        self.loss = L1Loss()
 
     def log(self, x):
         return torch.log(torch.max(x, 1e-5))
 
-    def forward(self, pred, gt):
-        return l1_loss(self.log(pred), self.log(gt))
+    def __call__(self, pred, gt):
+        return self.loss(self.log(pred), self.plogu(gt))

@@ -1,16 +1,14 @@
 import torch
-import numpy as np
-import torch.nn.L1Loss as l1_loss
+from torch.nn import L1Loss
 
 MU = 5000.0
 
-class MuLoss(torch.nn.Module):
-    """ tonemapping HDR images using μ-law before computing loss """
+class MuLoss:
     def __init__(self):
-        super(MuLoss, self).__init__()
+        self.loss = L1Loss()
 
     def mu(self, x):
-        return torch.log(1.0 + MU * (x + 1.0) / 2.0) / np.log(1.0 + MU)
+        return torch.log(1.0 + MU * (x + 1.0) / 2.0) / torch.log(1.0 + MU)
 
-    def forward(self, pred, gt):
-        return l1_loss(self.mu(pred), self.mu(gt))
+    def __call__(self, pred, gt):
+        return self.loss(self.mu(pred), self.mu(gt))

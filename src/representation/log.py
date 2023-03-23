@@ -1,8 +1,8 @@
 import torch
 
-class Log(torch.nn.Module):
+class Log:
     def __init__(self):
-        super(Log, self).__init__()
+        pass
 
-    def forward(self, x):
+    def __call__(self, x):
         return torch.log2(x)

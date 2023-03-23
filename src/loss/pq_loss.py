@@ -1,6 +1,5 @@
 import torch
-import numpy as np
-import torch.nn.L1Loss as l1_loss
+from torch.nn import L1Loss
 
 L_MAX = 10000
 N = 0.1593017578125
@@ -9,14 +8,14 @@ C1 = 0.8359375
 C2 = 18.8515625
 C3 = 18.6875
 
-class PQLoss(torch.nn.Module):
+class PQLoss:
     def __init__(self):
-        super(PQLoss, self).__init__()
+        self.loss = L1Loss()
 
     def pq(self, x):
-        im_t = np.power(np.maximum(x,0),1 / M)
-        out = L_MAX * np.power(np.maximum(im_t - C1, 0)/(C2 - C3 * im_t), 1 / N)
+        im_t = torch.pow(torch.maximum(x, torch.zeros_like(x)),1 / M)
+        out = L_MAX * torch.pow(torch.maximum(im_t - C1, torch.zeros_like(x))/(C2 - C3 * im_t), 1 / N)
         return out
 
-    def forward(self, pred, gt):
-        return l1_loss(self.pu(pred), self.pu(gt))
+    def __call__(self, pred, gt):
+        return self.loss(self.pq(pred), self.pq(gt))

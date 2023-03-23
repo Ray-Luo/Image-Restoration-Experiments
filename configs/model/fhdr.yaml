@@ -2,8 +2,6 @@ _target_: src.models.fhdr_module.FHDRLitModule
 
 loss: ${loss}
 
-representation: ${representation}
-
 optimizer:
   _target_: torch.optim.Adam
   _partial_: true
