@@ -25,7 +25,7 @@ def print_min_max(img: np.array):
     max_val = np.max(img)
 
     # Print the results
-    print(min_val, "  ", max_val)
+    print(min_val, "  ", max_val, "  ", img.shape)
 
 
 def save_hdr(img: np.array, img_folder: str, name: str):
@@ -45,7 +45,7 @@ def augment(img_folder: str, name: str):
             seen.add(rand_num)
             img *= rand_num
             processed_img = process_rit(img)
-            new_name = name.split('.')[0] + '_aug_' + str(rand_num) + '.hdr'
+            new_name = name.split('.')[0] + '_aug_' + str(len(seen)) + '.hdr'
             save_hdr(processed_img, img_folder, new_name)
             rand_num = random.uniform(1.0/8.0, 8.0)
 
@@ -57,7 +57,7 @@ def process_rit(img: np.array):
     img /= value_at_99_percentile
     img *= 4000.0
     img = np.clip(img, 0.05, 4000.0)
-    img /= 4000.0
+
     print_min_max(img)
     print("**********")
 
@@ -72,7 +72,7 @@ def process_save(img_folder: str, name: str):
     img /= value_at_99_percentile
     img *= 4000.0
     img = np.clip(img, 0.05, 4000.0)
-    img /= 4000.0
+
     print_min_max(img)
     print("**********")
 
@@ -81,10 +81,19 @@ def process_save(img_folder: str, name: str):
     save_hdr(img, img_folder, new_name)
 
 
-folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rti/" # replace with the path to your image folder
+def downsample2x(img_folder: str, name: str):
+    img = cv2.imread(os.path.join(img_folder, name), -1).astype(np.float32)
+    downscaled = cv2.resize(img, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_NEAREST)
+    upscaled = cv2.resize(downscaled, None, fx=2, fy=2, interpolation=cv2.INTER_NEAREST)
+    new_name = name.split('.')[0] + "_2x.hdr"
+    save_hdr(upscaled, img_folder, new_name)
+
+
+folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_augment/" # replace with the path to your image folder
 file_list = os.listdir(folder_path)
 
 for file_name in file_list:
-    process_save(folder_path, file_name)
-    augment(folder_path, file_name)
+    # process_save(folder_path, file_name)
+    # augment(folder_path, file_name)
+    downsample2x(folder_path, file_name)
     # break
