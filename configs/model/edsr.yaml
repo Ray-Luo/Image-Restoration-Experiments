@@ -1,4 +1,4 @@
-_target_: src.models.fhdr_module.FHDRLitModule
+_target_: src.models.edsr_module.EDSRLitModule
 
 loss: ${loss}
 
@@ -9,6 +9,7 @@ optimizer:
 
 scheduler:
   _target_: torch.optim.lr_scheduler.MultiStepLR
+  _partial_: true
   milestones: [20, 25]
   gamma: 0.5
 

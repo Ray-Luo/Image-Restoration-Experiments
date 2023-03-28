@@ -6,7 +6,7 @@ from pytorch_lightning import LightningDataModule
 from torch.utils.data import ConcatDataset, DataLoader, Dataset, random_split
 from torchvision.datasets import MNIST
 
-from .components.hdr_dataset import RITDataset
+from .components.rit_dataset import RITDataset
 
 
 class RITDataModule(LightningDataModule):
@@ -16,7 +16,7 @@ class RITDataModule(LightningDataModule):
         representation,
         seed,
         data_dir: str = "data/",
-        train_val_test_split: Tuple[int, int, int] = (80, 10, 10),
+        train_val_test_split: Tuple[int, int, int] = (0.8, 0.1, 0.1),
         batch_size: int = 64,
         num_workers: int = 0,
         pin_memory: bool = False,

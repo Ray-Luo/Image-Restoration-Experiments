@@ -16,12 +16,12 @@ class RITDataset(Dataset):
         self.hq = os.path.join(data_root, 'hq_patch')
         self.lq = os.path.join(data_root, 'lq_patch')
 
-        file_list = os.listdir(self.hq)
+        file_list = os.listdir(self.lq)
         self.img_names = [file_name for file_name in file_list]
 
     def __getitem__(self, index):
 
-        hq_image_path = os.path.join(self.hq, self.img_names[index])
+        hq_image_path = os.path.join(self.hq, self.img_names[index]).replace('2x_', '')
         lq_image_path = os.path.join(self.lq, self.img_names[index])
 
         hq_img = cv2.imread(hq_image_path, -1).astype(np.float32)

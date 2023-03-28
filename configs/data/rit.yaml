@@ -1,0 +1,7 @@
+_target_: src.data.rit_datamodule.RITDataModule
+representation: ${representation}
+seed: ${seed}
+data_dir: ${paths.data_dir}
+batch_size: 4
+num_workers: 0
+pin_memory: False
