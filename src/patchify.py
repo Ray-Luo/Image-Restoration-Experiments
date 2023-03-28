@@ -41,16 +41,16 @@ def main():
     opt['compression_level'] = 3
 
     # HR images
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_augment'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_augment_patchify'
-    opt['crop_size'] = 96
-    opt['step'] = 48
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_processed'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_processed_patchify'
+    opt['crop_size'] = 192
+    opt['step'] = 96
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
     # LRx2 images
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_augment_2x'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_augment_2x_patchify'
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_processed_2x'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_processed_2x_patchify'
     opt['crop_size'] = 96
     opt['step'] = 48
     opt['thresh_size'] = 0

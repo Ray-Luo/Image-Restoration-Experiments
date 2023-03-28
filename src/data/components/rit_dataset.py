@@ -13,8 +13,8 @@ class RITDataset(Dataset):
 
         self.representation = representation
 
-        self.hq = os.path.join(data_root, 'hq_patch')
-        self.lq = os.path.join(data_root, 'lq_patch')
+        self.hq = os.path.join(data_root, 'small_hq')
+        self.lq = os.path.join(data_root, 'small_lq')
 
         file_list = os.listdir(self.lq)
         self.img_names = [file_name for file_name in file_list]

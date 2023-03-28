@@ -9,27 +9,28 @@ defaults:
   - override /callbacks: default.yaml
   - override /trainer: gpu.yaml
   - override /logger: tensorboard.yaml
-  - override /loss: l1.yaml
-  - override /representation: linear.yaml
+  - override /loss: normalization.yaml
+  - override /representation: normalization.yaml
 
 # all parameters below will be merged with parameters from default configurations set above
 # this allows you to overwrite only specified parameters
 
-tags: ["edsr", "rit_small", "linear", "l1"]
+tags: ["edsr", "rit_small", "normalization", "normalization"]
 
 seed: 12345
 
 trainer:
   min_epochs: 0
   max_epochs: 1
+  log_every_n_steps: 1
 
 model:
   optimizer:
-    lr: 0.0002
+    lr: 1e-4
 
 data:
   data_dir: ${paths.root_dir}/data/
-  batch_size: 8
+  batch_size: 100
 
 logger:
   wandb:
