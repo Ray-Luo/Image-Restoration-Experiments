@@ -1,0 +1,23 @@
+_target_: src.models.fhdr_module.FHDRLitModule
+
+loss: ${loss}
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 0.001
+  weight_decay: 0.0
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  _partial_: true
+  mode: min
+  factor: 0.1
+  patience: 10
+
+net:
+  _target_: src.models.components.edsr.EDSR
+  scale : 2
+  num_input_channels : 3
+  n_resblocks : 16
+  n_feats : 64

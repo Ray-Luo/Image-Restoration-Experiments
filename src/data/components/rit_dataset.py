@@ -29,7 +29,6 @@ class RITDataset(Dataset):
         # transforms.ToTensor() is used for 8-bit [0, 255] range images; can't be used for [0, ∞) HDR images
         transform_hdr = transforms.Compose([
             transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
-            transforms.Resize(IMG_SIZE),
         ])
         hdr_tensor = transform_hdr(hdr_img)
 
