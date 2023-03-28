@@ -5,15 +5,12 @@ loss: ${loss}
 optimizer:
   _target_: torch.optim.Adam
   _partial_: true
-  lr: 0.001
-  weight_decay: 0.0
+  lr: 1e-4
 
 scheduler:
-  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
-  _partial_: true
-  mode: min
-  factor: 0.1
-  patience: 10
+  _target_: torch.optim.lr_scheduler.MultiStepLR
+  milestones: [20, 25]
+  gamma: 0.5
 
 net:
   _target_: src.models.components.edsr.EDSR

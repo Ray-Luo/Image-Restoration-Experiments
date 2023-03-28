@@ -6,48 +6,40 @@ import torch
 import torchvision.transforms as transforms
 from torch.utils.data import Dataset
 
-IMG_SIZE = (256, 256)
 
 class RITDataset(Dataset):
 
     def __init__(self, representation, data_root):
 
         self.representation = representation
-        self.data_root = data_root
 
-        file_list = os.listdir(self.data_root)
+        self.hq = os.path.join(data_root, 'hq_patch')
+        self.lq = os.path.join(data_root, 'lq_patch')
+
+        file_list = os.listdir(self.hq)
         self.img_names = [file_name for file_name in file_list]
 
     def __getitem__(self, index):
 
-        image_path = os.path.join(
-            self.data_root, self.img_names[index]
-        )
+        hq_image_path = os.path.join(self.hq, self.img_names[index])
+        lq_image_path = os.path.join(self.lq, self.img_names[index])
 
-        hdr_img = cv2.imread(image_path, -1).astype(np.float32)
+        hq_img = cv2.imread(hq_image_path, -1).astype(np.float32)
+        lq_img = cv2.imread(lq_image_path, -1).astype(np.float32)
 
         # transforms.ToTensor() is used for 8-bit [0, 255] range images; can't be used for [0, ∞) HDR images
         transform_hdr = transforms.Compose([
             transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
-        ])
-        hdr_tensor = transform_hdr(hdr_img)
-
-        noised = transforms.Compose([
-            transforms.RandomNoise(mean=0, stddev=0.1, p=1.0),
-        ])
-        noised_tensor = noised(hdr_tensor)
-
-        representation = transforms.Compose([
             transforms.Lambda(lambda img: self.representation(img)),
         ])
-
-        hdr_tensor = representation(hdr_tensor)
-        noised_tensor = representation(noised_tensor)
+        hq_tensor = transform_hdr(hq_img)
+        lq_tensor = transform_hdr(lq_img)
 
         sample_dict = {
-            "noised_image": noised_tensor,
-            "hdr_image": hdr_tensor,
-            "path": image_path,
+            "hq": hq_tensor,
+            "lq": lq_tensor,
+            "hq_path": hq_image_path,
+            "lq_path": lq_image_path,
         }
 
         return sample_dict

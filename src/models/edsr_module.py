@@ -52,11 +52,10 @@ class EDSRLitModule(LightningModule):
         self.val_loss.reset()
 
     def model_step(self, batch: Any):
-        x, gt = batch["ldr_image"], batch["hdr_image"]
+        x, gt = batch["lq"], batch["hq"]
         loss = 0
         pred = self.forward(x)
-        for output in pred:
-            loss += self.criterion(output, gt)
+        loss = self.criterion(pred, gt)
 
         return loss
 
