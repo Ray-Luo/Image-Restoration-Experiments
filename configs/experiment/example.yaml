@@ -21,7 +21,7 @@ seed: 12345
 
 trainer:
   min_epochs: 0
-  max_epochs: 10
+  max_epochs: 1
   log_every_n_steps: 1
 
 model:
@@ -29,7 +29,8 @@ model:
     lr: 1e-4
 
 data:
-  data_dir: ${paths.root_dir}/data/
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_all/rit_processed_patchify
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_all/rit_processed_2x_patchify
   batch_size: 100
 
 logger:

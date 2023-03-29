@@ -5,9 +5,6 @@ import pyrootutils
 from omegaconf import DictConfig
 from pytorch_lightning import LightningDataModule, LightningModule, Trainer
 from pytorch_lightning.loggers import Logger
-from torch.utils.data import DataLoader
-from data.components.rit_dataset import RITDataset
-from eval_util import pu_ssim, pu_psnr
 
 pyrootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 # ------------------------------------------------------------------------------------ #
@@ -33,7 +30,7 @@ log = utils.get_pylogger(__name__)
 
 
 @utils.task_wrapper
-def evaluate(cfg: DictConfig):
+def evaluate(cfg: DictConfig) -> Tuple[dict, dict]:
     """Evaluates given checkpoint on a datamodule testset.
 
     This method is wrapped in optional @task_wrapper decorator which applies extra utilities
@@ -48,36 +45,39 @@ def evaluate(cfg: DictConfig):
 
     assert cfg.ckpt_path
 
+    log.info(f"Instantiating datamodule <{cfg.data._target_}>")
+    datamodule: LightningDataModule = hydra.utils.instantiate(cfg.data)
+
     log.info(f"Instantiating model <{cfg.model._target_}>")
     model: LightningModule = hydra.utils.instantiate(cfg.model)
 
-    net = model.net
-    net.eval()
+    log.info("Instantiating loggers...")
+    logger: List[Logger] = utils.instantiate_loggers(cfg.get("logger"))
 
-    representation = hydra.utils.instantiate(cfg.representation)
-    loss_fn = hydra.utils.instantiate(cfg.loss)
+    log.info(f"Instantiating trainer <{cfg.trainer._target_}>")
+    trainer: Trainer = hydra.utils.instantiate(cfg.trainer, logger=logger)
 
-    dataset = RITDataset(representation, cfg.data.hq_path, cfg.data.lq_path)
-    dataloader = DataLoader(dataset, batch_size=cfg.data.batch_size, shuffle=False)
+    object_dict = {
+        "cfg": cfg,
+        "datamodule": datamodule,
+        "model": model,
+        "logger": logger,
+        "trainer": trainer,
+    }
 
-    loss = 0
-    psnr = 0
-    ssim = 0
-    for data in dataloader:
-        hq = data['hq']
-        lq = data['lq']
+    if logger:
+        log.info("Logging hyperparameters!")
+        utils.log_hyperparameters(object_dict)
 
-        pred = net(lq)
+    log.info("Starting testing!")
+    trainer.test(model=model, datamodule=datamodule, ckpt_path=cfg.ckpt_path)
 
-        loss += loss_fn(pred, hq)
-        pred = pred.detach().numpy()
-        hq = hq.detach().numpy()
-        psnr += pu_ssim(pred, hq)
-        ssim += pu_psnr(pred, hq)
+    # for predictions use trainer.predict(...)
+    # predictions = trainer.predict(model=model, dataloaders=dataloaders, ckpt_path=cfg.ckpt_path)
 
-    print("Averge loss: ", loss/len(dataset))
-    print("Averge psnr: ", psnr/len(dataset))
-    print("Averge ssim: ", ssim/len(dataset))
+    metric_dict = trainer.callback_metrics
+
+    return metric_dict, object_dict
 
 
 @hydra.main(version_base="1.3", config_path="../configs", config_name="eval.yaml")

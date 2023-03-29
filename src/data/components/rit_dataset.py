@@ -9,12 +9,12 @@ from torch.utils.data import Dataset
 
 class RITDataset(Dataset):
 
-    def __init__(self, representation, data_root):
+    def __init__(self, representation, hq_path, lq_path):
 
         self.representation = representation
 
-        self.hq = os.path.join(data_root, 'rit_all/rit_processed_patchify')
-        self.lq = os.path.join(data_root, 'rit_all/rit_processed_2x_patchify')
+        self.hq = hq_path # os.path.join(data_root, 'rit_all/rit_processed_patchify')
+        self.lq = lq_path # os.path.join(data_root, 'rit_all/rit_processed_2x_patchify')
 
         file_list = os.listdir(self.lq)
         self.img_names = [file_name for file_name in file_list]

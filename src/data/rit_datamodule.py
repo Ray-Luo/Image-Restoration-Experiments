@@ -14,9 +14,10 @@ class RITDataModule(LightningDataModule):
     def __init__(
         self,
         representation,
+        hq_path,
+        lq_path,
         seed,
-        data_dir: str = "data/",
-        train_val_test_split: Tuple[int, int, int] = (0.8, 0.1, 0.1),
+        train_val_split: Tuple[int, int] = (0.9, 0.1),
         batch_size: int = 64,
         num_workers: int = 0,
         pin_memory: bool = False,
@@ -29,15 +30,14 @@ class RITDataModule(LightningDataModule):
 
         self.seed = seed
 
-        dataset = RITDataset(representation, self.hparams.data_dir)
+        dataset = RITDataset(representation, self.hparams.hq_path, self.hparams.lq_path)
 
-        train_size = int(len(dataset) * train_val_test_split[0])
-        val_size = int(len(dataset) * train_val_test_split[1])
-        test_size = len(dataset) - train_size - val_size
+        train_size = int(len(dataset) * train_val_split[0])
+        val_size = len(dataset) - train_size
 
-        self.data_train, self.data_val, self.data_test = random_split(
+        self.data_train, self.data_val = random_split(
             dataset=dataset,
-            lengths=[train_size, val_size, test_size],
+            lengths=[train_size, val_size],
             generator=torch.Generator().manual_seed(seed),
         )
 
@@ -54,15 +54,6 @@ class RITDataModule(LightningDataModule):
     def val_dataloader(self):
         return DataLoader(
             dataset=self.data_val,
-            batch_size=self.hparams.batch_size,
-            num_workers=self.hparams.num_workers,
-            pin_memory=self.hparams.pin_memory,
-            shuffle=False,
-        )
-
-    def test_dataloader(self):
-        return DataLoader(
-            dataset=self.data_test,
             batch_size=self.hparams.batch_size,
             num_workers=self.hparams.num_workers,
             pin_memory=self.hparams.pin_memory,
