@@ -7,7 +7,9 @@ class LogLoss:
         self.loss = L1Loss()
 
     def log(self, x):
-        return torch.log(torch.max(x, 1e-5))
+        x = torch.log(torch.max(x, torch.ones_like(x) * 1e-5))
+        x = x * 4000.0
+        return x
 
     def __call__(self, pred, gt):
-        return self.loss(self.log(pred), self.plogu(gt))
+        return self.loss(self.log(pred), self.log(gt))

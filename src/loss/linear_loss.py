@@ -1,7 +1,7 @@
 from torch.nn import L1Loss
 
 
-class Normalizationloss:
+class LinearLoss:
     def __init__(self):
         self.loss = L1Loss()
 

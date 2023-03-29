@@ -8,7 +8,12 @@ class MuLoss:
         self.loss = L1Loss()
 
     def mu(self, x):
-        return torch.log(1.0 + MU * (x + 1.0) / 2.0) / torch.log(1.0 + MU)
+        mu = torch.tensor(MU, dtype=torch.float32)
+        x_mu = torch.sign(x) * torch.log1p(mu * torch.abs(x)) / torch.log1p(mu)
+        x_mu = ((x_mu + 1) / 2 * mu + 0.5)
+        return x_mu
 
     def __call__(self, pred, gt):
+        pred = pred * 4000.0
+        gt = gt * 4000.0
         return self.loss(self.mu(pred), self.mu(gt))

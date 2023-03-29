@@ -1,1 +1,1 @@
-_target_: src.loss.smape_loss.Smape
+_target_: src.loss.smape_loss.SmapeLoss
