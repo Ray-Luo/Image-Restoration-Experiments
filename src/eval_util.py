@@ -7,7 +7,7 @@ B_COEFF = 1.070672820603428
 MAX_PU = 10.017749773073085 # pu(4000.0)
 
 def pu(x):
-    return np.log2(A_COEFF * x) + B_COEFF
+    return np.log2(A_COEFF * x + 1e-5) + B_COEFF
 
 
 def psnr(pred, gt):

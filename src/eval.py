@@ -1,13 +1,11 @@
-from typing import List, Tuple
-
 import hydra
 import pyrootutils
 from omegaconf import DictConfig
-from pytorch_lightning import LightningDataModule, LightningModule, Trainer
-from pytorch_lightning.loggers import Logger
+from pytorch_lightning import LightningModule
 from torch.utils.data import DataLoader
 from data.components.rit_dataset import RITDataset
 from eval_util import pu_ssim, pu_psnr
+from tqdm import tqdm
 
 pyrootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 # ------------------------------------------------------------------------------------ #
@@ -59,6 +57,7 @@ def evaluate(cfg: DictConfig):
 
     dataset = RITDataset(representation, cfg.data.hq_path, cfg.data.lq_path)
     dataloader = DataLoader(dataset, batch_size=cfg.data.batch_size, shuffle=False)
+    dataloader = tqdm(dataloader)
 
     loss = 0
     psnr = 0
@@ -75,9 +74,25 @@ def evaluate(cfg: DictConfig):
         psnr += pu_ssim(pred, hq)
         ssim += pu_psnr(pred, hq)
 
-    print("Averge loss: ", loss/len(dataset))
-    print("Averge psnr: ", psnr/len(dataset))
-    print("Averge ssim: ", ssim/len(dataset))
+    loss /= len(dataset)
+    psnr /= len(dataset)
+    ssim /= len(dataset)
+    print("Averge loss: ", loss.item())
+    print("Averge psnr: ", psnr)
+    print("Averge ssim: ", ssim)
+
+    res_dict = {
+        "loss": loss.item(),
+        "psnr": psnr,
+        "loss": ssim,
+    }
+
+    object_dict = {
+        "cfg": cfg,
+        "res": res_dict
+    }
+
+    return {}, object_dict
 
 
 @hydra.main(version_base="1.3", config_path="../configs", config_name="eval.yaml")
