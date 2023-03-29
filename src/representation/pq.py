@@ -1,5 +1,4 @@
 import torch
-import numpy as np
 
 L_MAX = 10000
 N = 0.1593017578125

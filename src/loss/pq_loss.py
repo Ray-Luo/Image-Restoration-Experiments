@@ -18,4 +18,4 @@ class PQLoss:
         return out
 
     def __call__(self, pred, gt):
-        return self.loss(self.pq(pred), self.pq(gt))
+        return self.loss(self.pq(pred), self.pq(gt)) * 4000.0
