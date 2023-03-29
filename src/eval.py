@@ -6,6 +6,7 @@ from torch.utils.data import DataLoader
 from data.components.rit_dataset import RITDataset
 from eval_util import pu_ssim, pu_psnr
 from tqdm import tqdm
+import torch.nn.functional as F
 
 pyrootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 # ------------------------------------------------------------------------------------ #
@@ -59,6 +60,10 @@ def evaluate(cfg: DictConfig):
     dataloader = DataLoader(dataset, batch_size=cfg.data.batch_size, shuffle=False)
     dataloader = tqdm(dataloader)
 
+    bicubic_loss = 0
+    bicubic_psnr = 0
+    bicubic_ssim = 0
+
     loss = 0
     psnr = 0
     ssim = 0
@@ -67,24 +72,40 @@ def evaluate(cfg: DictConfig):
         lq = data['lq']
 
         pred = net(lq)
+        bicubic_pred = F.interpolate(lq, scale_factor=2, mode='bicubic', align_corners=True)
 
         loss += loss_fn(pred, hq)
+        bicubic_loss += loss_fn(bicubic_pred, hq)
+
         pred = pred.detach().numpy()
         hq = hq.detach().numpy()
+        bicubic_pred = bicubic_pred.detach().numpy()
+
         psnr += pu_ssim(pred, hq)
         ssim += pu_psnr(pred, hq)
+
+        bicubic_psnr += pu_ssim(bicubic_pred, hq)
+        bicubic_ssim += pu_psnr(bicubic_pred, hq)
 
     loss /= len(dataset)
     psnr /= len(dataset)
     ssim /= len(dataset)
-    print("Averge loss: ", loss.item())
-    print("Averge psnr: ", psnr)
-    print("Averge ssim: ", ssim)
+
+    bicubic_loss /= len(dataset)
+    bicubic_psnr /= len(dataset)
+    bicubic_ssim /= len(dataset)
+
+    print("Averge loss -- bicubic vs net: ", bicubic_loss.item(), loss.item())
+    print("Averge psnr -- bicubic vs net: ", bicubic_psnr, psnr)
+    print("Averge ssim -- bicubic vs net: ", bicubic_ssim, ssim)
 
     res_dict = {
         "loss": loss.item(),
         "psnr": psnr,
         "loss": ssim,
+        "bicubic_loss": bicubic_loss.item(),
+        "bicubic_psnr": bicubic_psnr,
+        "bicubic_loss": bicubic_ssim,
     }
 
     object_dict = {
@@ -102,3 +123,9 @@ def main(cfg: DictConfig) -> None:
 
 if __name__ == "__main__":
     main()
+
+"""
+Averge loss -- bicubic vs net:  12.168191909790039 1613.23681640625
+Averge psnr -- bicubic vs net:  0.9997592414247578 0.6082884422196864
+Averge ssim -- bicubic vs net:  77.08040852691732 32.634897858715235
+"""

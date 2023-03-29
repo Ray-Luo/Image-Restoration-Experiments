@@ -8,4 +8,4 @@ class PU:
         pass
 
     def __call__(self, x):
-        return torch.log2(A_COEFF * x + torch.ones_like(x) * 1e-5) + B_COEFF
+        return torch.log2(A_COEFF * x + B_COEFF)
