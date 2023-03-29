@@ -8,6 +8,7 @@ MAX_PU = 10.017749773073085 # pu(4000.0)
 
 def pu(x):
     return np.log2(A_COEFF * x + B_COEFF)
+    # return x
 
 
 def psnr(pred, gt):

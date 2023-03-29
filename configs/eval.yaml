@@ -7,8 +7,8 @@ defaults:
   - trainer: gpu.yaml
   - paths: default.yaml
   - extras: default.yaml
-  - representation: linear.yaml
-  - loss: linear.yaml
+  - representation: pu.yaml
+  - loss: pu.yaml
   - hydra: default.yaml
 
 
@@ -22,4 +22,6 @@ task_name: "eval"
 tags: ["dev"]
 
 # passing checkpoint path is necessary for evaluation
-ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-03-28_17-55-09/checkpoints/last.ckpt"
+# ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-03-28_17-55-09/checkpoints/last.ckpt"
+
+ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-03-29_00-12-25/checkpoints/epoch_006.ckpt"
