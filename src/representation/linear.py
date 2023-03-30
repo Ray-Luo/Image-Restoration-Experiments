@@ -3,4 +3,5 @@ class Linear:
         pass
 
     def __call__(self, x):
-        return x
+        # [0.05, 4000] --> [0, 1]
+        return x / 4000.0

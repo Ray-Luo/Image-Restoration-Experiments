@@ -13,4 +13,4 @@ class PULoss:
         return (torch.pow(2.0, x) - B_COEFF) / A_COEFF
 
     def __call__(self, pred, gt):
-        return self.loss(self.pu(pred), self.pu(gt)) * 4000.0
+        return self.loss(self.pu(pred), self.pu(gt))

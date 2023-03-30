@@ -81,11 +81,11 @@ def evaluate(cfg: DictConfig):
         hq = hq.detach().numpy()
         bicubic_pred = bicubic_pred.detach().numpy()
 
-        psnr += pu_ssim(pred, hq)
-        ssim += pu_psnr(pred, hq)
+        psnr += pu_psnr(pred, hq)
+        ssim += pu_ssim(pred, hq)
 
-        bicubic_psnr += pu_ssim(bicubic_pred, hq)
-        bicubic_ssim += pu_psnr(bicubic_pred, hq)
+        bicubic_psnr += pu_psnr(bicubic_pred, hq)
+        bicubic_ssim += pu_ssim(bicubic_pred, hq)
 
     loss /= len(dataset)
     psnr /= len(dataset)
@@ -126,12 +126,12 @@ if __name__ == "__main__":
 
 """
 Averge loss -- bicubic vs net:  12.168191909790039 1613.23681640625
-Averge psnr -- bicubic vs net:  0.9997592414247578 0.6082884422196864
-Averge ssim -- bicubic vs net:  77.08040852691732 32.634897858715235
+Averge ssim -- bicubic vs net:  0.9997592414247578 0.6082884422196864
+Averge psnr -- bicubic vs net:  77.08040852691732 32.634897858715235
 """
 
 """
 Averge loss -- bicubic vs net:  12.159172058105469 2339.674560546875
-Averge psnr -- bicubic vs net:  0.9997609193702477 0.49969096598580337
-Averge ssim -- bicubic vs net:  77.08658355990565 29.898147206268423
+Averge ssim -- bicubic vs net:  0.9997609193702477 0.49969096598580337
+Averge psnr -- bicubic vs net:  77.08658355990565 29.898147206268423
 """
