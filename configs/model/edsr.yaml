@@ -15,7 +15,7 @@ scheduler:
 
 net:
   _target_: src.models.components.edsr.EDSR
-  scale : 2
+  scale : 4
   num_input_channels : 3
   n_resblocks : 16
   n_feats : 64

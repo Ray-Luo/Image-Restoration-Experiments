@@ -88,11 +88,26 @@ def downsample2x(img_folder: str, name: str):
     save_hdr(downscaled, img_folder, new_name)
 
 
-folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_processed/" # replace with the path to your image folder
+def downsample4x(img_folder: str, name: str, save_path: str):
+    img = cv2.imread(os.path.join(img_folder, name), -1).astype(np.float32)
+    downscaled = cv2.resize(img, None, fx=0.25, fy=0.25, interpolation=cv2.INTER_NEAREST)
+    new_name = name.split('.')[0] + "_4x.hdr"
+    save_hdr(downscaled, save_path, new_name)
+
+
+def print_info(img_folder: str, name: str):
+    img = cv2.imread(os.path.join(img_folder, name), -1).astype(np.float32)
+    print_min_max(img)
+
+
+
+folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000/" # replace with the path to your image folder
+save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x/"
 file_list = os.listdir(folder_path)
 
 for file_name in file_list:
+    # print_info(folder_path, file_name)
     # process_save(folder_path, file_name)
     # augment(folder_path, file_name)
-    downsample2x(folder_path, file_name)
+    downsample4x(folder_path, file_name, save_path)
     # break

@@ -29,8 +29,8 @@ model:
     lr: 1e-4
 
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_all/rit_processed_patchify
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_all/rit_processed_2x_patchify
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_all/rit_hdr4000_patchify
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_all/rit_hdr4000_4x_patchify
   batch_size: 100
 
 logger:

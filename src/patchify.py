@@ -41,16 +41,16 @@ def main():
     opt['compression_level'] = 3
 
     # HR images
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_processed'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_processed_patchify'
-    opt['crop_size'] = 192
-    opt['step'] = 96
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_patchify'
+    opt['crop_size'] = 384
+    opt['step'] = 192
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
-    # LRx2 images
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_processed_2x'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_processed_2x_patchify'
+    # LRx4 images
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x_patchify'
     opt['crop_size'] = 96
     opt['step'] = 48
     opt['thresh_size'] = 0

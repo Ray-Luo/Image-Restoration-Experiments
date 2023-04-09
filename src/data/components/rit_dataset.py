@@ -21,7 +21,7 @@ class RITDataset(Dataset):
 
     def __getitem__(self, index):
 
-        hq_image_path = os.path.join(self.hq, self.img_names[index]).replace('2x_', '')
+        hq_image_path = os.path.join(self.hq, self.img_names[index]).replace('4x_', '')
         lq_image_path = os.path.join(self.lq, self.img_names[index])
 
         hq_img = cv2.imread(hq_image_path, -1).astype(np.float32)
