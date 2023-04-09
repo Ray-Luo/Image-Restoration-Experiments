@@ -64,21 +64,22 @@ def process_rit(img: np.array):
     return img
 
 
-def process_save(img_folder: str, name: str):
+def process_save(img_folder: str, name: str, save_path: str):
     img = cv2.imread(os.path.join(img_folder, name), -1).astype(np.float32)
     print_min_max(img)
-    img_g = img[:,:,1]
-    value_at_99_percentile = np.percentile(img_g, 99)
-    img /= value_at_99_percentile
-    img *= 4000.0
+    # img_g = img[:,:,1]
+    # value_at_99_percentile = np.percentile(img_g, 99)
+    # img /= value_at_99_percentile
+    # img *= 4000.0
     img = np.clip(img, 0.05, 4000.0)
 
     print_min_max(img)
     print("**********")
 
-    new_name = name.split('.')[0] + "_processed.hdr"
+    new_name = name
+    # new_name = name.split('.')[0] + "_processed.hdr"
 
-    save_hdr(img, img_folder, new_name)
+    save_hdr(img, save_path, new_name)
 
 
 def downsample2x(img_folder: str, name: str):
@@ -111,7 +112,7 @@ file_list = os.listdir(folder_path)
 
 for file_name in file_list:
     # print_info(folder_path, file_name)
-    # process_save(folder_path, file_name)
+    # process_save(folder_path, file_name, save_path)
     # augment(folder_path, file_name)
     downsample4x(folder_path, file_name, save_path)
     # compare_content(save_path, folder_path)

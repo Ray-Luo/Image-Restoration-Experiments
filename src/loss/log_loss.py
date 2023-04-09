@@ -8,7 +8,6 @@ class LogLoss:
 
     def log(self, x):
         x = torch.log(torch.max(x, torch.ones_like(x) * 1e-5))
-        x = x * 4000.0
         return x
 
     def __call__(self, pred, gt):
