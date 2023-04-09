@@ -100,6 +100,10 @@ def print_info(img_folder: str, name: str):
     print_min_max(img)
 
 
+def compare_content(a_folder, b_folder):
+    for file_name in file_list:
+        print(file_name, os.path.exists(os.path.join(b_folder, file_name.replace('4x_', ''))))
+
 
 folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000/" # replace with the path to your image folder
 save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x/"
@@ -110,4 +114,5 @@ for file_name in file_list:
     # process_save(folder_path, file_name)
     # augment(folder_path, file_name)
     downsample4x(folder_path, file_name, save_path)
+    # compare_content(save_path, folder_path)
     # break
