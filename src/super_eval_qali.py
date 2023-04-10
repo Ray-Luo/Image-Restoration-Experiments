@@ -39,6 +39,9 @@ def pu2linear(x):
     B_COEFF = 1.070672820603428
     return (torch.pow(2.0, x) - B_COEFF) / A_COEFF
 
+def linear2linear(x):
+    return x
+
 
 @utils.task_wrapper
 def evaluate(cfg: DictConfig):
@@ -86,7 +89,7 @@ def evaluate(cfg: DictConfig):
         hq_path = data['hq_path']
 
 
-        pred = pu2linear(net(lq))
+        pred = linear2linear(net(lq))
         bicubic_pred = F.interpolate(lq, scale_factor=4, mode='bilinear', align_corners=True).unsqueeze(0)
 
         res_list.append(pred)
