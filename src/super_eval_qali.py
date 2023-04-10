@@ -9,6 +9,7 @@ from tqdm import tqdm
 import torch.nn.functional as F
 from process_hdr import save_hdr
 import torch
+import numpy as np
 
 pyrootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 # ------------------------------------------------------------------------------------ #
@@ -88,30 +89,51 @@ def evaluate(cfg: DictConfig):
 
         # print(hq_path, "***************")
 
-    for img, navie in zip(res_list,navie_list):
-        x_start = x_index * 192
-        x_end = x_index * 192 + 384
+    h = 2868
+    w = 4312
+    crop_size = 384
+    step = 192
+    thresh_size = 0
+    h_space = np.arange(0, h - crop_size + 1, step)
+    if h - (h_space[-1] + crop_size) > thresh_size:
+        h_space = np.append(h_space, h - crop_size)
+    w_space = np.arange(0, w - crop_size + 1, step)
+    if w - (w_space[-1] + crop_size) > thresh_size:
+        w_space = np.append(w_space, w - crop_size)
 
-        y_start = y_index * 192
-        y_end = y_index * 192 + 384
+    index = 0
+    for x in h_space:
+        for y in w_space:
+            res_img[:,:, x:x + crop_size, y:y + crop_size] = res_list[index]
+            res_naive[:, :, x:x + crop_size, y:y + crop_size] = navie_list[index]
+            index += 1
 
-        if x_index * 192 + 384 > 2868:
-            x_start = 2868 - 384
-            x_end = 2868
 
-            y_index = 0
 
-        if y_index * 192 + 384 > 4312:
-            y_start = 4312 - 384
-            y_end = 4312
+    # for img, navie in zip(res_list,navie_list):
+    #     x_start = x_index * 192
+    #     x_end = x_index * 192 + 384
 
-            y_index = 0
-            x_index += 1
+    #     y_start = y_index * 192
+    #     y_end = y_index * 192 + 384
 
-        res_img[:, :, x_start : x_end, y_start : y_end] = img
-        res_naive[:, :, x_start : x_end, y_start : y_end] = navie
+    #     if x_index * 192 + 384 > 4312:
+    #         x_start = 4312 - 384
+    #         x_end = 4312
 
-        y_index += 1
+    #         x_index = 0
+    #         y_index += 1
+
+    #     if y_index * 192 + 384 > 2868:
+    #         y_start = 2868 - 384
+    #         y_end = 2868
+
+    #         y_index = 0
+
+    #     res_img[:, :, x_start : x_end, y_start : y_end] = img
+    #     res_naive[:, :, x_start : x_end, y_start : y_end] = navie
+
+    #     x_index += 1
 
 
     res_img = res_img.squeeze(0).permute(1,2,0).detach().numpy()
