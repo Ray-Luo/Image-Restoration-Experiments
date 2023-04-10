@@ -77,8 +77,8 @@ def evaluate(cfg: DictConfig):
     res_list = []
     navie_list = []
 
-    save_hdr(res_img.numpy(), "/home/luoleyouluole/Image-Restoration-Experiments/data/test", "res_img.hdr")
-    save_hdr(res_naive.numpy(), "/home/luoleyouluole/Image-Restoration-Experiments/data/test", "res_naive.hdr")
+    save_hdr(res_img.numpy(), "/home/luoleyouluole/Image-Restoration-Experiments/data/", "res_img.hdr")
+    save_hdr(res_naive.numpy(), "/home/luoleyouluole/Image-Restoration-Experiments/data/", "res_naive.hdr")
 
     for data in dataloader:
         hq = data['hq']
@@ -115,8 +115,8 @@ def evaluate(cfg: DictConfig):
 
     res_img = res_img.squeeze(0).permute(1,2,0).detach().numpy()
     res_naive = res_naive.squeeze(0).permute(1,2,0).detach().numpy()
-    save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments/data/test", "res_img.hdr")
-    save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments/data/test", "res_naive.hdr")
+    save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments/data", "res_img.hdr")
+    save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments/data", "res_naive.hdr")
 
     res_dict = {
     }

@@ -13,8 +13,8 @@ defaults:
 
 
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test/hq
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test/lq
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test2/hq
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test2/lq
   batch_size: 1
 
 task_name: "eval"
@@ -24,4 +24,4 @@ tags: ["dev"]
 # passing checkpoint path is necessary for evaluation
 # ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-03-28_17-55-09/checkpoints/last.ckpt"
 
-ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-04-09_01-07-33/checkpoints/last.ckpt"
+ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-04-10_00-52-42/checkpoints/last.ckpt"
