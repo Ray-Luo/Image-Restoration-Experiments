@@ -5,7 +5,7 @@ loss: ${loss}
 optimizer:
   _target_: torch.optim.Adam
   _partial_: true
-  lr: 1e-4
+  lr: 1e-3
 
 scheduler:
   _target_: torch.optim.lr_scheduler.MultiStepLR
