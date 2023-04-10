@@ -7,6 +7,8 @@ from data.components.rit_dataset import RITDataset
 from eval_util import pu_ssim, pu_psnr
 from tqdm import tqdm
 import torch.nn.functional as F
+from process_hdr import save_hdr
+import torch
 
 pyrootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 # ------------------------------------------------------------------------------------ #
@@ -60,24 +62,38 @@ def evaluate(cfg: DictConfig):
     dataloader = DataLoader(dataset, batch_size=cfg.data.batch_size, shuffle=False)
     dataloader = tqdm(dataloader)
 
+    res_img = torch.ones(1, 3, 2868, 4312)
+    res_naive = torch.zeros(1, 3, 2868, 4312)
+    x_index = 0
+    y_index = 0
+
     for data in dataloader:
         hq = data['hq']
         lq = data['lq']
 
         pred = net(lq)
-        bicubic_pred = F.interpolate(lq, scale_factor=4, mode='nearest', align_corners=True)　
+        bicubic_pred = F.interpolate(lq, scale_factor=4, mode='bilinear', align_corners=True).unsqueeze(0)
 
-    print("Averge loss -- bicubic vs net: ", bicubic_loss.item(), loss.item())
-    print("Averge psnr -- bicubic vs net: ", bicubic_psnr, psnr)
-    print("Averge ssim -- bicubic vs net: ", bicubic_ssim, ssim)
+        if x_index * 192 + 384 > 4312:
+            x_index = 0
+            y_index += 1
+
+        if y_index * 192 + 384 > 2868:
+            x_index = 0
+            y_index += 1
+
+        res_img[:,:,y_index * 192 : y_index * 192 + 384, x_index * 192 : x_index * 192 + 384] = pred
+
+        res_naive[:,:,y_index * 192 : y_index * 192 + 384, x_index * 192 : x_index * 192 + 384] = bicubic_pred
+
+        print(pred.shape, bicubic_pred.shape, "***************")
+
+        x_index += 1
+
+    save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments/data/test", "res_img.hdr")
+    save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments/data/test", "res_naive.hdr")
 
     res_dict = {
-        "loss": loss.item(),
-        "psnr": psnr,
-        "loss": ssim,
-        "bicubic_loss": bicubic_loss.item(),
-        "bicubic_psnr": bicubic_psnr,
-        "bicubic_loss": bicubic_ssim,
     }
 
     object_dict = {
@@ -95,15 +111,3 @@ def main(cfg: DictConfig) -> None:
 
 if __name__ == "__main__":
     main()
-
-"""
-Averge loss -- bicubic vs net:  12.168191909790039 1613.23681640625
-Averge ssim -- bicubic vs net:  0.9997592414247578 0.6082884422196864
-Averge psnr -- bicubic vs net:  77.08040852691732 32.634897858715235
-"""
-
-"""
-Averge loss -- bicubic vs net:  12.159172058105469 2339.674560546875
-Averge ssim -- bicubic vs net:  0.9997609193702477 0.49969096598580337
-Averge psnr -- bicubic vs net:  77.08658355990565 29.898147206268423
-"""
