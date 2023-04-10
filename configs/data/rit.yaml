@@ -4,5 +4,5 @@ hq_path: ${hq_path}
 lq_path: ${lq_path}
 seed: ${seed}
 batch_size: 4
-num_workers: 4
+num_workers: 0
 pin_memory: False

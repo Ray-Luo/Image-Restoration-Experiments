@@ -67,29 +67,55 @@ def evaluate(cfg: DictConfig):
     x_index = 0
     y_index = 0
 
+    res_list = []
+    navie_list = []
+
+    save_hdr(res_img.numpy(), "/home/luoleyouluole/Image-Restoration-Experiments/data/test", "res_img.hdr")
+    save_hdr(res_naive.numpy(), "/home/luoleyouluole/Image-Restoration-Experiments/data/test", "res_naive.hdr")
+
     for data in dataloader:
         hq = data['hq']
         lq = data['lq']
+        hq_path = data['hq_path']
+
 
         pred = net(lq)
         bicubic_pred = F.interpolate(lq, scale_factor=4, mode='bilinear', align_corners=True).unsqueeze(0)
 
-        if x_index * 192 + 384 > 4312:
-            x_index = 0
-            y_index += 1
+        res_list.append(pred)
+        navie_list.append(bicubic_pred)
 
-        if y_index * 192 + 384 > 2868:
-            x_index = 0
-            y_index += 1
 
-        res_img[:,:,y_index * 192 : y_index * 192 + 384, x_index * 192 : x_index * 192 + 384] = pred
+        # print(hq_path, "***************")
 
-        res_naive[:,:,y_index * 192 : y_index * 192 + 384, x_index * 192 : x_index * 192 + 384] = bicubic_pred
+    for img, navie in zip(res_list,navie_list):
+        x_start = x_index * 192
+        x_end = x_index * 192 + 384
 
-        print(pred.shape, bicubic_pred.shape, "***************")
+        y_start = y_index * 192
+        y_end = y_index * 192 + 384
 
-        x_index += 1
+        if x_index * 192 + 384 > 2868:
+            x_start = 2868 - 384
+            x_end = 2868
 
+            y_index = 0
+
+        if y_index * 192 + 384 > 4312:
+            y_start = 4312 - 384
+            y_end = 4312
+
+            y_index = 0
+            x_index += 1
+
+        res_img[:, :, x_start : x_end, y_start : y_end] = img
+        res_naive[:, :, x_start : x_end, y_start : y_end] = navie
+
+        y_index += 1
+
+
+    res_img = res_img.squeeze(0).permute(1,2,0).detach().numpy()
+    res_naive = res_naive.squeeze(0).permute(1,2,0).detach().numpy()
     save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments/data/test", "res_img.hdr")
     save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments/data/test", "res_naive.hdr")
 
