@@ -111,7 +111,7 @@ class ESRGANLitModule(LightningModule):
             l_g_total = l_g_pix + l_g_precep + l_g_style + l_g_gan
             self.log("total_gen_loss", l_g_total, logger=True)
             # return l_g_total
-            return {"l_g_total": l_g_total}
+            return {"loss": l_g_total}
 
         # Train discriminator
         if optimizer_idx == 1:
@@ -128,7 +128,7 @@ class ESRGANLitModule(LightningModule):
             self.log("d_loss", d_loss, logger=True)
 
             # return d_loss
-            return {"d_loss": d_loss}
+            return {"loss": d_loss}
 
     def training_epoch_end(self, outputs: List[Any]):
         # `outputs` is a list of dicts returned from `training_step()`
