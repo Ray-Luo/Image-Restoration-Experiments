@@ -19,6 +19,8 @@ tags: ["edsr", "rit", "pu", "pu"]
 
 seed: 12345
 
+ckpt_path: /home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-04-10_20-06-14/checkpoints/last.ckpt
+
 trainer:
   min_epochs: 0
   max_epochs: 100

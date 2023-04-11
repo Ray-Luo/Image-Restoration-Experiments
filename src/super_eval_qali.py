@@ -7,7 +7,7 @@ from data.components.rit_dataset import RITDataset
 from eval_util import pu_ssim, pu_psnr
 from tqdm import tqdm
 import torch.nn.functional as F
-from process_hdr import save_hdr
+from process_hdr import save_hdr, print_min_max
 import torch
 import numpy as np
 
@@ -40,7 +40,7 @@ def pu2linear(x):
     return (torch.pow(2.0, x) - B_COEFF) / A_COEFF
 
 def linear2linear(x):
-    return x
+    return x * 4000.0
 
 
 @utils.task_wrapper
@@ -73,7 +73,7 @@ def evaluate(cfg: DictConfig):
     dataloader = tqdm(dataloader)
 
     res_img = torch.ones(1, 3, 2868, 4312)
-    res_naive = torch.zeros(1, 3, 2868, 4312)
+    res_naive = torch.ones(1, 3, 2868, 4312)
     x_index = 0
     y_index = 0
 
@@ -89,8 +89,10 @@ def evaluate(cfg: DictConfig):
         hq_path = data['hq_path']
 
 
-        pred = linear2linear(net(lq))
+        pred = net(lq)
+        # pred = pu2linear(net(lq))
         bicubic_pred = F.interpolate(lq, scale_factor=4, mode='bilinear', align_corners=True).unsqueeze(0)
+        # bicubic_pred = pu2linear(bicubic_pred)
 
         res_list.append(pred)
         navie_list.append(bicubic_pred)
@@ -118,6 +120,8 @@ def evaluate(cfg: DictConfig):
 
     res_img = res_img.squeeze(0).permute(1,2,0).detach().numpy()
     res_naive = res_naive.squeeze(0).permute(1,2,0).detach().numpy()
+    print_min_max(res_img)
+    print_min_max(res_naive)
     save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments/data", "res_img.hdr")
     save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments/data", "res_naive.hdr")
 
