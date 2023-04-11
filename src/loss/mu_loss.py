@@ -9,11 +9,9 @@ class MuLoss:
 
     def mu(self, x):
         mu = torch.tensor(MU, dtype=torch.float32)
-        x_mu = torch.sign(x) * torch.log1p(mu * torch.abs(x)) / torch.log1p(mu)
-        x_mu = ((x_mu + 1) / 2 * mu + 0.5)
+        one = torch.tensor(1.0, dtype=torch.float32)
+        x_mu = torch.log(torch.max(one + x * MU, torch.ones_like(x) * 1e-5)) / torch.log(one + MU)
         return x_mu
 
     def __call__(self, pred, gt):
-        pred = pred * 4000.0
-        gt = gt * 4000.0
         return self.loss(self.mu(pred), self.mu(gt))
