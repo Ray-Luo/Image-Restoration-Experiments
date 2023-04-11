@@ -1,0 +1,20 @@
+_target_: src.models.esrgan_module.ESRGANLitModule
+
+loss: ${loss}
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 1e-4
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.MultiStepLR
+  _partial_: true
+  milestones: [20, 25]
+  gamma: 0.5
+
+net_g:
+  _target_: src.models.components.esrgan.ESRGAN
+  scale : 4
+  num_input_channels: 3
+  num_output_channels: 3
