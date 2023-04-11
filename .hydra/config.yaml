@@ -1,0 +1,108 @@
+task_name: train
+tags:
+- esrgan
+- rit
+- pu
+- pu
+train: true
+test: false
+ckpt_path: null
+seed: 12345
+data:
+  _target_: src.data.rit_datamodule.RITDataModule
+  representation: ${representation}
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_patchify
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x_patchify
+  seed: ${seed}
+  batch_size: 8
+  num_workers: 4
+  pin_memory: false
+model:
+  _target_: src.models.esrgan_module.ESRGANLitModule
+  loss: ${loss}
+  optimizer:
+    _target_: torch.optim.Adam
+    _partial_: true
+    lr: 0.0001
+  scheduler:
+    _target_: torch.optim.lr_scheduler.MultiStepLR
+    _partial_: true
+    milestones:
+    - 20
+    - 25
+    gamma: 0.5
+  net:
+    _target_: src.models.components.esrgan.RealESRGANNet
+    scale: 4
+    num_input_channels: 3
+    num_output_channels: 3
+callbacks:
+  model_checkpoint:
+    _target_: pytorch_lightning.callbacks.ModelCheckpoint
+    dirpath: ${paths.output_dir}/checkpoints
+    filename: epoch_{epoch:03d}
+    monitor: val/loss
+    verbose: false
+    save_last: true
+    save_top_k: 1
+    mode: min
+    auto_insert_metric_name: false
+    save_weights_only: false
+    every_n_train_steps: null
+    train_time_interval: null
+    every_n_epochs: null
+    save_on_train_epoch_end: null
+  early_stopping:
+    _target_: pytorch_lightning.callbacks.EarlyStopping
+    monitor: val/loss
+    min_delta: 0.0
+    patience: 10
+    verbose: false
+    mode: min
+    strict: true
+    check_finite: true
+    stopping_threshold: null
+    divergence_threshold: null
+    check_on_train_epoch_end: null
+  model_summary:
+    _target_: pytorch_lightning.callbacks.RichModelSummary
+    max_depth: -1
+  rich_progress_bar:
+    _target_: pytorch_lightning.callbacks.RichProgressBar
+logger:
+  tensorboard:
+    _target_: pytorch_lightning.loggers.tensorboard.TensorBoardLogger
+    save_dir: ${paths.output_dir}/tensorboard/
+    name: null
+    log_graph: false
+    default_hp_metric: true
+    prefix: ''
+  wandb:
+    tags: ${tags}
+    group: rit
+trainer:
+  _target_: pytorch_lightning.Trainer
+  default_root_dir: ${paths.output_dir}
+  min_epochs: 0
+  max_epochs: 100
+  accelerator: gpu
+  devices: 7
+  check_val_every_n_epoch: 1
+  deterministic: false
+  strategy: ddp
+  num_nodes: 1
+  sync_batchnorm: true
+  log_every_n_steps: 1
+paths:
+  root_dir: ${oc.env:PROJECT_ROOT}
+  log_dir: ${paths.root_dir}/logs/
+  output_dir: ${hydra:runtime.output_dir}
+  work_dir: ${hydra:runtime.cwd}
+extras:
+  ignore_warnings: false
+  enforce_tags: true
+  print_config: true
+loss:
+  _target_: src.loss.pu_loss.PULoss
+representation:
+  _target_: src.representation.pu.PU

@@ -9,15 +9,13 @@ defaults:
   - override /callbacks: default.yaml
   - override /trainer: gpu.yaml
   - override /logger: tensorboard.yaml
-  - override /loss: pu_forward.yaml
+  - override /loss: smape.yaml
   - override /representation: linear.yaml
 
 # all parameters below will be merged with parameters from default configurations set above
 # this allows you to overwrite only specified parameters
 
-tags: ["edsr", "rit", "linear", "pu_forward"] # ----> with * 4000, nan during training
-
-# without * 4000 seems better
+tags: ["edsr", "rit", "linear", "smape"]
 
 seed: 12345
 
