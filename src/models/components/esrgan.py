@@ -16,7 +16,7 @@ class RealESRGANNet(nn.Module):
         self,
         num_input_channels,
         num_output_channels,
-        degredation_params,
+        degredation_params=None,
         scale=4,
         num_feat=64,
         num_block=23,

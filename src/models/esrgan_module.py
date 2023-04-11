@@ -3,6 +3,7 @@ from typing import Any, List
 import torch
 from pytorch_lightning import LightningModule
 from torchmetrics import MeanMetric
+from basicsr.losses.gan_loss import GANLoss
 
 
 class ESRGANLitModule(LightningModule):
@@ -32,11 +33,14 @@ class ESRGANLitModule(LightningModule):
         # also ensures init params will be stored in ckpt
         self.save_hyperparameters(logger=False)
 
-        self.net = net.net_d
-        self.net_d = net.net_g
+        self.net = net
+        self.net_g = net.net_g
+        self.net_d = net.net_d
 
         # loss function
         self.criterion = loss
+
+        self.gan_loss = GANLoss(gan_type="vanilla", real_label_val=1.0, fake_label_val=0.0, loss_weight=1e-1)
 
         # for averaging loss across batches
         self.train_loss = MeanMetric()
@@ -45,7 +49,7 @@ class ESRGANLitModule(LightningModule):
 
 
     def forward(self, x: torch.Tensor, degrade: bool = False) -> torch.Tensor:
-        return self.net(x, degrade)
+        return self.net(x)
 
     def on_train_start(self):
         # by default lightning executes validation step sanity checks before training starts,
@@ -60,17 +64,6 @@ class ESRGANLitModule(LightningModule):
 
         return loss
 
-    # def training_step(self, batch: Any, batch_idx: int):
-    #     loss = self.model_step(batch)
-
-    #     # update and log metrics
-    #     self.train_loss(loss)
-    #     self.log("train/loss", self.train_loss, on_step=True, on_epoch=True, prog_bar=True)
-
-    #     # we can return here dict with any tensors
-    #     # and then read it in some callback or in `training_epoch_end()` below
-    #     # remember to always return loss from `training_step()` or backpropagation will fail!
-    #     return {"loss": loss}
 
     def training_step(
         self,
@@ -81,19 +74,16 @@ class ESRGANLitModule(LightningModule):
         **kwargs: Any,
     ) -> torch.Tensor:
 
-        output, _ = self.forward(batch, degrade=False)
+        output = self.forward(batch, degrade=False)
 
         # Log tensorboard images
         if self.global_step % 100 == 0:
             try:
                 self.logger.experiment.add_images(
-                    "hr_image", batch["hr_image"], self.global_step
+                    "hr_image", batch["hq"], self.global_step
                 )
                 self.logger.experiment.add_images(
-                    "lr_image", batch["lr_image"], self.global_step
-                )
-                self.logger.experiment.add_images(
-                    "degraded", degraded, self.global_step
+                    "lr_image", batch["lq"], self.global_step
                 )
                 self.logger.experiment.add_images("output", output, self.global_step)
             except AttributeError:
@@ -113,8 +103,8 @@ class ESRGANLitModule(LightningModule):
             self.log("style_loss", l_g_style, logger=True)
 
             # GAN loss
-            fake_g_pred = self.model.net_d(output)
-            l_g_gan = self.loss.gan_loss(fake_g_pred, True, is_disc=False)
+            fake_g_pred = self.net_d(output)
+            l_g_gan = self.gan_loss(fake_g_pred, True, is_disc=False)
             self.log("g_gan_loss", l_g_gan, logger=True)
 
             # Total loss
@@ -127,12 +117,12 @@ class ESRGANLitModule(LightningModule):
         if optimizer_idx == 1:
 
             # real
-            real_d_pred = self.model.net_d(batch["hq"])
-            l_d_real = self.loss.gan_loss(real_d_pred, True, is_disc=True)
+            real_d_pred = self.net_d(batch["hq"])
+            l_d_real = self.gan_loss(real_d_pred, True, is_disc=True)
 
             # fake
-            fake_d_pred = self.model.net_d(output)
-            l_d_fake = self.loss.gan_loss(fake_d_pred, False, is_disc=True)
+            fake_d_pred = self.net_d(output)
+            l_d_fake = self.gan_loss(fake_d_pred, False, is_disc=True)
 
             d_loss = (l_d_real + l_d_fake) / 2
             self.log("d_loss", d_loss, logger=True)
@@ -177,31 +167,14 @@ class ESRGANLitModule(LightningModule):
         Examples:
             https://pytorch-lightning.readthedocs.io/en/latest/common/lightning_module.html#configure-optimizers
         """
-        optimizer_g = hydra.utils.instantiate(
-            self.hparams.optimizer, self.model.net_g.parameters()
-        )
-        optimizer_d = hydra.utils.instantiate(
-            self.hparams.optimizer, self.model.net_d.parameters()
-        )
-        lr_scheduler_g = hydra.utils.instantiate(self.hparams.lr_scheduler, optimizer_g)
-        lr_scheduler_d = hydra.utils.instantiate(self.hparams.lr_scheduler, optimizer_d)
-        return [optimizer_g, optimizer_d], [lr_scheduler_g, lr_scheduler_d]
 
+        optimizer_g = self.hparams.optimizer(params=self.net_g.parameters())
+        optimizer_d = self.hparams.optimizer(params=self.net_d.parameters())
 
+        scheduler_g = self.hparams.scheduler(optimizer=optimizer_g)
+        scheduler_d = self.hparams.scheduler(optimizer=optimizer_d)
 
-        optimizer = self.hparams.optimizer(params=self.parameters())
-        if self.hparams.scheduler is not None:
-            scheduler = self.hparams.scheduler(optimizer=optimizer)
-            return {
-                "optimizer": optimizer,
-                "lr_scheduler": {
-                    "scheduler": scheduler,
-                    "monitor": "val/loss",
-                    "interval": "epoch",
-                    "frequency": 1,
-                },
-            }
-        return {"optimizer": optimizer}
+        return [optimizer_g, optimizer_d], [scheduler_g, scheduler_d]
 
 
 if __name__ == "__main__":

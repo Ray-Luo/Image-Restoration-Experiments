@@ -13,8 +13,8 @@ scheduler:
   milestones: [20, 25]
   gamma: 0.5
 
-net_g:
-  _target_: src.models.components.esrgan.ESRGAN
+net:
+  _target_: src.models.components.esrgan.RealESRGANNet
   scale : 4
   num_input_channels: 3
   num_output_channels: 3
