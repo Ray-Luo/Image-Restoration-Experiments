@@ -10,6 +10,11 @@ import torch.nn.functional as F
 from process_hdr import save_hdr, print_min_max
 import torch
 import numpy as np
+import torchvision.transforms as transforms
+import os
+import cv2
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 pyrootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 # ------------------------------------------------------------------------------------ #
@@ -39,8 +44,19 @@ def pu2linear(x):
     B_COEFF = 1.070672820603428
     return (torch.pow(2.0, x) - B_COEFF) / A_COEFF
 
-def linear2linear(x):
+def linear2original(x):
     return x * 4000.0
+
+def original2linear(x):
+    return x / 4000.0
+
+def identity(x):
+    return x
+
+transform_hdr = transforms.Compose([
+    transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
+    transforms.Lambda(lambda img: original2linear(img)),
+])
 
 
 @utils.task_wrapper
@@ -80,18 +96,17 @@ def evaluate(cfg: DictConfig):
     res_list = []
     navie_list = []
 
-    save_hdr(res_img.numpy(), "/home/luoleyouluole/Image-Restoration-Experiments/data/", "res_img.hdr")
-    save_hdr(res_naive.numpy(), "/home/luoleyouluole/Image-Restoration-Experiments/data/", "res_naive.hdr")
+    file_list = os.listdir(cfg.data.lq_path)
+    file_list.sort()
 
-    for data in dataloader:
-        hq = data['hq']
-        lq = data['lq']
-        hq_path = data['hq_path']
-
+    for file_name in tqdm(file_list):
+        lq_path = os.path.join(cfg.data.lq_path, file_name)
+        lq_img = cv2.imread(lq_path, -1).astype(np.float32)
+        lq = transform_hdr(lq_img).unsqueeze(0)
 
         pred = net(lq)
-        # pred = pu2linear(net(lq))
-        bicubic_pred = F.interpolate(lq, scale_factor=4, mode='bilinear', align_corners=True).unsqueeze(0)
+        # pred = pu2linear(pred)
+        bicubic_pred = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
         # bicubic_pred = pu2linear(bicubic_pred)
 
         res_list.append(pred)
@@ -118,12 +133,29 @@ def evaluate(cfg: DictConfig):
             index += 1
 
 
-    res_img = res_img.squeeze(0).permute(1,2,0).detach().numpy()
-    res_naive = res_naive.squeeze(0).permute(1,2,0).detach().numpy()
+    res_img = linear2original(res_img.squeeze(0).permute(1,2,0).detach().numpy())
+    res_naive = linear2original(res_naive.squeeze(0).permute(1,2,0).detach().numpy())
     print_min_max(res_img)
     print_min_max(res_naive)
     save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments/data", "res_img.hdr")
     save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments/data", "res_naive.hdr")
+
+    test = res_img.flatten()
+    fig, ax = plt.subplots()
+    sns.distplot(test, bins=100, kde=False)
+    plt.xlabel('Value')
+    plt.ylabel('Frequency')
+    plt.title('Histogram of Nets Prediction')
+    plt.savefig('./nets_prediction.png')
+
+    test = res_naive.flatten()
+    fig, ax = plt.subplots()
+    sns.distplot(test, bins=100, kde=False)
+    plt.xlabel('Value')
+    plt.ylabel('Frequency')
+    plt.title('Histogram of Nearest-neighbor Prediction')
+    plt.savefig('./nearest_prediction.png')
+
 
     res_dict = {
     }
