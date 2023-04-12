@@ -38,11 +38,14 @@ from src import utils
 
 log = utils.get_pylogger(__name__)
 
-
-def pu2linear(x):
-    A_COEFF = 0.456520040846940
-    B_COEFF = 1.070672820603428
-    return (torch.pow(2.0, x) - B_COEFF) / A_COEFF
+A_COEFF = 0.456520040846940
+B_COEFF = 1.070672820603428
+L_MAX = 10000
+N = 0.1593017578125
+M = 78.84375
+C1 = 0.8359375
+C2 = 18.8515625
+C3 = 18.6875
 
 def linear2original(x):
     return x * 4000.0
@@ -52,6 +55,31 @@ def original2linear(x):
 
 def identity(x):
     return x
+
+def original2log(x):
+    return torch.log(torch.max(x, torch.ones_like(x) * 1e-5))
+
+def log2original(x):
+    x = torch.exp(x)
+    return x
+
+def original2pu(x):
+    return torch.log2(A_COEFF * x + B_COEFF)
+
+def pu2original(x):
+    A_COEFF = 0.456520040846940
+    B_COEFF = 1.070672820603428
+    return (torch.pow(2.0, x) - B_COEFF) / A_COEFF
+
+def original2pq(x):
+    im_t = torch.pow(torch.clip(x, 0, L_MAX) / L_MAX, N)
+    out = torch.pow((C2 * im_t + C1) / (1 + C3 * im_t), M)
+    return out
+
+def pq2original(x):
+    im_t = torch.pow(torch.maximum(x, torch.zeros_like(x)),1 / M)
+    out = L_MAX * torch.pow(torch.maximum(im_t - C1, torch.zeros_like(x))/(C2 - C3 * im_t), 1 / N)
+    return out
 
 def draw_histogram(array, mode, save_path):
     fig, ax = plt.subplots()
@@ -64,7 +92,7 @@ def draw_histogram(array, mode, save_path):
 
 transform_hdr = transforms.Compose([
     transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
-    transforms.Lambda(lambda img: original2linear(img)),
+    transforms.Lambda(lambda img: original2pq(img)),
 ])
 
 
@@ -114,9 +142,10 @@ def evaluate(cfg: DictConfig):
         lq = transform_hdr(lq_img).unsqueeze(0)
 
         pred = net(lq)
-        # pred = pu2linear(pred)
+        pred = pq2original(pred)
+
         bicubic_pred = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
-        # bicubic_pred = pu2linear(bicubic_pred)
+        bicubic_pred = pq2original(bicubic_pred)
 
         res_list.append(pred)
         navie_list.append(bicubic_pred)
@@ -142,8 +171,8 @@ def evaluate(cfg: DictConfig):
             index += 1
 
 
-    res_img = linear2original(res_img.squeeze(0).permute(1,2,0).detach().numpy())
-    res_naive = linear2original(res_naive.squeeze(0).permute(1,2,0).detach().numpy())
+    res_img = identity(res_img.squeeze(0).permute(1,2,0).detach().numpy())
+    res_naive = identity(res_naive.squeeze(0).permute(1,2,0).detach().numpy())
     print_min_max(res_img)
     print_min_max(res_naive)
     save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img.hdr")
