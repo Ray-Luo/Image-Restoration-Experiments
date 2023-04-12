@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 import os
 import random
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 SEED = 12345
 NUMBER_AUG = 10

@@ -53,6 +53,15 @@ def original2linear(x):
 def identity(x):
     return x
 
+def draw_histogram(array, mode, save_path):
+    fig, ax = plt.subplots()
+    sns.distplot(array.flatten(), bins=100, kde=False)
+    plt.xlabel('Value')
+    plt.ylabel('Frequency')
+    plt.title('Histogram of {} Prediction'.format(mode))
+    plt.savefig(os.path.join(save_path + '{}_prediction.png'.format(mode)))
+
+
 transform_hdr = transforms.Compose([
     transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
     transforms.Lambda(lambda img: original2linear(img)),
@@ -137,25 +146,11 @@ def evaluate(cfg: DictConfig):
     res_naive = linear2original(res_naive.squeeze(0).permute(1,2,0).detach().numpy())
     print_min_max(res_img)
     print_min_max(res_naive)
-    save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments/data", "res_img.hdr")
-    save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments/data", "res_naive.hdr")
+    save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img.hdr")
+    save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments", "res_naive.hdr")
 
-    test = res_img.flatten()
-    fig, ax = plt.subplots()
-    sns.distplot(test, bins=100, kde=False)
-    plt.xlabel('Value')
-    plt.ylabel('Frequency')
-    plt.title('Histogram of Nets Prediction')
-    plt.savefig('./nets_prediction.png')
-
-    test = res_naive.flatten()
-    fig, ax = plt.subplots()
-    sns.distplot(test, bins=100, kde=False)
-    plt.xlabel('Value')
-    plt.ylabel('Frequency')
-    plt.title('Histogram of Nearest-neighbor Prediction')
-    plt.savefig('./nearest_prediction.png')
-
+    draw_histogram(res_img, "Nets", "./")
+    draw_histogram(res_naive, "Nearest-neighbor", "./")
 
     res_dict = {
     }
