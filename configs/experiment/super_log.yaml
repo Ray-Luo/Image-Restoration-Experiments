@@ -9,13 +9,13 @@ defaults:
   - override /callbacks: default.yaml
   - override /trainer: gpu.yaml
   - override /logger: tensorboard.yaml
-  - override /loss: log2.yaml
-  - override /representation: log2.yaml
+  - override /loss: log.yaml
+  - override /representation: log.yaml
 
 # all parameters below will be merged with parameters from default configurations set above
 # this allows you to overwrite only specified parameters
 
-tags: ["edsr", "rit", "log2", "log2"]
+tags: ["edsr", "rit", "log", "log"]
 
 seed: 12345
 
@@ -31,7 +31,7 @@ model:
 data:
   hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_patchify
   lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x_patchify
-  batch_size: 100
+  batch_size: 80
 
 logger:
   wandb:

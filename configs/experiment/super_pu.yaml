@@ -19,7 +19,7 @@ tags: ["edsr", "rit", "pu", "pu"]
 
 seed: 12345
 
-ckpt_path: /home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-04-10_20-06-14/checkpoints/last.ckpt
+# ckpt_path: /home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-04-10_20-06-14/checkpoints/last.ckpt
 
 trainer:
   min_epochs: 0
@@ -33,7 +33,7 @@ model:
 data:
   hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_patchify
   lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x_patchify
-  batch_size: 100
+  batch_size: 80
 
 logger:
   wandb:

@@ -9,13 +9,13 @@ defaults:
   - override /callbacks: default.yaml
   - override /trainer: gpu.yaml
   - override /logger: tensorboard.yaml
-  - override /loss: pu_forward.yaml
+  - override /loss: pu.yaml
   - override /representation: linear.yaml
 
 # all parameters below will be merged with parameters from default configurations set above
 # this allows you to overwrite only specified parameters
 
-tags: ["edsr", "rit", "linear", "pu_forward"] # ----> with * 4000, nan during training
+tags: ["edsr", "rit", "linear", "pu"] # ----> with * 4000, nan during training
 
 # without * 4000 seems better
 
@@ -33,7 +33,7 @@ model:
 data:
   hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_patchify
   lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x_patchify
-  batch_size: 100
+  batch_size: 80
 
 logger:
   wandb:

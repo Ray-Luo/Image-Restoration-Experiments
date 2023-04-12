@@ -6,9 +6,9 @@ class LogLoss:
     def __init__(self):
         self.loss = L1Loss()
 
-    def log(self, x):
-        x = torch.log(torch.max(x, torch.ones_like(x) * 1e-5))
+    def exp(self, x):
+        x = torch.exp(x)
         return x
 
     def __call__(self, pred, gt):
-        return self.loss(self.log(pred), self.log(gt))
+        return self.loss(self.exp(pred), self.exp(gt))

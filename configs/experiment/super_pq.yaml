@@ -15,7 +15,7 @@ defaults:
 # all parameters below will be merged with parameters from default configurations set above
 # this allows you to overwrite only specified parameters
 
-tags: ["edsr", "rit", "pq", "pq"]
+tags: ["edsr", "rit", "pq", "pq"]  # return nan
 
 seed: 12345
 
@@ -31,7 +31,7 @@ model:
 data:
   hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_patchify
   lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x_patchify
-  batch_size: 100
+  batch_size: 80
 
 logger:
   wandb:
