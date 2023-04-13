@@ -138,11 +138,17 @@ def evaluate(cfg: DictConfig):
         with torch.no_grad():
             pred = net(lq)
         res_img = linear2original(pred)
+        tmp = torch.log(res_img + torch.ones_like(res_img) * 1e-5)
+        tmp = tmp.squeeze(0).cpu().permute(1,2,0).detach().numpy()
+        draw_histogram(tmp, "Nets", "./")
         res_img /= 4000.0
         res_img = torch.pow(res_img, 2)
 
         bicubic_pred = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
         res_naive = linear2original(bicubic_pred)
+        tmp = torch.log(res_naive + torch.ones_like(res_naive) * 1e-5)
+        tmp = tmp.squeeze(0).cpu().permute(1,2,0).detach().numpy()
+        draw_histogram(tmp, "Nearest-neighbor", "./")
         res_naive /= 4000.0
         res_naive = torch.pow(res_naive, 2)
 
