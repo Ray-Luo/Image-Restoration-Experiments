@@ -24,4 +24,4 @@ tags: ["dev"]
 # passing checkpoint path is necessary for evaluation
 # ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-03-28_17-55-09/checkpoints/last.ckpt"
 
-ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-04-13_10-06-25/checkpoints/last.ckpt"
+ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train_2/runs/2023-04-11_16-52-40/checkpoints/last.ckpt"

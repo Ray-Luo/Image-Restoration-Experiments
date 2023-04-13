@@ -4,7 +4,7 @@ from omegaconf import DictConfig
 from pytorch_lightning import LightningModule
 from torch.utils.data import DataLoader
 from data.components.rit_dataset import RITDataset
-from eval_util import pu_ssim, pu_psnr
+from eval_util import ssim, psnr
 from tqdm import tqdm
 import torch.nn.functional as F
 from process_hdr import save_hdr, print_min_max
@@ -15,6 +15,12 @@ import os
 import cv2
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+import warnings
+
+# Ignore all warnings
+warnings.filterwarnings("ignore")
+
 
 pyrootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 # ------------------------------------------------------------------------------------ #
@@ -82,12 +88,30 @@ def pq2original(x):
     return out
 
 def draw_histogram(array, mode, save_path):
+    array = torch.log(array + torch.ones_like(array) * 1e-5)
+    array = array.squeeze(0).cpu().permute(1,2,0).detach().numpy()
     fig, ax = plt.subplots()
     sns.distplot(array.flatten(), bins=100, kde=False)
     plt.xlabel('Value')
     plt.ylabel('Frequency')
-    plt.title('Histogram of {} Prediction'.format(mode))
+    plt.title('Log Histogram of {} Prediction'.format(mode))
     plt.savefig(os.path.join(save_path + '{}_prediction.png'.format(mode)))
+
+def visualize(img: torch.Tensor,root, name):
+    img /= torch.max(img)
+    img = torch.clip(img, 0., 1.)
+    img = torch.pow(img, 1/2.2)
+    img = identity(img.squeeze(0).cpu().permute(1,2,0).detach().numpy())
+    save_hdr(img, root, name)
+    print_min_max(img)
+
+def cal_psnr(pred: torch.Tensor, gt: np.array):
+    pred = pred.squeeze(0).cpu().permute(1,2,0).detach().numpy()
+    return psnr(pred, gt)
+
+def cal_ssim(pred: torch.Tensor, gt: np.array):
+    pred = pred.squeeze(0).cpu().permute(1,2,0).detach().numpy()
+    return ssim(pred, gt)
 
 
 transform_hdr = transforms.Compose([
@@ -98,18 +122,6 @@ transform_hdr = transforms.Compose([
 
 @utils.task_wrapper
 def evaluate(cfg: DictConfig):
-    """Evaluates given checkpoint on a datamodule testset.
-
-    This method is wrapped in optional @task_wrapper decorator which applies extra utilities
-    before and after the call.
-
-    Args:
-        cfg (DictConfig): Configuration composed by Hydra.
-
-    Returns:
-        Tuple[dict, dict]: Dict with metrics and dict with all instantiated objects.
-    """
-
     assert cfg.ckpt_path
 
     log.info(f"Instantiating model <{cfg.model._target_}>")
@@ -133,35 +145,28 @@ def evaluate(cfg: DictConfig):
 
     for file_name in tqdm(file_list):
         lq_path = os.path.join(cfg.data.lq_path, file_name)
-        print(lq_path, "*************")
         lq_img = cv2.imread(lq_path, -1).astype(np.float32)
         lq = transform_hdr(lq_img).unsqueeze(0).cuda()
+
+        hq_path = os.path.join(cfg.data.hq_path, file_name.replace("_4x", ""))
+        gt = cv2.imread(hq_path, -1).astype(np.float32)
+
+        if 1:
+            res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
+            res_naive = linear2original(res_naive)
+            cal_psnr(res_naive, gt)
+            cal_ssim(res_naive, gt)
+            draw_histogram(res_naive, "Nearest-neighbor", "./")
+            visualize(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments", "res_naive.hdr")
+
 
         with torch.no_grad():
             pred = net(lq)
             res_img = linear2original(pred)
-            print(torch.mean(res_img), torch.std(res_img), "*****************")
-            tmp = torch.log(res_img + torch.ones_like(res_img) * 1e-5)
-            tmp = tmp.squeeze(0).cpu().permute(1,2,0).detach().numpy()
-            draw_histogram(tmp, "Nets", "./")
-            res_img /= 4000.0
-            res_img = torch.pow(res_img, 2)
-            res_img = identity(res_img.squeeze(0).cpu().permute(1,2,0).detach().numpy())
-            save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img.hdr")
-            print_min_max(res_img)
-
-        bicubic_pred = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
-        res_naive = linear2original(bicubic_pred)
-        print(torch.mean(res_naive), torch.std(res_naive), "*****************")
-        tmp = torch.log(res_naive + torch.ones_like(res_naive) * 1e-5)
-        tmp = tmp.squeeze(0).cpu().permute(1,2,0).detach().numpy()
-        draw_histogram(tmp, "Nearest-neighbor", "./")
-        res_naive /= 4000.0
-        res_naive = torch.pow(res_naive, 2)
-        res_naive = identity(res_naive.squeeze(0).cpu().permute(1,2,0).detach().numpy())
-        print_min_max(res_naive)
-        save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments", "res_naive.hdr")
-
+            cal_psnr(res_img, gt)
+            cal_ssim(res_img, gt)
+            draw_histogram(res_img, "Nets_linear_pu", "./")
+            visualize(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img_linear_pu.hdr")
 
     res_dict = {
     }

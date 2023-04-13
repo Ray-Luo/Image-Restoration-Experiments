@@ -4,6 +4,7 @@ import os
 import random
 import matplotlib.pyplot as plt
 import seaborn as sns
+import torch
 
 SEED = 12345
 NUMBER_AUG = 10
@@ -107,6 +108,16 @@ def compare_content(a_folder, b_folder):
     for file_name in file_list:
         print(file_name, os.path.exists(os.path.join(b_folder, file_name.replace('4x_', ''))))
 
+def draw_histogram(array, mode, save_path):
+    array = torch.log(array + torch.ones_like(array) * 1e-5)
+    array = array.squeeze(0).cpu().permute(1,2,0).detach().numpy()
+    fig, ax = plt.subplots()
+    sns.distplot(array.flatten(), bins=100, kde=False)
+    plt.xlabel('Value')
+    plt.ylabel('Frequency')
+    plt.title('Log Histogram of {} Prediction'.format(mode))
+    plt.savefig(os.path.join(save_path + '{}_prediction.png'.format(mode)))
+
 
 # folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000/" # replace with the path to your image folder
 # save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x/"
@@ -119,3 +130,13 @@ def compare_content(a_folder, b_folder):
     # downsample4x(folder_path, file_name, save_path)
     # compare_content(save_path, folder_path)
     # break
+
+# img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000/Ahwahnee_Great_Lounge.hdr", -1).astype(np.float32)
+# img = torch.tensor(img)
+
+# img /= np.max(img)
+# img = np.power(img, 1/2.2)
+# save_hdr(img, "/home/luoleyouluole/Image-Restoration-Experiments/", "GT.hdr")
+
+
+# draw_histogram(img, "GT", "./")

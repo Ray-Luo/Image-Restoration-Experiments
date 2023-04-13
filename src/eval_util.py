@@ -4,36 +4,38 @@ from scipy.ndimage import gaussian_filter
 
 A_COEFF = 0.456520040846940
 B_COEFF = 1.070672820603428
-MAX_PU = 10.017749773073085 # pu(4000.0)
+MAX_PIXEL = 4000
 
 def pu(x):
     return np.log2(A_COEFF * x + B_COEFF)
-    # return x
 
 
 def psnr(pred, gt):
-    """
-    Compute the Peak Signal-to-Noise Ratio (PSNR) between two images.
-    """
+    psnr = 0
     mse = np.mean((pred - gt) ** 2)
     if mse == 0:
-        return float('inf')
+        psnr = 100
     else:
-        psnr = 20 * np.log10(MAX_PU / np.sqrt(mse))
-        return psnr
+        psnr = 20 * np.log10(MAX_PIXEL / np.sqrt(mse))
+
+    print("PSNR = {}".format(psnr))
+    return psnr
+
 
 
 def pu_psnr(pred, gt):
-    return psnr(pu(pred), pu(gt))
+    score = psnr(pu(pred), pu(gt))
+    return score
 
 
 def rgb2gray(rgb):
+    # 0.212656, 0.715158, 0.072186 from REC.709 standard
     r, g, b = rgb[:,:,0], rgb[:,:,1], rgb[:,:,2]
-    gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
+    gray = 0.212656 * r + 0.715158 * g + 0.072186 * b
     return gray
 
 
-def ssim(img1, img2, k1=0.01, k2=0.03, sigma=1.5, L=MAX_PU):
+def ssim(img1, img2, k1=0.01, k2=0.03, sigma=1.5, L=MAX_PIXEL):
     # convert the input images to grayscale
     img1 = rgb2gray(img1)
     img2 = rgb2gray(img2)
@@ -53,7 +55,10 @@ def ssim(img1, img2, k1=0.01, k2=0.03, sigma=1.5, L=MAX_PU):
     C2 = (k2 * L) ** 2
     ssim = ((2 * mu1_mu2 + C1) * (2 * sigma12 + C2)) / ((mu1_sq + mu2_sq + C1) * (sigma1_sq + sigma2_sq + C2))
 
-    return np.mean(ssim)
+    ssim = np.mean(ssim)
+
+    print("SSIM = {}".format(ssim))
+    return ssim
 
 
 def pu_ssim(pred, gt):
