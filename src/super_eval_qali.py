@@ -92,7 +92,7 @@ def draw_histogram(array, mode, save_path):
 
 transform_hdr = transforms.Compose([
     transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
-    transforms.Lambda(lambda img: original2pq(img)),
+    transforms.Lambda(lambda img: original2linear(img)),
 ])
 
 
@@ -115,7 +115,7 @@ def evaluate(cfg: DictConfig):
     log.info(f"Instantiating model <{cfg.model._target_}>")
     model: LightningModule = hydra.utils.instantiate(cfg.model)
 
-    net = model.net
+    net = model.net.cuda()
     net.eval()
 
     representation = hydra.utils.instantiate(cfg.representation)
@@ -139,13 +139,13 @@ def evaluate(cfg: DictConfig):
     for file_name in tqdm(file_list):
         lq_path = os.path.join(cfg.data.lq_path, file_name)
         lq_img = cv2.imread(lq_path, -1).astype(np.float32)
-        lq = transform_hdr(lq_img).unsqueeze(0)
+        lq = transform_hdr(lq_img).unsqueeze(0).cuda()
 
         pred = net(lq)
-        pred = pq2original(pred)
+        pred = linear2original(pred)
 
         bicubic_pred = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
-        bicubic_pred = pq2original(bicubic_pred)
+        bicubic_pred = linear2original(bicubic_pred)
 
         res_list.append(pred)
         navie_list.append(bicubic_pred)
