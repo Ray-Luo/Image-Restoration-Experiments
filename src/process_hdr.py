@@ -108,14 +108,14 @@ def compare_content(a_folder, b_folder):
         print(file_name, os.path.exists(os.path.join(b_folder, file_name.replace('4x_', ''))))
 
 
-folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000/" # replace with the path to your image folder
-save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x/"
-file_list = os.listdir(folder_path)
+# folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000/" # replace with the path to your image folder
+# save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x/"
+# file_list = os.listdir(folder_path)
 
-for file_name in file_list:
+# for file_name in file_list:
     # print_info(folder_path, file_name)
     # process_save(folder_path, file_name, save_path)
     # augment(folder_path, file_name)
     # downsample4x(folder_path, file_name, save_path)
     # compare_content(save_path, folder_path)
-    break
+    # break
