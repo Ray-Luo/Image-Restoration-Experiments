@@ -2,7 +2,7 @@
 
 defaults:
   - _self_
-  - model: esrgan.yaml
+  - model: edsr.yaml
   - logger: null
   - trainer: gpu.yaml
   - paths: default.yaml
@@ -13,8 +13,8 @@ defaults:
 
 
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test2/hq
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test2/lq
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test3/hq
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test3/lq
   batch_size: 1
 
 task_name: "eval"
@@ -24,4 +24,4 @@ tags: ["dev"]
 # passing checkpoint path is necessary for evaluation
 # ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-03-28_17-55-09/checkpoints/last.ckpt"
 
-ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train_1/runs/2023-04-11_14-33-51/checkpoints/epoch_010.ckpt"
+ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-04-12_22-08-25/checkpoints/last.ckpt"

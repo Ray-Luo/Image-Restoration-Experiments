@@ -92,7 +92,7 @@ def draw_histogram(array, mode, save_path):
 
 transform_hdr = transforms.Compose([
     transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
-    transforms.Lambda(lambda img: original2pu(img)),
+    transforms.Lambda(lambda img: original2linear(img)),
 ])
 
 
@@ -137,46 +137,59 @@ def evaluate(cfg: DictConfig):
 
         with torch.no_grad():
             pred = net(lq)
-        pred = pu2original(pred)
+        res_img = linear2original(pred)
+        res_img /= 4000.0
+        res_img = torch.pow(res_img, 2)
 
         bicubic_pred = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
-        bicubic_pred = pu2original(bicubic_pred)
+        res_naive = linear2original(bicubic_pred)
+        res_naive /= 4000.0
+        res_naive = torch.pow(res_naive, 2)
 
-        res_list.append(pred)
-        navie_list.append(bicubic_pred)
+        # res_list.append(pred)
+        # navie_list.append(bicubic_pred)
 
+        res_img = identity(res_img.squeeze(0).cpu().permute(1,2,0).detach().numpy())
+        res_naive = identity(res_naive.squeeze(0).cpu().permute(1,2,0).detach().numpy())
 
-    h = 2868
-    w = 4312
-    crop_size = 384
-    step = 192
-    thresh_size = 0
-    h_space = np.arange(0, h - crop_size + 1, step)
-    if h - (h_space[-1] + crop_size) > thresh_size:
-        h_space = np.append(h_space, h - crop_size)
-    w_space = np.arange(0, w - crop_size + 1, step)
-    if w - (w_space[-1] + crop_size) > thresh_size:
-        w_space = np.append(w_space, w - crop_size)
+        print_min_max(res_img)
+        print_min_max(res_naive)
 
-    index = 0
-    for x in h_space:
-        for y in w_space:
-            res_img[:,:, x:x + crop_size, y:y + crop_size] = res_list[index]
-            res_naive[:, :, x:x + crop_size, y:y + crop_size] = navie_list[index]
-            index += 1
+        save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img.hdr")
+        save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments", "res_naive.hdr")
 
 
-    res_img = identity(res_img.squeeze(0).permute(1,2,0).detach().numpy())
-    res_naive = identity(res_naive.squeeze(0).permute(1,2,0).detach().numpy())
+    # h = 2868
+    # w = 4312
+    # crop_size = 384
+    # step = 192
+    # thresh_size = 0
+    # h_space = np.arange(0, h - crop_size + 1, step)
+    # if h - (h_space[-1] + crop_size) > thresh_size:
+    #     h_space = np.append(h_space, h - crop_size)
+    # w_space = np.arange(0, w - crop_size + 1, step)
+    # if w - (w_space[-1] + crop_size) > thresh_size:
+    #     w_space = np.append(w_space, w - crop_size)
 
-    print_min_max(res_img)
-    print_min_max(res_naive)
+    # index = 0
+    # for x in h_space:
+    #     for y in w_space:
+    #         res_img[:,:, x:x + crop_size, y:y + crop_size] = res_list[index]
+    #         res_naive[:, :, x:x + crop_size, y:y + crop_size] = navie_list[index]
+    #         index += 1
 
-    save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img.hdr")
-    save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments", "res_naive.hdr")
 
-    draw_histogram(res_img, "Nets", "./")
-    draw_histogram(res_naive, "Nearest-neighbor", "./")
+    # res_img = identity(res_img.squeeze(0).permute(1,2,0).detach().numpy())
+    # res_naive = identity(res_naive.squeeze(0).permute(1,2,0).detach().numpy())
+
+    # print_min_max(res_img)
+    # print_min_max(res_naive)
+
+    # save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img.hdr")
+    # save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments", "res_naive.hdr")
+
+    # draw_histogram(res_img, "Nets", "./")
+    # draw_histogram(res_naive, "Nearest-neighbor", "./")
 
     res_dict = {
     }
