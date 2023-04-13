@@ -114,8 +114,9 @@ def evaluate(cfg: DictConfig):
 
     log.info(f"Instantiating model <{cfg.model._target_}>")
     model: LightningModule = hydra.utils.instantiate(cfg.model)
+    model = model.load_from_checkpoint(cfg.ckpt_path)
 
-    net = model.net.cuda()
+    net = model.cuda()
     net.eval()
 
     res_img = torch.ones(1, 3, 2868, 4312)
@@ -132,70 +133,35 @@ def evaluate(cfg: DictConfig):
 
     for file_name in tqdm(file_list):
         lq_path = os.path.join(cfg.data.lq_path, file_name)
+        print(lq_path, "*************")
         lq_img = cv2.imread(lq_path, -1).astype(np.float32)
         lq = transform_hdr(lq_img).unsqueeze(0).cuda()
 
         with torch.no_grad():
             pred = net(lq)
-        res_img = linear2original(pred)
-        tmp = torch.log(res_img + torch.ones_like(res_img) * 1e-5)
-        tmp = tmp.squeeze(0).cpu().permute(1,2,0).detach().numpy()
-        draw_histogram(tmp, "Nets", "./")
-        res_img /= 4000.0
-        res_img = torch.pow(res_img, 2)
+            res_img = linear2original(pred)
+            print(torch.mean(res_img), torch.std(res_img), "*****************")
+            tmp = torch.log(res_img + torch.ones_like(res_img) * 1e-5)
+            tmp = tmp.squeeze(0).cpu().permute(1,2,0).detach().numpy()
+            draw_histogram(tmp, "Nets", "./")
+            res_img /= 4000.0
+            res_img = torch.pow(res_img, 2)
+            res_img = identity(res_img.squeeze(0).cpu().permute(1,2,0).detach().numpy())
+            save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img.hdr")
+            print_min_max(res_img)
 
         bicubic_pred = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
         res_naive = linear2original(bicubic_pred)
+        print(torch.mean(res_naive), torch.std(res_naive), "*****************")
         tmp = torch.log(res_naive + torch.ones_like(res_naive) * 1e-5)
         tmp = tmp.squeeze(0).cpu().permute(1,2,0).detach().numpy()
         draw_histogram(tmp, "Nearest-neighbor", "./")
         res_naive /= 4000.0
         res_naive = torch.pow(res_naive, 2)
-
-        # res_list.append(pred)
-        # navie_list.append(bicubic_pred)
-
-        res_img = identity(res_img.squeeze(0).cpu().permute(1,2,0).detach().numpy())
         res_naive = identity(res_naive.squeeze(0).cpu().permute(1,2,0).detach().numpy())
-
-        print_min_max(res_img)
         print_min_max(res_naive)
-
-        save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img.hdr")
         save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments", "res_naive.hdr")
 
-
-    # h = 2868
-    # w = 4312
-    # crop_size = 384
-    # step = 192
-    # thresh_size = 0
-    # h_space = np.arange(0, h - crop_size + 1, step)
-    # if h - (h_space[-1] + crop_size) > thresh_size:
-    #     h_space = np.append(h_space, h - crop_size)
-    # w_space = np.arange(0, w - crop_size + 1, step)
-    # if w - (w_space[-1] + crop_size) > thresh_size:
-    #     w_space = np.append(w_space, w - crop_size)
-
-    # index = 0
-    # for x in h_space:
-    #     for y in w_space:
-    #         res_img[:,:, x:x + crop_size, y:y + crop_size] = res_list[index]
-    #         res_naive[:, :, x:x + crop_size, y:y + crop_size] = navie_list[index]
-    #         index += 1
-
-
-    # res_img = identity(res_img.squeeze(0).permute(1,2,0).detach().numpy())
-    # res_naive = identity(res_naive.squeeze(0).permute(1,2,0).detach().numpy())
-
-    # print_min_max(res_img)
-    # print_min_max(res_naive)
-
-    # save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img.hdr")
-    # save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments", "res_naive.hdr")
-
-    # draw_histogram(res_img, "Nets", "./")
-    # draw_histogram(res_naive, "Nearest-neighbor", "./")
 
     res_dict = {
     }
