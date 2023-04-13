@@ -47,11 +47,11 @@ C1 = 0.8359375
 C2 = 18.8515625
 C3 = 18.6875
 
-def linear2original(x):
-    return x * 4000.0
-
 def original2linear(x):
     return x / 4000.0
+
+def linear2original(x):
+    return x * 4000.0
 
 def identity(x):
     return x
@@ -92,7 +92,7 @@ def draw_histogram(array, mode, save_path):
 
 transform_hdr = transforms.Compose([
     transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
-    transforms.Lambda(lambda img: original2linear(img)),
+    transforms.Lambda(lambda img: original2pu(img)),
 ])
 
 
@@ -118,13 +118,6 @@ def evaluate(cfg: DictConfig):
     net = model.net.cuda()
     net.eval()
 
-    representation = hydra.utils.instantiate(cfg.representation)
-    loss_fn = hydra.utils.instantiate(cfg.loss)
-
-    dataset = RITDataset(representation, cfg.data.hq_path, cfg.data.lq_path)
-    dataloader = DataLoader(dataset, batch_size=cfg.data.batch_size, shuffle=False)
-    dataloader = tqdm(dataloader)
-
     res_img = torch.ones(1, 3, 2868, 4312)
     res_naive = torch.ones(1, 3, 2868, 4312)
     x_index = 0
@@ -136,16 +129,18 @@ def evaluate(cfg: DictConfig):
     file_list = os.listdir(cfg.data.lq_path)
     file_list.sort()
 
+
     for file_name in tqdm(file_list):
         lq_path = os.path.join(cfg.data.lq_path, file_name)
         lq_img = cv2.imread(lq_path, -1).astype(np.float32)
         lq = transform_hdr(lq_img).unsqueeze(0).cuda()
 
-        pred = net(lq)
-        pred = linear2original(pred)
+        with torch.no_grad():
+            pred = net(lq)
+        pred = pu2original(pred)
 
         bicubic_pred = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
-        bicubic_pred = linear2original(bicubic_pred)
+        bicubic_pred = pu2original(bicubic_pred)
 
         res_list.append(pred)
         navie_list.append(bicubic_pred)
@@ -173,8 +168,10 @@ def evaluate(cfg: DictConfig):
 
     res_img = identity(res_img.squeeze(0).permute(1,2,0).detach().numpy())
     res_naive = identity(res_naive.squeeze(0).permute(1,2,0).detach().numpy())
+
     print_min_max(res_img)
     print_min_max(res_naive)
+
     save_hdr(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img.hdr")
     save_hdr(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments", "res_naive.hdr")
 
