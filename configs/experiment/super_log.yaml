@@ -9,8 +9,8 @@ defaults:
   - override /callbacks: default.yaml
   - override /trainer: gpu.yaml
   - override /logger: tensorboard.yaml
-  - override /loss: log.yaml
   - override /representation: log.yaml
+  - override /loss: l1.yaml
 
 # all parameters below will be merged with parameters from default configurations set above
 # this allows you to overwrite only specified parameters

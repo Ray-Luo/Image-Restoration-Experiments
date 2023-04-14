@@ -9,13 +9,13 @@ defaults:
   - override /callbacks: default.yaml
   - override /trainer: gpu.yaml
   - override /logger: tensorboard.yaml
-  - override /loss: pq.yaml
   - override /representation: pq.yaml
+  - override /loss: l1.yaml
 
 # all parameters below will be merged with parameters from default configurations set above
 # this allows you to overwrite only specified parameters
 
-tags: ["edsr", "rit", "pq", "pq"]  # return nan
+tags: ["edsr", "rit", "pq", "l1"]  # return nan
 
 seed: 12345
 
