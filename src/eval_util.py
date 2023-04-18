@@ -4,7 +4,9 @@ from scipy.ndimage import gaussian_filter
 
 A_COEFF = 0.456520040846940
 B_COEFF = 1.070672820603428
-MAX_PIXEL = 4000
+L_max = 10000
+p = [234.0235618, 216.9339286, 0.0001091864237, 0.893206924, 0.06733984121, 1.444718567, 567.6315065]
+MAX_PIXEL = p[6]*(((p[0] + p[1]*L_max**p[3])/(1 + p[2]*L_max**p[3]))**p[4] - p[5])
 
 def pu(x):
     return np.log2(A_COEFF * x + B_COEFF)
@@ -20,7 +22,6 @@ def psnr(pred, gt):
 
     print("PSNR = {}".format(psnr))
     return psnr
-
 
 
 def pu_psnr(pred, gt):

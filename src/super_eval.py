@@ -89,8 +89,8 @@ def pq2original(x):
     return out
 
 def draw_histogram(array, mode, save_path):
-    array = torch.log(array + torch.ones_like(array) * 1e-5)
-    array = array.squeeze(0).cpu().permute(1,2,0).detach().numpy()
+    array += 1e-5
+    array = np.log(array)
     fig, ax = plt.subplots()
     sns.distplot(array.flatten(), bins=100, kde=False)
     plt.xlabel('Value')
@@ -98,22 +98,28 @@ def draw_histogram(array, mode, save_path):
     plt.title('Log Histogram of {} Prediction'.format(mode))
     plt.savefig(os.path.join(save_path + '{}_prediction.png'.format(mode)))
 
-def visualize(img: torch.Tensor,root, name):
-    img /= 4000.0 # torch.max(img)
-    img = torch.clip(img, 0., 1.)
-    img = torch.pow(img, 1/2.2)
-    img = identity(img.squeeze(0).cpu().permute(1,2,0).detach().numpy())
+def visualize(img: np.array,root, name):
+    img /= 4000.0
+    img = np.clip(img, 0., 1.)
+    img = np.power(img, 1/2.2)
     save_hdr(img, root, name)
     print_min_max(img)
 
-def cal_psnr(pred: torch.Tensor, gt: np.array):
-    pred = pred.squeeze(0).cpu().permute(1,2,0).detach().numpy()
+def cal_psnr(pred: np.array, gt: np.array):
     return psnr(pred, gt)
 
-def cal_ssim(pred: torch.Tensor, gt: np.array):
-    pred = pred.squeeze(0).cpu().permute(1,2,0).detach().numpy()
+def cal_ssim(pred: np.array, gt: np.array):
     return ssim(pred, gt)
 
+def check_if_load_correct(experiemnt_signiture: str, tag_file_path: str):
+    with open(tag_file_path, "r") as file:
+        contents = file.read()
+
+    for item in experiemnt_signiture.split('_'):
+        if item not in contents:
+            return False
+
+    return True
 
 transform_hdr = transforms.Compose([
     transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
@@ -123,51 +129,64 @@ transform_hdr = transforms.Compose([
 
 @utils.task_wrapper
 def evaluate(cfg: DictConfig):
-    assert cfg.ckpt_path
 
     log.info(f"Instantiating model <{cfg.model._target_}>")
     model: LightningModule = hydra.utils.instantiate(cfg.model)
-    model = model.load_from_checkpoint(cfg.ckpt_path)
 
-    net = model.cuda()
-    net.eval()
+    log_path = hydra.utils.instantiate(cfg.log_path)
+    print(type(log_path))
 
-    res_img = torch.ones(1, 3, 2868, 4312)
-    res_naive = torch.ones(1, 3, 2868, 4312)
-    x_index = 0
-    y_index = 0
+    for experiment, path in log_path.items():
+        print(experiment, path, "**********")
 
-    res_list = []
-    navie_list = []
+        model_path = os.path.join(path,"checkpoints/last.ckpt")
+        tag_file = os.path.join(path,"tags.log")
+        assert check_if_load_correct(experiment, tag_file) is True, "Checkpoint file is not correct!"
+        break
+        model = model.load_from_checkpoint(cfg.ckpt_path)
 
-    file_list = os.listdir(cfg.data.lq_path)
-    file_list.sort()
+        net = model.cuda()
+        net.eval()
 
+        res_img = torch.ones(1, 3, 2868, 4312)
+        res_naive = torch.ones(1, 3, 2868, 4312)
+        x_index = 0
+        y_index = 0
 
-    for file_name in tqdm(file_list):
-        lq_path = os.path.join(cfg.data.lq_path, file_name)
-        lq_img = cv2.imread(lq_path, -1).astype(np.float32)
-        lq = transform_hdr(lq_img).unsqueeze(0).cuda()
+        res_list = []
+        navie_list = []
 
-        hq_path = os.path.join(cfg.data.hq_path, file_name.replace("_4x", ""))
-        gt = cv2.imread(hq_path, -1).astype(np.float32)
-
-        if 1:
-            res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
-            res_naive = pq2original(res_naive)
-            cal_psnr(res_naive, gt)
-            cal_ssim(res_naive, gt)
-            draw_histogram(res_naive, "Nearest-neighbor", "/home/luoleyouluole/Image-Restoration-Experiments/data/res/")
-            visualize(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments/data/res", "res_naive.hdr")
+        file_list = os.listdir(cfg.data.lq_path)
+        file_list.sort()
 
 
-        with torch.no_grad():
-            pred = net(lq)
-            res_img = pq2original(pred)
-            cal_psnr(res_img, gt)
-            cal_ssim(res_img, gt)
-            draw_histogram(res_img, "Nets_pq", "/home/luoleyouluole/Image-Restoration-Experiments/data/res/")
-            visualize(res_img, "/home/luoleyouluole/Image-Restoration-Experiments/data/res", "res_img_pq.hdr")
+        for file_name in tqdm(file_list):
+            lq_path = os.path.join(cfg.data.lq_path, file_name)
+            lq_img = cv2.imread(lq_path, -1).astype(np.float32)
+            lq = transform_hdr(lq_img).unsqueeze(0).cuda()
+
+            hq_path = os.path.join(cfg.data.hq_path, file_name.replace("_4x", ""))
+            gt = cv2.imread(hq_path, -1).astype(np.float32)
+            file_name = file_name.replace("_4x", "").split('.')[0]
+            visualize(gt, "/home/luoleyouluole/Image-Restoration-Experiments/data/res", file_name + "_GT.hdr")
+            draw_histogram(gt, file_name + "_GT", "/home/luoleyouluole/Image-Restoration-Experiments/data/res/")
+
+            if 1:
+                res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
+                res_naive = pq2original(res_naive).squeeze(0).cpu().permute(1,2,0).detach().numpy()
+                cal_psnr(res_naive, gt)
+                cal_ssim(res_naive, gt)
+                draw_histogram(res_naive, file_name + "Nearest-neighbor", "/home/luoleyouluole/Image-Restoration-Experiments/data/res/")
+                visualize(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments/data/res", file_name + "_res_naive.hdr")
+
+
+            with torch.no_grad():
+                pred = net(lq)
+                res_img = pq2original(pred).squeeze(0).cpu().permute(1,2,0).detach().numpy()
+                cal_psnr(res_img, gt)
+                cal_ssim(res_img, gt)
+                draw_histogram(res_img, file_name + "Nets_pq", "/home/luoleyouluole/Image-Restoration-Experiments/data/res/")
+                visualize(res_img, "/home/luoleyouluole/Image-Restoration-Experiments/data/res", file_name + "_res_img_pq.hdr")
 
     res_dict = {
     }
