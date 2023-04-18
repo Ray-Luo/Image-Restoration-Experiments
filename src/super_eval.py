@@ -99,7 +99,7 @@ def draw_histogram(array, mode, save_path):
     plt.savefig(os.path.join(save_path + '{}_prediction.png'.format(mode)))
 
 def visualize(img: torch.Tensor,root, name):
-    img /= torch.max(img)
+    img /= 4000.0 # torch.max(img)
     img = torch.clip(img, 0., 1.)
     img = torch.pow(img, 1/2.2)
     img = identity(img.squeeze(0).cpu().permute(1,2,0).detach().numpy())
@@ -117,7 +117,7 @@ def cal_ssim(pred: torch.Tensor, gt: np.array):
 
 transform_hdr = transforms.Compose([
     transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
-    transforms.Lambda(lambda img: original2linear(img)),
+    transforms.Lambda(lambda img: original2pq(img)),
 ])
 
 
@@ -154,20 +154,20 @@ def evaluate(cfg: DictConfig):
 
         if 1:
             res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
-            res_naive = linear2original(res_naive)
+            res_naive = pq2original(res_naive)
             cal_psnr(res_naive, gt)
             cal_ssim(res_naive, gt)
-            draw_histogram(res_naive, "Nearest-neighbor", "./")
-            visualize(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments", "res_naive.hdr")
+            draw_histogram(res_naive, "Nearest-neighbor", "/home/luoleyouluole/Image-Restoration-Experiments/data/res/")
+            visualize(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments/data/res", "res_naive.hdr")
 
 
         with torch.no_grad():
             pred = net(lq)
-            res_img = linear2original(pred)
+            res_img = pq2original(pred)
             cal_psnr(res_img, gt)
             cal_ssim(res_img, gt)
-            draw_histogram(res_img, "Nets_linear_pu", "./")
-            visualize(res_img, "/home/luoleyouluole/Image-Restoration-Experiments", "res_img_linear_pu.hdr")
+            draw_histogram(res_img, "Nets_pq", "/home/luoleyouluole/Image-Restoration-Experiments/data/res/")
+            visualize(res_img, "/home/luoleyouluole/Image-Restoration-Experiments/data/res", "res_img_pq.hdr")
 
     res_dict = {
     }
