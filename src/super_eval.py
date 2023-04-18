@@ -183,17 +183,19 @@ def evaluate(cfg: DictConfig):
             gt = cv2.imread(hq_path, -1).astype(np.float32)
             file_name = file_name.replace("_4x", "").split('.')[0]
             report += "*********************  " + file_name + "  *********************\n"
-            # visualize(gt, results_save_path, file_name + "_GT.hdr")
-            # draw_histogram(gt, file_name + "_GT", results_save_path)
+            if not os.path.exists(os.path.join(results_save_path, file_name + "_GT.hdr")):
+                visualize(gt, results_save_path, file_name + "_GT.hdr")
+                draw_histogram(gt, file_name + "_GT", results_save_path)
 
-            if 1:
-                res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
-                res_naive = inverse_fn(res_naive).squeeze(0).cpu().permute(1,2,0).detach().numpy()
-                psnr = cal_psnr(res_naive, gt)
-                ssim = cal_ssim(res_naive, gt)
-                report += "navie -- PSNR = {:.5f}, ssim = {:.5f}\n".format(psnr, ssim)
-                # draw_histogram(res_naive, file_name + "Nearest-neighbor", results_save_path)
-                # visualize(res_naive, results_save_path, file_name + "_naive.hdr")
+
+            res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
+            res_naive = inverse_fn(res_naive).squeeze(0).cpu().permute(1,2,0).detach().numpy()
+            psnr = cal_psnr(res_naive, gt)
+            ssim = cal_ssim(res_naive, gt)
+            report += "navie -- PSNR = {:.5f}, ssim = {:.5f}\n".format(psnr, ssim)
+            if not os.path.exists(os.path.join(results_save_path, file_name + "_naive.hdr")):
+                draw_histogram(res_naive, file_name + "_nearest-neighbor", results_save_path)
+                visualize(res_naive, results_save_path, file_name + "_naive.hdr")
 
             with torch.no_grad():
                 pred = net(lq)
@@ -201,7 +203,7 @@ def evaluate(cfg: DictConfig):
                 psnr = cal_psnr(res_img, gt)
                 ssim = cal_ssim(res_img, gt)
                 report += "{} -- PSNR = {:.5f}, ssim = {:.5f}\n".format(experiment, psnr, ssim)
-                draw_histogram(res_img, file_name + "Nets_pq", results_save_path)
+                draw_histogram(res_img, file_name + "_Nets_pq", results_save_path)
                 visualize(res_img, results_save_path, file_name + "_{}.hdr".format(experiment))
 
         report += "\n\n"
