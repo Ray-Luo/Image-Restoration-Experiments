@@ -124,33 +124,28 @@ def check_if_load_correct(experiemnt_signiture: str, tag_file_path: str):
 def get_transform(experiemnt_signiture: str):
     representation, loss = experiemnt_signiture.split('_')
     if representation == "linear":
-        if loss == "log":
-            return original2log, log2original
-        elif loss = "mu":
-            return original2mu, mu2original
-        elif loss = "pu":
-            return original2pu, pu2original
-        elif loss = "smape":
-            return original2smape, smape2original
-        elif loss = "l1":
-            return original2linear, linear2original
-        else:
-            raise NotImplementedError
+        return original2linear, linear2original
+
     elif representation == "log":
-        if loss = "l1":
+        if loss == "l1":
             return original2log, log2original
         else:
             raise NotImplementedError
+
     elif representation == "pu":
-        if loss = "l1":
+        if loss == "l1":
             return original2pu, pu2original
         else:
             raise NotImplementedError
+
     elif representation == "pq":
-        if loss = "l1":
+        if loss == "l1":
             return original2pq, pq2original
         else:
             raise NotImplementedError
+
+    else:
+        raise NotImplementedError
 
 transform_hdr = transforms.Compose([
     transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
@@ -180,10 +175,10 @@ def evaluate(cfg: DictConfig):
         file_list = os.listdir(cfg.data.lq_path)
         file_list.sort()
 
-        transform_fn = get_transform(experiment)
+        transform_fn, inverse_fn = get_transform(experiment)
         transform_hdr = transforms.Compose([
             transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
-            transforms.Lambda(lambda img: original2pq(img)),
+            transforms.Lambda(lambda img: transform_fn(img)),
         ])
 
         for file_name in file_list:
@@ -200,21 +195,23 @@ def evaluate(cfg: DictConfig):
 
             if 1:
                 res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
-                res_naive = pq2original(res_naive).squeeze(0).cpu().permute(1,2,0).detach().numpy()
-                cal_psnr(res_naive, gt)
-                cal_ssim(res_naive, gt)
+                res_naive = inverse_fn(res_naive).squeeze(0).cpu().permute(1,2,0).detach().numpy()
+                psnr = cal_psnr(res_naive, gt)
+                ssim = cal_ssim(res_naive, gt)
+                print("navie -- PSNR = {:.5f}, ssim = {:.5f}".format(psnr, ssim))
                 draw_histogram(res_naive, file_name + "Nearest-neighbor", results_save_path)
                 visualize(res_naive, results_save_path, file_name + "_res_naive.hdr")
 
             with torch.no_grad():
                 pred = net(lq)
-                res_img = pq2original(pred).squeeze(0).cpu().permute(1,2,0).detach().numpy()
-                cal_psnr(res_img, gt)
-                cal_ssim(res_img, gt)
+                res_img = inverse_fn(pred).squeeze(0).cpu().permute(1,2,0).detach().numpy()
+                psnr = cal_psnr(res_img, gt)
+                ssim = cal_ssim(res_img, gt)
+                print("{} -- PSNR = {:.5f}, ssim = {:.5f}".format(experiment, psnr, ssim))
                 draw_histogram(res_img, file_name + "Nets_pq", results_save_path)
                 visualize(res_img, results_save_path, file_name + "_res_img_pq.hdr")
 
-            print("****************************************************************************")
+        print("\n\n")
 
     res_dict = {
     }

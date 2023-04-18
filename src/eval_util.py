@@ -20,7 +20,6 @@ def psnr(pred, gt):
     else:
         psnr = 20 * np.log10(MAX_PIXEL / np.sqrt(mse))
 
-    print("PSNR = {}".format(psnr))
     return psnr
 
 
@@ -57,8 +56,6 @@ def ssim(img1, img2, k1=0.01, k2=0.03, sigma=1.5, L=MAX_PIXEL):
     ssim = ((2 * mu1_mu2 + C1) * (2 * sigma12 + C2)) / ((mu1_sq + mu2_sq + C1) * (sigma1_sq + sigma2_sq + C2))
 
     ssim = np.mean(ssim)
-
-    print("SSIM = {}".format(ssim))
     return ssim
 
 
