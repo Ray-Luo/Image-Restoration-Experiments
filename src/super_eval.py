@@ -89,7 +89,7 @@ def pq2original(x):
     return out
 
 def draw_histogram(array, mode, save_path):
-    array += 1e-5
+    array = array + 1e-5
     array = np.log(array)
     fig, ax = plt.subplots()
     sns.distplot(array.flatten(), bins=100, kde=False)
@@ -99,7 +99,7 @@ def draw_histogram(array, mode, save_path):
     plt.savefig(os.path.join(save_path + '{}'.format(mode)))
 
 def visualize(img: np.array,root, name):
-    img /= 4000.0
+    img = img / 4000.0
     img = np.clip(img, 0., 1.)
     img = np.power(img, 1/2.2)
     save_hdr(img, root, name)
@@ -154,6 +154,8 @@ def evaluate(cfg: DictConfig):
     results_save_path = cfg.results_save_path
 
     report = ""
+    psnr = 0
+    ssim = 0
 
     for experiment, path in tqdm(log_path.items()):
         report += "**************************  " + experiment + "  **************************\n"
