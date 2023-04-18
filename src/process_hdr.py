@@ -32,7 +32,7 @@ def print_min_max(img: np.array):
 
 
 def save_hdr(img: np.array, img_folder: str, name: str):
-    print(os.path.join(img_folder, name))
+    # print(os.path.join(img_folder, name))
     cv2.imwrite(os.path.join(img_folder, name), img, [cv2.IMWRITE_HDR_COMPRESSION, 0])
 
 

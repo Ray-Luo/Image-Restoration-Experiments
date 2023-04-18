@@ -40,3 +40,6 @@ log_path:
   pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train_3/runs/2023-04-13_23-01-17"
 
   pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train_3/runs/2023-04-13_22-59-40"
+
+
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res/"

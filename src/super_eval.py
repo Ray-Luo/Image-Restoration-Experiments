@@ -103,7 +103,7 @@ def visualize(img: np.array,root, name):
     img = np.clip(img, 0., 1.)
     img = np.power(img, 1/2.2)
     save_hdr(img, root, name)
-    print_min_max(img)
+    # print_min_max(img)
 
 def cal_psnr(pred: np.array, gt: np.array):
     return psnr(pred, gt)
@@ -121,6 +121,37 @@ def check_if_load_correct(experiemnt_signiture: str, tag_file_path: str):
 
     return True
 
+def get_transform(experiemnt_signiture: str):
+    representation, loss = experiemnt_signiture.split('_')
+    if representation == "linear":
+        if loss == "log":
+            return original2log, log2original
+        elif loss = "mu":
+            return original2mu, mu2original
+        elif loss = "pu":
+            return original2pu, pu2original
+        elif loss = "smape":
+            return original2smape, smape2original
+        elif loss = "l1":
+            return original2linear, linear2original
+        else:
+            raise NotImplementedError
+    elif representation == "log":
+        if loss = "l1":
+            return original2log, log2original
+        else:
+            raise NotImplementedError
+    elif representation == "pu":
+        if loss = "l1":
+            return original2pu, pu2original
+        else:
+            raise NotImplementedError
+    elif representation == "pq":
+        if loss = "l1":
+            return original2pq, pq2original
+        else:
+            raise NotImplementedError
+
 transform_hdr = transforms.Compose([
     transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
     transforms.Lambda(lambda img: original2pq(img)),
@@ -134,33 +165,28 @@ def evaluate(cfg: DictConfig):
     model: LightningModule = hydra.utils.instantiate(cfg.model)
 
     log_path = hydra.utils.instantiate(cfg.log_path)
-    print(type(log_path))
+    results_save_path = cfg.results_save_path
 
     for experiment, path in log_path.items():
-        print(experiment, path, "**********")
-
-        model_path = os.path.join(path,"checkpoints/last.ckpt")
+        print("**************************  " + experiment + "  **************************")
         tag_file = os.path.join(path,"tags.log")
         assert check_if_load_correct(experiment, tag_file) is True, "Checkpoint file is not correct!"
-        break
-        model = model.load_from_checkpoint(cfg.ckpt_path)
 
+        model_path = os.path.join(path,"checkpoints/last.ckpt")
+        model = model.load_from_checkpoint(model_path)
         net = model.cuda()
         net.eval()
-
-        res_img = torch.ones(1, 3, 2868, 4312)
-        res_naive = torch.ones(1, 3, 2868, 4312)
-        x_index = 0
-        y_index = 0
-
-        res_list = []
-        navie_list = []
 
         file_list = os.listdir(cfg.data.lq_path)
         file_list.sort()
 
+        transform_fn = get_transform(experiment)
+        transform_hdr = transforms.Compose([
+            transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
+            transforms.Lambda(lambda img: original2pq(img)),
+        ])
 
-        for file_name in tqdm(file_list):
+        for file_name in file_list:
             lq_path = os.path.join(cfg.data.lq_path, file_name)
             lq_img = cv2.imread(lq_path, -1).astype(np.float32)
             lq = transform_hdr(lq_img).unsqueeze(0).cuda()
@@ -168,25 +194,27 @@ def evaluate(cfg: DictConfig):
             hq_path = os.path.join(cfg.data.hq_path, file_name.replace("_4x", ""))
             gt = cv2.imread(hq_path, -1).astype(np.float32)
             file_name = file_name.replace("_4x", "").split('.')[0]
-            visualize(gt, "/home/luoleyouluole/Image-Restoration-Experiments/data/res", file_name + "_GT.hdr")
-            draw_histogram(gt, file_name + "_GT", "/home/luoleyouluole/Image-Restoration-Experiments/data/res/")
+            print("*********************  " + file_name + "  *********************")
+            visualize(gt, results_save_path, file_name + "_GT.hdr")
+            draw_histogram(gt, file_name + "_GT", results_save_path)
 
             if 1:
                 res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
                 res_naive = pq2original(res_naive).squeeze(0).cpu().permute(1,2,0).detach().numpy()
                 cal_psnr(res_naive, gt)
                 cal_ssim(res_naive, gt)
-                draw_histogram(res_naive, file_name + "Nearest-neighbor", "/home/luoleyouluole/Image-Restoration-Experiments/data/res/")
-                visualize(res_naive, "/home/luoleyouluole/Image-Restoration-Experiments/data/res", file_name + "_res_naive.hdr")
-
+                draw_histogram(res_naive, file_name + "Nearest-neighbor", results_save_path)
+                visualize(res_naive, results_save_path, file_name + "_res_naive.hdr")
 
             with torch.no_grad():
                 pred = net(lq)
                 res_img = pq2original(pred).squeeze(0).cpu().permute(1,2,0).detach().numpy()
                 cal_psnr(res_img, gt)
                 cal_ssim(res_img, gt)
-                draw_histogram(res_img, file_name + "Nets_pq", "/home/luoleyouluole/Image-Restoration-Experiments/data/res/")
-                visualize(res_img, "/home/luoleyouluole/Image-Restoration-Experiments/data/res", file_name + "_res_img_pq.hdr")
+                draw_histogram(res_img, file_name + "Nets_pq", results_save_path)
+                visualize(res_img, results_save_path, file_name + "_res_img_pq.hdr")
+
+            print("****************************************************************************")
 
     res_dict = {
     }
