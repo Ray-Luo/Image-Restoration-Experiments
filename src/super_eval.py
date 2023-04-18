@@ -95,8 +95,8 @@ def draw_histogram(array, mode, save_path):
     sns.distplot(array.flatten(), bins=100, kde=False)
     plt.xlabel('Value')
     plt.ylabel('Frequency')
-    plt.title('Log Histogram of {} Prediction'.format(mode))
-    plt.savefig(os.path.join(save_path + '{}_prediction.png'.format(mode)))
+    plt.title('Log Histogram of {}'.format(mode))
+    plt.savefig(os.path.join(save_path + '{}'.format(mode)))
 
 def visualize(img: np.array,root, name):
     img /= 4000.0
@@ -127,22 +127,13 @@ def get_transform(experiemnt_signiture: str):
         return original2linear, linear2original
 
     elif representation == "log":
-        if loss == "l1":
-            return original2log, log2original
-        else:
-            raise NotImplementedError
+        return original2log, log2original
 
     elif representation == "pu":
-        if loss == "l1":
-            return original2pu, pu2original
-        else:
-            raise NotImplementedError
+        return original2pu, pu2original
 
     elif representation == "pq":
-        if loss == "l1":
-            return original2pq, pq2original
-        else:
-            raise NotImplementedError
+        return original2pq, pq2original
 
     else:
         raise NotImplementedError
@@ -162,8 +153,10 @@ def evaluate(cfg: DictConfig):
     log_path = hydra.utils.instantiate(cfg.log_path)
     results_save_path = cfg.results_save_path
 
-    for experiment, path in log_path.items():
-        print("**************************  " + experiment + "  **************************")
+    report = ""
+
+    for experiment, path in tqdm(log_path.items()):
+        report += "**************************  " + experiment + "  **************************\n"
         tag_file = os.path.join(path,"tags.log")
         assert check_if_load_correct(experiment, tag_file) is True, "Checkpoint file is not correct!"
 
@@ -189,29 +182,33 @@ def evaluate(cfg: DictConfig):
             hq_path = os.path.join(cfg.data.hq_path, file_name.replace("_4x", ""))
             gt = cv2.imread(hq_path, -1).astype(np.float32)
             file_name = file_name.replace("_4x", "").split('.')[0]
-            print("*********************  " + file_name + "  *********************")
-            visualize(gt, results_save_path, file_name + "_GT.hdr")
-            draw_histogram(gt, file_name + "_GT", results_save_path)
+            report += "*********************  " + file_name + "  *********************\n"
+            # visualize(gt, results_save_path, file_name + "_GT.hdr")
+            # draw_histogram(gt, file_name + "_GT", results_save_path)
 
             if 1:
                 res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
                 res_naive = inverse_fn(res_naive).squeeze(0).cpu().permute(1,2,0).detach().numpy()
                 psnr = cal_psnr(res_naive, gt)
                 ssim = cal_ssim(res_naive, gt)
-                print("navie -- PSNR = {:.5f}, ssim = {:.5f}".format(psnr, ssim))
-                draw_histogram(res_naive, file_name + "Nearest-neighbor", results_save_path)
-                visualize(res_naive, results_save_path, file_name + "_res_naive.hdr")
+                report += "navie -- PSNR = {:.5f}, ssim = {:.5f}\n".format(psnr, ssim)
+                # draw_histogram(res_naive, file_name + "Nearest-neighbor", results_save_path)
+                # visualize(res_naive, results_save_path, file_name + "_naive.hdr")
 
             with torch.no_grad():
                 pred = net(lq)
                 res_img = inverse_fn(pred).squeeze(0).cpu().permute(1,2,0).detach().numpy()
                 psnr = cal_psnr(res_img, gt)
                 ssim = cal_ssim(res_img, gt)
-                print("{} -- PSNR = {:.5f}, ssim = {:.5f}".format(experiment, psnr, ssim))
+                report += "{} -- PSNR = {:.5f}, ssim = {:.5f}\n".format(experiment, psnr, ssim)
                 draw_histogram(res_img, file_name + "Nets_pq", results_save_path)
-                visualize(res_img, results_save_path, file_name + "_res_img_pq.hdr")
+                visualize(res_img, results_save_path, file_name + "_{}.hdr".format(experiment))
 
-        print("\n\n")
+        report += "\n\n"
+
+    with open(os.path.join(results_save_path, "report.log"), "w") as file:
+        # Write a string to the file
+        file.write(report)
 
     res_dict = {
     }
