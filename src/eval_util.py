@@ -9,7 +9,9 @@ p = [234.0235618, 216.9339286, 0.0001091864237, 0.893206924, 0.06733984121, 1.44
 MAX_PIXEL = p[6]*(((p[0] + p[1]*L_max**p[3])/(1 + p[2]*L_max**p[3]))**p[4] - p[5])
 
 def pu(x):
-    return np.log2(A_COEFF * x + B_COEFF + 1e-5)
+    x = A_COEFF * x + B_COEFF
+    x = np.clip(x, 1e-5, np.max(x))
+    return np.log2(x)
 
 
 def psnr(pred, gt):
