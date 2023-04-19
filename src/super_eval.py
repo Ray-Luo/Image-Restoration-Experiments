@@ -205,7 +205,7 @@ def evaluate(cfg: DictConfig):
                 psnr = cal_psnr(res_img, gt)
                 ssim = cal_ssim(res_img, gt)
                 report += "{} -- PSNR = {:.5f}, ssim = {:.5f}\n".format(experiment, psnr, ssim)
-                draw_histogram(res_img, file_name + "_Nets_pq", results_save_path)
+                draw_histogram(res_img, file_name + "_nets_" + experiment, results_save_path)
                 visualize(res_img, results_save_path, file_name + "_{}.hdr".format(experiment))
 
         report += "\n\n"
