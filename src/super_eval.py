@@ -4,7 +4,7 @@ from omegaconf import DictConfig
 from pytorch_lightning import LightningModule
 from torch.utils.data import DataLoader
 from data.components.rit_dataset import RITDataset
-from eval_util import ssim, psnr
+from eval_util import pu_psnr, pu_ssim
 from tqdm import tqdm
 import torch.nn.functional as F
 from process_hdr import save_hdr, print_min_max
@@ -103,13 +103,7 @@ def visualize(img: np.array,root, name):
     img = np.clip(img, 0., 1.)
     img = np.power(img, 1/2.2)
     save_hdr(img, root, name)
-    # print_min_max(img)
 
-def cal_psnr(pred: np.array, gt: np.array):
-    return psnr(pred, gt)
-
-def cal_ssim(pred: np.array, gt: np.array):
-    return ssim(pred, gt)
 
 def check_if_load_correct(experiemnt_signiture: str, tag_file_path: str):
     with open(tag_file_path, "r") as file:
@@ -137,11 +131,6 @@ def get_transform(experiemnt_signiture: str):
 
     else:
         raise NotImplementedError
-
-transform_hdr = transforms.Compose([
-    transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
-    transforms.Lambda(lambda img: original2pq(img)),
-])
 
 
 @utils.task_wrapper
@@ -192,8 +181,8 @@ def evaluate(cfg: DictConfig):
 
             res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
             res_naive = inverse_fn(res_naive).squeeze(0).cpu().permute(1,2,0).detach().numpy()
-            psnr = cal_psnr(res_naive, gt)
-            ssim = cal_ssim(res_naive, gt)
+            psnr = pu_psnr(res_naive, gt)
+            ssim = pu_ssim(res_naive, gt)
             report += "navie -- PSNR = {:.5f}, ssim = {:.5f}\n".format(psnr, ssim)
             if not os.path.exists(os.path.join(results_save_path, file_name + "_naive.hdr")):
                 draw_histogram(res_naive, file_name + "_nearest-neighbor", results_save_path)
@@ -202,8 +191,8 @@ def evaluate(cfg: DictConfig):
             with torch.no_grad():
                 pred = net(lq)
                 res_img = inverse_fn(pred).squeeze(0).cpu().permute(1,2,0).detach().numpy()
-                psnr = cal_psnr(res_img, gt)
-                ssim = cal_ssim(res_img, gt)
+                psnr = pu_psnr(res_img, gt)
+                ssim = pu_ssim(res_img, gt)
                 report += "{} -- PSNR = {:.5f}, ssim = {:.5f}\n".format(experiment, psnr, ssim)
                 draw_histogram(res_img, file_name + "_nets_" + experiment, results_save_path)
                 visualize(res_img, results_save_path, file_name + "_{}.hdr".format(experiment))
