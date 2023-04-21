@@ -10,7 +10,8 @@ class PUForwardLoss:
         self.loss = L1Loss()
 
     def pu(self, x):
-        # x *= 4000.0
+        x = torch.clamp(x, min=1e-6)
+        x = x * 4000.0
         return torch.log2(A_COEFF * x + B_COEFF)
 
     def __call__(self, pred, gt):
