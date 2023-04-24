@@ -33,6 +33,7 @@ for file_name in file_list:
     hq_img_path = os.path.join(hq_path, file_name.replace("_4x", ""))
     gt = cv2.imread(hq_img_path, -1).astype(np.float32)
 
+    # order = 0 means nearest-neighbor
     lq = transform.resize(lq, (lq.shape[0] * 4, lq.shape[1] * 4), order=0)
     save_hdr(lq, "/home/luoleyouluole/Image-Restoration-Experiments/data/", file_name)
 
