@@ -43,10 +43,8 @@ for file_name in file_list:
     diff = lq_tensor - lq
     print("diff", np.sum(diff))
 
-
     psnr = pu_psnr(lq, gt)
     ssim = pu_ssim(lq, gt)
-
     print("scikit-image", file_name, psnr, ssim)
 
     psnr = pu_psnr(lq_tensor, gt)
