@@ -87,16 +87,18 @@ def process_save(img_folder: str, name: str, save_path: str):
 
 def downsample2x(img_folder: str, name: str):
     img = cv2.imread(os.path.join(img_folder, name), -1).astype(np.float32)
-    downscaled = cv2.resize(img, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_NEAREST)
+    downscaled = cv2.resize(img, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_LINEAR)
     new_name = name.split('.')[0] + "_2x.hdr"
     save_hdr(downscaled, img_folder, new_name)
 
 
 def downsample4x(img_folder: str, name: str, save_path: str):
     img = cv2.imread(os.path.join(img_folder, name), -1).astype(np.float32)
-    downscaled = cv2.resize(img, None, fx=0.25, fy=0.25, interpolation=cv2.INTER_NEAREST)
+    assert np.min(img) >= 0.0, print(name)
+    downscaled = cv2.resize(img, None, fx=0.25, fy=0.25, interpolation=cv2.INTER_LINEAR)
     new_name = name.split('.')[0] + "_4x.hdr"
     save_hdr(downscaled, save_path, new_name)
+    print_min_max(downscaled)
 
 
 def print_info(img_folder: str, name: str):
@@ -119,17 +121,13 @@ def draw_histogram(array, mode, save_path):
     plt.savefig(os.path.join(save_path + '{}_prediction.png'.format(mode)))
 
 
-# folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000/" # replace with the path to your image folder
-# save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x/"
-# file_list = os.listdir(folder_path)
+folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/train" # replace with the path to your image folder
+save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/train_d_4x"
+file_list = os.listdir(folder_path)
+file_list.sort()
 
-# for file_name in file_list:
-    # print_info(folder_path, file_name)
-    # process_save(folder_path, file_name, save_path)
-    # augment(folder_path, file_name)
-    # downsample4x(folder_path, file_name, save_path)
-    # compare_content(save_path, folder_path)
-    # break
+for file_name in file_list:
+    downsample4x(folder_path, file_name, save_path)
 
 # img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000/Ahwahnee_Great_Lounge.hdr", -1).astype(np.float32)
 # img = torch.tensor(img)
