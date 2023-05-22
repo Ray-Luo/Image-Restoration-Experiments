@@ -121,8 +121,8 @@ def draw_histogram(array, mode, save_path):
     plt.savefig(os.path.join(save_path + '{}_prediction.png'.format(mode)))
 
 
-folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/train" # replace with the path to your image folder
-save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/train_d_4x"
+folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/test" # replace with the path to your image folder
+save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/test_d_4x"
 file_list = os.listdir(folder_path)
 file_list.sort()
 

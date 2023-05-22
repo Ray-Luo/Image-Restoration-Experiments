@@ -9,7 +9,7 @@ import cv2
 from skimage import transform
 
 
-img_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/train/4k_ref_CenterPanorama_0001.png"
+img_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/train_patchify/Letchworth_Tea_Table_1_s190.hdr"
 res_dir = "/home/luoleyouluole/Image-Restoration-Experiments/res.hdr"
 
 img = cv2.imread(img_path, -1).astype(np.float32)

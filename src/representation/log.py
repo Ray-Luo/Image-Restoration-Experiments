@@ -5,4 +5,7 @@ class Log:
         pass
 
     def __call__(self, x):
-        return torch.log(torch.max(x, torch.ones_like(x) * 1e-5))
+        x = torch.clamp(x, min=1e-5)
+        x = torch.log(x)
+        x = x / torch.max(x)
+        return x

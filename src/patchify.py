@@ -106,9 +106,11 @@ def worker(path, opt):
     step = opt['step']
     thresh_size = opt['thresh_size']
     img_name, extension = osp.splitext(osp.basename(path))
+    # save as hdr
+    extension = '.hdr'
 
-    # remove the x2
-    img_name = img_name.replace('_x2', '')
+    # remove the x4
+    img_name = img_name.replace('_x4', '')
 
     img = cv2.imread(path, cv2.IMREAD_UNCHANGED)
 
@@ -128,7 +130,7 @@ def worker(path, opt):
             cropped_img = np.ascontiguousarray(cropped_img)
             cv2.imwrite(
                 osp.join(opt['save_folder'], f'{img_name}_s{index:03d}{extension}'), cropped_img,
-                [cv2.IMWRITE_PNG_COMPRESSION, opt['compression_level']])
+                [cv2.IMWRITE_HDR_COMPRESSION, 0])
     process_info = f'Processing {img_name} ...'
     return process_info
 

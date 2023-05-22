@@ -15,7 +15,7 @@ defaults:
 # all parameters below will be merged with parameters from default configurations set above
 # this allows you to overwrite only specified parameters
 
-tags: ["edsr", "rit", "log", "log"]
+tags: ["edsr", "rit", "log", "l1"]
 
 seed: 12345
 
@@ -29,8 +29,8 @@ model:
     lr: 1e-4
 
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_patchify
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000_4x_patchify
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/train_patchify
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/train_d_4x_patchify
   batch_size: 80
 
 logger:
