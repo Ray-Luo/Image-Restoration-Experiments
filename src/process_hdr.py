@@ -121,13 +121,13 @@ def draw_histogram(array, mode, save_path):
     plt.savefig(os.path.join(save_path + '{}_prediction.png'.format(mode)))
 
 
-folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/test" # replace with the path to your image folder
-save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/test_d_4x"
-file_list = os.listdir(folder_path)
-file_list.sort()
+# folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/test" # replace with the path to your image folder
+# save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/test_d_4x"
+# file_list = os.listdir(folder_path)
+# file_list.sort()
 
-for file_name in file_list:
-    downsample4x(folder_path, file_name, save_path)
+# for file_name in file_list:
+#     downsample4x(folder_path, file_name, save_path)
 
 # img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/data/rit_hdr4000/Ahwahnee_Great_Lounge.hdr", -1).astype(np.float32)
 # img = torch.tensor(img)
