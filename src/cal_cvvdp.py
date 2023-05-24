@@ -76,23 +76,23 @@ for filename in imgs:
         else:
             raise ValueError(f"Unknown test name: {test_name}")
 
-print("navie_psnr_rgb", navie_psnr_rgb)
-print("linear_psnr_rgb", linear_psnr_rgb)
-print("log_psnr_rgb", log_psnr_rgb)
-print("pu_psnr_rgb", pu_psnr_rgb)
-print("pq_psnr_rgb", pq_psnr_rgb)
+print("navie_psnr_rgb=", navie_psnr_rgb)
+print("linear_psnr_rgb=", linear_psnr_rgb)
+print("log_psnr_rg=", log_psnr_rgb)
+print("pu_psnr_rgb=", pu_psnr_rgb)
+print("pq_psnr_rgb=", pq_psnr_rgb)
 
-print("navie_psnr_y", navie_psnr_y)
-print("linear_psnr_y", linear_psnr_y)
-print("log_psnr_y", log_psnr_y)
-print("pu_psnr_y", pu_psnr_y)
-print("pq_psnr_y", pq_psnr_y)
+print("navie_psnr_y=", navie_psnr_y)
+print("linear_psnr_y=", linear_psnr_y)
+print("log_psnr_y=", log_psnr_y)
+print("pu_psnr_y=", pu_psnr_y)
+print("pq_psnr_y=", pq_psnr_y)
 
-print("navie_cvvdp", navie_cvvdp)
-print("linear_cvvdp", linear_cvvdp)
-print("log_cvvdp", log_cvvdp)
-print("pu_cvvdp", pu_cvvdp)
-print("pq_cvvdp", pq_cvvdp)
+print("navie_cvvdp=", navie_cvvdp)
+print("linear_cvvdp=", linear_cvvdp)
+print("log_cvvdp=", log_cvvdp)
+print("pu_cvvdp=", pu_cvvdp)
+print("pq_cvvdp=", pq_cvvdp)
 
 
 
