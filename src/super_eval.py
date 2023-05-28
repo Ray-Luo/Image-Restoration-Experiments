@@ -153,7 +153,8 @@ def evaluate(cfg: DictConfig):
         tag_file = os.path.join(path,"tags.log")
         assert check_if_load_correct(experiment, tag_file) is True, "Checkpoint file is not correct!"
 
-        model_path = os.path.join(path,"checkpoints/last.ckpt")
+        model_path = os.path.join(path,"checkpoints/epoch_055.ckpt")
+        # model_path = os.path.join(path,"checkpoints/epoch_082.ckpt")
         model = model.load_from_checkpoint(model_path)
         net = model.cuda()
         net.eval()

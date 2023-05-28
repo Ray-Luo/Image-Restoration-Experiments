@@ -43,12 +43,13 @@ for filename in imgs:
         # file_name + "_raw_linear_l1.hdr",
         # file_name + "_raw_log_l1.hdr",
         file_name + "_raw_pq_l1.hdr",
-        file_name + "_raw_pu_l1.hdr",]
+        # file_name + "_raw_pu_l1.hdr",
+    ]
 
     for test_name in test_names:
         test_img = os.path.join(test_img_folder, test_name)
 
-        command = f"cvvdp --test {test_img} --ref {reference_img} --display standard_hdr_linear --metric pu-psnr-rgb pu-psnr-y cvvdp  --quiet"
+        command = f"cvvdp --test {test_img} --ref {reference_img} --display standard_hdr_linear_zoom --metric pu-psnr-rgb pu-psnr-y cvvdp  --quiet"
         ret_value = subprocess.run(command, shell=True, capture_output=True, text=True)
         psnr_rgb, psnr_y, cvvdp = ret_value.stdout.split()
         print(test_name, psnr_rgb, psnr_y, cvvdp)
