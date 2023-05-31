@@ -100,6 +100,9 @@ def downsample4x(img_folder: str, name: str, save_path: str):
     save_hdr(downscaled, save_path, new_name)
     print_min_max(downscaled)
 
+def downsample4x(img):
+    downscaled = cv2.resize(img, None, fx=0.25, fy=0.25, interpolation=cv2.INTER_LINEAR)
+    return downscaled
 
 def print_info(img_folder: str, name: str):
     img = cv2.imread(os.path.join(img_folder, name), -1).astype(np.float32)
@@ -119,6 +122,14 @@ def draw_histogram(array, mode, save_path):
     plt.ylabel('Frequency')
     plt.title('Log Histogram of {} Prediction'.format(mode))
     plt.savefig(os.path.join(save_path + '{}_prediction.png'.format(mode)))
+
+def exr2hdr(img):
+    green = img[:,:,1]
+    p = np.percentile(green, 99)
+    img = img / p
+    img = img * 4000.0
+    img = np.clip(img, 0.05, 4000.0)
+    return img
 
 
 # folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/test" # replace with the path to your image folder
