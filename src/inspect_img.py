@@ -3,22 +3,22 @@ os.environ["OPENCV_IO_ENABLE_OPENEXR"]="1"
 import cv2
 import numpy as np
 from process_hdr import print_min_max
+from tqdm import tqdm
 
 
 
 
-# folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/test" # replace with the path to your image folder
+folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/Night_Street" # replace with the path to your image folder
 # save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/test_d_4x"
-# file_list = os.listdir(folder_path)
-# file_list.sort()
+file_list = os.listdir(folder_path)
+file_list.sort()
 
-# for file_name in file_list:
-#     downsample4x(folder_path, file_name, save_path)
+for file_name in tqdm(file_list):
+    img = cv2.imread(os.path.join(folder_path, file_name), cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
+    min_val = np.min(img)
+    max_val = np.max(img)
+    assert min_val >= 0. and max_val <= 1.0, print(os.path.join(folder_path, file_name))
 
-img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/A009C050_1410316B.00043597.exr", cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH)#.astype(np.float32)
-# img = torch.tensor(img)
-
-img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 # img /= np.max(img)
 # img = np.power(img, 1/2.2)
@@ -26,4 +26,8 @@ img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 
 # draw_histogram(img, "GT", "./")
-print_min_max(img)
+    # print_min_max(img)
+
+"""
+607 + 667 + 472 + 495 + 223
+"""
