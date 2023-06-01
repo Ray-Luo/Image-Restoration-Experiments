@@ -29,8 +29,44 @@ cfg = {
     "BAYER_PATTERN": "RGGB",
     "NOISE_ORDER": 1.0
 }
-
 cfg = SimpleNamespace(**cfg)
+
+
+def noiseFromCDF(gt_bayer):
+    pass
+
+def noiseFromVariance(profile, gt_bayer):
+    np.random.seed(int.from_bytes(os.urandom(4), byteorder="little"))
+    shape = gt_bayer.shape
+    var = profile[gt_bayer]
+    noise = var * np.random.randn(*shape)
+    return noise
+
+def addNoise(profile, gt_bayer):
+    if cfg.NOISE_MODE == "VAR":
+        noise = noiseFromVariance(profile, gt_bayer)
+    elif cfg.NOISE_MODE == "CDF":
+        noise = noiseFromCDF(gt_bayer)
+    else:
+        raise NotImplementedError
+
+    noise_order = cfg.NOISE_ORDER - (
+        cfg.NOISE_ORDER - 1.0
+    ) * np.power(
+        np.clip(
+            (gt_bayer.astype(np.float32) - cfg.AUG_BLACK_LEVEL)
+            / cfg.AUG_WHITE_LEVEL,
+            0,
+            1.0,
+        ),
+        0.2,
+    )
+    noisy_bayer = np.clip(
+        noise * noise_order + gt_bayer.astype(np.float32),
+        0,
+        cfg.AUG_WHITE_LEVEL,
+    )
+    return noisy_bayer
 
 def getRandomMultiplier():
     np.random.seed()
