@@ -6,9 +6,9 @@ from process_hdr import print_min_max, exr2hdr, save_hdr, downsample4x
 from tqdm import tqdm
 import random
 
-PERCENT = 0.4
+PERCENT = 0.2
 
-save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_4xd"
+save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_20_4xd"
 
 
 # folder_list = [
@@ -19,7 +19,7 @@ save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FR
 #     "/home/luoleyouluole/Image-Restoration-Experiments/data/Night_Street",
 # ]
 folder_list = [
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME",
+    "/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_20",
 ]
 folder_list.sort()
 
