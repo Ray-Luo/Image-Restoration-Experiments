@@ -22,6 +22,8 @@ noisy_bayer = addNoise(profile, gt_bayer)
 
 noisy_tensors = normalizeRaw(noisy_bayer)
 gt_tensors = normalizeRaw(gt_bayer)
+# noisy_tensors = noisy_bayer
+# gt_tensors = gt_bayer
 
 wb_gain = np.sqrt(wb_gain)
 gt_tensors[0, 0, :2, :2] = wb_gain
@@ -31,6 +33,7 @@ if gt_tensors.shape[0] == 1:
     gt_tensors = np.squeeze(gt_tensors, axis=0)
     noisy_tensors = np.squeeze(noisy_tensors, axis=0)
 
+print_min_max(noisy_tensors)
 noisy_tensors = np.transpose(noisy_tensors, (1, 2, 0))#.astype(np.uint16)
 noisy_tensors = np.squeeze(noisy_tensors, axis=-1)
 # noisy_tensors.tofile("./noise.raw")
@@ -42,7 +45,7 @@ noisy_tensors = noisy_tensors * 255
 
 # imageio.imsave('./noise.jpg', noisy_tensors)
 
-print_min_max(noisy_tensors)
+# print_min_max(noisy_tensors)
 
 save_hdr(noisy_tensors, "/home/luoleyouluole/Image-Restoration-Experiments/", "noise.hdr")
 

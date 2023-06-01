@@ -260,7 +260,7 @@ def getRandomMultiplier():
     dice = np.random.randint(10)
     max_multf = (
         cfg.AUG_WHITE_LEVEL - cfg.AUG_BLACK_LEVEL
-    ) * 1.0 / 255.0 - 1
+    ) * 1.0 / 65535.0 - 1
     multf = max_multf + 1
     if dice == 1:
         multf = 1 + max_multf * np.random.random_sample()
