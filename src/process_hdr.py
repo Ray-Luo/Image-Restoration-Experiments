@@ -32,6 +32,27 @@ cfg = {
 cfg = SimpleNamespace(**cfg)
 
 
+def bayer2rgb(raw: np.ndarray) -> np.ndarray:
+    """
+    Create linear RGB by converting 2x2 Bayer pattern RGGB to 3-channel RGB
+    """
+    raw = raw.permute(1,2,0).squeeze(-1)
+    height = int(raw.shape[0] / 2)
+    width = int(raw.shape[1] / 2)
+    # print(raw.shape, height, width)
+    out = np.empty((height, width, 3), dtype=int)
+    # Use slicing to generate RGB colocated image
+    # R value
+    out[:, :, 0] = raw[0::2, 0::2]
+    # B value
+    out[:, :, 2] = raw[1::2, 1::2]
+    # G value
+    if False:
+        out[:, :, 1] = (raw[0::2, 1::2] + raw[1::2, 0::2] + 1) / 2
+    else:  # use Gr only
+        out[:, :, 1] = raw[0::2, 1::2]
+    return out
+
 def normalizeRaw(in_image):
     in_image = in_image.astype(np.float32)
     in_image = in_image / (
