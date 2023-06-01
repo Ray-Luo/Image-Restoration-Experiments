@@ -32,6 +32,31 @@ cfg = {
 cfg = SimpleNamespace(**cfg)
 
 
+def normalizeRaw(in_image):
+    in_image = in_image.astype(np.float32)
+    in_image = in_image / (
+        (cfg.AUG_WHITE_LEVEL + 1) / (cfg.WHITE_LEVEL + 1)
+    )
+    quant_numerator = np.clip(
+        in_image - cfg.BLACK_LEVEL,
+        -cfg.BLACK_LEVEL / 32,
+        cfg.WHITE_LEVEL,
+    )
+    quant_denominator = np.sqrt(
+        np.clip(
+            in_image - cfg.BLACK_LEVEL + cfg.BLACK_OFFSET,
+            cfg.BLACK_OFFSET,
+            cfg.WHITE_LEVEL,
+        )
+    )
+    quant_result = np.divide(
+        np.divide(quant_numerator, quant_denominator),
+        np.sqrt(cfg.WHITE_LEVEL),
+    )
+
+    return quant_result
+
+
 def noiseFromCDF(gt_bayer):
     pass
 
