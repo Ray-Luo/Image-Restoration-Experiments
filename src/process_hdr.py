@@ -5,9 +5,112 @@ import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 import torch
+from types import SimpleNamespace
 
 SEED = 12345
 NUMBER_AUG = 10
+FOCUS_ORDER = 3
+
+cfg = {
+    "enable_dpc": False,
+    "bayer_binning": False,
+    "NOISE_MODE": "VAR", #option: CDF, VAR
+    "CROP_HEIGHT": 512,
+    "CROP_WIDTH": 512,
+    "RAW_HEIGHT": 3024,
+    "RAW_WIDTH" : 4038,
+    "RAW_BITS" : 10,
+    "meta_padding": 8076,
+    "AUG_WHITE_LEVEL": 65535,
+    "AUG_BLACK_LEVEL": 4096,
+    "BLACK_LEVEL": 256,
+    "WHITE_LEVEL": 4095,
+    "BLACK_OFFSET": 16,
+    "BAYER_PATTERN": "RGGB",
+    "NOISE_ORDER": 1.0
+}
+
+cfg = SimpleNamespace(**cfg)
+
+def getRandomMultiplier():
+    np.random.seed()
+    dice = np.random.randint(10)
+    max_multf = (
+        cfg.AUG_WHITE_LEVEL - cfg.AUG_BLACK_LEVEL
+    ) * 1.0 / 255.0 - 1
+    multf = max_multf + 1
+    if dice == 1:
+        multf = 1 + max_multf * np.random.random_sample()
+    elif dice > 1:
+        multf = 1 + max_multf * (np.random.random_sample() ** FOCUS_ORDER)
+    return multf
+
+def getRandomGain():
+    multf = getRandomMultiplier()
+    r_gain = random.uniform(1.0, 3.0)
+    b_gain = random.uniform(1.0, 3.0)
+    if cfg.BAYER_PATTERN == "MONO":
+        r_gain = 1.0
+        b_gain = 1.0
+    return multf, r_gain, b_gain
+
+def applyGain(rgb_tensor, multf, r_gain, b_gain):
+    wb_gain = np.zeros((2, 2), dtype=np.float32)
+    T, H, W, C = rgb_tensor.shape
+    rc = np.clip(
+        rgb_tensor[:, :, :, 0] * multf / r_gain + cfg.AUG_BLACK_LEVEL,
+        0,
+        cfg.AUG_WHITE_LEVEL,
+    )
+    gc = np.clip(
+        rgb_tensor[:, :, :, 1] * multf + cfg.AUG_BLACK_LEVEL,
+        0,
+        cfg.AUG_WHITE_LEVEL,
+    )
+    bc = np.clip(
+        rgb_tensor[:, :, :, 2] * multf / b_gain + cfg.AUG_BLACK_LEVEL,
+        0,
+        cfg.AUG_WHITE_LEVEL,
+    )
+
+    bayer_tensor = np.zeros((T, 1, H, W), dtype=np.int32)
+
+    if cfg.BAYER_PATTERN == "MONO":
+        bayer_tensor[:, 0, :, :] = (rc * 0.299 + gc * 0.587 + bc * 0.114).astype(
+            np.uint32
+        )
+    elif cfg.BAYER_PATTERN == "RGGB":
+        bayer_tensor[:, 0, 0:H:2, 0:W:2] = rc[:, 0:H:2, 0:W:2]
+        bayer_tensor[:, 0, 0:H:2, 1:W:2] = gc[:, 0:H:2, 1:W:2]
+        bayer_tensor[:, 0, 1:H:2, 0:W:2] = gc[:, 1:H:2, 0:W:2]
+        bayer_tensor[:, 0, 1:H:2, 1:W:2] = bc[:, 1:H:2, 1:W:2]
+        wb_gain = np.array([[r_gain, 1.0], [1.0, b_gain]])
+    elif cfg.BAYER_PATTERN == "BGGR":
+        bayer_tensor[:, 0, 0:H:2, 0:W:2] = bc[:, 0:H:2, 0:W:2]
+        bayer_tensor[:, 0, 0:H:2, 1:W:2] = gc[:, 0:H:2, 1:W:2]
+        bayer_tensor[:, 0, 1:H:2, 0:W:2] = gc[:, 1:H:2, 0:W:2]
+        bayer_tensor[:, 0, 1:H:2, 1:W:2] = rc[:, 1:H:2, 1:W:2]
+        wb_gain = np.array([[b_gain, 1.0], [1.0, r_gain]])
+    elif cfg.BAYER_PATTERN == "GRBG":
+        bayer_tensor[:, 0, 0:H:2, 0:W:2] = gc[:, 0:H:2, 0:W:2]
+        bayer_tensor[:, 0, 0:H:2, 1:W:2] = rc[:, 0:H:2, 1:W:2]
+        bayer_tensor[:, 0, 1:H:2, 0:W:2] = bc[:, 1:H:2, 0:W:2]
+        bayer_tensor[:, 0, 1:H:2, 1:W:2] = gc[:, 1:H:2, 1:W:2]
+        wb_gain = np.array([[1.0, r_gain], [b_gain, 1.0]])
+    elif cfg.BAYER_PATTERN == "GBRG":
+        bayer_tensor[:, 0, 0:H:2, 0:W:2] = gc[:, 0:H:2, 0:W:2]
+        bayer_tensor[:, 0, 0:H:2, 1:W:2] = bc[:, 0:H:2, 1:W:2]
+        bayer_tensor[:, 0, 1:H:2, 0:W:2] = rc[:, 1:H:2, 0:W:2]
+        bayer_tensor[:, 0, 1:H:2, 1:W:2] = gc[:, 1:H:2, 1:W:2]
+        wb_gain = np.array([[1.0, b_gain], [r_gain, 1.0]])
+    else:
+        raise NotImplementedError
+
+    return bayer_tensor, wb_gain
+
+def rgb2bayer(rgb_tensor):
+    multf, r_gain, b_gain = getRandomGain()
+    return applyGain(rgb_tensor, multf, r_gain, b_gain)
 
 def print_min_max(path: str, name: str):
     # Read the image using OpenCV
