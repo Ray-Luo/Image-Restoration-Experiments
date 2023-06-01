@@ -26,7 +26,7 @@ cfg = {
     "BLACK_LEVEL": 256,
     "WHITE_LEVEL": 4095,
     "BLACK_OFFSET": 16,
-    "BAYER_PATTERN": "RGGB",
+    "BAYER_PATTERN": "GRBG",
     "NOISE_ORDER": 1.0
 }
 cfg = SimpleNamespace(**cfg)
