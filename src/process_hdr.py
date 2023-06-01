@@ -32,6 +32,147 @@ cfg = {
 cfg = SimpleNamespace(**cfg)
 
 
+def derivativeV(img, mode="g"):
+    if mode == "all":
+        derivative = (
+            abs(
+                np.roll(img, [-1, -1], axis=[0, 1])
+                - np.roll(img, [+1, -1], axis=[0, 1])
+            )
+            * 2
+            + abs(np.roll(img, [-2, 0], axis=[0, 1]) - img) * 2
+            + abs(img - np.roll(img, [+2, 0], axis=[0, 1])) * 2
+            + abs(
+                np.roll(img, [-1, +1], axis=[0, 1])
+                - np.roll(img, [+1, +1], axis=[0, 1])
+            )
+            * 2
+            + abs(
+                np.roll(img, [-2, -1], axis=[0, 1]) - np.roll(img, [0, -1], axis=[0, 1])
+            )
+            + abs(
+                np.roll(img, [0, -1], axis=[0, 1]) - np.roll(img, [+2, -1], axis=[0, 1])
+            )
+            + abs(
+                np.roll(img, [-1, 0], axis=[0, 1]) - np.roll(img, [+1, 0], axis=[0, 1])
+            )
+            * 4
+            + abs(
+                np.roll(img, [-2, +1], axis=[0, 1]) - np.roll(img, [0, +1], axis=[0, 1])
+            )
+            + abs(
+                np.roll(img, [0, +1], axis=[0, 1]) - np.roll(img, [-2, +1], axis=[0, 1])
+            )
+        )
+        derivative = derivative / 16
+    elif mode == "g":
+        derivative = (
+            abs(
+                np.roll(img, [-2, -1], axis=[0, 1]) - np.roll(img, [0, -1], axis=[0, 1])
+            )
+            + abs(
+                np.roll(img, [0, -1], axis=[0, 1]) - np.roll(img, [+2, -1], axis=[0, 1])
+            )
+            + abs(
+                np.roll(img, [-1, 0], axis=[0, 1]) - np.roll(img, [+1, 0], axis=[0, 1])
+            )
+            * 4
+            + abs(
+                np.roll(img, [-2, +1], axis=[0, 1]) - np.roll(img, [0, +1], axis=[0, 1])
+            )
+            + abs(
+                np.roll(img, [0, +1], axis=[0, 1]) - np.roll(img, [-2, +1], axis=[0, 1])
+            )
+        )
+        derivative = derivative / 8
+    else:
+        raise Exception("unexpected derivative mode")
+    return derivative
+
+def derivativeH(img, mode="g"):
+    return np.transpose(derivativeV(np.transpose(img), mode))
+
+def interpolateH(img):
+    return (np.roll(img, [0, -1], axis=[0, 1]) + np.roll(img, [0, 1], axis=[0, 1])) / 2
+
+def interpolateV(img):
+    return (np.roll(img, [-1, 0], axis=[0, 1]) + np.roll(img, [1, 0], axis=[0, 1])) / 2
+
+def interpolatePlus(img):
+    return (
+        np.roll(img, [-1, 0], axis=[0, 1])
+        + np.roll(img, [1, 0], axis=[0, 1])
+        + np.roll(img, [0, -1], axis=[0, 1])
+        + np.roll(img, [0, 1], axis=[0, 1])
+    ) / 4
+
+def interpolateCross(img):
+    return (
+        np.roll(img, [-1, -1], axis=[0, 1])
+        + np.roll(img, [+1, +1], axis=[0, 1])
+        + np.roll(img, [+1, -1], axis=[0, 1])
+        + np.roll(img, [-1, +1], axis=[0, 1])
+    ) / 4
+
+def bayer2RGB(bayer, thres=10, interpolateChroma=True, deriMode="all"):
+    rgbImg = np.zeros((bayer.shape[0], bayer.shape[1], 3))
+
+    rgbImg[0::2, 0::2, 1] = bayer[0::2, 0::2]  # gb
+    rgbImg[0::2, 1::2, 0] = bayer[0::2, 1::2]  # b
+    rgbImg[1::2, 0::2, 2] = bayer[1::2, 0::2]  # r
+    rgbImg[1::2, 1::2, 1] = bayer[1::2, 1::2]  # gr
+
+    # interpolate green channel
+    derH = derivativeH(bayer, deriMode)
+    derV = derivativeV(bayer, deriMode)
+    derMax = np.maximum(derH, derV)
+    weight = (np.clip(derMax - thres, -8, 0) + 8) / 8
+    driction = derH > derV
+
+    pixelH = interpolateH(rgbImg[::, ::, 1])
+    pixelV = interpolateV(rgbImg[::, ::, 1])
+    pixelDir = pixelH
+    pixelDir[driction] = pixelV[driction]
+    pixelPlus = interpolatePlus(rgbImg[::, ::, 1])
+    pixelBlend = (pixelDir - pixelPlus) * weight + pixelPlus
+
+    rgbImg[0::2, 1::2, 1] = pixelBlend[0::2, 1::2]
+    rgbImg[1::2, 0::2, 1] = pixelBlend[1::2, 0::2]
+
+    # chroma interpolation
+    greenPlane = (
+        rgbImg[::, ::, 1]
+        if interpolateChroma
+        else np.zeros((rgbImg.shape[0], rgbImg.shape[1]))
+    )
+
+    # complete red/blue cross
+    rgbImg[0::2, 1::2, 2] = (
+        interpolateCross(rgbImg[::, ::, 2] - greenPlane) + greenPlane
+    )[0::2, 1::2]
+    rgbImg[1::2, 0::2, 0] = (
+        interpolateCross(rgbImg[::, ::, 0] - greenPlane) + greenPlane
+    )[1::2, 0::2]
+
+    # complete blue plus
+    rgbImg[0::2, 0::2, 0] = (interpolateH(rgbImg[::, ::, 0] - greenPlane) + greenPlane)[
+        0::2, 0::2
+    ]
+    rgbImg[1::2, 1::2, 0] = (interpolateV(rgbImg[::, ::, 0] - greenPlane) + greenPlane)[
+        1::2, 1::2
+    ]
+
+    # complete red plus
+    rgbImg[0::2, 0::2, 2] = (interpolateV(rgbImg[::, ::, 2] - greenPlane) + greenPlane)[
+        0::2, 0::2
+    ]
+    rgbImg[1::2, 1::2, 2] = (interpolateH(rgbImg[::, ::, 2] - greenPlane) + greenPlane)[
+        1::2, 1::2
+    ]
+
+    return rgbImg
+
+
 def bayer2rgb(raw: np.ndarray) -> np.ndarray:
     """
     Create linear RGB by converting 2x2 Bayer pattern RGGB to 3-channel RGB
@@ -211,9 +352,11 @@ def print_min_max(img: np.array):
     # Get the minimum and maximum pixel values
     min_val = np.min(img)
     max_val = np.max(img)
+    mean_val = np.mean(img)
+    std_val = np.std(img)
 
     # Print the results
-    print(min_val, "  ", max_val, "  ", img.shape)
+    print("min: {}, max: {}, mean: {}, std: {}, shape: {}".format(min_val, max_val, mean_val, std_val, img.shape))
 
 
 def save_hdr(img: np.array, img_folder: str, name: str):
