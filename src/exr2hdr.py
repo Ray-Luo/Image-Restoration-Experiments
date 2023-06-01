@@ -4,6 +4,9 @@ import cv2
 import numpy as np
 from process_hdr import print_min_max, exr2hdr, save_hdr, downsample4x
 from tqdm import tqdm
+import random
+
+PERCENT = 0.4
 
 save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_4xd"
 
@@ -33,6 +36,21 @@ for folder_path in tqdm(folder_list):
         save_hdr(img, save_path, file_name)
     # assert min_val >= 0. and max_val <= 1.0, print(os.path.join(folder_path, file_name))
 
+# for folder_path in tqdm(folder_list):
+#     file_list = os.listdir(folder_path)
+#     file_list.sort()
+#     numbers = list(range(len(file_list)))
+#     selected_numbers = random.sample(numbers, int(PERCENT * len(file_list)))
+#     for i in tqdm(selected_numbers):
+#         file_name = file_list[i]
+#         img = cv2.imread(os.path.join(folder_path, file_name), cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
+#         img = exr2hdr(img)
+#         file_name = file_name.replace(".exr", "**hdr").replace(".", "_").replace("**", ".")
+#         # file_name = file_name.replace(".hdr", "_4dx.hdr")
+#         # img = downsample4x(img)
+#         save_hdr(img, save_path, file_name)
+        # break
+    # break
 
 # img /= np.max(img)
 # img = np.power(img, 1/2.2)
@@ -44,4 +62,5 @@ for folder_path in tqdm(folder_list):
 
 """
 607 + 667 + 472 + 495 + 223
+
 """
