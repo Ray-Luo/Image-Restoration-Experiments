@@ -26,9 +26,9 @@ header['channels'] = dict([(c, Imath.Channel(Imath.PixelType(OpenEXR.FLOAT))) fo
 file = OpenEXR.OutputFile('output.exr', header)
 
 # Convert the numpy array data into a string
-red = (data[:,:,0]).tobytes()
-green = (data[:,:,1]).tobytes()
-blue = (data[:,:,2]).tobytes()
+red = (data[:,:,0].astype(np.float32)).tobytes()
+green = (data[:,:,1].astype(np.float32)).tobytes()
+blue = (data[:,:,2].astype(np.float32)).tobytes()
 
 # Write the image data to the exr file
 file.writePixels({'R': red, 'G': green, 'B': blue})
