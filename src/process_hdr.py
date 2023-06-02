@@ -31,6 +31,66 @@ cfg = {
 }
 cfg = SimpleNamespace(**cfg)
 
+class RandomNoiseAdder:
+    def __init__(
+        self,
+        iso_range_start,
+        iso_range_end,
+        min_gain,
+        max_gain,
+        shot_noise_slope,
+        shot_noise_intercept,
+        shot_noise_stderr,
+        read_noise_slope,
+        read_noise_intercept,
+        read_noise_stderr,
+    ) -> None:
+        self.shot_noise_slope = torch.tensor(shot_noise_slope)
+        self.shot_noise_intercept = torch.tensor(shot_noise_intercept)
+        self.shot_noise_stderr = torch.tensor(shot_noise_stderr)
+        self.read_noise_slope = torch.tensor(read_noise_slope)
+        self.read_noise_intercept = torch.tensor(read_noise_intercept)
+        self.read_noise_stderr = torch.tensor(read_noise_stderr)
+        min_gain_subrange = min_gain + iso_range_start * (max_gain - min_gain)
+        max_gain_subrange = min_gain + iso_range_end * (max_gain - min_gain)
+        self.uniform = torch.distributions.uniform.Uniform(
+            min_gain_subrange,
+            max_gain_subrange,
+        )
+
+    def _generate_noise(
+        self,
+        image,
+        shot_noise,
+        read_noise,
+        clip_noise: bool = True,
+    ):
+        """Adds random shot (proportional to image) and read (independent) noise."""
+        variance = image * shot_noise[:, None, None] + read_noise[:, None, None]
+        stdev = torch.sqrt(variance)
+        noise = torch.randn(image.shape, dtype=torch.float, device=image.device)
+        noise = torch.mul(noise, stdev)
+
+        noisy_image = noise + image
+        if clip_noise:
+            noisy_image = torch.clamp(noisy_image, min=0.0, max=1.0)
+
+        return noisy_image
+
+    def __call__(self, img):
+        gain = self.uniform.sample()
+        reported_shot_noise = self.shot_noise_slope * gain + self.shot_noise_intercept
+        reported_read_noise = self.read_noise_slope * gain + self.read_noise_intercept
+        shot_noise = reported_shot_noise + np.random.normal(
+            0.0, self.shot_noise_stderr
+        ).astype(np.float32)
+        read_noise = reported_read_noise + np.random.normal(
+            0.0, self.read_noise_stderr
+        ).astype(np.float32)
+        noisy_img = self._generate_noise(img, shot_noise, read_noise)
+
+        return noisy_img, reported_shot_noise, reported_read_noise
+
 
 def derivativeV(img, mode="g"):
     if mode == "all":
