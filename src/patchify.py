@@ -41,16 +41,16 @@ def main():
     opt['compression_level'] = 3
 
     # HR images
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_20'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_20_patchify'
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_patchify'
     opt['crop_size'] = 384
     opt['step'] = 192
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
     # LRx4 images
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_20_4xd'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_20_4xd_patchify'
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_4xd'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_4xd_patchify'
     opt['crop_size'] = 96
     opt['step'] = 48
     opt['thresh_size'] = 0

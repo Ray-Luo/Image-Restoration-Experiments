@@ -8,7 +8,7 @@ import random
 
 PERCENT = 0.2
 
-save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_20_4xd"
+save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/frame_hdr"
 
 
 # folder_list = [
@@ -19,36 +19,32 @@ save_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FR
 #     "/home/luoleyouluole/Image-Restoration-Experiments/data/Night_Street",
 # ]
 folder_list = [
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/HDR_VIDEO_FRAME_20",
+    "/home/luoleyouluole/Image-Restoration-Experiments/data/frame_exr",
 ]
 folder_list.sort()
 
+
+# for folder_path in tqdm(folder_list):
+#     file_list = os.listdir(folder_path)
+#     file_list.sort()
+#     for file_name in tqdm(file_list):
+#         img = cv2.imread(os.path.join(folder_path, file_name), cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
+#         # img = exr2hdr(img)
+#         # file_name = file_name.replace(".exr", "**hdr").replace(".", "_").replace("**", ".")
+#         file_name = file_name.replace(".hdr", "_4dx.hdr")
+#         img = downsample4x(img)
+#         save_hdr(img, save_path, file_name)
+    # assert min_val >= 0. and max_val <= 1.0, print(os.path.join(folder_path, file_name))
 
 for folder_path in tqdm(folder_list):
     file_list = os.listdir(folder_path)
     file_list.sort()
     for file_name in tqdm(file_list):
         img = cv2.imread(os.path.join(folder_path, file_name), cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
-        # img = exr2hdr(img)
+        img = exr2hdr(img)
         # file_name = file_name.replace(".exr", "**hdr").replace(".", "_").replace("**", ".")
-        file_name = file_name.replace(".hdr", "_4dx.hdr")
-        img = downsample4x(img)
+        file_name = file_name.replace(".exr", ".hdr")
         save_hdr(img, save_path, file_name)
-    # assert min_val >= 0. and max_val <= 1.0, print(os.path.join(folder_path, file_name))
-
-# for folder_path in tqdm(folder_list):
-#     file_list = os.listdir(folder_path)
-#     file_list.sort()
-#     numbers = list(range(len(file_list)))
-#     selected_numbers = random.sample(numbers, int(PERCENT * len(file_list)))
-#     for i in tqdm(selected_numbers):
-#         file_name = file_list[i]
-#         img = cv2.imread(os.path.join(folder_path, file_name), cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
-#         img = exr2hdr(img)
-#         file_name = file_name.replace(".exr", "**hdr").replace(".", "_").replace("**", ".")
-#         # file_name = file_name.replace(".hdr", "_4dx.hdr")
-#         # img = downsample4x(img)
-#         save_hdr(img, save_path, file_name)
         # break
     # break
 
