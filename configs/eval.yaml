@@ -33,13 +33,13 @@ log_path:
 
   # linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train_1/runs/2023-04-11_14-36-26"
 
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/linear_epoch=86-step=35756.ckpt"
+  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/linear_epoch=45-step=2483.ckpt"
 
   # log_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-05-22_14-04-19"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/pq_epoch=95-step=19775.ckpt"
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/pq_epoch=67-step=3671.ckpt"
 
-  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/pu_epoch=97-step=80555.ckpt"
+  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/pu_epoch=98-step=3068.ckpt"
 
 
 results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res/"
