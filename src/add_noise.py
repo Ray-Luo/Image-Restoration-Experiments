@@ -46,13 +46,44 @@ for gt_folder, noise_folder in tqdm(zip(gt_list, noise_list)):
         print_min_max(img, )
         gt_img = np.power(img, 1/2.2)
         save_hdr(gt_img, noise_folder, gt)
-        img = torch.from_numpy(img).unsqueeze(0).permute(0, 3, 1, 2)
+
         img = img / 4000.0
+
+        header = OpenEXR.Header(img.shape[1], img.shape[0])
+        header['channels'] = dict([(c, Imath.Channel(Imath.PixelType(OpenEXR.FLOAT))) for c in "RGB"])
+
+        # Create an OpenEXR file
+        file = OpenEXR.OutputFile(os.path.join(noise_folder, gt), header)
+
+        # Convert the numpy array data into a string
+        red = (img[:,:,2].astype(np.float32)).tobytes()
+        green = (img[:,:,1].astype(np.float32)).tobytes()
+        blue = (img[:,:,0].astype(np.float32)).tobytes()
+
+        # Write the image data to the exr file
+        file.writePixels({'R': red, 'G': green, 'B': blue})
+
+        img = torch.from_numpy(img).unsqueeze(0).permute(0, 3, 1, 2)
+
         data, shot_noise, read_noise = noise_adder(img)
         data = data.permute(0, 2, 3, 1).squeeze(0).numpy()
-        data = exr2hdr(data)
-        print_min_max(data, )
-        noise_data = np.power(data, 1/2.2)
-        save_hdr(noise_data, noise_folder, gt.replace(".hdr", "_noise.hdr"))
+
+        header = OpenEXR.Header(data.shape[1], data.shape[0])
+        header['channels'] = dict([(c, Imath.Channel(Imath.PixelType(OpenEXR.FLOAT))) for c in "RGB"])
+
+        # Create an OpenEXR file
+        file = OpenEXR.OutputFile(os.path.join(noise_folder, gt.replace(".hdr", "_noise.hdr")), header)
+
+        # Convert the numpy array data into a string
+        red = (data[:,:,2].astype(np.float32)).tobytes()
+        green = (data[:,:,1].astype(np.float32)).tobytes()
+        blue = (data[:,:,0].astype(np.float32)).tobytes()
+
+        # Write the image data to the exr file
+        file.writePixels({'R': red, 'G': green, 'B': blue})
+        # data = exr2hdr(data)
+        # print_min_max(data, )
+        # noise_data = np.power(data, 1/2.2)
+        # save_hdr(noise_data, noise_folder, gt.replace(".hdr", "_noise.hdr"))
         break
     break
