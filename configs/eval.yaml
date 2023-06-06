@@ -33,13 +33,19 @@ log_path:
 
   # linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train_1/runs/2023-04-11_14-36-26"
 
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/linear_epoch=45-step=2483.ckpt"
+  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/linear_epoch=49-step=2699.ckpt"
 
   # log_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-05-22_14-04-19"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/pq_epoch=67-step=3671.ckpt"
+  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/pu_epoch=175-step=7226.ckpt"
 
-  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/pu_epoch=98-step=3068.ckpt"
+  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/pq_epoch=175-step=9503.ckpt"
+
+  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_linear_epoch=130-step=2095.ckpt"
+
+  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_pu_epoch=172-step=4670.ckpt"
+
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_pq_epoch=109-step=2969.ckpt"
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_wdsr/"

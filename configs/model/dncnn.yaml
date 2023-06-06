@@ -1,0 +1,17 @@
+_target_: src.models.dncnn_module.DnCNNLitModule
+
+loss: ${loss}
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 1e-3
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.MultiStepLR
+  _partial_: true
+  milestones: [20, 25]
+  gamma: 0.5
+
+net:
+  _target_: src.models.components.dncnn.DnCNN
