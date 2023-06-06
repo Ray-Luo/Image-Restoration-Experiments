@@ -87,10 +87,8 @@ for gt_folder, gt_exr_folder, gt_hdr_folder, noise_exr_folder, noise_hdr_folder 
 
         gt_exr = cv2.imread(os.path.join(gt_exr_folder, gt.replace(".hdr", ".exr")), cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
         gt_hdr = exr2hdr(gt_exr)
-        gt_hdr = np.power(gt_hdr, 1/2.2)
         save_hdr(gt_hdr, gt_hdr_folder, gt.replace(".hdr", "_exr2hdr.hdr"))
 
         noise_exr = cv2.imread(os.path.join(noise_exr_folder, gt.replace(".hdr", "_noise.exr")), cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
         noise_hdr = exr2hdr(noise_exr)
-        noise_hdr = np.power(noise_hdr, 1/2.2)
         save_hdr(noise_hdr, noise_hdr_folder, gt.replace(".hdr", "_noise_exr2hdr.hdr"))
