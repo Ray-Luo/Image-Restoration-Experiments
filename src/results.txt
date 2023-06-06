@@ -1,3 +1,4 @@
+********************************************* EDSR *********************************************
 Artist_Palette_raw_naive.hdr inf inf 10.0000
 Artist_Palette_raw_linear_l1.hdr 80.4890 103.4367 9.9991
 Artist_Palette_raw_pq_l1.hdr inf inf 10.0000
