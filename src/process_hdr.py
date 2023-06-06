@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import torch
 from types import SimpleNamespace
+import OpenEXR, Imath
+import os
+os.environ["OPENCV_IO_ENABLE_OPENEXR"]="1"
 
 SEED = 12345
 NUMBER_AUG = 10
@@ -518,6 +521,22 @@ def exr2hdr(img):
     img = img * 4000.0
     img = np.clip(img, 0.05, 4000.0)
     return img
+
+def save_exr(img, folder, name):
+    header = OpenEXR.Header(img.shape[1], img.shape[0])
+    header['channels'] = dict([(c, Imath.Channel(Imath.PixelType(OpenEXR.FLOAT))) for c in "RGB"])
+
+    # Create an OpenEXR file
+    file = OpenEXR.OutputFile(os.path.join(folder, name), header)
+
+    # Convert the numpy array data into a string
+    red = (img[:,:,2].astype(np.float32)).tobytes()
+    green = (img[:,:,1].astype(np.float32)).tobytes()
+    blue = (img[:,:,0].astype(np.float32)).tobytes()
+
+    # Write the image data to the exr file
+    file.writePixels({'R': red, 'G': green, 'B': blue})
+
 
 
 # folder_path = "/home/luoleyouluole/Image-Restoration-Experiments/data/hdr_data/test" # replace with the path to your image folder
