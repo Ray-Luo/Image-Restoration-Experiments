@@ -1,0 +1,111 @@
+Artist_Palette_raw_naive.hdr inf inf 10.0000
+Artist_Palette_raw_linear_l1.hdr 80.4890 103.4367 9.9991
+Artist_Palette_raw_pq_l1.hdr inf inf 10.0000
+Artist_Palette_raw_pu_l1.hdr inf inf 10.0000
+Bandon_Sunset_2_raw_naive.hdr 42.3617 44.3126 8.6396
+Bandon_Sunset_2_raw_linear_l1.hdr 29.9443 35.5887 7.2204
+Bandon_Sunset_2_raw_pq_l1.hdr 42.7105 44.8416 8.7640
+Bandon_Sunset_2_raw_pu_l1.hdr 42.1777 44.6496 8.7348
+Bar_Harbor_Sunrise_raw_naive.hdr 42.2483 44.6994 8.7445
+Bar_Harbor_Sunrise_raw_linear_l1.hdr 31.2035 36.0359 7.2380
+Bar_Harbor_Sunrise_raw_pq_l1.hdr 43.6141 46.9159 9.0622
+Bar_Harbor_Sunrise_raw_pu_l1.hdr 41.9839 45.9683 8.9704
+Ben\&Jerry\'s_raw_naive.hdr 46.8167 60.2547 9.6188
+Ben\&Jerry\'s_raw_linear_l1.hdr 42.5040 51.3523 9.2708
+Ben\&Jerry\'s_raw_pq_l1.hdr 47.5431 62.9203 9.7325
+Ben\&Jerry\'s_raw_pu_l1.hdr 46.5844 61.2013 9.6789
+Bigfoot_Pass_raw_naive.hdr inf inf 10.0000
+Bigfoot_Pass_raw_linear_l1.hdr inf inf 10.0000
+Bigfoot_Pass_raw_pq_l1.hdr inf inf 10.0000
+Bigfoot_Pass_raw_pu_l1.hdr inf inf 10.0000
+Blooming_Gorse_1_raw_naive.hdr 37.2652 60.2108 9.7385
+Blooming_Gorse_1_raw_linear_l1.hdr 35.7128 55.8331 9.5761
+Blooming_Gorse_1_raw_pq_l1.hdr 37.7917 60.7371 9.7660
+Blooming_Gorse_1_raw_pu_l1.hdr 37.7123 60.6577 9.7635
+Cades_Cove_raw_naive.hdr 45.1487 68.0638 9.8731
+Cades_Cove_raw_linear_l1.hdr 43.9598 62.2712 9.7449
+Cades_Cove_raw_pq_l1.hdr 45.3124 68.2346 9.8866
+Cades_Cove_raw_pu_l1.hdr 45.2566 68.1762 9.8834
+El_Capitan_raw_naive.hdr 63.4090 86.2484 9.9870
+El_Capitan_raw_linear_l1.hdr 53.5454 61.0663 9.7213
+El_Capitan_raw_pq_l1.hdr 63.4090 86.2484 9.9870
+El_Capitan_raw_pu_l1.hdr 63.4090 86.2484 9.9870
+Flamingo_raw_naive.hdr 36.1996 40.5370 8.2492
+Flamingo_raw_linear_l1.hdr 27.3699 30.7889 7.5534
+Flamingo_raw_pq_l1.hdr 36.2847 40.5535 8.2081
+Flamingo_raw_pu_l1.hdr 35.9090 40.1131 8.0700
+Golden_Gate_2_raw_naive.hdr 51.0323 51.5516 9.2435
+Golden_Gate_2_raw_linear_l1.hdr 38.2620 42.3232 8.3035
+Golden_Gate_2_raw_pq_l1.hdr 52.8026 53.7491 9.4375
+Golden_Gate_2_raw_pu_l1.hdr 52.1136 53.0251 9.3950
+Hancock_Kitchen_Inside_raw_naive.hdr 47.7487 50.7750 9.2518
+Hancock_Kitchen_Inside_raw_linear_l1.hdr 27.8626 33.6760 7.7648
+Hancock_Kitchen_Inside_raw_pq_l1.hdr 48.8552 52.3261 9.3802
+Hancock_Kitchen_Inside_raw_pu_l1.hdr 46.8875 50.3497 9.2295
+Lab_Booth_raw_naive.hdr 40.0868 54.4545 9.4614
+Lab_Booth_raw_linear_l1.hdr 30.4407 37.5339 8.4204
+Lab_Booth_raw_pq_l1.hdr 40.5584 56.3036 9.5892
+Lab_Booth_raw_pu_l1.hdr 39.7406 54.0778 9.4694
+Lab_Typwriter_raw_naive.hdr 47.9425 50.8824 9.3869
+Lab_Typwriter_raw_linear_l1.hdr 27.1777 31.3057 8.0707
+Lab_Typwriter_raw_pq_l1.hdr 48.3085 51.5306 9.4530
+Lab_Typwriter_raw_pu_l1.hdr 47.2726 50.3941 9.2524
+Lab_Window_raw_naive.hdr 43.1203 48.2229 9.0232
+Lab_Window_raw_linear_l1.hdr 28.7114 31.2433 7.4987
+Lab_Window_raw_pq_l1.hdr 44.6259 50.7573 9.2609
+Lab_Window_raw_pu_l1.hdr 43.8416 48.9875 9.0194
+Las_Vegas_Store_raw_naive.hdr 39.9199 43.4566 8.6113
+Las_Vegas_Store_raw_linear_l1.hdr 30.5322 33.1077 8.2110
+Las_Vegas_Store_raw_pq_l1.hdr 40.2772 43.4431 8.5554
+Las_Vegas_Store_raw_pu_l1.hdr 40.0194 43.0805 8.4421
+McKee\'s_Pub_raw_naive.hdr 51.2866 54.8353 9.4372
+McKee\'s_Pub_raw_linear_l1.hdr 38.9478 42.6015 8.4823
+McKee\'s_Pub_raw_pq_l1.hdr 52.5534 57.9546 9.6341
+McKee\'s_Pub_raw_pu_l1.hdr 51.6868 56.7916 9.5824
+Old_Faithful_Inn_raw_naive.hdr 49.4526 51.3997 9.2760
+Old_Faithful_Inn_raw_linear_l1.hdr 31.2602 34.9400 7.4925
+Old_Faithful_Inn_raw_pq_l1.hdr 51.7459 53.9864 9.4609
+Old_Faithful_Inn_raw_pu_l1.hdr 49.7725 52.1162 9.3282
+RIT_Tiger_raw_naive.hdr 61.8666 84.2931 9.9706
+RIT_Tiger_raw_linear_l1.hdr 51.4602 59.6685 9.6436
+RIT_Tiger_raw_pq_l1.hdr 61.9853 84.4205 9.9752
+RIT_Tiger_raw_pu_l1.hdr 61.9115 84.3299 9.9730
+Route_66_Museum_raw_naive.hdr 51.4706 63.3531 9.7047
+Route_66_Museum_raw_linear_l1.hdr 46.2161 51.5296 9.2930
+Route_66_Museum_raw_pq_l1.hdr 52.0420 66.8000 9.8048
+Route_66_Museum_raw_pu_l1.hdr 51.7133 63.8110 9.7435
+The_Grotto_raw_naive.hdr 56.4004 79.0725 9.9648
+The_Grotto_raw_linear_l1.hdr 50.6702 64.5776 9.7899
+The_Grotto_raw_pq_l1.hdr 56.4269 79.1050 9.9655
+The_Grotto_raw_pu_l1.hdr 56.4095 79.0836 9.9650
+Zentrum_raw_naive.hdr 38.0400 40.7857 8.3687
+Zentrum_raw_linear_l1.hdr 27.6412 31.8470 7.2838
+Zentrum_raw_pq_l1.hdr 38.1801 41.0460 8.4070
+Zentrum_raw_pu_l1.hdr 37.5396 40.7196 8.3178
+cargo_boat_raw_naive.hdr 54.1844 62.9934 0.1000
+cargo_boat_raw_linear_l1.hdr 54.1844 62.9934 0.1000
+cargo_boat_raw_pq_l1.hdr 54.1951 63.0740 0.1000
+cargo_boat_raw_pu_l1.hdr 54.1844 62.9934 0.1000
+skyscraper_raw_naive.hdr 53.6496 76.5973 0.1000
+skyscraper_raw_linear_l1.hdr 53.1188 76.0665 0.1000
+skyscraper_raw_pq_l1.hdr 55.2598 78.2075 0.1000
+skyscraper_raw_pu_l1.hdr 54.6869 77.6346 0.1000
+urban_land_raw_naive.hdr 40.1452 41.9227 0.1000
+urban_land_raw_linear_l1.hdr 39.4234 41.3164 0.1000
+urban_land_raw_pq_l1.hdr 40.5516 42.2914 0.1000
+urban_land_raw_pu_l1.hdr 40.4411 42.1491 0.1000
+navie_psnr_rgb= [inf, 42.3617, 42.2483, 46.8167, inf, 37.2652, 45.1487, 63.409, 36.1996, 51.0323, 47.7487, 40.0868, 47.9425, 43.1203, 39.9199, 51.2866, 49.4526, 61.8666, 51.4706, 56.4004, 38.04, 54.1844, 53.6496, 40.1452]
+linear_psnr_rgb= [80.489, 29.9443, 31.2035, 42.504, inf, 35.7128, 43.9598, 53.5454, 27.3699, 38.262, 27.8626, 30.4407, 27.1777, 28.7114, 30.5322, 38.9478, 31.2602, 51.4602, 46.2161, 50.6702, 27.6412, 54.1844, 53.1188, 39.4234]
+log_psnr_rg= []
+pu_psnr_rgb= [inf, 42.1777, 41.9839, 46.5844, inf, 37.7123, 45.2566, 63.409, 35.909, 52.1136, 46.8875, 39.7406, 47.2726, 43.8416, 40.0194, 51.6868, 49.7725, 61.9115, 51.7133, 56.4095, 37.5396, 54.1844, 54.6869, 40.4411]
+pq_psnr_rgb= [inf, 42.7105, 43.6141, 47.5431, inf, 37.7917, 45.3124, 63.409, 36.2847, 52.8026, 48.8552, 40.5584, 48.3085, 44.6259, 40.2772, 52.5534, 51.7459, 61.9853, 52.042, 56.4269, 38.1801, 54.1951, 55.2598, 40.5516]
+navie_psnr_y= [inf, 44.3126, 44.6994, 60.2547, inf, 60.2108, 68.0638, 86.2484, 40.537, 51.5516, 50.775, 54.4545, 50.8824, 48.2229, 43.4566, 54.8353, 51.3997, 84.2931, 63.3531, 79.0725, 40.7857, 62.9934, 76.5973, 41.9227]
+linear_psnr_y= [103.4367, 35.5887, 36.0359, 51.3523, inf, 55.8331, 62.2712, 61.0663, 30.7889, 42.3232, 33.676, 37.5339, 31.3057, 31.2433, 33.1077, 42.6015, 34.94, 59.6685, 51.5296, 64.5776, 31.847, 62.9934, 76.0665, 41.3164]
+log_psnr_y= []
+pu_psnr_y= [inf, 44.6496, 45.9683, 61.2013, inf, 60.6577, 68.1762, 86.2484, 40.1131, 53.0251, 50.3497, 54.0778, 50.3941, 48.9875, 43.0805, 56.7916, 52.1162, 84.3299, 63.811, 79.0836, 40.7196, 62.9934, 77.6346, 42.1491]
+pq_psnr_y= [inf, 44.8416, 46.9159, 62.9203, inf, 60.7371, 68.2346, 86.2484, 40.5535, 53.7491, 52.3261, 56.3036, 51.5306, 50.7573, 43.4431, 57.9546, 53.9864, 84.4205, 66.8, 79.105, 41.046, 63.074, 78.2075, 42.2914]
+navie_cvvdp= [10.0, 8.6396, 8.7445, 9.6188, 10.0, 9.7385, 9.8731, 9.987, 8.2492, 9.2435, 9.2518, 9.4614, 9.3869, 9.0232, 8.6113, 9.4372, 9.276, 9.9706, 9.7047, 9.9648, 8.3687, 0.1, 0.1, 0.1]
+linear_cvvdp= [9.9991, 7.2204, 7.238, 9.2708, 10.0, 9.5761, 9.7449, 9.7213, 7.5534, 8.3035, 7.7648, 8.4204, 8.0707, 7.4987, 8.211, 8.4823, 7.4925, 9.6436, 9.293, 9.7899, 7.2838, 0.1, 0.1, 0.1]
+log_cvvdp= []
+pu_cvvdp= [10.0, 8.7348, 8.9704, 9.6789, 10.0, 9.7635, 9.8834, 9.987, 8.07, 9.395, 9.2295, 9.4694, 9.2524, 9.0194, 8.4421, 9.5824, 9.3282, 9.973, 9.7435, 9.965, 8.3178, 0.1, 0.1, 0.1]
+pq_cvvdp= [10.0, 8.764, 9.0622, 9.7325, 10.0, 9.766, 9.8866, 9.987, 8.2081, 9.4375, 9.3802, 9.5892, 9.453, 9.2609, 8.5554, 9.6341, 9.4609, 9.9752, 9.8048, 9.9655, 8.407, 0.1, 0.1, 0.1]
