@@ -165,7 +165,7 @@ def evaluate(cfg: DictConfig):
         net = model.cuda()
         net.eval()
 
-        file_list = os.listdir(cfg.data.hq_path)
+        file_list = os.listdir(cfg.data.lq_path)
         file_list.sort()
 
         transform_fn, inverse_fn = get_transform(experiment)
@@ -175,9 +175,12 @@ def evaluate(cfg: DictConfig):
         ])
 
         for file_name in file_list:
-            hq_path = os.path.join(cfg.data.hq_path, file_name)
+            lq_path = os.path.join(cfg.data.lq_path, file_name)
+            hq_path = os.path.join(cfg.data.hq_path, file_name.replace("_noise", ""))
             gt = cv2.imread(hq_path, -1).astype(np.float32)
-            file_name = file_name.replace("_4x", "").split('.')[0]
+            lq = cv2.imread(lq_path, -1).astype(np.float32)
+
+            file_name = file_name.replace("_noise", "").split('.')[0]
             report += "*********************  " + file_name + "  *********************\n"
             if not os.path.exists(os.path.join(results_save_path, file_name + "_GT.hdr")):
                 save_hdr(gt, results_save_path, file_name + "_raw_GT.hdr")
@@ -185,26 +188,11 @@ def evaluate(cfg: DictConfig):
                 draw_histogram(gt, file_name + "_GT", results_save_path)
 
 
-            # res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
-            # res_naive = inverse_fn(lq).squeeze(0).cpu().permute(1,2,0).detach().numpy()
-            # res_naive = cv2.resize(res_naive, None, fx=4, fy=4, interpolation=cv2.INTER_LINEAR)
-            downscaled = cv2.resize(gt, None, fx=0.25, fy=0.25, interpolation=cv2.INTER_LINEAR)
-            res_naive = cv2.resize(downscaled, None, fx=4, fy=4, interpolation=cv2.INTER_LINEAR)
-            # psnr = pu_psnr(res_naive, gt)
-            # ssim = pu_ssim(res_naive, gt)
-            # report += "navie -- PSNR = {:.5f}, ssim = {:.5f}\n".format(psnr, ssim)
-            if not os.path.exists(os.path.join(results_save_path, file_name + "_naive.hdr")):
-                draw_histogram(res_naive, file_name + "_bilinear", results_save_path)
-                save_hdr(res_naive, results_save_path, file_name + "_raw_naive.hdr")
-                visualize(res_naive, results_save_path, file_name + "_naive.hdr")
-
-            lq = transform_hdr(downscaled).unsqueeze(0).cuda()
+            lq = transform_hdr(lq).unsqueeze(0).cuda()
             with torch.no_grad():
                 pred = net(lq)
                 res_img = inverse_fn(pred).squeeze(0).cpu().permute(1,2,0).detach().numpy()
-                # psnr = pu_psnr(res_img, gt)
-                # ssim = pu_ssim(res_img, gt)
-                # report += "{} -- PSNR = {:.5f}, ssim = {:.5f}\n".format(experiment, psnr, ssim)
+
                 draw_histogram(res_img, file_name + "_nets_" + experiment, results_save_path)
                 save_hdr(res_img, results_save_path, file_name + "_raw_{}.hdr".format(experiment))
                 visualize(res_img, results_save_path, file_name + "_{}.hdr".format(experiment))
@@ -226,7 +214,7 @@ def evaluate(cfg: DictConfig):
     return {}, object_dict
 
 
-@hydra.main(version_base="1.3", config_path="../configs", config_name="eval.yaml")
+@hydra.main(version_base="1.3", config_path="../configs", config_name="eval_dn.yaml")
 def main(cfg: DictConfig) -> None:
     evaluate(cfg)
 

@@ -2,7 +2,7 @@ import os
 import subprocess
 
 # directory containing the images
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_wdsr_patchify'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_patchify'
 imgs = os.listdir(test_img_folder)
 imgs.sort()
 test_imgs = []
@@ -34,7 +34,7 @@ pq_cvvdp = []
 
 
 for file_name in test_imgs:
-    if "Artist_Palette" in file_name or "Bandon_Sunset" in file_name:
+    if "_s003.hdr" in file_name or "_s006.hdr" in file_name:
         continue
     if "'" in file_name or "&" in file_name:
         file_name = file_name.replace("'", "\\'").replace("&", "\\&")

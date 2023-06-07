@@ -26,19 +26,21 @@ class DnCNNLitModule(LightningModule):
 
     def __init__(
         self,
-        hparams: DictConfig,
+        net: torch.nn.Module,
+        optimizer: torch.optim.Optimizer,
+        scheduler: torch.optim.lr_scheduler,
+        loss: torch.nn.Module,
     ):
         super().__init__()
 
         # this line allows to access init params with 'self.hparams' attribute
         # also ensures init params will be stored in ckpt
-        self.save_hyperparameters(hparams)
+        # self.save_hyperparameters(logger=False)
 
-        self.net = hydra.utils.instantiate(hparams.model)
-        self.net.apply(self.weights_init_kaiming)
+        self.net = net
 
         # loss function
-        self.criterion = hydra.utils.instantiate(hparams.loss)
+        self.criterion = loss
 
         # for averaging loss across batches
         self.train_loss = MeanMetric()

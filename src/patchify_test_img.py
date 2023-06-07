@@ -41,10 +41,10 @@ def main():
     opt['compression_level'] = 3
 
     # HR images
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_wdsr'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_wdsr_patchify'
-    opt['crop_size'] = 512
-    opt['step'] = 256
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_patchify'
+    opt['crop_size'] = 2048
+    opt['step'] = 2048
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
