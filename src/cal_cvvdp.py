@@ -5,7 +5,7 @@ import subprocess
 folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/test'
 
 
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_wdsr'
 
 imgs = os.listdir(folder)
 imgs.sort()

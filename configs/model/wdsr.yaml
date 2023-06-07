@@ -1,0 +1,23 @@
+_target_: src.models.wdsr_module.WDSRLitModule
+
+loss: ${loss}
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 1e-3
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.MultiStepLR
+  _partial_: true
+  milestones: [20, 25]
+  gamma: 0.5
+
+net:
+  _target_: src.models.components.wdsr.WDSR
+  scale: 4
+  num_blocks: 16 # Number of residual blocks in networks
+  num_input_channels: 3
+  image_mean: 0.5
+  num_residual_units: 32 # Number of residual units in networks
+  width_multiplier: 4 # Width multiplier inside residual blocks.

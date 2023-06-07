@@ -149,6 +149,7 @@ def load_model_from_server(model, path):
 def evaluate(cfg: DictConfig):
 
     log.info(f"Instantiating model <{cfg.model._target_}>")
+    print(cfg.model, "****************")
     model: LightningModule = hydra.utils.instantiate(cfg.model)
 
     log_path = hydra.utils.instantiate(cfg.log_path)
