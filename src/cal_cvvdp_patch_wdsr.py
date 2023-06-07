@@ -2,7 +2,7 @@ import os
 import subprocess
 
 # directory containing the images
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_wdsr_patchify'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_pq_patchify'
 imgs = os.listdir(test_img_folder)
 imgs.sort()
 test_imgs = []
@@ -41,9 +41,9 @@ for file_name in test_imgs:
     reference_name = file_name
     reference_img = os.path.join(test_img_folder, reference_name)
     test_names = [
-        file_name.replace("_GT_", "_naive_"),
-        file_name.replace("_GT_", "_linear_l1_"),
-        file_name.replace("_GT_", "_pu_l1_"),
+        # file_name.replace("_GT_", "_naive_"),
+        # file_name.replace("_GT_", "_linear_l1_"),
+        # file_name.replace("_GT_", "_pu_l1_"),
         file_name.replace("_GT_", "_pq_l1_"),
     ]
 
