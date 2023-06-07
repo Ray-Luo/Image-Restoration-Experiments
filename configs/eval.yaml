@@ -2,7 +2,7 @@
 
 defaults:
   - _self_
-  - model: dncnn.yaml
+  - model: wdsr.yaml
   - logger: null
   - trainer: gpu.yaml
   - paths: default.yaml
@@ -12,14 +12,9 @@ defaults:
   - hydra: default.yaml
 
 
-# data:
-#   hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
-#   lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
-#   batch_size: 1
-
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
   batch_size: 1
 
 task_name: "eval"
@@ -50,13 +45,13 @@ log_path:
 
   # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_pu_epoch=172-step=4670.ckpt"
 
-  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_pq_epoch=109-step=2969.ckpt"
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_pq_epoch=198-step=5372.ckpt"
 
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/nd_linear_epoch=11-step=3659.ckpt"
+  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/nd_linear_epoch=11-step=3659.ckpt"
 
-  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/nd_pu_epoch=7-step=2439.ckpt"
+  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/nd_pu_epoch=7-step=2439.ckpt"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/nd_pq_epoch=16-step=4538.ckpt"
+  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/nd_pq_epoch=16-step=4538.ckpt"
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_pq/"

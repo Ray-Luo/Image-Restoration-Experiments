@@ -8,4 +8,5 @@ class PU:
         pass
 
     def __call__(self, x):
-        return torch.log2(A_COEFF * x + B_COEFF)
+        max = torch.log2(A_COEFF * 4000.0 + B_COEFF)
+        return torch.log2(A_COEFF * x + B_COEFF) / max
