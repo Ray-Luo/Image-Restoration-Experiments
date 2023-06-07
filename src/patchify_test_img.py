@@ -41,8 +41,8 @@ def main():
     opt['compression_level'] = 3
 
     # HR images
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_patchify'
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_patchify'
     opt['crop_size'] = 2048
     opt['step'] = 2048
     opt['thresh_size'] = 0
