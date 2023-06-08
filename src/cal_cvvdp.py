@@ -5,7 +5,7 @@ import subprocess
 folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/test'
 
 
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_wdsr'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr'
 
 imgs = os.listdir(folder)
 imgs.sort()
@@ -31,6 +31,8 @@ pq_psnr_y = []
 pq_cvvdp = []
 
 for filename in imgs:
+    if "Artist_Palette" in filename or "Bigfoot_Pass" in filename:
+        continue
     file_name = filename.split(".")[0]
     if "'" in file_name or "&" in file_name:
         file_name = file_name.replace("'", "\\'").replace("&", "\\&")
@@ -39,7 +41,6 @@ for filename in imgs:
     test_names = [
         file_name + "_raw_naive.hdr",
         file_name + "_raw_linear_l1.hdr",
-        # file_name + "_raw_log_l1.hdr",
         file_name + "_raw_pq_l1.hdr",
         file_name + "_raw_pu_l1.hdr",
     ]
