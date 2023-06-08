@@ -42,30 +42,30 @@ def main():
 
     # HR images
     opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/train_hdr'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/240p_train_hdr_patchify'
-    opt['crop_size'] = 384
-    opt['step'] = 192
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_train_hdr_patchify'
+    opt['crop_size'] = 960
+    opt['step'] = 480
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
     opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/valid_hdr'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/240p_valid_hdr_patchify'
-    opt['crop_size'] = 384
-    opt['step'] = 192
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_valid_hdr_patchify'
+    opt['crop_size'] = 960
+    opt['step'] = 480
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
     opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/train_noise_hdr'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/240p_train_noise_hdr_patchify'
-    opt['crop_size'] = 384
-    opt['step'] = 192
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_train_noise_hdr_patchify'
+    opt['crop_size'] = 960
+    opt['step'] = 480
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
     opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/valid_noise_hdr'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/240p_valid_noise_hdr_patchify'
-    opt['crop_size'] = 384
-    opt['step'] = 192
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_valid_noise_hdr_patchify'
+    opt['crop_size'] = 960
+    opt['step'] = 480
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
