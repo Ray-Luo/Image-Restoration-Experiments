@@ -26,37 +26,14 @@ task_name: "eval"
 
 tags: ["dev"]
 
-# passing checkpoint path is necessary for evaluation
-# ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-03-28_17-55-09/checkpoints/last.ckpt"
 
 log_path:
-  # linear_log: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train_1/runs/2023-04-11_14-38-18"
 
-  # linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train_1/runs/2023-04-11_14-42-15"
+  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_epoch=409-step=35669.ckpt"
 
-  # linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train_4/runs/2023-04-21_16-04-58"
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_epoch=526-step=45848.ckpt"
 
-  # linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train_1/runs/2023-04-11_14-36-26"
-
-  # log_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-05-22_14-04-19"
-
-  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/linear_epoch=49-step=2699.ckpt"
-
-  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/pu_epoch=175-step=7226.ckpt"
-
-  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/pq_epoch=175-step=9503.ckpt"
-
-  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_linear_epoch=130-step=2095.ckpt"
-
-  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_pu_epoch=172-step=4670.ckpt"
-
-  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_pq_epoch=109-step=2969.ckpt"
-
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/nd_linear_epoch=11-step=3659.ckpt"
-
-  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/nd_pu_epoch=7-step=2439.ckpt"
-
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/nd_pq_epoch=16-step=4538.ckpt"
+  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu_epoch=235-step=20531.ckpt"
 
 
 results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn/"

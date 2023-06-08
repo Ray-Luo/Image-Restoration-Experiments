@@ -26,11 +26,11 @@ from tqdm import tqdm
 
 
 # img /= np.max(img)
-img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr/Hancock_Kitchen_Inside_exr2hdr.hdr", cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
+img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr/skyscraper_noise_exr2hdr.hdr", cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
 img = img / 4000.0
 img = np.clip(img, 0., 1.)
 img = np.power(img, 1/2.2)
-save_hdr(img, "/home/luoleyouluole/Image-Restoration-Experiments/", "Hancock_Kitchen_Inside_exr2hdr.hdr")
+save_hdr(img, "/home/luoleyouluole/Image-Restoration-Experiments/", "skyscraper_noise_exr2hdr.hdr")
 
 
 # draw_histogram(img, "GT", "./")
