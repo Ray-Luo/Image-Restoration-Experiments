@@ -51,7 +51,7 @@ for filename in imgs:
         command = f"cvvdp --test {test_img} --ref {reference_img} --display standard_hdr_linear_zoom --metric pu-psnr-rgb pu-psnr-y cvvdp  --quiet"
         ret_value = subprocess.run(command, shell=True, capture_output=True, text=True)
         psnr_rgb, psnr_y, cvvdp = ret_value.stdout.split()
-        print(test_name, psnr_rgb, psnr_y, cvvdp, "\n")
+        print(test_name, psnr_rgb, psnr_y, cvvdp)
 
         if "naive" in test_name:
             navie_psnr_rgb.append(float(psnr_rgb))
@@ -75,6 +75,8 @@ for filename in imgs:
             pu_cvvdp.append(float(cvvdp))
         else:
             raise ValueError(f"Unknown test name: {test_name}")
+
+    print("\n")
 
 print("navie_psnr_rgb=", navie_psnr_rgb)
 print("linear_psnr_rgb=", linear_psnr_rgb)
