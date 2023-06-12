@@ -29,11 +29,11 @@ tags: ["dev"]
 
 log_path:
 
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_epoch=409-step=35669.ckpt"
+  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_epoch=795-step=69251.ckpt"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_epoch=526-step=45848.ckpt"
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_epoch=956-step=83258.ckpt"
 
-  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu_epoch=235-step=20531.ckpt"
+  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu_epoch=728-step=63422.ckpt"
 
 
 results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn/"

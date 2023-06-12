@@ -2,12 +2,12 @@ import os
 import subprocess
 
 # directory containing the images
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_wdsr_patchify'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr_patchify'
 imgs = os.listdir(test_img_folder)
 imgs.sort()
 test_imgs = []
 for filename in imgs:
-    if "_GT_" in filename:
+    if "_raw_GT_" in filename:
         test_imgs.append(filename)
 
 navie_psnr_rgb = []

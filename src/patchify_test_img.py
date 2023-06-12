@@ -41,19 +41,19 @@ def main():
     opt['compression_level'] = 3
 
     # HR images
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_pq'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_pq_patchify'
-    opt['crop_size'] = 2048
-    opt['step'] = 2048
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr_patchify'
+    opt['crop_size'] = 2000
+    opt['step'] = 1000
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
-    # opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/valid_hdr'
-    # opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/valid_hdr_patchify'
-    # opt['crop_size'] = 384
-    # opt['step'] = 192
-    # opt['thresh_size'] = 0
-    # extract_subimages(opt)
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_wdsr'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_wdsr_patchify'
+    opt['crop_size'] = 2000
+    opt['step'] = 1000
+    opt['thresh_size'] = 0
+    extract_subimages(opt)
 
     # opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/train_noise_hdr'
     # opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/train_noise_hdr_patchify'

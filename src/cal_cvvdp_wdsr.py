@@ -2,12 +2,12 @@ import os
 import subprocess
 
 # directory containing the images
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_pq_patchify'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_wdsr'
 imgs = os.listdir(test_img_folder)
 imgs.sort()
 test_imgs = []
 for filename in imgs:
-    if "_GT_" in filename:
+    if "_raw_GT" in filename:
         test_imgs.append(filename)
 
 navie_psnr_rgb = []
@@ -41,10 +41,10 @@ for file_name in test_imgs:
     reference_name = file_name
     reference_img = os.path.join(test_img_folder, reference_name)
     test_names = [
-        # file_name.replace("_GT_", "_naive_"),
-        # file_name.replace("_GT_", "_linear_l1_"),
-        # file_name.replace("_GT_", "_pu_l1_"),
-        file_name.replace("_GT_", "_pq_l1_"),
+        file_name.replace("_GT", "_naive"),
+        file_name.replace("_GT", "_linear_l1"),
+        file_name.replace("_GT", "_pu_l1"),
+        file_name.replace("_GT", "_pq_l1"),
     ]
 
     for test_name in test_names:
@@ -77,6 +77,8 @@ for file_name in test_imgs:
             pu_cvvdp.append(float(cvvdp))
         else:
             raise ValueError(f"Unknown test name: {test_name}")
+
+    print("\n")
 
 print("navie_psnr_rgb=", navie_psnr_rgb)
 print("linear_psnr_rgb=", linear_psnr_rgb)
