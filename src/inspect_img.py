@@ -29,18 +29,20 @@ def original2pq(x):
 
 def draw_histogram(array, mode, save_path):
     array = array + 1e-5
-    # array = np.log(array)
+    array = np.log(array)
     fig, ax = plt.subplots()
     sns.distplot(array.flatten(), bins=100, kde=False)
-    if mode == "gt":
-        plt.xlim(0, 1000)
-        plt.ylim(0, 3e7)
-    else:
-        plt.xlim(0, 1)
-        plt.ylim(0, 3e7)
+    # if mode == "gt":
+    #     plt.xlim(0, 1000)
+    #     plt.ylim(0, 3e7)
+    # else:
+    #     plt.xlim(0, 1)
+    #     plt.ylim(0, 3e7)
+    plt.xlim(-13, 8)
+    plt.ylim(0, 5.5e6)
     plt.xlabel('Value')
-    plt.ylabel('Frequency')
-    plt.title('Log Histogram of {}'.format(mode))
+    plt.ylabel('Log Frequency')
+    plt.title('Histogram of {}'.format(mode))
     plt.savefig(os.path.join(save_path + '{}'.format(mode)))
 
 
