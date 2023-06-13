@@ -77,6 +77,8 @@ for file_name in test_imgs:
         else:
             raise ValueError(f"Unknown test name: {test_name}")
 
+    print("\n")
+
 print("navie_psnr_rgb=", navie_psnr_rgb)
 print("linear_psnr_rgb=", linear_psnr_rgb)
 print("log_psnr_rg=", log_psnr_rgb)
