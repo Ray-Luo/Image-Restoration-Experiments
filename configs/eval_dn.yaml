@@ -29,11 +29,17 @@ tags: ["dev"]
 
 log_path:
 
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_epoch=795-step=69251.ckpt"
+  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_epoch=795-step=69251.ckpt"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_epoch=1473-step=128237.ckpt"
+  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_epoch=1473-step=128237.ckpt"
 
-  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu_epoch=1113-step=96917.ckpt"
+  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu_epoch=1113-step=96917.ckpt"
+
+  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_l1_epoch=374-step=32624.ckpt"
+
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_l1_epoch=543-step=47327.ckpt"
+
+  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu_l1_epoch=480-step=41846.ckpt"
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_l1/"

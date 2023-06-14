@@ -55,8 +55,8 @@ def main():
     # opt['thresh_size'] = 0
     # extract_subimages(opt)
 
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_patchify'
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_l1'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_l1_patchify'
     opt['crop_size'] = 2000
     opt['step'] = 1000
     opt['thresh_size'] = 0

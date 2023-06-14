@@ -41,7 +41,7 @@ def draw_histogram(array, mode, save_path):
     plt.xlim(-13, 8)
     plt.ylim(0, 5.5e6)
     plt.xlabel('Value')
-    plt.ylabel('Log Frequency')
+    plt.ylabel('Frequency')
     plt.title('Histogram of {}'.format(mode))
     plt.savefig(os.path.join(save_path + '{}'.format(mode)))
 
@@ -51,6 +51,9 @@ img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/data/res_eds
 navie = img / 4000.0
 pu_encoded = original2pu(img)
 pq_encoded = original2pq(img)
+
+print(original2pq(np.array([1.0])))
+print(original2pu(np.array([1.0])))
 
 draw_histogram(img, "gt", "./")
 draw_histogram(navie, "navie", "./")
