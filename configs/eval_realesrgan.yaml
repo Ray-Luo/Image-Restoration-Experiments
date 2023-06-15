@@ -1,0 +1,36 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - model: realesrgan.yaml
+  - logger: null
+  - trainer: gpu.yaml
+  - paths: default.yaml
+  - extras: default.yaml
+  - representation: pu.yaml
+  - loss: l1.yaml
+  - hydra: default.yaml
+
+
+data:
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
+  batch_size: 1
+
+task_name: "eval"
+
+tags: ["dev"]
+
+# passing checkpoint path is necessary for evaluation
+# ckpt_path: "/home/luoleyouluole/Image-Restoration-Experiments/logs/train/runs/2023-03-28_17-55-09/checkpoints/last.ckpt"
+
+log_path:
+
+  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_linear_epoch=1929-step=17999.ckpt"
+
+  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_pu_epoch=2544-step=23561.ckpt"
+
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/realesrgan_epoch=21-step=3827.ckpt"
+
+
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_realesrgan/"
