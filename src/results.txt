@@ -299,128 +299,678 @@ pq_cvvdp= [8.9321, 9.2339, 9.7689, 9.7978, 9.894, 9.987, 8.3977, 9.5095, 9.4485,
 
 
 ********************************************* dncnn *********************************************
-BBandon_Sunset_2_exr2hdr_raw_linear_l1.hdr 59.9020 70.3455 9.8945
-Bandon_Sunset_2_exr2hdr_raw_pu_l1.hdr 58.0264 64.3802 9.8257
-Bandon_Sunset_2_exr2hdr_raw_pq_l1.hdr 71.0863 79.7047 9.9489
+Bandon_Sunset_2_aug_1_exr2hdr_raw_linear_l1.hdr 42.3824 55.8270 9.5499
+Bandon_Sunset_2_aug_1_exr2hdr_raw_pu_l1.hdr 64.9933 87.9381 9.9859
+Bandon_Sunset_2_aug_1_exr2hdr_raw_pq_l1.hdr 52.2798 75.2274 9.9678
 
 
-Bar_Harbor_Sunrise_exr2hdr_raw_linear_l1.hdr 41.1757 46.7093 8.5985
-Bar_Harbor_Sunrise_exr2hdr_raw_pu_l1.hdr 41.2482 46.7107 8.5985
-Bar_Harbor_Sunrise_exr2hdr_raw_pq_l1.hdr 41.2566 46.7109 8.5985
+Bandon_Sunset_2_aug_2_exr2hdr_raw_linear_l1.hdr 40.1318 48.9746 9.3083
+Bandon_Sunset_2_aug_2_exr2hdr_raw_pu_l1.hdr 63.4568 86.3075 9.9755
+Bandon_Sunset_2_aug_2_exr2hdr_raw_pq_l1.hdr 61.7713 84.6530 9.9758
 
 
-Ben\&Jerry\'s_exr2hdr_raw_linear_l1.hdr 48.2099 68.4553 9.7923
-Ben\&Jerry\'s_exr2hdr_raw_pu_l1.hdr 48.4353 68.5748 9.8000
-Ben\&Jerry\'s_exr2hdr_raw_pq_l1.hdr 48.5907 68.6555 9.7990
+Bandon_Sunset_2_aug_3_exr2hdr_raw_linear_l1.hdr 39.8025 48.6427 9.2915
+Bandon_Sunset_2_aug_3_exr2hdr_raw_pu_l1.hdr 64.0025 86.8905 9.9786
+Bandon_Sunset_2_aug_3_exr2hdr_raw_pq_l1.hdr 63.7199 86.6121 9.9817
 
 
-Blooming_Gorse_1_exr2hdr_raw_linear_l1.hdr 35.9386 58.8858 9.6134
-Blooming_Gorse_1_exr2hdr_raw_pu_l1.hdr 38.9942 61.9412 9.8295
-Blooming_Gorse_1_exr2hdr_raw_pq_l1.hdr 38.9649 61.9119 9.8266
+Bandon_Sunset_2_aug_4_exr2hdr_raw_linear_l1.hdr 38.9962 47.7421 9.2393
+Bandon_Sunset_2_aug_4_exr2hdr_raw_pu_l1.hdr 66.6245 89.5131 9.9759
+Bandon_Sunset_2_aug_4_exr2hdr_raw_pq_l1.hdr 66.8749 89.7615 9.9839
 
 
-Cades_Cove_exr2hdr_raw_linear_l1.hdr 44.7389 67.6864 9.8499
-Cades_Cove_exr2hdr_raw_pu_l1.hdr 45.3560 68.3035 9.8912
-Cades_Cove_exr2hdr_raw_pq_l1.hdr 45.7055 68.6530 9.9001
+Bandon_Sunset_2_aug_5_exr2hdr_raw_linear_l1.hdr 38.3296 46.8760 9.1831
+Bandon_Sunset_2_aug_5_exr2hdr_raw_pu_l1.hdr 67.8076 90.7143 9.9870
+Bandon_Sunset_2_aug_5_exr2hdr_raw_pq_l1.hdr 68.0051 90.9165 9.9867
 
 
-El_Capitan_exr2hdr_raw_linear_l1.hdr 63.0793 86.0234 9.9865
-El_Capitan_exr2hdr_raw_pu_l1.hdr 63.0885 86.0326 9.9867
-El_Capitan_exr2hdr_raw_pq_l1.hdr 62.8533 85.7976 9.9866
+Bandon_Sunset_2_exr2hdr_raw_linear_l1.hdr 52.3080 64.6137 9.7426
+Bandon_Sunset_2_exr2hdr_raw_pu_l1.hdr 68.1972 91.1436 9.9872
+Bandon_Sunset_2_exr2hdr_raw_pq_l1.hdr 67.9768 90.9232 9.9872
 
 
-Flamingo_exr2hdr_raw_linear_l1.hdr 30.3850 32.5977 7.6163
-Flamingo_exr2hdr_raw_pu_l1.hdr 30.5112 32.6430 7.6572
-Flamingo_exr2hdr_raw_pq_l1.hdr 30.6799 32.6832 7.6672
+Bar_Harbor_Sunrise_aug_1_exr2hdr_raw_linear_l1.hdr 40.7266 46.5717 8.5927
+Bar_Harbor_Sunrise_aug_1_exr2hdr_raw_pu_l1.hdr 41.0545 46.6992 8.5979
+Bar_Harbor_Sunrise_aug_1_exr2hdr_raw_pq_l1.hdr 40.9849 46.6979 8.5979
 
 
-Golden_Gate_2_exr2hdr_raw_linear_l1.hdr 60.5613 66.2436 9.6684
-Golden_Gate_2_exr2hdr_raw_pu_l1.hdr 60.7466 64.6826 9.6667
-Golden_Gate_2_exr2hdr_raw_pq_l1.hdr 62.3641 66.2714 9.6685
+Bar_Harbor_Sunrise_aug_2_exr2hdr_raw_linear_l1.hdr 38.4851 45.6677 8.5878
+Bar_Harbor_Sunrise_aug_2_exr2hdr_raw_pu_l1.hdr 40.9501 46.8034 8.6080
+Bar_Harbor_Sunrise_aug_2_exr2hdr_raw_pq_l1.hdr 40.5120 46.7944 8.6080
 
 
-Hancock_Kitchen_Inside_exr2hdr_raw_linear_l1.hdr 28.1732 31.9422 7.3907
-Hancock_Kitchen_Inside_exr2hdr_raw_pu_l1.hdr 28.2492 31.9636 7.4009
-Hancock_Kitchen_Inside_exr2hdr_raw_pq_l1.hdr 30.7046 32.8679 7.5603
+Bar_Harbor_Sunrise_aug_3_exr2hdr_raw_linear_l1.hdr 38.1962 45.2820 8.5727
+Bar_Harbor_Sunrise_aug_3_exr2hdr_raw_pu_l1.hdr 40.9607 46.6980 8.5980
+Bar_Harbor_Sunrise_aug_3_exr2hdr_raw_pq_l1.hdr 40.7807 46.6946 8.5980
 
 
-Lab_Booth_exr2hdr_raw_linear_l1.hdr 31.0009 38.6371 8.5306
-Lab_Booth_exr2hdr_raw_pu_l1.hdr 32.9124 38.6846 8.5341
-Lab_Booth_exr2hdr_raw_pq_l1.hdr 33.2344 38.7449 8.5493
+Bar_Harbor_Sunrise_aug_4_exr2hdr_raw_linear_l1.hdr 37.5453 44.9040 8.5730
+Bar_Harbor_Sunrise_aug_4_exr2hdr_raw_pu_l1.hdr 41.0796 46.8071 8.6081
+Bar_Harbor_Sunrise_aug_4_exr2hdr_raw_pq_l1.hdr 41.0556 46.8067 8.6081
 
 
-Lab_Typwriter_exr2hdr_raw_linear_l1.hdr 28.3833 30.9281 7.9677
-Lab_Typwriter_exr2hdr_raw_pu_l1.hdr 28.4027 30.9322 7.9691
-Lab_Typwriter_exr2hdr_raw_pq_l1.hdr 28.9386 31.0387 8.0042
+Bar_Harbor_Sunrise_aug_5_exr2hdr_raw_linear_l1.hdr 36.7468 44.0820 8.5424
+Bar_Harbor_Sunrise_aug_5_exr2hdr_raw_pu_l1.hdr 41.1015 46.6993 8.5977
+Bar_Harbor_Sunrise_aug_5_exr2hdr_raw_pq_l1.hdr 41.1014 46.6993 8.5977
 
 
-Lab_Window_exr2hdr_raw_linear_l1.hdr 28.7663 29.8528 7.4293
-Lab_Window_exr2hdr_raw_pu_l1.hdr 29.3267 29.9310 7.4545
-Lab_Window_exr2hdr_raw_pq_l1.hdr 29.9782 30.0912 7.4994
+Bar_Harbor_Sunrise_exr2hdr_raw_linear_l1.hdr 41.1742 46.6880 8.5987
+Bar_Harbor_Sunrise_exr2hdr_raw_pu_l1.hdr 41.1855 46.7095 8.5985
+Bar_Harbor_Sunrise_exr2hdr_raw_pq_l1.hdr 41.1859 46.7095 8.5985
 
 
-Las_Vegas_Store_exr2hdr_raw_linear_l1.hdr 35.8918 37.8351 8.5695
-Las_Vegas_Store_exr2hdr_raw_pu_l1.hdr 36.5418 37.9516 8.6341
-Las_Vegas_Store_exr2hdr_raw_pq_l1.hdr 36.6953 37.9827 8.6388
+Ben\&Jerry\'s_aug_1_exr2hdr_raw_linear_l1.hdr 46.8378 67.2130 9.7776
+Ben\&Jerry\'s_aug_1_exr2hdr_raw_pu_l1.hdr 47.2187 67.9092 9.7959
+Ben\&Jerry\'s_aug_1_exr2hdr_raw_pq_l1.hdr 47.3159 67.9668 9.7958
 
 
-McKee\'s_Pub_exr2hdr_raw_linear_l1.hdr 50.0323 52.8633 9.1589
-McKee\'s_Pub_exr2hdr_raw_pu_l1.hdr 50.4647 52.9155 9.1668
-McKee\'s_Pub_exr2hdr_raw_pq_l1.hdr 50.4592 52.9195 9.1667
+Ben\&Jerry\'s_aug_2_exr2hdr_raw_linear_l1.hdr 41.5966 55.0109 9.5747
+Ben\&Jerry\'s_aug_2_exr2hdr_raw_pu_l1.hdr 47.9296 68.2978 9.7900
+Ben\&Jerry\'s_aug_2_exr2hdr_raw_pq_l1.hdr 46.6277 67.5313 9.7894
+
+
+Ben\&Jerry\'s_aug_3_exr2hdr_raw_linear_l1.hdr 41.5520 54.8631 9.5712
+Ben\&Jerry\'s_aug_3_exr2hdr_raw_pu_l1.hdr 47.9998 68.3159 9.7925
+Ben\&Jerry\'s_aug_3_exr2hdr_raw_pq_l1.hdr 46.7114 67.5662 9.7922
+
+
+Ben\&Jerry\'s_aug_4_exr2hdr_raw_linear_l1.hdr 39.5523 50.2998 9.3846
+Ben\&Jerry\'s_aug_4_exr2hdr_raw_pu_l1.hdr 46.8959 67.6964 9.7841
+Ben\&Jerry\'s_aug_4_exr2hdr_raw_pq_l1.hdr 46.7944 67.6342 9.7841
+
+
+Ben\&Jerry\'s_aug_5_exr2hdr_raw_linear_l1.hdr 38.3179 47.5944 9.2284
+Ben\&Jerry\'s_aug_5_exr2hdr_raw_pu_l1.hdr 48.0600 68.3572 9.7915
+Ben\&Jerry\'s_aug_5_exr2hdr_raw_pq_l1.hdr 48.0618 68.3582 9.7915
+
+
+Ben\&Jerry\'s_exr2hdr_raw_linear_l1.hdr 48.2088 68.4508 9.7924
+Ben\&Jerry\'s_exr2hdr_raw_pu_l1.hdr 48.6611 68.6916 9.7997
+Ben\&Jerry\'s_exr2hdr_raw_pq_l1.hdr 48.6585 68.6903 9.7986
+
+
+Blooming_Gorse_1_aug_1_exr2hdr_raw_linear_l1.hdr 35.3434 58.2908 9.5741
+Blooming_Gorse_1_aug_1_exr2hdr_raw_pu_l1.hdr 37.5979 60.5451 9.7711
+Blooming_Gorse_1_aug_1_exr2hdr_raw_pq_l1.hdr 37.0929 60.0402 9.7181
+
+
+Blooming_Gorse_1_aug_2_exr2hdr_raw_linear_l1.hdr 35.4863 58.1571 9.5744
+Blooming_Gorse_1_aug_2_exr2hdr_raw_pu_l1.hdr 35.7231 58.6705 9.6115
+Blooming_Gorse_1_aug_2_exr2hdr_raw_pq_l1.hdr 35.5088 58.4559 9.6067
+
+
+Blooming_Gorse_1_aug_3_exr2hdr_raw_linear_l1.hdr 35.5461 58.0778 9.5837
+Blooming_Gorse_1_aug_3_exr2hdr_raw_pu_l1.hdr 35.8194 58.7668 9.6133
+Blooming_Gorse_1_aug_3_exr2hdr_raw_pq_l1.hdr 35.5972 58.5433 9.6101
+
+
+Blooming_Gorse_1_aug_4_exr2hdr_raw_linear_l1.hdr 34.8416 55.7558 9.5458
+Blooming_Gorse_1_aug_4_exr2hdr_raw_pu_l1.hdr 35.3344 58.2819 9.5756
+Blooming_Gorse_1_aug_4_exr2hdr_raw_pq_l1.hdr 35.2809 58.2278 9.5745
+
+
+Blooming_Gorse_1_aug_5_exr2hdr_raw_linear_l1.hdr 34.6853 51.1621 9.4244
+Blooming_Gorse_1_aug_5_exr2hdr_raw_pu_l1.hdr 35.7703 58.7177 9.5877
+Blooming_Gorse_1_aug_5_exr2hdr_raw_pq_l1.hdr 35.7703 58.7177 9.5876
+
+
+Blooming_Gorse_1_exr2hdr_raw_linear_l1.hdr 35.8713 58.8187 9.5993
+Blooming_Gorse_1_exr2hdr_raw_pu_l1.hdr 37.9847 60.9319 9.7837
+Blooming_Gorse_1_exr2hdr_raw_pq_l1.hdr 37.4916 60.4389 9.7315
+
+
+Cades_Cove_aug_1_exr2hdr_raw_linear_l1.hdr 43.9228 66.8693 9.8313
+Cades_Cove_aug_1_exr2hdr_raw_pu_l1.hdr 44.0386 66.9862 9.8547
+Cades_Cove_aug_1_exr2hdr_raw_pq_l1.hdr 43.9798 66.9274 9.8441
+
+
+Cades_Cove_aug_2_exr2hdr_raw_linear_l1.hdr 41.8861 61.9114 9.7596
+Cades_Cove_aug_2_exr2hdr_raw_pu_l1.hdr 43.9222 66.8698 9.8346
+Cades_Cove_aug_2_exr2hdr_raw_pq_l1.hdr 43.8445 66.7921 9.8341
+
+
+Cades_Cove_aug_3_exr2hdr_raw_linear_l1.hdr 41.5781 59.7683 9.7162
+Cades_Cove_aug_3_exr2hdr_raw_pu_l1.hdr 44.7207 67.6682 9.8501
+Cades_Cove_aug_3_exr2hdr_raw_pq_l1.hdr 44.5746 67.5221 9.8494
+
+
+Cades_Cove_aug_4_exr2hdr_raw_linear_l1.hdr 40.3978 57.1874 9.6541
+Cades_Cove_aug_4_exr2hdr_raw_pu_l1.hdr 43.9201 66.8677 9.8320
+Cades_Cove_aug_4_exr2hdr_raw_pq_l1.hdr 43.6488 66.5898 9.8318
+
+
+Cades_Cove_aug_5_exr2hdr_raw_linear_l1.hdr 38.4794 49.5011 9.3470
+Cades_Cove_aug_5_exr2hdr_raw_pu_l1.hdr 44.7271 67.6746 9.8474
+Cades_Cove_aug_5_exr2hdr_raw_pq_l1.hdr 44.7229 67.6704 9.8474
+
+
+Cades_Cove_exr2hdr_raw_linear_l1.hdr 44.7377 67.6852 9.8493
+Cades_Cove_exr2hdr_raw_pu_l1.hdr 44.9225 67.8701 9.8748
+Cades_Cove_exr2hdr_raw_pq_l1.hdr 44.8237 67.7712 9.8631
+
+
+El_Capitan_aug_1_exr2hdr_raw_linear_l1.hdr 60.0706 83.0131 9.9795
+El_Capitan_aug_1_exr2hdr_raw_pu_l1.hdr 60.0730 83.0154 9.9795
+El_Capitan_aug_1_exr2hdr_raw_pq_l1.hdr 60.0730 83.0154 9.9795
+
+
+El_Capitan_aug_2_exr2hdr_raw_linear_l1.hdr 46.2871 66.8259 9.8731
+El_Capitan_aug_2_exr2hdr_raw_pu_l1.hdr 58.3962 81.3407 9.9766
+El_Capitan_aug_2_exr2hdr_raw_pq_l1.hdr 51.4179 74.3650 9.9595
+
+
+El_Capitan_aug_3_exr2hdr_raw_linear_l1.hdr 44.7776 63.1992 9.8068
+El_Capitan_aug_3_exr2hdr_raw_pu_l1.hdr 57.9075 80.8516 9.9756
+El_Capitan_aug_3_exr2hdr_raw_pq_l1.hdr 50.9021 73.8491 9.9578
+
+
+El_Capitan_aug_4_exr2hdr_raw_linear_l1.hdr 40.7452 52.2706 9.4835
+El_Capitan_aug_4_exr2hdr_raw_pu_l1.hdr 59.4450 82.3893 9.9785
+El_Capitan_aug_4_exr2hdr_raw_pq_l1.hdr 55.8854 78.8316 9.9745
+
+
+El_Capitan_aug_5_exr2hdr_raw_linear_l1.hdr 39.7875 49.9922 9.3718
+El_Capitan_aug_5_exr2hdr_raw_pu_l1.hdr 59.6240 82.5663 9.9786
+El_Capitan_aug_5_exr2hdr_raw_pq_l1.hdr 59.2975 82.2402 9.9784
+
+
+El_Capitan_exr2hdr_raw_linear_l1.hdr 63.0885 86.0326 9.9865
+El_Capitan_exr2hdr_raw_pu_l1.hdr 63.0932 86.0373 9.9865
+El_Capitan_exr2hdr_raw_pq_l1.hdr 63.0932 86.0373 9.9865
+
+
+Flamingo_aug_1_exr2hdr_raw_linear_l1.hdr 29.8519 32.5549 7.6027
+Flamingo_aug_1_exr2hdr_raw_pu_l1.hdr 29.9855 32.5681 7.6298
+Flamingo_aug_1_exr2hdr_raw_pq_l1.hdr 29.9496 32.5773 7.6445
+
+
+Flamingo_aug_2_exr2hdr_raw_linear_l1.hdr 29.6115 32.5372 7.6007
+Flamingo_aug_2_exr2hdr_raw_pu_l1.hdr 29.8835 32.5450 7.6014
+Flamingo_aug_2_exr2hdr_raw_pq_l1.hdr 29.8849 32.5633 7.6306
+
+
+Flamingo_aug_3_exr2hdr_raw_linear_l1.hdr 30.0090 32.5974 7.6084
+Flamingo_aug_3_exr2hdr_raw_pu_l1.hdr 30.3576 32.6178 7.6092
+Flamingo_aug_3_exr2hdr_raw_pq_l1.hdr 30.3620 32.6335 7.6360
+
+
+Flamingo_aug_4_exr2hdr_raw_linear_l1.hdr 29.5691 32.5293 7.5961
+Flamingo_aug_4_exr2hdr_raw_pu_l1.hdr 29.9424 32.5936 7.6007
+Flamingo_aug_4_exr2hdr_raw_pq_l1.hdr 29.9413 32.5960 7.6068
+
+
+Flamingo_aug_5_exr2hdr_raw_linear_l1.hdr 29.4249 32.4465 7.5852
+Flamingo_aug_5_exr2hdr_raw_pu_l1.hdr 29.8243 32.5342 7.5966
+Flamingo_aug_5_exr2hdr_raw_pq_l1.hdr 29.8242 32.5342 7.5966
+
+
+Flamingo_exr2hdr_raw_linear_l1.hdr 30.3339 32.6000 7.6189
+Flamingo_exr2hdr_raw_pu_l1.hdr 30.4748 32.6211 7.6459
+Flamingo_exr2hdr_raw_pq_l1.hdr 30.4983 32.6223 7.6511
+
+
+Golden_Gate_2_aug_1_exr2hdr_raw_linear_l1.hdr 55.4596 63.9739 9.6436
+Golden_Gate_2_aug_1_exr2hdr_raw_pu_l1.hdr 60.1833 66.1411 9.6663
+Golden_Gate_2_aug_1_exr2hdr_raw_pq_l1.hdr 59.7444 66.1318 9.6663
+
+
+Golden_Gate_2_aug_2_exr2hdr_raw_linear_l1.hdr 41.6400 50.6509 9.3756
+Golden_Gate_2_aug_2_exr2hdr_raw_pu_l1.hdr 58.1300 66.2284 9.6696
+Golden_Gate_2_aug_2_exr2hdr_raw_pq_l1.hdr 53.7191 65.4885 9.6628
+
+
+Golden_Gate_2_aug_3_exr2hdr_raw_linear_l1.hdr 42.0990 51.5293 9.4103
+Golden_Gate_2_aug_3_exr2hdr_raw_pu_l1.hdr 58.2864 66.1949 9.6686
+Golden_Gate_2_aug_3_exr2hdr_raw_pq_l1.hdr 52.3168 64.8630 9.6508
+
+
+Golden_Gate_2_aug_4_exr2hdr_raw_linear_l1.hdr 40.4529 48.7881 9.2895
+Golden_Gate_2_aug_4_exr2hdr_raw_pu_l1.hdr 59.6588 66.2228 9.6684
+Golden_Gate_2_aug_4_exr2hdr_raw_pq_l1.hdr 59.5361 66.2189 9.6684
+
+
+Golden_Gate_2_aug_5_exr2hdr_raw_linear_l1.hdr 38.8062 47.0661 9.1852
+Golden_Gate_2_aug_5_exr2hdr_raw_pu_l1.hdr 60.3894 66.2376 9.6683
+Golden_Gate_2_aug_5_exr2hdr_raw_pq_l1.hdr 60.4299 66.2384 9.6683
+
+
+Golden_Gate_2_exr2hdr_raw_linear_l1.hdr 59.8098 64.8312 9.6522
+Golden_Gate_2_exr2hdr_raw_pu_l1.hdr 60.6136 66.2445 9.6684
+Golden_Gate_2_exr2hdr_raw_pq_l1.hdr 60.6294 66.2448 9.6684
+
+
+Hancock_Kitchen_Inside_aug_1_exr2hdr_raw_linear_l1.hdr 28.0770 31.9058 7.3908
+Hancock_Kitchen_Inside_aug_1_exr2hdr_raw_pu_l1.hdr 28.0712 31.9038 7.3911
+Hancock_Kitchen_Inside_aug_1_exr2hdr_raw_pq_l1.hdr 28.0712 31.9038 7.3911
+
+
+Hancock_Kitchen_Inside_aug_2_exr2hdr_raw_linear_l1.hdr 27.9998 31.8880 7.3888
+Hancock_Kitchen_Inside_aug_2_exr2hdr_raw_pu_l1.hdr 28.0195 31.8909 7.3905
+Hancock_Kitchen_Inside_aug_2_exr2hdr_raw_pq_l1.hdr 28.0195 31.8909 7.3905
+
+
+Hancock_Kitchen_Inside_aug_3_exr2hdr_raw_linear_l1.hdr 27.9929 31.8916 7.3883
+Hancock_Kitchen_Inside_aug_3_exr2hdr_raw_pu_l1.hdr 27.9937 31.8943 7.3912
+Hancock_Kitchen_Inside_aug_3_exr2hdr_raw_pq_l1.hdr 27.9937 31.8943 7.3912
+
+
+Hancock_Kitchen_Inside_aug_4_exr2hdr_raw_linear_l1.hdr 27.8734 31.8587 7.3944
+Hancock_Kitchen_Inside_aug_4_exr2hdr_raw_pu_l1.hdr 28.0855 31.9083 7.3916
+Hancock_Kitchen_Inside_aug_4_exr2hdr_raw_pq_l1.hdr 28.0842 31.9083 7.3916
+
+
+Hancock_Kitchen_Inside_aug_5_exr2hdr_raw_linear_l1.hdr 27.8462 31.8139 7.3906
+Hancock_Kitchen_Inside_aug_5_exr2hdr_raw_pu_l1.hdr 28.0678 31.8951 7.3894
+Hancock_Kitchen_Inside_aug_5_exr2hdr_raw_pq_l1.hdr 28.0658 31.8951 7.3894
+
+
+Hancock_Kitchen_Inside_exr2hdr_raw_linear_l1.hdr 28.1733 31.9422 7.3907
+Hancock_Kitchen_Inside_exr2hdr_raw_pu_l1.hdr 28.1733 31.9422 7.3907
+Hancock_Kitchen_Inside_exr2hdr_raw_pq_l1.hdr 28.1977 31.9483 7.3929
+
+
+Lab_Booth_aug_1_exr2hdr_raw_linear_l1.hdr 30.4919 38.6082 8.5303
+Lab_Booth_aug_1_exr2hdr_raw_pu_l1.hdr 31.9197 38.6386 8.5317
+Lab_Booth_aug_1_exr2hdr_raw_pq_l1.hdr 31.9371 38.6390 8.5317
+
+
+Lab_Booth_aug_2_exr2hdr_raw_linear_l1.hdr 30.2353 38.5407 8.5268
+Lab_Booth_aug_2_exr2hdr_raw_pu_l1.hdr 30.7154 38.5618 8.5261
+Lab_Booth_aug_2_exr2hdr_raw_pq_l1.hdr 30.8627 38.5663 8.5248
+
+
+Lab_Booth_aug_3_exr2hdr_raw_linear_l1.hdr 30.4093 38.5345 8.5284
+Lab_Booth_aug_3_exr2hdr_raw_pu_l1.hdr 30.9272 38.6394 8.5310
+Lab_Booth_aug_3_exr2hdr_raw_pq_l1.hdr 30.8971 38.6385 8.5306
+
+
+Lab_Booth_aug_4_exr2hdr_raw_linear_l1.hdr 30.0308 38.4267 8.5262
+Lab_Booth_aug_4_exr2hdr_raw_pu_l1.hdr 30.4754 38.6098 8.5312
+Lab_Booth_aug_4_exr2hdr_raw_pq_l1.hdr 30.4359 38.6085 8.5311
+
+
+Lab_Booth_aug_5_exr2hdr_raw_linear_l1.hdr 29.9521 38.3386 8.5218
+Lab_Booth_aug_5_exr2hdr_raw_pu_l1.hdr 30.3830 38.5973 8.5317
+Lab_Booth_aug_5_exr2hdr_raw_pq_l1.hdr 30.3634 38.5967 8.5317
+
+
+Lab_Booth_exr2hdr_raw_linear_l1.hdr 30.9580 38.6368 8.5298
+Lab_Booth_exr2hdr_raw_pu_l1.hdr 32.8849 38.6828 8.5330
+Lab_Booth_exr2hdr_raw_pq_l1.hdr 32.7241 38.6796 8.5325
+
+
+Lab_Typwriter_aug_1_exr2hdr_raw_linear_l1.hdr 28.3193 30.9030 7.9647
+Lab_Typwriter_aug_1_exr2hdr_raw_pu_l1.hdr 28.3123 30.9000 7.9655
+Lab_Typwriter_aug_1_exr2hdr_raw_pq_l1.hdr 28.3124 30.9000 7.9655
+
+
+Lab_Typwriter_aug_2_exr2hdr_raw_linear_l1.hdr 28.2791 30.8953 7.9599
+Lab_Typwriter_aug_2_exr2hdr_raw_pu_l1.hdr 28.2842 30.8951 7.9657
+Lab_Typwriter_aug_2_exr2hdr_raw_pq_l1.hdr 28.2839 30.8951 7.9657
+
+
+Lab_Typwriter_aug_3_exr2hdr_raw_linear_l1.hdr 28.1354 30.9225 7.9652
+Lab_Typwriter_aug_3_exr2hdr_raw_pu_l1.hdr 28.3340 30.9331 7.9695
+Lab_Typwriter_aug_3_exr2hdr_raw_pq_l1.hdr 28.3252 30.9330 7.9695
+
+
+Lab_Typwriter_aug_4_exr2hdr_raw_linear_l1.hdr 28.0841 30.8717 7.9614
+Lab_Typwriter_aug_4_exr2hdr_raw_pu_l1.hdr 28.3209 30.9232 7.9681
+Lab_Typwriter_aug_4_exr2hdr_raw_pq_l1.hdr 28.3094 30.9231 7.9681
+
+
+Lab_Typwriter_aug_5_exr2hdr_raw_linear_l1.hdr 28.1032 30.8769 7.9617
+Lab_Typwriter_aug_5_exr2hdr_raw_pu_l1.hdr 28.3487 30.9364 7.9696
+Lab_Typwriter_aug_5_exr2hdr_raw_pq_l1.hdr 28.3473 30.9364 7.9696
+
+
+Lab_Typwriter_exr2hdr_raw_linear_l1.hdr 28.3841 30.9284 7.9675
+Lab_Typwriter_exr2hdr_raw_pu_l1.hdr 28.3834 30.9281 7.9677
+Lab_Typwriter_exr2hdr_raw_pq_l1.hdr 28.3855 30.9285 7.9678
+
+
+Lab_Window_aug_1_exr2hdr_raw_linear_l1.hdr 28.7392 29.8500 7.4275
+Lab_Window_aug_1_exr2hdr_raw_pu_l1.hdr 29.1221 29.9018 7.4255
+Lab_Window_aug_1_exr2hdr_raw_pq_l1.hdr 29.1694 29.9081 7.4312
+
+
+Lab_Window_aug_2_exr2hdr_raw_linear_l1.hdr 28.7159 29.8399 7.4240
+Lab_Window_aug_2_exr2hdr_raw_pu_l1.hdr 28.8250 29.8544 7.4143
+Lab_Window_aug_2_exr2hdr_raw_pq_l1.hdr 28.9490 29.8717 7.4048
+
+
+Lab_Window_aug_3_exr2hdr_raw_linear_l1.hdr 28.5275 29.8441 7.4274
+Lab_Window_aug_3_exr2hdr_raw_pu_l1.hdr 28.7607 29.8522 7.4291
+Lab_Window_aug_3_exr2hdr_raw_pq_l1.hdr 28.7593 29.8529 7.4140
+
+
+Lab_Window_aug_4_exr2hdr_raw_linear_l1.hdr 28.5014 29.8443 7.4274
+Lab_Window_aug_4_exr2hdr_raw_pu_l1.hdr 28.7346 29.8507 7.4283
+Lab_Window_aug_4_exr2hdr_raw_pq_l1.hdr 28.7424 29.8528 7.4151
+
+
+Lab_Window_aug_5_exr2hdr_raw_linear_l1.hdr 28.4331 29.8119 7.4279
+Lab_Window_aug_5_exr2hdr_raw_pu_l1.hdr 28.7660 29.8558 7.4299
+Lab_Window_aug_5_exr2hdr_raw_pq_l1.hdr 28.7654 29.8558 7.4299
+
+
+Lab_Window_exr2hdr_raw_linear_l1.hdr 28.7666 29.8528 7.4294
+Lab_Window_exr2hdr_raw_pu_l1.hdr 29.1876 29.9105 7.4321
+Lab_Window_exr2hdr_raw_pq_l1.hdr 29.2480 29.9193 7.4415
+
+
+Las_Vegas_Store_aug_1_exr2hdr_raw_linear_l1.hdr 35.6374 37.7891 8.5470
+Las_Vegas_Store_aug_1_exr2hdr_raw_pu_l1.hdr 35.9807 37.8507 8.5770
+Las_Vegas_Store_aug_1_exr2hdr_raw_pq_l1.hdr 35.9752 37.8745 8.5916
+
+
+Las_Vegas_Store_aug_2_exr2hdr_raw_linear_l1.hdr 34.3318 37.6720 8.5290
+Las_Vegas_Store_aug_2_exr2hdr_raw_pu_l1.hdr 35.7451 37.7933 8.5574
+Las_Vegas_Store_aug_2_exr2hdr_raw_pq_l1.hdr 35.7925 37.8242 8.5722
+
+
+Las_Vegas_Store_aug_3_exr2hdr_raw_linear_l1.hdr 34.2712 37.6135 8.5158
+Las_Vegas_Store_aug_3_exr2hdr_raw_pu_l1.hdr 35.8277 37.8295 8.5579
+Las_Vegas_Store_aug_3_exr2hdr_raw_pq_l1.hdr 35.8798 37.8545 8.5725
+
+
+Las_Vegas_Store_aug_4_exr2hdr_raw_linear_l1.hdr 34.0248 37.4279 8.4859
+Las_Vegas_Store_aug_4_exr2hdr_raw_pu_l1.hdr 35.7321 37.7928 8.5509
+Las_Vegas_Store_aug_4_exr2hdr_raw_pq_l1.hdr 35.7414 37.7987 8.5563
+
+
+Las_Vegas_Store_aug_5_exr2hdr_raw_linear_l1.hdr 34.0036 37.3629 8.4748
+Las_Vegas_Store_aug_5_exr2hdr_raw_pu_l1.hdr 35.8002 37.7872 8.5516
+Las_Vegas_Store_aug_5_exr2hdr_raw_pq_l1.hdr 35.7987 37.7873 8.5517
+
+
+Las_Vegas_Store_exr2hdr_raw_linear_l1.hdr 35.8164 37.8274 8.5572
+Las_Vegas_Store_exr2hdr_raw_pu_l1.hdr 36.1502 37.8906 8.5879
+Las_Vegas_Store_exr2hdr_raw_pq_l1.hdr 36.1646 37.9122 8.6022
+
+
+McKee\'s_Pub_aug_1_exr2hdr_raw_linear_l1.hdr 48.7494 52.6851 9.1525
+McKee\'s_Pub_aug_1_exr2hdr_raw_pu_l1.hdr 49.3355 52.8533 9.1601
+McKee\'s_Pub_aug_1_exr2hdr_raw_pq_l1.hdr 49.3396 52.8557 9.1613
+
+
+McKee\'s_Pub_aug_2_exr2hdr_raw_linear_l1.hdr 40.0423 48.8317 9.0943
+McKee\'s_Pub_aug_2_exr2hdr_raw_pu_l1.hdr 49.1511 52.8748 9.1602
+McKee\'s_Pub_aug_2_exr2hdr_raw_pq_l1.hdr 48.5493 52.8678 9.1617
+
+
+McKee\'s_Pub_aug_3_exr2hdr_raw_linear_l1.hdr 41.0659 50.3197 9.1200
+McKee\'s_Pub_aug_3_exr2hdr_raw_pu_l1.hdr 49.8308 52.8685 9.1604
+McKee\'s_Pub_aug_3_exr2hdr_raw_pq_l1.hdr 49.6340 52.8673 9.1612
+
+
+McKee\'s_Pub_aug_4_exr2hdr_raw_linear_l1.hdr 39.2633 47.4327 9.0559
+McKee\'s_Pub_aug_4_exr2hdr_raw_pu_l1.hdr 49.1861 52.8354 9.1572
+McKee\'s_Pub_aug_4_exr2hdr_raw_pq_l1.hdr 48.5796 52.8301 9.1591
+
+
+McKee\'s_Pub_aug_5_exr2hdr_raw_linear_l1.hdr 38.5239 46.1497 9.0054
+McKee\'s_Pub_aug_5_exr2hdr_raw_pu_l1.hdr 49.9721 52.8332 9.1565
+McKee\'s_Pub_aug_5_exr2hdr_raw_pq_l1.hdr 49.9757 52.8332 9.1565
+
+
+McKee\'s_Pub_exr2hdr_raw_linear_l1.hdr 49.8194 52.8092 9.1572
+McKee\'s_Pub_exr2hdr_raw_pu_l1.hdr 50.1361 52.8800 9.1620
+McKee\'s_Pub_exr2hdr_raw_pq_l1.hdr 50.1238 52.8839 9.1636
+
+
+Old_Faithful_Inn_aug_1_exr2hdr_raw_linear_l1.hdr 38.7791 42.3168 8.3983
+Old_Faithful_Inn_aug_1_exr2hdr_raw_pu_l1.hdr 38.7743 42.3297 8.3984
+Old_Faithful_Inn_aug_1_exr2hdr_raw_pq_l1.hdr 38.7743 42.3297 8.3984
+
+
+Old_Faithful_Inn_aug_2_exr2hdr_raw_linear_l1.hdr 36.6500 41.7301 8.3910
+Old_Faithful_Inn_aug_2_exr2hdr_raw_pu_l1.hdr 38.7589 42.3310 8.3987
+Old_Faithful_Inn_aug_2_exr2hdr_raw_pq_l1.hdr 38.6221 42.3293 8.3987
+
+
+Old_Faithful_Inn_aug_3_exr2hdr_raw_linear_l1.hdr 36.5796 41.6172 8.3847
+Old_Faithful_Inn_aug_3_exr2hdr_raw_pu_l1.hdr 38.7447 42.2785 8.3929
+Old_Faithful_Inn_aug_3_exr2hdr_raw_pq_l1.hdr 38.6162 42.2770 8.3929
+
+
+Old_Faithful_Inn_aug_4_exr2hdr_raw_linear_l1.hdr 36.3956 41.4718 8.3890
+Old_Faithful_Inn_aug_4_exr2hdr_raw_pu_l1.hdr 38.7871 42.3547 8.4011
+Old_Faithful_Inn_aug_4_exr2hdr_raw_pq_l1.hdr 38.7362 42.3541 8.4011
+
+
+Old_Faithful_Inn_aug_5_exr2hdr_raw_linear_l1.hdr 35.9641 41.1835 8.3752
+Old_Faithful_Inn_aug_5_exr2hdr_raw_pu_l1.hdr 38.7332 42.2804 8.3933
+Old_Faithful_Inn_aug_5_exr2hdr_raw_pq_l1.hdr 38.7303 42.2804 8.3933
 
 
 Old_Faithful_Inn_exr2hdr_raw_linear_l1.hdr 38.8074 42.3162 8.3968
-Old_Faithful_Inn_exr2hdr_raw_pu_l1.hdr 38.8092 42.3165 8.3968
-Old_Faithful_Inn_exr2hdr_raw_pq_l1.hdr 38.8409 42.3225 8.3984
+Old_Faithful_Inn_exr2hdr_raw_pu_l1.hdr 38.8074 42.3162 8.3968
+Old_Faithful_Inn_exr2hdr_raw_pq_l1.hdr 38.8446 42.3231 8.3982
 
 
-RIT_Tiger_exr2hdr_raw_linear_l1.hdr 60.5452 83.4883 9.9646
-RIT_Tiger_exr2hdr_raw_pu_l1.hdr 60.4887 83.4318 9.9644
-RIT_Tiger_exr2hdr_raw_pq_l1.hdr 60.4911 83.4343 9.9652
+RIT_Tiger_aug_1_exr2hdr_raw_linear_l1.hdr 60.0286 82.3655 9.9603
+RIT_Tiger_aug_1_exr2hdr_raw_pu_l1.hdr 58.4526 81.3976 9.9423
+RIT_Tiger_aug_1_exr2hdr_raw_pq_l1.hdr 58.9393 81.8839 9.9384
 
 
-Route_66_Museum_exr2hdr_raw_linear_l1.hdr 50.0827 72.7585 9.8558
-Route_66_Museum_exr2hdr_raw_pu_l1.hdr 51.7306 74.2863 9.8910
-Route_66_Museum_exr2hdr_raw_pq_l1.hdr 52.6161 75.0878 9.8951
+RIT_Tiger_aug_2_exr2hdr_raw_linear_l1.hdr 42.9937 57.2524 9.6401
+RIT_Tiger_aug_2_exr2hdr_raw_pu_l1.hdr 56.1031 79.0493 9.9508
+RIT_Tiger_aug_2_exr2hdr_raw_pq_l1.hdr 46.6230 69.4153 9.9050
 
 
-The_Grotto_exr2hdr_raw_linear_l1.hdr 55.2403 78.1787 9.9600
-The_Grotto_exr2hdr_raw_pu_l1.hdr 55.2434 78.1817 9.9604
-The_Grotto_exr2hdr_raw_pq_l1.hdr 55.0149 77.9518 9.9601
+RIT_Tiger_aug_3_exr2hdr_raw_linear_l1.hdr 46.3714 63.5889 9.7636
+RIT_Tiger_aug_3_exr2hdr_raw_pu_l1.hdr 57.8046 80.7489 9.9487
+RIT_Tiger_aug_3_exr2hdr_raw_pq_l1.hdr 53.2883 74.7706 9.8778
 
 
-Zentrum_exr2hdr_raw_linear_l1.hdr 30.5285 33.1932 7.4043
-Zentrum_exr2hdr_raw_pu_l1.hdr 30.5713 33.2030 7.4081
-Zentrum_exr2hdr_raw_pq_l1.hdr 31.6005 33.4926 7.4556
+RIT_Tiger_aug_4_exr2hdr_raw_linear_l1.hdr 41.1359 50.8255 9.4031
+RIT_Tiger_aug_4_exr2hdr_raw_pu_l1.hdr 59.0736 82.0182 9.9636
+RIT_Tiger_aug_4_exr2hdr_raw_pq_l1.hdr 55.2014 78.1478 9.9621
 
 
-cargo_boat_exr2hdr_raw_linear_l1.hdr 54.2863 63.1195 9.7686
-cargo_boat_exr2hdr_raw_pu_l1.hdr 67.1671 73.1676 9.9228
-cargo_boat_exr2hdr_raw_pq_l1.hdr 62.1322 73.3782 9.9317
+RIT_Tiger_aug_5_exr2hdr_raw_linear_l1.hdr 39.9867 49.2241 9.3271
+RIT_Tiger_aug_5_exr2hdr_raw_pu_l1.hdr 60.3397 83.2806 9.9645
+RIT_Tiger_aug_5_exr2hdr_raw_pq_l1.hdr 60.3452 83.2869 9.9645
 
 
-skyscraper_exr2hdr_raw_linear_l1.hdr 53.0475 75.9952 9.8689
-skyscraper_exr2hdr_raw_pu_l1.hdr 58.7492 81.6969 9.9654
-skyscraper_exr2hdr_raw_pq_l1.hdr 56.9426 79.8903 9.9507
+RIT_Tiger_exr2hdr_raw_linear_l1.hdr 60.4565 76.6184 9.8995
+RIT_Tiger_exr2hdr_raw_pu_l1.hdr 60.5066 83.4497 9.9645
+RIT_Tiger_exr2hdr_raw_pq_l1.hdr 60.5427 83.4857 9.9646
 
 
-urban_land_exr2hdr_raw_linear_l1.hdr 39.6116 41.5982 8.5827
-urban_land_exr2hdr_raw_pu_l1.hdr 45.4646 46.6737 9.2932
-urban_land_exr2hdr_raw_pq_l1.hdr 49.0099 51.6823 9.6176
+Route_66_Museum_aug_1_exr2hdr_raw_linear_l1.hdr 48.7264 71.4645 9.8392
+Route_66_Museum_aug_1_exr2hdr_raw_pu_l1.hdr 50.6793 73.3029 9.8824
+Route_66_Museum_aug_1_exr2hdr_raw_pq_l1.hdr 50.7444 73.3633 9.8791
+
+
+Route_66_Museum_aug_2_exr2hdr_raw_linear_l1.hdr 44.0955 61.4989 9.7553
+Route_66_Museum_aug_2_exr2hdr_raw_pu_l1.hdr 49.3689 72.0755 9.8512
+Route_66_Museum_aug_2_exr2hdr_raw_pq_l1.hdr 46.6315 69.4492 9.8506
+
+
+Route_66_Museum_aug_3_exr2hdr_raw_linear_l1.hdr 42.3166 56.4650 9.6356
+Route_66_Museum_aug_3_exr2hdr_raw_pu_l1.hdr 49.9443 72.6256 9.8560
+Route_66_Museum_aug_3_exr2hdr_raw_pq_l1.hdr 48.4179 71.1765 9.8556
+
+
+Route_66_Museum_aug_4_exr2hdr_raw_linear_l1.hdr 39.3015 49.5560 9.3495
+Route_66_Museum_aug_4_exr2hdr_raw_pu_l1.hdr 49.5040 72.2024 9.8492
+Route_66_Museum_aug_4_exr2hdr_raw_pq_l1.hdr 49.5059 72.2042 9.8492
+
+
+Route_66_Museum_aug_5_exr2hdr_raw_linear_l1.hdr 38.6646 48.1723 9.2686
+Route_66_Museum_aug_5_exr2hdr_raw_pu_l1.hdr 49.4773 72.1800 9.8493
+Route_66_Museum_aug_5_exr2hdr_raw_pq_l1.hdr 49.4799 72.1825 9.8493
+
+
+Route_66_Museum_exr2hdr_raw_linear_l1.hdr 49.4598 72.1633 9.8497
+Route_66_Museum_exr2hdr_raw_pu_l1.hdr 50.6353 73.2754 9.8767
+Route_66_Museum_exr2hdr_raw_pq_l1.hdr 50.7034 73.3388 9.8740
+
+
+The_Grotto_aug_1_exr2hdr_raw_linear_l1.hdr 52.9992 75.9314 9.9500
+The_Grotto_aug_1_exr2hdr_raw_pu_l1.hdr 53.0317 75.9652 9.9501
+The_Grotto_aug_1_exr2hdr_raw_pq_l1.hdr 53.0243 75.9579 9.9501
+
+
+The_Grotto_aug_2_exr2hdr_raw_linear_l1.hdr 41.5607 56.8492 9.6471
+The_Grotto_aug_2_exr2hdr_raw_pu_l1.hdr 55.1437 78.0818 9.9599
+The_Grotto_aug_2_exr2hdr_raw_pq_l1.hdr 52.8911 75.8331 9.9574
+
+
+The_Grotto_aug_3_exr2hdr_raw_linear_l1.hdr 41.3936 55.9430 9.6169
+The_Grotto_aug_3_exr2hdr_raw_pu_l1.hdr 55.0929 78.0298 9.9598
+The_Grotto_aug_3_exr2hdr_raw_pq_l1.hdr 52.5036 75.4454 9.9569
+
+
+The_Grotto_aug_4_exr2hdr_raw_linear_l1.hdr 39.6297 49.7026 9.3545
+The_Grotto_aug_4_exr2hdr_raw_pu_l1.hdr 55.1917 78.1301 9.9599
+The_Grotto_aug_4_exr2hdr_raw_pq_l1.hdr 54.0205 76.9612 9.9590
+
+
+The_Grotto_aug_5_exr2hdr_raw_linear_l1.hdr 39.6482 49.5889 9.3465
+The_Grotto_aug_5_exr2hdr_raw_pu_l1.hdr 55.1908 78.1249 9.9599
+The_Grotto_aug_5_exr2hdr_raw_pq_l1.hdr 54.0083 76.9457 9.9588
+
+
+The_Grotto_exr2hdr_raw_linear_l1.hdr 55.2341 78.1724 9.9600
+The_Grotto_exr2hdr_raw_pu_l1.hdr 55.2396 78.1779 9.9600
+The_Grotto_exr2hdr_raw_pq_l1.hdr 55.2403 78.1787 9.9600
+
+
+Zentrum_aug_1_exr2hdr_raw_linear_l1.hdr 30.4698 33.1887 7.4054
+Zentrum_aug_1_exr2hdr_raw_pu_l1.hdr 30.4697 33.1887 7.4053
+Zentrum_aug_1_exr2hdr_raw_pq_l1.hdr 30.4808 33.1909 7.4060
+
+
+Zentrum_aug_2_exr2hdr_raw_linear_l1.hdr 30.1689 33.1315 7.3972
+Zentrum_aug_2_exr2hdr_raw_pu_l1.hdr 30.4193 33.1590 7.4022
+Zentrum_aug_2_exr2hdr_raw_pq_l1.hdr 30.4123 33.1589 7.4021
+
+
+Zentrum_aug_3_exr2hdr_raw_linear_l1.hdr 30.0486 33.0995 7.3991
+Zentrum_aug_3_exr2hdr_raw_pu_l1.hdr 30.4475 33.1627 7.4020
+Zentrum_aug_3_exr2hdr_raw_pq_l1.hdr 30.4343 33.1626 7.4020
+
+
+Zentrum_aug_4_exr2hdr_raw_linear_l1.hdr 30.0422 33.1071 7.3993
+Zentrum_aug_4_exr2hdr_raw_pu_l1.hdr 30.4448 33.1731 7.4037
+Zentrum_aug_4_exr2hdr_raw_pq_l1.hdr 30.4313 33.1729 7.4036
+
+
+Zentrum_aug_5_exr2hdr_raw_linear_l1.hdr 29.9820 33.0447 7.3964
+Zentrum_aug_5_exr2hdr_raw_pu_l1.hdr 30.4165 33.1582 7.4020
+Zentrum_aug_5_exr2hdr_raw_pq_l1.hdr 30.4099 33.1582 7.4020
+
+
+Zentrum_exr2hdr_raw_linear_l1.hdr 30.5285 33.1933 7.4043
+Zentrum_exr2hdr_raw_pu_l1.hdr 30.5285 33.1933 7.4042
+Zentrum_exr2hdr_raw_pq_l1.hdr 30.5414 33.1960 7.4049
+
+
+cargo_boat_aug_1_exr2hdr_raw_linear_l1.hdr 54.1515 62.9484 0.1000
+cargo_boat_aug_1_exr2hdr_raw_pu_l1.hdr 54.3350 62.9553 0.1000
+cargo_boat_aug_1_exr2hdr_raw_pq_l1.hdr 54.5064 62.9625 0.1000
+
+
+cargo_boat_aug_2_exr2hdr_raw_linear_l1.hdr 54.1515 62.9484 0.1000
+cargo_boat_aug_2_exr2hdr_raw_pu_l1.hdr 54.2328 62.9525 0.1000
+cargo_boat_aug_2_exr2hdr_raw_pq_l1.hdr 54.4558 62.9607 0.1000
+
+
+cargo_boat_aug_3_exr2hdr_raw_linear_l1.hdr 54.1515 62.9484 0.1000
+cargo_boat_aug_3_exr2hdr_raw_pu_l1.hdr 54.2202 62.9520 0.1000
+cargo_boat_aug_3_exr2hdr_raw_pq_l1.hdr 53.4252 62.9201 0.1000
+
+
+cargo_boat_aug_4_exr2hdr_raw_linear_l1.hdr 54.1276 62.9164 0.1000
+cargo_boat_aug_4_exr2hdr_raw_pu_l1.hdr 54.0586 62.9448 0.1000
+cargo_boat_aug_4_exr2hdr_raw_pq_l1.hdr 46.3950 62.1898 0.1000
+
+
+cargo_boat_aug_5_exr2hdr_raw_linear_l1.hdr 52.1323 61.0110 0.1000
+cargo_boat_aug_5_exr2hdr_raw_pu_l1.hdr 54.1215 62.9472 0.1000
+cargo_boat_aug_5_exr2hdr_raw_pq_l1.hdr 52.5346 62.8737 0.1000
+
+
+cargo_boat_exr2hdr_raw_linear_l1.hdr 54.1844 62.9934 0.1000
+cargo_boat_exr2hdr_raw_pu_l1.hdr 54.4663 63.0040 0.1000
+cargo_boat_exr2hdr_raw_pq_l1.hdr 54.8232 63.0184 0.1000
+
+
+skyscraper_aug_1_exr2hdr_raw_linear_l1.hdr 52.9276 75.8753 0.1000
+skyscraper_aug_1_exr2hdr_raw_pu_l1.hdr 54.2355 77.1832 0.1000
+skyscraper_aug_1_exr2hdr_raw_pq_l1.hdr 53.3443 76.2921 0.1000
+
+
+skyscraper_aug_2_exr2hdr_raw_linear_l1.hdr 52.9283 75.8760 0.1000
+skyscraper_aug_2_exr2hdr_raw_pu_l1.hdr 52.9618 75.9095 0.1000
+skyscraper_aug_2_exr2hdr_raw_pq_l1.hdr 52.9719 75.9196 0.1000
+
+
+skyscraper_aug_3_exr2hdr_raw_linear_l1.hdr 52.9276 75.8753 0.1000
+skyscraper_aug_3_exr2hdr_raw_pu_l1.hdr 52.9243 75.8720 0.1000
+skyscraper_aug_3_exr2hdr_raw_pq_l1.hdr 52.4818 75.4295 0.1000
+
+
+skyscraper_aug_4_exr2hdr_raw_linear_l1.hdr 52.9383 75.8860 0.1000
+skyscraper_aug_4_exr2hdr_raw_pu_l1.hdr 52.9243 75.8720 0.1000
+skyscraper_aug_4_exr2hdr_raw_pq_l1.hdr 50.9001 73.8479 0.1000
+
+
+skyscraper_aug_5_exr2hdr_raw_linear_l1.hdr 50.7945 65.5829 0.1000
+skyscraper_aug_5_exr2hdr_raw_pu_l1.hdr 52.8963 75.8441 0.1000
+skyscraper_aug_5_exr2hdr_raw_pq_l1.hdr 50.6753 73.6231 0.1000
+
+
+skyscraper_exr2hdr_raw_linear_l1.hdr 53.0468 75.9945 0.1000
+skyscraper_exr2hdr_raw_pu_l1.hdr 55.2724 78.2201 0.1000
+skyscraper_exr2hdr_raw_pq_l1.hdr 54.1365 77.0842 0.1000
+
+
+urban_land_aug_1_exr2hdr_raw_linear_l1.hdr 39.5888 41.5935 0.1000
+urban_land_aug_1_exr2hdr_raw_pu_l1.hdr 40.5257 42.1421 0.1000
+urban_land_aug_1_exr2hdr_raw_pq_l1.hdr 40.7589 42.2154 0.1000
+
+
+urban_land_aug_2_exr2hdr_raw_linear_l1.hdr 39.4268 41.3675 0.1000
+urban_land_aug_2_exr2hdr_raw_pu_l1.hdr 40.0089 41.6052 0.1000
+urban_land_aug_2_exr2hdr_raw_pq_l1.hdr 40.3589 41.9564 0.1000
+
+
+urban_land_aug_3_exr2hdr_raw_linear_l1.hdr 39.3896 41.3229 0.1000
+urban_land_aug_3_exr2hdr_raw_pu_l1.hdr 39.8009 41.4559 0.1000
+urban_land_aug_3_exr2hdr_raw_pq_l1.hdr 40.0465 41.8347 0.1000
+
+
+urban_land_aug_4_exr2hdr_raw_linear_l1.hdr 39.3591 41.2853 0.1000
+urban_land_aug_4_exr2hdr_raw_pu_l1.hdr 39.3862 41.2792 0.1000
+urban_land_aug_4_exr2hdr_raw_pq_l1.hdr 39.4026 41.6035 0.1000
+
+
+urban_land_aug_5_exr2hdr_raw_linear_l1.hdr 38.7853 41.1983 0.1000
+urban_land_aug_5_exr2hdr_raw_pu_l1.hdr 39.3412 41.2638 0.1000
+urban_land_aug_5_exr2hdr_raw_pq_l1.hdr 39.3192 41.2637 0.1000
+
+
+urban_land_exr2hdr_raw_linear_l1.hdr 39.5827 41.5673 0.1000
+urban_land_exr2hdr_raw_pu_l1.hdr 40.5868 42.2026 0.1000
+urban_land_exr2hdr_raw_pq_l1.hdr 40.8513 42.2711 0.1000
 
 
 navie_psnr_rgb= []
-linear_psnr_rgb= [59.902, 41.1757, 48.2099, 35.9386, 44.7389, 63.0793, 30.385, 60.5613, 28.1732, 31.0009, 28.3833, 28.7663, 35.8918, 50.0323, 38.8074, 60.5452, 50.0827, 55.2403, 30.5285, 54.2863, 53.0475, 39.6116]
+linear_psnr_rgb= [42.3824, 40.1318, 39.8025, 38.9962, 38.3296, 52.308, 40.7266, 38.4851, 38.1962, 37.5453, 36.7468, 41.1742, 46.8378, 41.5966, 41.552, 39.5523, 38.3179, 48.2088, 35.3434, 35.4863, 35.5461, 34.8416, 34.6853, 35.8713, 43.9228, 41.8861, 41.5781, 40.3978, 38.4794, 44.7377, 60.0706, 46.2871, 44.7776, 40.7452, 39.7875, 63.0885, 29.8519, 29.6115, 30.009, 29.5691, 29.4249, 30.3339, 55.4596, 41.64, 42.099, 40.4529, 38.8062, 59.8098, 28.077, 27.9998, 27.9929, 27.8734, 27.8462, 28.1733, 30.4919, 30.2353, 30.4093, 30.0308, 29.9521, 30.958, 28.3193, 28.2791, 28.1354, 28.0841, 28.1032, 28.3841, 28.7392, 28.7159, 28.5275, 28.5014, 28.4331, 28.7666, 35.6374, 34.3318, 34.2712, 34.0248, 34.0036, 35.8164, 48.7494, 40.0423, 41.0659, 39.2633, 38.5239, 49.8194, 38.7791, 36.65, 36.5796, 36.3956, 35.9641, 38.8074, 60.0286, 42.9937, 46.3714, 41.1359, 39.9867, 60.4565, 48.7264, 44.0955, 42.3166, 39.3015, 38.6646, 49.4598, 52.9992, 41.5607, 41.3936, 39.6297, 39.6482, 55.2341, 30.4698, 30.1689, 30.0486, 30.0422, 29.982, 30.5285, 54.1515, 54.1515, 54.1515, 54.1276, 52.1323, 54.1844, 52.9276, 52.9283, 52.9276, 52.9383, 50.7945, 53.0468, 39.5888, 39.4268, 39.3896, 39.3591, 38.7853, 39.5827]
 log_psnr_rg= []
-pu_psnr_rgb= [58.0264, 41.2482, 48.4353, 38.9942, 45.356, 63.0885, 30.5112, 60.7466, 28.2492, 32.9124, 28.4027, 29.3267, 36.5418, 50.4647, 38.8092, 60.4887, 51.7306, 55.2434, 30.5713, 67.1671, 58.7492, 45.4646]
-pq_psnr_rgb= [71.0863, 41.2566, 48.5907, 38.9649, 45.7055, 62.8533, 30.6799, 62.3641, 30.7046, 33.2344, 28.9386, 29.9782, 36.6953, 50.4592, 38.8409, 60.4911, 52.6161, 55.0149, 31.6005, 62.1322, 56.9426, 49.0099]
+pu_psnr_rgb= [64.9933, 63.4568, 64.0025, 66.6245, 67.8076, 68.1972, 41.0545, 40.9501, 40.9607, 41.0796, 41.1015, 41.1855, 47.2187, 47.9296, 47.9998, 46.8959, 48.06, 48.6611, 37.5979, 35.7231, 35.8194, 35.3344, 35.7703, 37.9847, 44.0386, 43.9222, 44.7207, 43.9201, 44.7271, 44.9225, 60.073, 58.3962, 57.9075, 59.445, 59.624, 63.0932, 29.9855, 29.8835, 30.3576, 29.9424, 29.8243, 30.4748, 60.1833, 58.13, 58.2864, 59.6588, 60.3894, 60.6136, 28.0712, 28.0195, 27.9937, 28.0855, 28.0678, 28.1733, 31.9197, 30.7154, 30.9272, 30.4754, 30.383, 32.8849, 28.3123, 28.2842, 28.334, 28.3209, 28.3487, 28.3834, 29.1221, 28.825, 28.7607, 28.7346, 28.766, 29.1876, 35.9807, 35.7451, 35.8277, 35.7321, 35.8002, 36.1502, 49.3355, 49.1511, 49.8308, 49.1861, 49.9721, 50.1361, 38.7743, 38.7589, 38.7447, 38.7871, 38.7332, 38.8074, 58.4526, 56.1031, 57.8046, 59.0736, 60.3397, 60.5066, 50.6793, 49.3689, 49.9443, 49.504, 49.4773, 50.6353, 53.0317, 55.1437, 55.0929, 55.1917, 55.1908, 55.2396, 30.4697, 30.4193, 30.4475, 30.4448, 30.4165, 30.5285, 54.335, 54.2328, 54.2202, 54.0586, 54.1215, 54.4663, 54.2355, 52.9618, 52.9243, 52.9243, 52.8963, 55.2724, 40.5257, 40.0089, 39.8009, 39.3862, 39.3412, 40.5868]
+pq_psnr_rgb= [52.2798, 61.7713, 63.7199, 66.8749, 68.0051, 67.9768, 40.9849, 40.512, 40.7807, 41.0556, 41.1014, 41.1859, 47.3159, 46.6277, 46.7114, 46.7944, 48.0618, 48.6585, 37.0929, 35.5088, 35.5972, 35.2809, 35.7703, 37.4916, 43.9798, 43.8445, 44.5746, 43.6488, 44.7229, 44.8237, 60.073, 51.4179, 50.9021, 55.8854, 59.2975, 63.0932, 29.9496, 29.8849, 30.362, 29.9413, 29.8242, 30.4983, 59.7444, 53.7191, 52.3168, 59.5361, 60.4299, 60.6294, 28.0712, 28.0195, 27.9937, 28.0842, 28.0658, 28.1977, 31.9371, 30.8627, 30.8971, 30.4359, 30.3634, 32.7241, 28.3124, 28.2839, 28.3252, 28.3094, 28.3473, 28.3855, 29.1694, 28.949, 28.7593, 28.7424, 28.7654, 29.248, 35.9752, 35.7925, 35.8798, 35.7414, 35.7987, 36.1646, 49.3396, 48.5493, 49.634, 48.5796, 49.9757, 50.1238, 38.7743, 38.6221, 38.6162, 38.7362, 38.7303, 38.8446, 58.9393, 46.623, 53.2883, 55.2014, 60.3452, 60.5427, 50.7444, 46.6315, 48.4179, 49.5059, 49.4799, 50.7034, 53.0243, 52.8911, 52.5036, 54.0205, 54.0083, 55.2403, 30.4808, 30.4123, 30.4343, 30.4313, 30.4099, 30.5414, 54.5064, 54.4558, 53.4252, 46.395, 52.5346, 54.8232, 53.3443, 52.9719, 52.4818, 50.9001, 50.6753, 54.1365, 40.7589, 40.3589, 40.0465, 39.4026, 39.3192, 40.8513]
 navie_psnr_y= []
-linear_psnr_y= [70.3455, 46.7093, 68.4553, 58.8858, 67.6864, 86.0234, 32.5977, 66.2436, 31.9422, 38.6371, 30.9281, 29.8528, 37.8351, 52.8633, 42.3162, 83.4883, 72.7585, 78.1787, 33.1932, 63.1195, 75.9952, 41.5982]
+linear_psnr_y= [55.827, 48.9746, 48.6427, 47.7421, 46.876, 64.6137, 46.5717, 45.6677, 45.282, 44.904, 44.082, 46.688, 67.213, 55.0109, 54.8631, 50.2998, 47.5944, 68.4508, 58.2908, 58.1571, 58.0778, 55.7558, 51.1621, 58.8187, 66.8693, 61.9114, 59.7683, 57.1874, 49.5011, 67.6852, 83.0131, 66.8259, 63.1992, 52.2706, 49.9922, 86.0326, 32.5549, 32.5372, 32.5974, 32.5293, 32.4465, 32.6, 63.9739, 50.6509, 51.5293, 48.7881, 47.0661, 64.8312, 31.9058, 31.888, 31.8916, 31.8587, 31.8139, 31.9422, 38.6082, 38.5407, 38.5345, 38.4267, 38.3386, 38.6368, 30.903, 30.8953, 30.9225, 30.8717, 30.8769, 30.9284, 29.85, 29.8399, 29.8441, 29.8443, 29.8119, 29.8528, 37.7891, 37.672, 37.6135, 37.4279, 37.3629, 37.8274, 52.6851, 48.8317, 50.3197, 47.4327, 46.1497, 52.8092, 42.3168, 41.7301, 41.6172, 41.4718, 41.1835, 42.3162, 82.3655, 57.2524, 63.5889, 50.8255, 49.2241, 76.6184, 71.4645, 61.4989, 56.465, 49.556, 48.1723, 72.1633, 75.9314, 56.8492, 55.943, 49.7026, 49.5889, 78.1724, 33.1887, 33.1315, 33.0995, 33.1071, 33.0447, 33.1933, 62.9484, 62.9484, 62.9484, 62.9164, 61.011, 62.9934, 75.8753, 75.876, 75.8753, 75.886, 65.5829, 75.9945, 41.5935, 41.3675, 41.3229, 41.2853, 41.1983, 41.5673]
 log_psnr_y= []
-pu_psnr_y= [64.3802, 46.7107, 68.5748, 61.9412, 68.3035, 86.0326, 32.643, 64.6826, 31.9636, 38.6846, 30.9322, 29.931, 37.9516, 52.9155, 42.3165, 83.4318, 74.2863, 78.1817, 33.203, 73.1676, 81.6969, 46.6737]
-pq_psnr_y= [79.7047, 46.7109, 68.6555, 61.9119, 68.653, 85.7976, 32.6832, 66.2714, 32.8679, 38.7449, 31.0387, 30.0912, 37.9827, 52.9195, 42.3225, 83.4343, 75.0878, 77.9518, 33.4926, 73.3782, 79.8903, 51.6823]
+pu_psnr_y= [87.9381, 86.3075, 86.8905, 89.5131, 90.7143, 91.1436, 46.6992, 46.8034, 46.698, 46.8071, 46.6993, 46.7095, 67.9092, 68.2978, 68.3159, 67.6964, 68.3572, 68.6916, 60.5451, 58.6705, 58.7668, 58.2819, 58.7177, 60.9319, 66.9862, 66.8698, 67.6682, 66.8677, 67.6746, 67.8701, 83.0154, 81.3407, 80.8516, 82.3893, 82.5663, 86.0373, 32.5681, 32.545, 32.6178, 32.5936, 32.5342, 32.6211, 66.1411, 66.2284, 66.1949, 66.2228, 66.2376, 66.2445, 31.9038, 31.8909, 31.8943, 31.9083, 31.8951, 31.9422, 38.6386, 38.5618, 38.6394, 38.6098, 38.5973, 38.6828, 30.9, 30.8951, 30.9331, 30.9232, 30.9364, 30.9281, 29.9018, 29.8544, 29.8522, 29.8507, 29.8558, 29.9105, 37.8507, 37.7933, 37.8295, 37.7928, 37.7872, 37.8906, 52.8533, 52.8748, 52.8685, 52.8354, 52.8332, 52.88, 42.3297, 42.331, 42.2785, 42.3547, 42.2804, 42.3162, 81.3976, 79.0493, 80.7489, 82.0182, 83.2806, 83.4497, 73.3029, 72.0755, 72.6256, 72.2024, 72.18, 73.2754, 75.9652, 78.0818, 78.0298, 78.1301, 78.1249, 78.1779, 33.1887, 33.159, 33.1627, 33.1731, 33.1582, 33.1933, 62.9553, 62.9525, 62.952, 62.9448, 62.9472, 63.004, 77.1832, 75.9095, 75.872, 75.872, 75.8441, 78.2201, 42.1421, 41.6052, 41.4559, 41.2792, 41.2638, 42.2026]
+pq_psnr_y= [75.2274, 84.653, 86.6121, 89.7615, 90.9165, 90.9232, 46.6979, 46.7944, 46.6946, 46.8067, 46.6993, 46.7095, 67.9668, 67.5313, 67.5662, 67.6342, 68.3582, 68.6903, 60.0402, 58.4559, 58.5433, 58.2278, 58.7177, 60.4389, 66.9274, 66.7921, 67.5221, 66.5898, 67.6704, 67.7712, 83.0154, 74.365, 73.8491, 78.8316, 82.2402, 86.0373, 32.5773, 32.5633, 32.6335, 32.596, 32.5342, 32.6223, 66.1318, 65.4885, 64.863, 66.2189, 66.2384, 66.2448, 31.9038, 31.8909, 31.8943, 31.9083, 31.8951, 31.9483, 38.639, 38.5663, 38.6385, 38.6085, 38.5967, 38.6796, 30.9, 30.8951, 30.933, 30.9231, 30.9364, 30.9285, 29.9081, 29.8717, 29.8529, 29.8528, 29.8558, 29.9193, 37.8745, 37.8242, 37.8545, 37.7987, 37.7873, 37.9122, 52.8557, 52.8678, 52.8673, 52.8301, 52.8332, 52.8839, 42.3297, 42.3293, 42.277, 42.3541, 42.2804, 42.3231, 81.8839, 69.4153, 74.7706, 78.1478, 83.2869, 83.4857, 73.3633, 69.4492, 71.1765, 72.2042, 72.1825, 73.3388, 75.9579, 75.8331, 75.4454, 76.9612, 76.9457, 78.1787, 33.1909, 33.1589, 33.1626, 33.1729, 33.1582, 33.196, 62.9625, 62.9607, 62.9201, 62.1898, 62.8737, 63.0184, 76.2921, 75.9196, 75.4295, 73.8479, 73.6231, 77.0842, 42.2154, 41.9564, 41.8347, 41.6035, 41.2637, 42.2711]
 navie_cvvdp= []
-linear_cvvdp= [9.8945, 8.5985, 9.7923, 9.6134, 9.8499, 9.9865, 7.6163, 9.6684, 7.3907, 8.5306, 7.9677, 7.4293, 8.5695, 9.1589, 8.3968, 9.9646, 9.8558, 9.96, 7.4043, 9.7686, 9.8689, 8.5827]
+linear_cvvdp= [9.5499, 9.3083, 9.2915, 9.2393, 9.1831, 9.7426, 8.5927, 8.5878, 8.5727, 8.573, 8.5424, 8.5987, 9.7776, 9.5747, 9.5712, 9.3846, 9.2284, 9.7924, 9.5741, 9.5744, 9.5837, 9.5458, 9.4244, 9.5993, 9.8313, 9.7596, 9.7162, 9.6541, 9.347, 9.8493, 9.9795, 9.8731, 9.8068, 9.4835, 9.3718, 9.9865, 7.6027, 7.6007, 7.6084, 7.5961, 7.5852, 7.6189, 9.6436, 9.3756, 9.4103, 9.2895, 9.1852, 9.6522, 7.3908, 7.3888, 7.3883, 7.3944, 7.3906, 7.3907, 8.5303, 8.5268, 8.5284, 8.5262, 8.5218, 8.5298, 7.9647, 7.9599, 7.9652, 7.9614, 7.9617, 7.9675, 7.4275, 7.424, 7.4274, 7.4274, 7.4279, 7.4294, 8.547, 8.529, 8.5158, 8.4859, 8.4748, 8.5572, 9.1525, 9.0943, 9.12, 9.0559, 9.0054, 9.1572, 8.3983, 8.391, 8.3847, 8.389, 8.3752, 8.3968, 9.9603, 9.6401, 9.7636, 9.4031, 9.3271, 9.8995, 9.8392, 9.7553, 9.6356, 9.3495, 9.2686, 9.8497, 9.95, 9.6471, 9.6169, 9.3545, 9.3465, 9.96, 7.4054, 7.3972, 7.3991, 7.3993, 7.3964, 7.4043, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
 log_cvvdp= []
-pu_cvvdp= [9.8257, 8.5985, 9.8, 9.8295, 9.8912, 9.9867, 7.6572, 9.6667, 7.4009, 8.5341, 7.9691, 7.4545, 8.6341, 9.1668, 8.3968, 9.9644, 9.891, 9.9604, 7.4081, 9.9228, 9.9654, 9.2932]
-pq_cvvdp= [9.9489, 8.5985, 9.799, 9.8266, 9.9001, 9.9866, 7.6672, 9.6685, 7.5603, 8.5493, 8.0042, 7.4994, 8.6388, 9.1667, 8.3984, 9.9652, 9.8951, 9.9601, 7.4556, 9.9317, 9.9507, 9.6176]
+pu_cvvdp= [9.9859, 9.9755, 9.9786, 9.9759, 9.987, 9.9872, 8.5979, 8.608, 8.598, 8.6081, 8.5977, 8.5985, 9.7959, 9.79, 9.7925, 9.7841, 9.7915, 9.7997, 9.7711, 9.6115, 9.6133, 9.5756, 9.5877, 9.7837, 9.8547, 9.8346, 9.8501, 9.832, 9.8474, 9.8748, 9.9795, 9.9766, 9.9756, 9.9785, 9.9786, 9.9865, 7.6298, 7.6014, 7.6092, 7.6007, 7.5966, 7.6459, 9.6663, 9.6696, 9.6686, 9.6684, 9.6683, 9.6684, 7.3911, 7.3905, 7.3912, 7.3916, 7.3894, 7.3907, 8.5317, 8.5261, 8.531, 8.5312, 8.5317, 8.533, 7.9655, 7.9657, 7.9695, 7.9681, 7.9696, 7.9677, 7.4255, 7.4143, 7.4291, 7.4283, 7.4299, 7.4321, 8.577, 8.5574, 8.5579, 8.5509, 8.5516, 8.5879, 9.1601, 9.1602, 9.1604, 9.1572, 9.1565, 9.162, 8.3984, 8.3987, 8.3929, 8.4011, 8.3933, 8.3968, 9.9423, 9.9508, 9.9487, 9.9636, 9.9645, 9.9645, 9.8824, 9.8512, 9.856, 9.8492, 9.8493, 9.8767, 9.9501, 9.9599, 9.9598, 9.9599, 9.9599, 9.96, 7.4053, 7.4022, 7.402, 7.4037, 7.402, 7.4042, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+pq_cvvdp= [9.9678, 9.9758, 9.9817, 9.9839, 9.9867, 9.9872, 8.5979, 8.608, 8.598, 8.6081, 8.5977, 8.5985, 9.7958, 9.7894, 9.7922, 9.7841, 9.7915, 9.7986, 9.7181, 9.6067, 9.6101, 9.5745, 9.5876, 9.7315, 9.8441, 9.8341, 9.8494, 9.8318, 9.8474, 9.8631, 9.9795, 9.9595, 9.9578, 9.9745, 9.9784, 9.9865, 7.6445, 7.6306, 7.636, 7.6068, 7.5966, 7.6511, 9.6663, 9.6628, 9.6508, 9.6684, 9.6683, 9.6684, 7.3911, 7.3905, 7.3912, 7.3916, 7.3894, 7.3929, 8.5317, 8.5248, 8.5306, 8.5311, 8.5317, 8.5325, 7.9655, 7.9657, 7.9695, 7.9681, 7.9696, 7.9678, 7.4312, 7.4048, 7.414, 7.4151, 7.4299, 7.4415, 8.5916, 8.5722, 8.5725, 8.5563, 8.5517, 8.6022, 9.1613, 9.1617, 9.1612, 9.1591, 9.1565, 9.1636, 8.3984, 8.3987, 8.3929, 8.4011, 8.3933, 8.3982, 9.9384, 9.905, 9.8778, 9.9621, 9.9645, 9.9646, 9.8791, 9.8506, 9.8556, 9.8492, 9.8493, 9.874, 9.9501, 9.9574, 9.9569, 9.959, 9.9588, 9.96, 7.406, 7.4021, 7.402, 7.4036, 7.402, 7.4049, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]

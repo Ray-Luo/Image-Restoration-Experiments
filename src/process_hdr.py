@@ -11,7 +11,7 @@ import os
 os.environ["OPENCV_IO_ENABLE_OPENEXR"]="1"
 
 SEED = 12345
-NUMBER_AUG = 10
+NUMBER_AUG = 1
 FOCUS_ORDER = 3
 
 cfg = {
@@ -432,7 +432,7 @@ def augment(img_folder: str, name: str):
 
     seen = set()
     random.seed(SEED)
-    rand_num = random.uniform(1.0/8.0, 8.0)
+    rand_num = random.uniform(0.1, 0.9)
 
     while len(seen) < NUMBER_AUG:
         if rand_num not in seen:
@@ -441,7 +441,7 @@ def augment(img_folder: str, name: str):
             processed_img = process_rit(img)
             new_name = name.split('.')[0] + '_aug_' + str(len(seen)) + '.hdr'
             save_hdr(processed_img, img_folder, new_name)
-            rand_num = random.uniform(1.0/8.0, 8.0)
+            rand_num = random.uniform(0.1, 0.9)
 
 
 def process_rit(img: np.array):

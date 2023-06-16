@@ -24,50 +24,64 @@ noise_adder = RandomNoiseAdder(**noise)
 
 
 gt_list = [
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/train",
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/valid",
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/test",
+    # "/home/luoleyouluole/Image-Restoration-Experiments/data/train",
+    # "/home/luoleyouluole/Image-Restoration-Experiments/data/valid",
+    "/home/luoleyouluole/Image-Restoration-Experiments/data/test_aug",
 ]
 gt_list.sort()
 
 gt_exr_list = [
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/train_exr",
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/valid_exr",
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/test_exr",
+    # "/home/luoleyouluole/Image-Restoration-Experiments/data/train_exr",
+    # "/home/luoleyouluole/Image-Restoration-Experiments/data/valid_exr",
+    "/home/luoleyouluole/Image-Restoration-Experiments/data/test_exr_aug",
 ]
 gt_exr_list.sort()
 
 gt_hdr_list = [
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/train_hdr",
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/valid_hdr",
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr",
+    # "/home/luoleyouluole/Image-Restoration-Experiments/data/train_hdr",
+    # "/home/luoleyouluole/Image-Restoration-Experiments/data/valid_hdr",
+    "/home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_aug",
 ]
 gt_hdr_list.sort()
 
 noise_exr_list = [
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/train_noise_exr",
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/valid_noise_exr",
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_exr",
+    # "/home/luoleyouluole/Image-Restoration-Experiments/data/train_noise_exr",
+    # "/home/luoleyouluole/Image-Restoration-Experiments/data/valid_noise_exr",
+    "/home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_exr_aug",
 ]
 noise_exr_list.sort()
 
 noise_hdr_list = [
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/train_noise_hdr",
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/valid_noise_hdr",
-    "/home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr",
+    # "/home/luoleyouluole/Image-Restoration-Experiments/data/train_noise_hdr",
+    # "/home/luoleyouluole/Image-Restoration-Experiments/data/valid_noise_hdr",
+    "/home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_aug",
 ]
 noise_hdr_list.sort()
 
 for gt_exr_folder, gt_hdr_folder, noise_exr_folder, noise_hdr_folder in tqdm(zip(gt_exr_list, gt_hdr_list, noise_exr_list, noise_hdr_list)):
-    shutil.rmtree(gt_exr_folder)
-    shutil.rmtree(gt_hdr_folder)
-    shutil.rmtree(noise_exr_folder)
-    shutil.rmtree(noise_hdr_folder)
+    if os.path.exists(gt_exr_folder):
+        shutil.rmtree(gt_exr_folder)
+        os.mkdir(gt_exr_folder)
+    else:
+        os.mkdir(gt_exr_folder)
 
-    os.mkdir(gt_exr_folder)
-    os.mkdir(gt_hdr_folder)
-    os.mkdir(noise_exr_folder)
-    os.mkdir(noise_hdr_folder)
+    if os.path.exists(gt_hdr_folder):
+        shutil.rmtree(gt_hdr_folder)
+        os.mkdir(gt_hdr_folder)
+    else:
+        os.mkdir(gt_hdr_folder)
+
+    if os.path.exists(noise_exr_folder):
+        shutil.rmtree(noise_exr_folder)
+        os.mkdir(noise_exr_folder)
+    else:
+        os.mkdir(noise_exr_folder)
+
+    if os.path.exists(noise_hdr_folder):
+        shutil.rmtree(noise_hdr_folder)
+        os.mkdir(noise_hdr_folder)
+    else:
+        os.mkdir(noise_hdr_folder)
 
 
 for gt_folder, gt_exr_folder, gt_hdr_folder, noise_exr_folder, noise_hdr_folder in tqdm(zip(gt_list, gt_exr_list, gt_hdr_list, noise_exr_list, noise_hdr_list)):

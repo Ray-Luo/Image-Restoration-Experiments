@@ -28,8 +28,8 @@ def original2pq(x):
     return out
 
 def draw_histogram(array, mode, save_path):
-    array = array + 1e-5
-    array = np.log(array)
+    # array = array + 1e-5
+    # array = np.log(array)
     fig, ax = plt.subplots()
     sns.distplot(array.flatten(), bins=100, kde=False)
     # if mode == "gt":
@@ -38,8 +38,8 @@ def draw_histogram(array, mode, save_path):
     # else:
     #     plt.xlim(0, 1)
     #     plt.ylim(0, 3e7)
-    plt.xlim(-13, 8)
-    plt.ylim(0, 5.5e6)
+    # plt.xlim(-13, 900)
+    # plt.ylim(0, 5.5e6)
     plt.xlabel('Value')
     plt.ylabel('Frequency')
     plt.title('Histogram of {}'.format(mode))
@@ -47,18 +47,24 @@ def draw_histogram(array, mode, save_path):
 
 
 # img /= np.max(img)
-img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr/Old_Faithful_Inn_raw_GT.hdr", cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
-navie = img / 4000.0
-pu_encoded = original2pu(img)
-pq_encoded = original2pq(img)
+img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/pine_attic_4k.hdr", cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
+print_min_max(img)
+# Calculate the 99th percentile
+img = np.clip(img, 0, 1.0)
+percentile_99 = np.percentile(img, 99.999)
 
-print(original2pq(np.array([1.0])))
-print(original2pu(np.array([1.0])))
+print("99th percentile:", percentile_99)
+# navie = img / 4000.0
+# pu_encoded = original2pu(img)
+# pq_encoded = original2pq(img)
+
+# print(original2pq(np.array([1.0])))
+# print(original2pu(np.array([1.0])))
 
 draw_histogram(img, "gt", "./")
-draw_histogram(navie, "navie", "./")
-draw_histogram(pu_encoded, "pu", "./")
-draw_histogram(pq_encoded, "pq", "./")
+# draw_histogram(navie, "navie", "./")
+# draw_histogram(pu_encoded, "pu", "./")
+# draw_histogram(pq_encoded, "pq", "./")
 
 # save_hdr(img, "/home/luoleyouluole/Image-Restoration-Experiments/", "skyscraper_noise_exr2hdr.hdr")
 
