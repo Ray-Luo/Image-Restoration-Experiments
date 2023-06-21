@@ -40,9 +40,9 @@ for filename in imgs:
     reference_img = os.path.join(test_img_folder, reference_name)
     test_names = [
         file_name + "_raw_naive.hdr",
-        # file_name + "_raw_linear_l1.hdr",
+        file_name + "_raw_linear_l1.hdr",
         file_name + "_raw_pq_l1.hdr",
-        # file_name + "_raw_pu_l1.hdr",
+        file_name + "_raw_pu_l1.hdr",
     ]
 
     for test_name in test_names:

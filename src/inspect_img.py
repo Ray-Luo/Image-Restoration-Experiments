@@ -47,26 +47,12 @@ def draw_histogram(array, mode, save_path):
 
 
 # img /= np.max(img)
-img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/pine_attic_4k.hdr", cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
+img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/data/res_realesrgan/Artist_Palette_GT.hdr", cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
 print_min_max(img)
-# Calculate the 99th percentile
-img = np.clip(img, 0, 1.0)
-percentile_99 = np.percentile(img, 99.999)
 
-print("99th percentile:", percentile_99)
-# navie = img / 4000.0
-# pu_encoded = original2pu(img)
-# pq_encoded = original2pq(img)
+blur = cv2.GaussianBlur(img, (51, 51), 0)
 
-# print(original2pq(np.array([1.0])))
-# print(original2pu(np.array([1.0])))
-
-draw_histogram(img, "gt", "./")
-# draw_histogram(navie, "navie", "./")
-# draw_histogram(pu_encoded, "pu", "./")
-# draw_histogram(pq_encoded, "pq", "./")
-
-# save_hdr(img, "/home/luoleyouluole/Image-Restoration-Experiments/", "skyscraper_noise_exr2hdr.hdr")
+save_hdr(blur, "/home/luoleyouluole/Image-Restoration-Experiments/", "Artist_Palette_GT_blur.hdr")
 
 
 # draw_histogram(img, "GT", "./")

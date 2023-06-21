@@ -26,11 +26,11 @@ tags: ["dev"]
 
 log_path:
 
-  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_linear_epoch=1929-step=17999.ckpt"
+  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/real_linear_epoch=316-step=55157.ckpt"
 
-  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/wdsr_pu_epoch=2544-step=23561.ckpt"
+  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/real_pu_epoch=822-step=143201.ckpt"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/realesrgan_epoch=21-step=3827.ckpt"
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/real_pq_epoch=817-step=142331.ckpt"
 
 
 results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_realesrgan/"
