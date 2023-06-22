@@ -1,0 +1,30 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - model: mirnetv2.yaml
+  - logger: null
+  - trainer: gpu.yaml
+  - paths: default.yaml
+  - extras: default.yaml
+  - representation: pu.yaml
+  - loss: l1.yaml
+  - hydra: default.yaml
+
+
+data:
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
+  batch_size: 1
+
+task_name: "eval"
+
+log_path:
+  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_epoch=1726-step=31085.ckpt"
+
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pq_epoch=18-step=21963.ckpt"
+
+  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_pu_epoch=1998-step=35981.ckpt"
+
+
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_mirnetv2/"
