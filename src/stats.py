@@ -199,6 +199,69 @@ if 1:
     plt.clf()
 
 
+# ********************************************* DnCNN *********************************************
+if 1:
+    navie_psnr_rgb= []
+    linear_psnr_rgb= [37.0175, 36.7969, 44.4465, 36.5373, 44.9539, 63.0938, 31.365, 44.5812, 35.545, 34.0281, 34.342, 33.1773, 34.7883, 44.329, 38.067, 59.6214, 48.2812, 55.7047, 33.5157, 54.1844, 53.2104, 39.4951]
+    log_psnr_rg= []
+    pu_psnr_rgb= [41.8147, 40.8158, 46.0079, 37.5901, 45.2046, 63.409, 35.904, 49.5447, 46.696, 39.1252, 47.2593, 41.541, 39.7249, 49.6023, 47.714, 61.6701, 50.8456, 56.3972, 37.6703, 54.1844, 53.7972, 40.2808]
+    pq_psnr_rgb= [41.2645, 40.3774, 45.9822, 37.2347, 45.108, 63.409, 35.8112, 49.2742, 46.3893, 39.1183, 47.3245, 39.5689, 39.5436, 49.0213, 47.5206, 57.882, 50.8662, 56.3471, 37.523, 54.1844, 53.5199, 40.2003]
+    navie_psnr_y= []
+    linear_psnr_y= [39.6579, 38.6623, 55.3321, 59.4759, 67.6143, 85.9003, 34.3751, 46.5678, 37.2464, 41.4003, 35.7601, 36.0499, 37.234, 46.8402, 40.1126, 79.4509, 56.825, 78.3038, 35.4406, 62.9934, 76.1582, 41.4503]
+    log_psnr_y= []
+    pu_psnr_y= [43.6076, 43.1466, 56.8466, 60.5355, 68.1086, 86.2484, 40.507, 50.1029, 50.016, 50.9057, 50.6372, 47.6768, 43.3668, 52.7831, 49.5921, 83.6676, 60.3046, 79.0665, 40.5329, 62.9934, 76.7449, 41.8751]
+    pq_psnr_y= [43.0458, 42.6855, 57.3385, 60.1802, 68.0146, 86.2484, 40.3292, 49.7451, 49.3527, 52.1067, 50.3828, 46.8114, 43.3534, 52.3471, 49.5608, 74.5818, 61.1827, 79.0191, 40.3215, 62.9934, 76.4676, 41.8041]
+    navie_cvvdp= []
+    linear_cvvdp= [7.7429, 7.7116, 9.3823, 9.7171, 9.861, 9.9869, 7.7823, 8.7101, 8.2745, 8.6983, 8.5276, 8.0193, 8.2832, 8.8593, 8.3039, 9.9442, 9.475, 9.9626, 7.6183, 0.1, 0.1, 0.1]
+    log_cvvdp= []
+    pu_cvvdp= [8.3617, 8.3503, 9.4403, 9.7242, 9.8706, 9.987, 8.199, 9.04, 9.1009, 9.0574, 9.3027, 8.7887, 8.5681, 9.2017, 8.9721, 9.9541, 9.5629, 9.9648, 8.208, 0.1, 0.1, 0.1]
+    pq_cvvdp= [8.2137, 8.2502, 9.4489, 9.6711, 9.86, 9.987, 8.0425, 8.9954, 8.9823, 9.1607, 9.2473, 8.7887, 8.4601, 9.1611, 8.936, 9.8039, 9.5832, 9.9611, 8.0564, 0.1, 0.1, 0.1]
+
+    # print(len(linear_psnr_rgb), len(pu_psnr_rgb), len(pq_psnr_rgb))
+
+    # Perform t-test
+    t_statistic, p_value = stats.ttest_ind(linear_psnr_rgb, pu_psnr_rgb)
+    print('t statistic:', t_statistic)
+    print('p value:', p_value)
+
+    navie_psnr_rgb = np.array(navie_psnr_rgb)
+    linear_psnr_rgb = np.array(linear_psnr_rgb)
+    pu_psnr_rgb = np.array(pu_psnr_rgb)
+    pq_psnr_rgb = np.array(pq_psnr_rgb)
+    print(np.mean(linear_psnr_rgb), np.mean(pu_psnr_rgb), np.mean(pq_psnr_rgb))
+    psnr_rgb_df = pd.DataFrame({'linear_psnr_rgb': linear_psnr_rgb, 'pu_psnr_rgb': pu_psnr_rgb, 'pq_psnr_rgb': pq_psnr_rgb})
+
+
+    navie_psnr_y = np.array(navie_psnr_y)
+    linear_psnr_y = np.array(linear_psnr_y)
+    pu_psnr_y = np.array(pu_psnr_y)
+    pq_psnr_y = np.array(pq_psnr_y)
+    print(np.mean(linear_psnr_y), np.mean(pu_psnr_y), np.mean(pq_psnr_y))
+    psnr_y_df = pd.DataFrame({ 'linear_psnr_y': linear_psnr_y, 'pu_psnr_y': pu_psnr_y, 'pq_psnr_y': pq_psnr_y})
+
+    navie_cvvdp = np.array(navie_cvvdp)
+    linear_cvvdp = np.array(linear_cvvdp)
+    pu_cvvdp = np.array(pu_cvvdp)
+    pq_cvvdp = np.array(pq_cvvdp)
+    print(np.mean(linear_cvvdp), np.mean(pu_cvvdp), np.mean(pq_cvvdp))
+    cvvdp_df = pd.DataFrame({'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
+
+
+    sns.violinplot(data=psnr_rgb_df)
+    plt.ylabel('dncnn_psnr_rgb')
+    plt.savefig('dncnn_psnr_rgb.png')
+    plt.clf()
+
+    sns.violinplot(data=psnr_y_df)
+    plt.ylabel('dncnn_psnr_y')
+    plt.savefig('dncnn_psnr_y.png')
+    plt.clf()
+
+    sns.violinplot(data=cvvdp_df)
+    plt.ylabel('dncnn_cvvdp')
+    plt.savefig('dncnn_cvvdp.png')
+    plt.clf()
+
 
 """
 ------------------- super-res -------------------
