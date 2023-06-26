@@ -13,16 +13,16 @@ defaults:
 
 
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug
   batch_size: 1
 
 task_name: "eval"
 
 log_path:
-  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_epoch=488-step=42542.ckpt"
+  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_epoch=488-step=42542.ckpt"
 
-  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pq_epoch=981-step=85433.ckpt"
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pq_epoch=981-step=85433.ckpt"
 
   pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pu_epoch=994-step=86564.ckpt"
 

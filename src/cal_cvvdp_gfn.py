@@ -2,7 +2,7 @@ import os
 import subprocess
 
 # directory containing the images
-folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/test'
+folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_aug'
 
 
 test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_gfn'
