@@ -13,8 +13,8 @@ defaults:
 
 
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug
   batch_size: 1
 
 task_name: "eval"
