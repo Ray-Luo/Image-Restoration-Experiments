@@ -18,8 +18,8 @@ defaults:
 #   batch_size: 1
 
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_aug
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_aug
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_patchify
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_patchify
   batch_size: 1
 
 task_name: "eval"
@@ -29,17 +29,11 @@ tags: ["dev"]
 
 log_path:
 
-  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_epoch=795-step=69251.ckpt"
+  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_epoch=374-step=32624.ckpt"
 
-  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_epoch=1473-step=128237.ckpt"
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_epoch=943-step=82127.ckpt"
 
-  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu_epoch=1113-step=96917.ckpt"
-
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_l1_epoch=374-step=32624.ckpt"
-
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_l1_epoch=943-step=82127.ckpt"
-
-  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu_l1_epoch=873-step=76037.ckpt"
+  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu_epoch=873-step=76037.ckpt"
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_l1_aug/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn/"

@@ -41,33 +41,33 @@ def main():
     opt['compression_level'] = 3
 
     # HR images
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/train_hdr'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_train_hdr_patchify'
-    opt['crop_size'] = 960
-    opt['step'] = 480
-    opt['thresh_size'] = 0
-    extract_subimages(opt)
+    # opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/train_hdr'
+    # opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_train_hdr_patchify'
+    # opt['crop_size'] = 960
+    # opt['step'] = 480
+    # opt['thresh_size'] = 0
+    # extract_subimages(opt)
 
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/valid_hdr'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_valid_hdr_patchify'
-    opt['crop_size'] = 960
-    opt['step'] = 480
-    opt['thresh_size'] = 0
-    extract_subimages(opt)
+    # opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/valid_hdr'
+    # opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_valid_hdr_patchify'
+    # opt['crop_size'] = 960
+    # opt['step'] = 480
+    # opt['thresh_size'] = 0
+    # extract_subimages(opt)
 
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/train_noise_hdr'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_train_noise_hdr_patchify'
-    opt['crop_size'] = 960
-    opt['step'] = 480
-    opt['thresh_size'] = 0
-    extract_subimages(opt)
+    # opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/train_noise_hdr'
+    # opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_train_noise_hdr_patchify'
+    # opt['crop_size'] = 960
+    # opt['step'] = 480
+    # opt['thresh_size'] = 0
+    # extract_subimages(opt)
 
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/valid_noise_hdr'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_valid_noise_hdr_patchify'
-    opt['crop_size'] = 960
-    opt['step'] = 480
-    opt['thresh_size'] = 0
-    extract_subimages(opt)
+    # opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/valid_noise_hdr'
+    # opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/960p_valid_noise_hdr_patchify'
+    # opt['crop_size'] = 960
+    # opt['step'] = 480
+    # opt['thresh_size'] = 0
+    # extract_subimages(opt)
 
     # LRx4 images
     # opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/valid_4xd'
@@ -76,6 +76,20 @@ def main():
     # opt['step'] = 48
     # opt['thresh_size'] = 0
     # extract_subimages(opt)
+
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_patchify'
+    opt['crop_size'] = 2000
+    opt['step'] = 1000
+    opt['thresh_size'] = 0
+    extract_subimages(opt)
+
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_patchify'
+    opt['crop_size'] = 2000
+    opt['step'] = 1000
+    opt['thresh_size'] = 0
+    extract_subimages(opt)
 
 def extract_subimages(opt):
     """Crop images to subimages.

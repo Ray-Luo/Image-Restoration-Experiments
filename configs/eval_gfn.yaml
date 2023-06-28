@@ -20,7 +20,7 @@ data:
 task_name: "eval"
 
 log_path:
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_epoch=488-step=42542.ckpt"
+  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_epoch=959-step=83519.ckpt"
 
   pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pq_epoch=981-step=85433.ckpt"
 

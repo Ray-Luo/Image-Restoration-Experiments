@@ -13,18 +13,18 @@ defaults:
 
 
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_patchify
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_patchify
   batch_size: 1
 
 task_name: "eval"
 
 log_path:
-  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_epoch=1726-step=31085.ckpt"
+  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sadnet_linear_epoch=975-step=68319.ckpt"
 
-  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_pq_epoch=1998-step=35981.ckpt"
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sadnet_pq_epoch=1126-step=98048.ckpt"
 
   pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sadnet_pu_epoch=971-step=68039.ckpt"
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_sadnet/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_sad/"

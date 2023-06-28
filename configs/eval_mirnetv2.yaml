@@ -13,18 +13,18 @@ defaults:
 
 
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug
   batch_size: 1
 
 task_name: "eval"
 
 log_path:
-  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_epoch=1726-step=31085.ckpt"
+  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnet_linear_epoch=10-step=12715.ckpt"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pq_epoch=18-step=21963.ckpt"
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pq_epoch=384-step=445059.ckpt"
 
-  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_pu_epoch=1998-step=35981.ckpt"
+  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pu_epoch=165-step=191895.ckpt"
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_mirnetv2/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_mir/"
