@@ -18,8 +18,8 @@ defaults:
 #   batch_size: 1
 
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_patchify
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_patchify
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_aug_patchify
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_aug_patchify
   batch_size: 1
 
 task_name: "eval"
