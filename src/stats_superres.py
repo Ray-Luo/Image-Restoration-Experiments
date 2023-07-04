@@ -231,7 +231,7 @@ if 1:
 EDSR
 
 
-WDSR
+
 
 
 RealESRGAN
