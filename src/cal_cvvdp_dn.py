@@ -2,7 +2,7 @@ import os
 import subprocess
 
 # directory containing the images
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_sad'
 imgs = os.listdir(test_img_folder)
 imgs.sort()
 test_imgs = []
