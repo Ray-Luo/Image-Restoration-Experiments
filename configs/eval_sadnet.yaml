@@ -26,5 +26,14 @@ log_path:
 
   pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sadnet_pu_epoch=971-step=68039.ckpt"
 
+  linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sad_linear_smape_epoch=795-step=55719.ckpt"
+
+  linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sad_linear_pu_epoch=851-step=59639.ckpt"
+
+  linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sad_linear_pq_epoch=954-step=66849.ckpt"
+
+  linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sad_linear_mu_epoch=968-step=67829.ckpt"
+
+
 
 results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_sad/"
