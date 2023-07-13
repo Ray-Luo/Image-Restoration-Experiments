@@ -20,13 +20,13 @@ data:
 task_name: "eval"
 
 log_path:
-  # linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_smape_epoch=1883-step=54635.ckpt"
+  linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_smape_epoch=1883-step=54635.ckpt"
 
-  # linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_mu_epoch=1973-step=57245.ckpt"
+  linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_mu_epoch=1973-step=57245.ckpt"
 
-  # linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_pu_epoch=1841-step=53417.ckpt"
+  linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_pu_epoch=1841-step=53417.ckpt"
 
-  # linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_pq_epoch=1994-step=57854.ckpt"
+  linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_pq_epoch=1994-step=57854.ckpt"
 
   linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_epoch=1726-step=31085.ckpt"
 
