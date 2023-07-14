@@ -15,6 +15,7 @@ import os
 import cv2
 import matplotlib.pyplot as plt
 import seaborn as sns
+import shutil
 
 import warnings
 
@@ -216,7 +217,13 @@ def evaluate(cfg: DictConfig):
 
 @hydra.main(version_base="1.3", config_path="../configs", config_name="eval_dn.yaml")
 def main(cfg: DictConfig) -> None:
+    if os.path.exists(cfg.results_save_path):
+        shutil.rmtree(cfg.results_save_path)
+        os.mkdir(cfg.results_save_path)
+    else:
+        os.mkdir(cfg.results_save_path)
     evaluate(cfg)
+
 
 
 if __name__ == "__main__":

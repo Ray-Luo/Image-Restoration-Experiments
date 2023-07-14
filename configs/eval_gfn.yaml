@@ -26,5 +26,14 @@ log_path:
 
   pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pu_epoch=994-step=86564.ckpt"
 
+  linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_smape_epoch=63-step=5567.ckpt"
+
+  linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_mu_epoch=953-step=82997.ckpt"
+
+  linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_pu_epoch=0-step=86.ckpt"
+
+  linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_pq_epoch=16-step=1478.ckpt"
+
+
 
 results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_gfn/"

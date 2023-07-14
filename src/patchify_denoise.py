@@ -77,15 +77,15 @@ def main():
     # opt['thresh_size'] = 0
     # extract_subimages(opt)
 
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_patchify'
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_aug'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_aug_patchify'
     opt['crop_size'] = 2000
     opt['step'] = 1000
     opt['thresh_size'] = 0
     extract_subimages(opt)
 
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_patchify'
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_aug'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_aug_patchify'
     opt['crop_size'] = 2000
     opt['step'] = 1000
     opt['thresh_size'] = 0
