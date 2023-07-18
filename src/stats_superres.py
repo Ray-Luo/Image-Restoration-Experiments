@@ -79,28 +79,35 @@ if 1:
     linear_pq_psnr_rgb = np.array(linear_pq_psnr_rgb)
     linear_mu_psnr_rgb = np.array(linear_mu_psnr_rgb)
     # print(np.mean(navie_psnr_rgb), np.mean(linear_psnr_rgb), np.mean(pu_psnr_rgb), np.mean(pq_psnr_rgb))
-    print("linear_l1: {}, linear_smape: {}, linear_pu: {}, linear_pq: {}, linear_mu: {}, pu_l1: {}, pq_l1: {}".format(np.mean(linear_psnr_rgb), np.mean(linear_smape_psnr_rgb), np.mean(linear_pu_psnr_rgb), np.mean(linear_pq_psnr_rgb), np.mean(linear_mu_psnr_rgb), np.mean(pu_psnr_rgb),  np.mean(pq_psnr_rgb)))
-    psnr_rgb_df = pd.DataFrame({'navie_psnr_rgb': navie_psnr_rgb, 'linear_psnr_rgb': linear_psnr_rgb, 'pu_psnr_rgb': pu_psnr_rgb, 'pq_psnr_rgb': pq_psnr_rgb})
+    # psnr_rgb_df = pd.DataFrame({'navie_psnr_rgb': navie_psnr_rgb, 'linear_psnr_rgb': linear_psnr_rgb, 'pu_psnr_rgb': pu_psnr_rgb, 'pq_psnr_rgb': pq_psnr_rgb})
+    psnr_rgb_df = pd.DataFrame({'linear_l1': linear_psnr_rgb, 'linear_smape': linear_smape_psnr_rgb, 'linear_pu': linear_pu_psnr_rgb, 'linear_pq': linear_pq_psnr_rgb, 'linear_mu': linear_mu_psnr_rgb, 'pu_l1': pu_psnr_rgb, 'pq_l1': pq_psnr_rgb})
 
 
     navie_psnr_y = np.array(navie_psnr_y)
     linear_psnr_y = np.array(linear_psnr_y)
     pu_psnr_y = np.array(pu_psnr_y)
     pq_psnr_y = np.array(pq_psnr_y)
+    linear_smape_psnr_y = np.array(linear_smape_psnr_y)
+    linear_pu_psnr_y = np.array(linear_pu_psnr_y)
+    linear_pq_psnr_y = np.array(linear_pq_psnr_y)
+    linear_mu_psnr_y = np.array(linear_mu_psnr_y)
     # print(np.mean(navie_psnr_y), np.mean(linear_psnr_y), np.mean(pu_psnr_y), np.mean(pq_psnr_y))
-    print("linear_l1: {}, linear_smape: {}, linear_pu: {}, linear_pq: {}, linear_mu: {}, pu_l1: {}, pq_l1: {}".format(np.mean(linear_psnr_y), np.mean(linear_smape_psnr_y), np.mean(linear_pu_psnr_y), np.mean(linear_pq_psnr_y), np.mean(linear_mu_psnr_y), np.mean(pu_psnr_y),  np.mean(pq_psnr_y)))
-    psnr_y_df = pd.DataFrame({ 'navie_psnr_y': navie_psnr_y , 'linear_psnr_y': linear_psnr_y, 'pu_psnr_y': pu_psnr_y, 'pq_psnr_y': pq_psnr_y})
+    psnr_y_df = pd.DataFrame({'linear_l1': linear_psnr_y, 'linear_smape': linear_smape_psnr_y, 'linear_pu': linear_pu_psnr_y, 'linear_pq': linear_pq_psnr_y, 'linear_mu': linear_mu_psnr_y, 'pu_l1': pu_psnr_y, 'pq_l1': pq_psnr_y})
 
     navie_cvvdp = np.array(navie_cvvdp)
     linear_cvvdp = np.array(linear_cvvdp)
     pu_cvvdp = np.array(pu_cvvdp)
     pq_cvvdp = np.array(pq_cvvdp)
+    linear_smape_cvvdp = np.array(linear_smape_cvvdp)
+    linear_pu_cvvdp = np.array(linear_pu_cvvdp)
+    linear_pq_cvvdp = np.array(linear_pq_cvvdp)
+    linear_mu_cvvdp = np.array(linear_mu_cvvdp)
     # print(np.mean(navie_cvvdp), np.mean(linear_cvvdp), np.mean(pu_cvvdp), np.mean(pq_cvvdp))
-    print("linear_l1: {}, linear_smape: {}, linear_pu: {}, linear_pq: {}, linear_mu: {}, pu_l1: {}, pq_l1: {}".format(np.mean(linear_cvvdp), np.mean(linear_smape_cvvdp), np.mean(linear_pu_cvvdp), np.mean(linear_pq_cvvdp), np.mean(linear_mu_cvvdp), np.mean(pu_cvvdp),  np.mean(pq_cvvdp)))
-    cvvdp_df = pd.DataFrame({'navie_cvvdp': navie_cvvdp, 'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
-
+    # cvvdp_df = pd.DataFrame({'navie_cvvdp': navie_cvvdp, 'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
+    cvvdp_df = pd.DataFrame({'linear_l1': linear_cvvdp, 'linear_smape': linear_smape_cvvdp, 'linear_pu': linear_pu_cvvdp, 'linear_pq':linear_pq_cvvdp, 'linear_mu': linear_mu_cvvdp, 'pu_l1': pu_cvvdp, 'pq_l1': pq_cvvdp})
 
     sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1, color_codes=True, rc=None)
+
 
     plt.figure(figsize=(10,6))
     sns.violinplot(data=psnr_rgb_df, cut = 0)
@@ -258,7 +265,7 @@ if 1:
     linear_mu_psnr_rgb = np.array(linear_mu_psnr_rgb)
     # print(np.mean(navie_psnr_rgb), np.mean(linear_psnr_rgb), np.mean(pu_psnr_rgb), np.mean(pq_psnr_rgb))
     print("linear_l1: {}, linear_smape: {}, linear_pu: {}, linear_pq: {}, linear_mu: {}, pu_l1: {}, pq_l1: {}".format(np.mean(linear_psnr_rgb), np.mean(linear_smape_psnr_rgb), np.mean(linear_pu_psnr_rgb), np.mean(linear_pq_psnr_rgb), np.mean(linear_mu_psnr_rgb), np.mean(pu_psnr_rgb),  np.mean(pq_psnr_rgb)))
-    psnr_rgb_df = pd.DataFrame({'navie_psnr_rgb': navie_psnr_rgb, 'linear_psnr_rgb': linear_psnr_rgb, 'pu_psnr_rgb': pu_psnr_rgb, 'pq_psnr_rgb': pq_psnr_rgb})
+    psnr_rgb_df = pd.DataFrame({'linear_l1': linear_psnr_rgb, 'linear_smape': linear_smape_psnr_rgb, 'linear_pu': linear_pu_psnr_rgb, 'linear_pq': linear_pq_psnr_rgb, 'linear_mu': linear_mu_psnr_rgb, 'pu_l1': pu_psnr_rgb, 'pq_l1': pq_psnr_rgb})
 
 
     navie_psnr_y = np.array(navie_psnr_y)
@@ -267,7 +274,7 @@ if 1:
     pq_psnr_y = np.array(pq_psnr_y)
     # print(np.mean(navie_psnr_y), np.mean(linear_psnr_y), np.mean(pu_psnr_y), np.mean(pq_psnr_y))
     print("linear_l1: {}, linear_smape: {}, linear_pu: {}, linear_pq: {}, linear_mu: {}, pu_l1: {}, pq_l1: {}".format(np.mean(linear_psnr_y), np.mean(linear_smape_psnr_y), np.mean(linear_pu_psnr_y), np.mean(linear_pq_psnr_y), np.mean(linear_mu_psnr_y), np.mean(pu_psnr_y),  np.mean(pq_psnr_y)))
-    psnr_y_df = pd.DataFrame({ 'navie_psnr_y': navie_psnr_y , 'linear_psnr_y': linear_psnr_y, 'pu_psnr_y': pu_psnr_y, 'pq_psnr_y': pq_psnr_y})
+    psnr_y_df = pd.DataFrame({'linear_l1': linear_psnr_y, 'linear_smape': linear_smape_psnr_y, 'linear_pu': linear_pu_psnr_y, 'linear_pq': linear_pq_psnr_y, 'linear_mu': linear_mu_psnr_y, 'pu_l1': pu_psnr_y, 'pq_l1': pq_psnr_y})
 
     navie_cvvdp = np.array(navie_cvvdp)
     linear_cvvdp = np.array(linear_cvvdp)
@@ -275,7 +282,7 @@ if 1:
     pq_cvvdp = np.array(pq_cvvdp)
     # print(np.mean(navie_cvvdp), np.mean(linear_cvvdp), np.mean(pu_cvvdp), np.mean(pq_cvvdp))
     print("linear_l1: {}, linear_smape: {}, linear_pu: {}, linear_pq: {}, linear_mu: {}, pu_l1: {}, pq_l1: {}".format(np.mean(linear_cvvdp), np.mean(linear_smape_cvvdp), np.mean(linear_pu_cvvdp), np.mean(linear_pq_cvvdp), np.mean(linear_mu_cvvdp), np.mean(pu_cvvdp),  np.mean(pq_cvvdp)))
-    cvvdp_df = pd.DataFrame({'navie_cvvdp': navie_cvvdp, 'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
+    cvvdp_df = pd.DataFrame({'linear_l1': linear_cvvdp, 'linear_smape': linear_smape_cvvdp, 'linear_pu': linear_pu_cvvdp, 'linear_pq':linear_pq_cvvdp, 'linear_mu': linear_mu_cvvdp, 'pu_l1': pu_cvvdp, 'pq_l1': pq_cvvdp})
 
 
     sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1, color_codes=True, rc=None)
