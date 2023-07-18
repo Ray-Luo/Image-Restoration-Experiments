@@ -189,6 +189,41 @@ if 1:
     print(np.mean(linear_cvvdp), np.mean(pu_cvvdp), np.mean(pq_cvvdp))
     cvvdp_df = pd.DataFrame({'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
 
+    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1, color_codes=True, rc=None)
+
+    # rc = {'figure.facecolor': 'white',
+    # 'axes.labelcolor': '.15',
+    # 'xtick.direction': 'out',
+    # 'ytick.direction': 'out',
+    # 'xtick.color': '.15',
+    # 'ytick.color': '.15',
+    # 'axes.axisbelow': True,
+    # 'grid.linestyle': '-',
+    # 'text.color': '.15',
+    # 'font.family': ['sans-serif'],
+    # 'font.sans-serif': ['Arial',
+    # 'DejaVu Sans',
+    # 'Liberation Sans',
+    # 'Bitstream Vera Sans',
+    # 'sans-serif'],
+    # 'lines.solid_capstyle': 'round',
+    # 'patch.edgecolor': 'w',
+    # 'patch.force_edgecolor': True,
+    # 'image.cmap': 'rocket',
+    # 'xtick.top': False,
+    # 'ytick.right': False,
+    # 'axes.grid': True,
+    # 'axes.facecolor': '#EAEAF2',
+    # 'axes.edgecolor': 'white',
+    # 'grid.color': 'white',
+    # 'axes.spines.left': True,
+    # 'axes.spines.bottom': True,
+    # 'axes.spines.right': True,
+    # 'axes.spines.top': True,
+    # 'xtick.bottom': False,
+    # 'ytick.left': False}
+
+    # sns.axes_style(style='darkgrid', rc=rc)
 
     sns.violinplot(data=psnr_rgb_df, cut = 0)
     plt.ylabel('dncnn_psnr_rgb')
