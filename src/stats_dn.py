@@ -113,17 +113,17 @@ if 1:
 
 
     plt.figure(figsize=(10,6))
-    sns.violinplot(data=psnr_rgb_df)
+    sns.violinplot(data=psnr_rgb_df, cut = 0)
     plt.ylabel('sad_psnr_rgb')
     plt.savefig('sad_psnr_rgb.png')
     plt.clf()
 
-    sns.violinplot(data=psnr_y_df)
+    sns.violinplot(data=psnr_y_df, cut = 0)
     plt.ylabel('sad_psnr_y')
     plt.savefig('sad_psnr_y.png')
     plt.clf()
 
-    sns.violinplot(data=cvvdp_df)
+    sns.violinplot(data=cvvdp_df, cut = 0)
     plt.ylabel('sad_cvvdp')
     plt.savefig('sad_cvvdp.png')
     plt.clf()
@@ -190,17 +190,17 @@ if 1:
     cvvdp_df = pd.DataFrame({'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
 
 
-    sns.violinplot(data=psnr_rgb_df)
+    sns.violinplot(data=psnr_rgb_df, cut = 0)
     plt.ylabel('dncnn_psnr_rgb')
     plt.savefig('dncnn_psnr_rgb.png')
     plt.clf()
 
-    sns.violinplot(data=psnr_y_df)
+    sns.violinplot(data=psnr_y_df, cut = 0)
     plt.ylabel('dncnn_psnr_y')
     plt.savefig('dncnn_psnr_y.png')
     plt.clf()
 
-    sns.violinplot(data=cvvdp_df)
+    sns.violinplot(data=cvvdp_df, cut = 0)
     plt.ylabel('dncnn_cvvdp')
     plt.savefig('dncnn_cvvdp.png')
     plt.clf()

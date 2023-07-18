@@ -2,13 +2,13 @@ import os
 import subprocess
 
 # directory containing the images
-folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_aug'
-
-
 test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr'
-
-imgs = os.listdir(folder)
+imgs = os.listdir(test_img_folder)
 imgs.sort()
+test_imgs = []
+for filename in imgs:
+    if "_raw_GT.hdr" in filename:
+        test_imgs.append(filename)
 
 navie_psnr_rgb = []
 navie_psnr_y = []
@@ -49,24 +49,42 @@ linear_mu_cvvdp = []
 
 report  = ""
 
-for filename in imgs:
-    if "Artist_Palette" in filename or "Bigfoot_Pass" in filename:
+for file_name in test_imgs:
+    if "Artist_Palette" in file_name or "Bigfoot_Pass" in file_name:
         continue
-    file_name = filename.split(".")[0]
     if "'" in file_name or "&" in file_name:
         file_name = file_name.replace("'", "\\'").replace("&", "\\&")
-    reference_name = file_name + "_raw_GT.hdr"
+    reference_name = file_name
     reference_img = os.path.join(test_img_folder, reference_name)
     test_names = [
-        file_name + "_raw_naive.hdr",
-        file_name + "_raw_linear_smape.hdr",
-        file_name + "_raw_linear_mu.hdr",
-        file_name + "_raw_linear_pu.hdr",
-        file_name + "_raw_linear_pq.hdr",
-        file_name + "_raw_linear_l1.hdr",
-        file_name + "_raw_pq_l1.hdr",
-        file_name + "_raw_pu_l1.hdr",
+        file_name.replace("_GT", "_naive"),
+        file_name.replace("_GT", "_linear_l1"),
+        file_name.replace("_GT", "_pu_l1"),
+        file_name.replace("_GT", "_pq_l1"),
+        file_name.replace("_GT", "_linear_pq"),
+        file_name.replace("_GT", "_linear_pu"),
+        file_name.replace("_GT", "_linear_smape"),
+        file_name.replace("_GT", "_linear_mu"),
     ]
+
+# for filename in imgs:
+#     if "Artist_Palette" in filename or "Bigfoot_Pass" in filename:
+#         continue
+#     file_name = filename.split(".")[0]
+#     if "'" in file_name or "&" in file_name:
+#         file_name = file_name.replace("'", "\\'").replace("&", "\\&")
+#     reference_name = file_name + "_raw_GT.hdr"
+#     reference_img = os.path.join(test_img_folder, reference_name)
+#     test_names = [
+#         file_name + "_raw_naive.hdr",
+#         file_name + "_raw_linear_smape.hdr",
+#         file_name + "_raw_linear_mu.hdr",
+#         file_name + "_raw_linear_pu.hdr",
+#         file_name + "_raw_linear_pq.hdr",
+#         file_name + "_raw_linear_l1.hdr",
+#         file_name + "_raw_pq_l1.hdr",
+#         file_name + "_raw_pu_l1.hdr",
+#     ]
 
     for test_name in test_names:
         test_img = os.path.join(test_img_folder, test_name)
@@ -184,7 +202,7 @@ report += "linear_pq_cvvdp = " + str(linear_pq_cvvdp) + "\n"
 report += "linear_mu_cvvdp = " + str(linear_mu_cvvdp) + "\n"
 
 
-with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_edsr.txt", "w") as file:
+with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_edsr_extra.txt", "w") as file:
     file.write(report)
 
 

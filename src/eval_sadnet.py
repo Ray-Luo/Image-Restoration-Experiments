@@ -176,6 +176,9 @@ def evaluate(cfg: DictConfig):
         ])
 
         for file_name in file_list:
+            if "cargo_boat" not in file_name and "skyscraper" not in file_name and "urban_land" not in file_name:
+                continue
+
             lq_path = os.path.join(cfg.data.lq_path, file_name)
             hq_path = os.path.join(cfg.data.hq_path, file_name.replace("_noise", ""))
             gt = cv2.imread(hq_path, -1).astype(np.float32)

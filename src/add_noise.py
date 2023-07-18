@@ -89,6 +89,9 @@ for gt_folder, gt_exr_folder, gt_hdr_folder, noise_exr_folder, noise_hdr_folder 
     gt_imgs = os.listdir(gt_folder)
     gt_imgs.sort()
     for gt in tqdm(gt_imgs):
+        if "cargo_boat" not in gt and "skyscraper" not in gt and "urban_land" not in gt:
+            continue
+
         img = cv2.imread(os.path.join(gt_folder, gt), cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
         img = img / 4000.0
         save_exr(img, gt_exr_folder, gt.replace(".hdr", ".exr"))

@@ -28,9 +28,9 @@ log_path:
 
   linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/real_linear_epoch=1130-step=196793.ckpt"
 
-  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/real_pu_epoch=1070-step=186353.ckpt"
+  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/real_pu_l1_epoch=1760-step=306413.ckpt"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/real_pq_epoch=1002-step=174521.ckpt"
+  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/real_pq_l1_epoch=1694-step=294929.ckpt"
 
   linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/real_linear_pu_epoch=939-step=163559.ckpt"
 

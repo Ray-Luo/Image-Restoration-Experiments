@@ -27,11 +27,6 @@ C2 = 18.8515625
 C3 = 18.6875
 MAX = 10.8354  # PU(4000)
 
-def original2pq(x):
-    im_t = np.power(torch.clip(x, 0, L_MAX) / L_MAX, N)
-    out = np.power((C2 * im_t + C1) / (1 + C3 * im_t), M)
-    return out
-
 def pq2original(V):
     Lmax = 10000
     n    = 0.15930175781250000
@@ -53,6 +48,6 @@ for file_name in os.listdir(images):
     img = cv2.imread(path, -1).astype(np.float32)
     print_min_max(img)
     linear = pq2original(img)
-    hdr = process_rit(linear)
-    # print_min_max(linear)
-    save_hdr(hdr, "/home/luoleyouluole/Image-Restoration-Experiments/data/test/", name)
+    # hdr = process_rit(linear)
+    print_min_max(linear)
+    save_hdr(linear, "/home/luoleyouluole/Image-Restoration-Experiments/data/test/", name)

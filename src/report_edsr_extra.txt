@@ -1,0 +1,189 @@
+cargo_boat_aug_1_raw_naive.hdr 48.5176 57.0278 0.1000
+cargo_boat_aug_1_raw_linear_l1.hdr 43.1176 48.8598 0.1000
+cargo_boat_aug_1_raw_pu_l1.hdr 48.3553 56.9165 0.1000
+cargo_boat_aug_1_raw_pq_l1.hdr 48.5127 57.0528 0.1000
+cargo_boat_aug_1_raw_linear_pq.hdr 40.8104 49.2681 0.1000
+cargo_boat_aug_1_raw_linear_pu.hdr 39.3660 46.9185 0.1000
+cargo_boat_aug_1_raw_linear_smape.hdr 43.3105 51.9868 0.1000
+cargo_boat_aug_1_raw_linear_mu.hdr 43.0815 49.0306 0.1000
+
+cargo_boat_aug_2_raw_naive.hdr 41.8768 46.9530 8.9221
+cargo_boat_aug_2_raw_linear_l1.hdr 28.9695 29.6753 0.1000
+cargo_boat_aug_2_raw_pu_l1.hdr 42.0722 47.5339 9.0337
+cargo_boat_aug_2_raw_pq_l1.hdr 42.4345 47.9986 9.0789
+cargo_boat_aug_2_raw_linear_pq.hdr 27.8308 30.2230 7.7167
+cargo_boat_aug_2_raw_linear_pu.hdr 28.1596 31.4893 7.7790
+cargo_boat_aug_2_raw_linear_smape.hdr 28.8676 30.3446 7.6069
+cargo_boat_aug_2_raw_linear_mu.hdr 28.5369 29.4537 7.4698
+
+cargo_boat_aug_3_raw_naive.hdr 40.4791 45.1321 8.6965
+cargo_boat_aug_3_raw_linear_l1.hdr 27.8408 28.4753 0.1000
+cargo_boat_aug_3_raw_pu_l1.hdr 40.6339 45.7200 8.8460
+cargo_boat_aug_3_raw_pq_l1.hdr 40.9817 46.1624 8.8923
+cargo_boat_aug_3_raw_linear_pq.hdr 26.9116 28.7448 7.4598
+cargo_boat_aug_3_raw_linear_pu.hdr 27.1062 29.8150 7.4669
+cargo_boat_aug_3_raw_linear_smape.hdr 27.6552 29.0966 7.3246
+cargo_boat_aug_3_raw_linear_mu.hdr 27.2326 28.0959 7.1106
+
+cargo_boat_aug_4_raw_naive.hdr 36.7833 39.0265 7.8413
+cargo_boat_aug_4_raw_linear_l1.hdr 23.1762 23.6080 5.3301
+cargo_boat_aug_4_raw_pu_l1.hdr 36.9713 39.4878 8.0804
+cargo_boat_aug_4_raw_pq_l1.hdr 37.3091 39.7975 8.1175
+cargo_boat_aug_4_raw_linear_pq.hdr 23.1309 24.3562 5.5414
+cargo_boat_aug_4_raw_linear_pu.hdr 24.9574 26.1421 6.7977
+cargo_boat_aug_4_raw_linear_smape.hdr 23.3269 24.0708 5.4730
+cargo_boat_aug_4_raw_linear_mu.hdr 22.9690 23.7961 5.3596
+
+cargo_boat_aug_5_raw_naive.hdr 37.7443 39.1289 8.0616
+cargo_boat_aug_5_raw_linear_l1.hdr 20.0811 20.1731 5.7126
+cargo_boat_aug_5_raw_pu_l1.hdr 38.2321 39.9281 8.2968
+cargo_boat_aug_5_raw_pq_l1.hdr 38.7931 40.4454 8.3412
+cargo_boat_aug_5_raw_linear_pq.hdr 20.4230 20.5369 5.7105
+cargo_boat_aug_5_raw_linear_pu.hdr 26.0710 27.2436 7.1879
+cargo_boat_aug_5_raw_linear_smape.hdr 20.3139 20.5321 5.7460
+cargo_boat_aug_5_raw_linear_mu.hdr 20.0617 20.3761 5.7066
+
+cargo_boat_raw_naive.hdr 50.9563 59.8518 0.1000
+cargo_boat_raw_linear_l1.hdr 47.7951 51.3181 0.1000
+cargo_boat_raw_pu_l1.hdr 50.9693 60.0019 0.1000
+cargo_boat_raw_pq_l1.hdr 50.9629 59.9100 0.1000
+cargo_boat_raw_linear_pq.hdr 49.1115 58.1311 0.1000
+cargo_boat_raw_linear_pu.hdr 48.3445 55.9054 0.1000
+cargo_boat_raw_linear_smape.hdr 50.4497 58.8553 0.1000
+cargo_boat_raw_linear_mu.hdr 50.6281 58.9054 0.1000
+
+skyscraper_aug_1_raw_naive.hdr 51.3266 59.0097 0.1000
+skyscraper_aug_1_raw_linear_l1.hdr 43.1935 49.2265 0.1000
+skyscraper_aug_1_raw_pu_l1.hdr 50.3304 58.7539 0.1000
+skyscraper_aug_1_raw_pq_l1.hdr 52.5729 60.0693 0.1000
+skyscraper_aug_1_raw_linear_pq.hdr 40.2975 47.1742 0.1000
+skyscraper_aug_1_raw_linear_pu.hdr 38.8653 42.3828 0.1000
+skyscraper_aug_1_raw_linear_smape.hdr 42.3786 50.5926 0.1000
+skyscraper_aug_1_raw_linear_mu.hdr 41.6100 45.6935 0.1000
+
+skyscraper_aug_2_raw_naive.hdr 44.3883 45.6373 0.1000
+skyscraper_aug_2_raw_linear_l1.hdr 29.3394 30.2613 0.1000
+skyscraper_aug_2_raw_pu_l1.hdr 45.1929 47.2779 0.1000
+skyscraper_aug_2_raw_pq_l1.hdr 46.5526 48.2079 0.1000
+skyscraper_aug_2_raw_linear_pq.hdr 28.7816 30.6007 0.1000
+skyscraper_aug_2_raw_linear_pu.hdr 29.7997 31.4810 0.1000
+skyscraper_aug_2_raw_linear_smape.hdr 29.3778 30.7554 0.1000
+skyscraper_aug_2_raw_linear_mu.hdr 28.9113 30.1780 0.1000
+
+skyscraper_aug_3_raw_naive.hdr 44.2588 45.4262 0.1000
+skyscraper_aug_3_raw_linear_l1.hdr 28.1094 28.8466 0.1000
+skyscraper_aug_3_raw_pu_l1.hdr 45.0644 46.9106 0.1000
+skyscraper_aug_3_raw_pq_l1.hdr 46.3218 47.7812 0.1000
+skyscraper_aug_3_raw_linear_pq.hdr 27.7969 29.3421 0.1000
+skyscraper_aug_3_raw_linear_pu.hdr 29.3755 30.8200 0.1000
+skyscraper_aug_3_raw_linear_smape.hdr 28.1939 29.3159 0.1000
+skyscraper_aug_3_raw_linear_mu.hdr 27.7983 28.9039 0.1000
+
+skyscraper_aug_4_raw_naive.hdr 44.8430 46.3351 0.1000
+skyscraper_aug_4_raw_linear_l1.hdr 24.2748 24.4763 0.1000
+skyscraper_aug_4_raw_pu_l1.hdr 45.8194 47.9400 0.1000
+skyscraper_aug_4_raw_pq_l1.hdr 47.0522 48.9667 0.1000
+skyscraper_aug_4_raw_linear_pq.hdr 24.2973 24.8372 0.1000
+skyscraper_aug_4_raw_linear_pu.hdr 28.6117 30.4193 0.1000
+skyscraper_aug_4_raw_linear_smape.hdr 24.4414 24.8407 0.1000
+skyscraper_aug_4_raw_linear_mu.hdr 24.1895 24.6301 0.1000
+
+skyscraper_aug_5_raw_naive.hdr 45.8498 46.5901 0.1000
+skyscraper_aug_5_raw_linear_l1.hdr 22.3628 22.4876 0.1000
+skyscraper_aug_5_raw_pu_l1.hdr 46.9407 47.8661 0.1000
+skyscraper_aug_5_raw_pq_l1.hdr 48.0458 49.0682 0.1000
+skyscraper_aug_5_raw_linear_pq.hdr 22.2200 22.5400 0.1000
+skyscraper_aug_5_raw_linear_pu.hdr 26.4866 28.4142 0.1000
+skyscraper_aug_5_raw_linear_smape.hdr 22.4304 22.6496 0.1000
+skyscraper_aug_5_raw_linear_mu.hdr 22.1278 22.5243 0.1000
+
+skyscraper_raw_naive.hdr 53.9442 69.4932 0.1000
+skyscraper_raw_linear_l1.hdr 46.9802 55.5190 0.1000
+skyscraper_raw_pu_l1.hdr 53.2609 69.0289 0.1000
+skyscraper_raw_pq_l1.hdr 55.9400 70.3301 0.1000
+skyscraper_raw_linear_pq.hdr 45.1015 55.2141 0.1000
+skyscraper_raw_linear_pu.hdr 44.1844 50.9076 0.1000
+skyscraper_raw_linear_smape.hdr 46.6519 62.0290 0.1000
+skyscraper_raw_linear_mu.hdr 46.2285 52.0571 0.1000
+
+urban_land_aug_1_raw_naive.hdr 36.0135 38.6328 8.2028
+urban_land_aug_1_raw_linear_l1.hdr 26.3910 26.6619 7.3190
+urban_land_aug_1_raw_pu_l1.hdr 35.9056 38.4930 8.1163
+urban_land_aug_1_raw_pq_l1.hdr 36.0565 38.6322 8.1395
+urban_land_aug_1_raw_linear_pq.hdr 26.2595 28.2466 7.5229
+urban_land_aug_1_raw_linear_pu.hdr 25.5763 26.4548 7.0653
+urban_land_aug_1_raw_linear_smape.hdr 26.5424 27.4384 7.4986
+urban_land_aug_1_raw_linear_mu.hdr 26.2866 26.9375 7.3152
+
+urban_land_aug_2_raw_naive.hdr 39.9015 41.1130 8.4858
+urban_land_aug_2_raw_linear_l1.hdr 18.8799 18.8636 5.8980
+urban_land_aug_2_raw_pu_l1.hdr 39.9636 41.7823 8.6830
+urban_land_aug_2_raw_pq_l1.hdr 41.3111 42.9040 8.7824
+urban_land_aug_2_raw_linear_pq.hdr 19.0345 18.8733 5.9348
+urban_land_aug_2_raw_linear_pu.hdr 26.8200 28.1923 7.5178
+urban_land_aug_2_raw_linear_smape.hdr 18.9922 18.9651 5.8911
+urban_land_aug_2_raw_linear_mu.hdr 18.7741 18.9756 5.8679
+
+urban_land_aug_3_raw_naive.hdr 40.1719 41.3151 8.4904
+urban_land_aug_3_raw_linear_l1.hdr 18.6359 18.6165 5.8769
+urban_land_aug_3_raw_pu_l1.hdr 40.2169 42.0171 8.6937
+urban_land_aug_3_raw_pq_l1.hdr 41.7976 43.3561 8.8052
+urban_land_aug_3_raw_linear_pq.hdr 18.7908 18.5994 5.9010
+urban_land_aug_3_raw_linear_pu.hdr 26.8008 28.1968 7.5080
+urban_land_aug_3_raw_linear_smape.hdr 18.6913 18.5879 5.8645
+urban_land_aug_3_raw_linear_mu.hdr 18.5116 18.7107 5.8479
+
+urban_land_aug_4_raw_naive.hdr 40.9149 41.9292 8.5783
+urban_land_aug_4_raw_linear_l1.hdr 18.0418 18.0131 5.9413
+urban_land_aug_4_raw_pu_l1.hdr 40.6303 42.4174 8.7088
+urban_land_aug_4_raw_pq_l1.hdr 43.1571 44.6445 8.8909
+urban_land_aug_4_raw_linear_pq.hdr 18.1947 17.9428 5.9505
+urban_land_aug_4_raw_linear_pu.hdr 26.1316 27.2600 7.3555
+urban_land_aug_4_raw_linear_smape.hdr 18.0280 17.8559 5.9230
+urban_land_aug_4_raw_linear_mu.hdr 17.8694 18.0575 5.9251
+
+urban_land_aug_5_raw_naive.hdr 41.9592 43.0903 8.7293
+urban_land_aug_5_raw_linear_l1.hdr 17.8044 17.7678 6.1556
+urban_land_aug_5_raw_pu_l1.hdr 41.1432 42.9340 8.7490
+urban_land_aug_5_raw_pq_l1.hdr 44.1307 45.7358 8.9740
+urban_land_aug_5_raw_linear_pq.hdr 17.9475 17.6756 6.1507
+urban_land_aug_5_raw_linear_pu.hdr 26.0347 27.1356 7.2417
+urban_land_aug_5_raw_linear_smape.hdr 17.7752 17.5863 6.1412
+urban_land_aug_5_raw_linear_mu.hdr 17.6131 17.7935 6.1436
+
+urban_land_raw_naive.hdr 37.2804 39.5811 8.4134
+urban_land_raw_linear_l1.hdr 35.5180 37.7115 0.1000
+urban_land_raw_pu_l1.hdr 37.3411 39.6421 8.4727
+urban_land_raw_pq_l1.hdr 37.4239 39.6917 8.4686
+urban_land_raw_linear_pq.hdr 29.7246 32.4428 8.1108
+urban_land_raw_linear_pu.hdr 27.8187 30.6683 7.4917
+urban_land_raw_linear_smape.hdr 34.3883 38.4701 8.3307
+urban_land_raw_linear_mu.hdr 31.9636 33.4597 7.7065
+
+navie_psnr_rgb = [48.5176, 41.8768, 40.4791, 36.7833, 37.7443, 50.9563, 51.3266, 44.3883, 44.2588, 44.843, 45.8498, 53.9442, 36.0135, 39.9015, 40.1719, 40.9149, 41.9592, 37.2804]
+linear_psnr_rgb = [43.1176, 28.9695, 27.8408, 23.1762, 20.0811, 47.7951, 43.1935, 29.3394, 28.1094, 24.2748, 22.3628, 46.9802, 26.391, 18.8799, 18.6359, 18.0418, 17.8044, 35.518]
+log_psnr_rgb = []
+pu_psnr_rgb = [48.3553, 42.0722, 40.6339, 36.9713, 38.2321, 50.9693, 50.3304, 45.1929, 45.0644, 45.8194, 46.9407, 53.2609, 35.9056, 39.9636, 40.2169, 40.6303, 41.1432, 37.3411]
+pq_psnr_rgb = [48.5127, 42.4345, 40.9817, 37.3091, 38.7931, 50.9629, 52.5729, 46.5526, 46.3218, 47.0522, 48.0458, 55.94, 36.0565, 41.3111, 41.7976, 43.1571, 44.1307, 37.4239]
+linear_smape_psnr_rgb = [43.3105, 28.8676, 27.6552, 23.3269, 20.3139, 50.4497, 42.3786, 29.3778, 28.1939, 24.4414, 22.4304, 46.6519, 26.5424, 18.9922, 18.6913, 18.028, 17.7752, 34.3883]
+linear_pu_psnr_rgb = [39.366, 28.1596, 27.1062, 24.9574, 26.071, 48.3445, 38.8653, 29.7997, 29.3755, 28.6117, 26.4866, 44.1844, 25.5763, 26.82, 26.8008, 26.1316, 26.0347, 27.8187]
+linear_pq_psnr_rgb = [40.8104, 27.8308, 26.9116, 23.1309, 20.423, 49.1115, 40.2975, 28.7816, 27.7969, 24.2973, 22.22, 45.1015, 26.2595, 19.0345, 18.7908, 18.1947, 17.9475, 29.7246]
+linear_mu_psnr_rgb = [43.0815, 28.5369, 27.2326, 22.969, 20.0617, 50.6281, 41.61, 28.9113, 27.7983, 24.1895, 22.1278, 46.2285, 26.2866, 18.7741, 18.5116, 17.8694, 17.6131, 31.9636]
+navie_psnr_y = [57.0278, 46.953, 45.1321, 39.0265, 39.1289, 59.8518, 59.0097, 45.6373, 45.4262, 46.3351, 46.5901, 69.4932, 38.6328, 41.113, 41.3151, 41.9292, 43.0903, 39.5811]
+linear_psnr_y = [48.8598, 29.6753, 28.4753, 23.608, 20.1731, 51.3181, 49.2265, 30.2613, 28.8466, 24.4763, 22.4876, 55.519, 26.6619, 18.8636, 18.6165, 18.0131, 17.7678, 37.7115]
+log_psnr_y = []
+pu_psnr_y = [56.9165, 47.5339, 45.72, 39.4878, 39.9281, 60.0019, 58.7539, 47.2779, 46.9106, 47.94, 47.8661, 69.0289, 38.493, 41.7823, 42.0171, 42.4174, 42.934, 39.6421]
+pq_psnr_y = [57.0528, 47.9986, 46.1624, 39.7975, 40.4454, 59.91, 60.0693, 48.2079, 47.7812, 48.9667, 49.0682, 70.3301, 38.6322, 42.904, 43.3561, 44.6445, 45.7358, 39.6917]
+linear_smape_psnr_y = [51.9868, 30.3446, 29.0966, 24.0708, 20.5321, 58.8553, 50.5926, 30.7554, 29.3159, 24.8407, 22.6496, 62.029, 27.4384, 18.9651, 18.5879, 17.8559, 17.5863, 38.4701]
+linear_pu_psnr_y = [46.9185, 31.4893, 29.815, 26.1421, 27.2436, 55.9054, 42.3828, 31.481, 30.82, 30.4193, 28.4142, 50.9076, 26.4548, 28.1923, 28.1968, 27.26, 27.1356, 30.6683]
+linear_pq_psnr_y = [49.2681, 30.223, 28.7448, 24.3562, 20.5369, 58.1311, 47.1742, 30.6007, 29.3421, 24.8372, 22.54, 55.2141, 28.2466, 18.8733, 18.5994, 17.9428, 17.6756, 32.4428]
+linear_mu_psnr_y = [49.0306, 29.4537, 28.0959, 23.7961, 20.3761, 58.9054, 45.6935, 30.178, 28.9039, 24.6301, 22.5243, 52.0571, 26.9375, 18.9756, 18.7107, 18.0575, 17.7935, 33.4597]
+navie_cvvdp = [0.1, 8.9221, 8.6965, 7.8413, 8.0616, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 8.2028, 8.4858, 8.4904, 8.5783, 8.7293, 8.4134]
+linear_cvvdp = [0.1, 0.1, 0.1, 5.3301, 5.7126, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 7.319, 5.898, 5.8769, 5.9413, 6.1556, 0.1]
+log_cvvdp = []
+pu_cvvdp = [0.1, 9.0337, 8.846, 8.0804, 8.2968, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 8.1163, 8.683, 8.6937, 8.7088, 8.749, 8.4727]
+pq_cvvdp = [0.1, 9.0789, 8.8923, 8.1175, 8.3412, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 8.1395, 8.7824, 8.8052, 8.8909, 8.974, 8.4686]
+linear_smape_cvvdp = [0.1, 7.6069, 7.3246, 5.473, 5.746, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 7.4986, 5.8911, 5.8645, 5.923, 6.1412, 8.3307]
+linear_pu_cvvdp = [0.1, 7.779, 7.4669, 6.7977, 7.1879, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 7.0653, 7.5178, 7.508, 7.3555, 7.2417, 7.4917]
+linear_pq_cvvdp = [0.1, 7.7167, 7.4598, 5.5414, 5.7105, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 7.5229, 5.9348, 5.901, 5.9505, 6.1507, 8.1108]
+linear_mu_cvvdp = [0.1, 7.4698, 7.1106, 5.3596, 5.7066, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 7.3152, 5.8679, 5.8479, 5.9251, 6.1436, 7.7065]

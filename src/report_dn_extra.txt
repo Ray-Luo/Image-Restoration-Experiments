@@ -1,0 +1,891 @@
+cargo_boat_aug_1_exr2hdr_s001_raw_linear_l1.hdr 50.1437 59.4478 9.6819
+cargo_boat_aug_1_exr2hdr_s001_raw_pu_l1.hdr 50.2561 59.4689 9.6817
+cargo_boat_aug_1_exr2hdr_s001_raw_pq_l1.hdr 50.1110 59.4627 9.6826
+cargo_boat_aug_1_exr2hdr_s001_raw_linear_pq.hdr 50.1950 59.4474 9.6827
+cargo_boat_aug_1_exr2hdr_s001_raw_linear_pu.hdr 49.4561 55.8980 9.5817
+cargo_boat_aug_1_exr2hdr_s001_raw_linear_smape.hdr 50.2516 59.4687 9.6817
+cargo_boat_aug_1_exr2hdr_s001_raw_linear_mu.hdr 50.2471 59.4686 9.6817
+
+cargo_boat_aug_1_exr2hdr_s002_raw_linear_l1.hdr 46.6999 55.7507 9.5575
+cargo_boat_aug_1_exr2hdr_s002_raw_pu_l1.hdr 46.8436 55.9164 9.5655
+cargo_boat_aug_1_exr2hdr_s002_raw_pq_l1.hdr 46.6878 55.9099 9.5664
+cargo_boat_aug_1_exr2hdr_s002_raw_linear_pq.hdr 46.7991 55.8830 9.5657
+cargo_boat_aug_1_exr2hdr_s002_raw_linear_pu.hdr 45.9979 52.2744 9.4325
+cargo_boat_aug_1_exr2hdr_s002_raw_linear_smape.hdr 46.8477 55.9166 9.5655
+cargo_boat_aug_1_exr2hdr_s002_raw_linear_mu.hdr 46.8426 55.9164 9.5655
+
+cargo_boat_aug_1_exr2hdr_s003_raw_linear_l1.hdr 48.1965 56.8769 9.5804
+cargo_boat_aug_1_exr2hdr_s003_raw_pu_l1.hdr 48.4242 57.4790 9.6135
+cargo_boat_aug_1_exr2hdr_s003_raw_pq_l1.hdr 48.2547 57.4720 9.6144
+cargo_boat_aug_1_exr2hdr_s003_raw_linear_pq.hdr 48.3889 57.4262 9.6131
+cargo_boat_aug_1_exr2hdr_s003_raw_linear_pu.hdr 47.5559 53.7419 9.4942
+cargo_boat_aug_1_exr2hdr_s003_raw_linear_smape.hdr 48.4380 57.4796 9.6135
+cargo_boat_aug_1_exr2hdr_s003_raw_linear_mu.hdr 48.4320 57.4793 9.6135
+
+cargo_boat_aug_1_exr2hdr_s004_raw_linear_l1.hdr 50.1437 59.4478 9.6819
+cargo_boat_aug_1_exr2hdr_s004_raw_pu_l1.hdr 50.2561 59.4689 9.6817
+cargo_boat_aug_1_exr2hdr_s004_raw_pq_l1.hdr 50.1110 59.4627 9.6826
+cargo_boat_aug_1_exr2hdr_s004_raw_linear_pq.hdr 50.1950 59.4474 9.6827
+cargo_boat_aug_1_exr2hdr_s004_raw_linear_pu.hdr 49.4561 55.8980 9.5817
+cargo_boat_aug_1_exr2hdr_s004_raw_linear_smape.hdr 50.2516 59.4687 9.6817
+cargo_boat_aug_1_exr2hdr_s004_raw_linear_mu.hdr 50.2471 59.4686 9.6817
+
+cargo_boat_aug_1_exr2hdr_s005_raw_linear_l1.hdr 46.6999 55.7507 9.5575
+cargo_boat_aug_1_exr2hdr_s005_raw_pu_l1.hdr 46.8436 55.9164 9.5655
+cargo_boat_aug_1_exr2hdr_s005_raw_pq_l1.hdr 46.6878 55.9099 9.5664
+cargo_boat_aug_1_exr2hdr_s005_raw_linear_pq.hdr 46.7991 55.8830 9.5657
+cargo_boat_aug_1_exr2hdr_s005_raw_linear_pu.hdr 45.9979 52.2744 9.4325
+cargo_boat_aug_1_exr2hdr_s005_raw_linear_smape.hdr 46.8477 55.9166 9.5655
+cargo_boat_aug_1_exr2hdr_s005_raw_linear_mu.hdr 46.8426 55.9164 9.5655
+
+cargo_boat_aug_1_exr2hdr_s006_raw_linear_l1.hdr 48.1965 56.8769 9.5804
+cargo_boat_aug_1_exr2hdr_s006_raw_pu_l1.hdr 48.4242 57.4790 9.6135
+cargo_boat_aug_1_exr2hdr_s006_raw_pq_l1.hdr 48.2547 57.4720 9.6144
+cargo_boat_aug_1_exr2hdr_s006_raw_linear_pq.hdr 48.3889 57.4262 9.6131
+cargo_boat_aug_1_exr2hdr_s006_raw_linear_pu.hdr 47.5559 53.7419 9.4942
+cargo_boat_aug_1_exr2hdr_s006_raw_linear_smape.hdr 48.4380 57.4796 9.6135
+cargo_boat_aug_1_exr2hdr_s006_raw_linear_mu.hdr 48.4320 57.4793 9.6135
+
+cargo_boat_aug_2_exr2hdr_s001_raw_linear_l1.hdr 41.5753 50.7361 9.4112
+cargo_boat_aug_2_exr2hdr_s001_raw_pu_l1.hdr 50.1540 59.4646 9.6816
+cargo_boat_aug_2_exr2hdr_s001_raw_pq_l1.hdr 49.6123 59.4393 9.6814
+cargo_boat_aug_2_exr2hdr_s001_raw_linear_pq.hdr 49.5419 58.3489 9.6651
+cargo_boat_aug_2_exr2hdr_s001_raw_linear_pu.hdr 45.7170 51.2389 9.4634
+cargo_boat_aug_2_exr2hdr_s001_raw_linear_smape.hdr 50.2516 59.4687 9.6817
+cargo_boat_aug_2_exr2hdr_s001_raw_linear_mu.hdr 50.2516 59.4687 9.6817
+
+cargo_boat_aug_2_exr2hdr_s002_raw_linear_l1.hdr 40.4641 49.5299 9.3282
+cargo_boat_aug_2_exr2hdr_s002_raw_pu_l1.hdr 46.7214 55.9108 9.5653
+cargo_boat_aug_2_exr2hdr_s002_raw_pq_l1.hdr 46.0318 55.8797 9.5650
+cargo_boat_aug_2_exr2hdr_s002_raw_linear_pq.hdr 46.5294 55.4682 9.5575
+cargo_boat_aug_2_exr2hdr_s002_raw_linear_pu.hdr 44.3389 50.5733 9.4099
+cargo_boat_aug_2_exr2hdr_s002_raw_linear_smape.hdr 46.8476 55.9161 9.5654
+cargo_boat_aug_2_exr2hdr_s002_raw_linear_mu.hdr 46.8476 55.9161 9.5654
+
+cargo_boat_aug_2_exr2hdr_s003_raw_linear_l1.hdr 40.2323 49.2317 9.3142
+cargo_boat_aug_2_exr2hdr_s003_raw_pu_l1.hdr 48.2947 57.4728 9.6133
+cargo_boat_aug_2_exr2hdr_s003_raw_pq_l1.hdr 47.5179 57.4377 9.6131
+cargo_boat_aug_2_exr2hdr_s003_raw_linear_pq.hdr 47.9552 56.8597 9.6037
+cargo_boat_aug_2_exr2hdr_s003_raw_linear_pu.hdr 45.0884 50.9129 9.4334
+cargo_boat_aug_2_exr2hdr_s003_raw_linear_smape.hdr 48.4376 57.4787 9.6135
+cargo_boat_aug_2_exr2hdr_s003_raw_linear_mu.hdr 48.4371 57.4748 9.6135
+
+cargo_boat_aug_2_exr2hdr_s004_raw_linear_l1.hdr 41.6360 50.8304 9.4166
+cargo_boat_aug_2_exr2hdr_s004_raw_pu_l1.hdr 50.1540 59.4646 9.6816
+cargo_boat_aug_2_exr2hdr_s004_raw_pq_l1.hdr 49.6129 59.4393 9.6814
+cargo_boat_aug_2_exr2hdr_s004_raw_linear_pq.hdr 49.5254 58.3225 9.6634
+cargo_boat_aug_2_exr2hdr_s004_raw_linear_pu.hdr 45.7285 51.2429 9.4639
+cargo_boat_aug_2_exr2hdr_s004_raw_linear_smape.hdr 50.2516 59.4687 9.6817
+cargo_boat_aug_2_exr2hdr_s004_raw_linear_mu.hdr 50.2516 59.4687 9.6817
+
+cargo_boat_aug_2_exr2hdr_s005_raw_linear_l1.hdr 40.5171 49.6122 9.3326
+cargo_boat_aug_2_exr2hdr_s005_raw_pu_l1.hdr 46.7214 55.9108 9.5653
+cargo_boat_aug_2_exr2hdr_s005_raw_pq_l1.hdr 46.0318 55.8797 9.5650
+cargo_boat_aug_2_exr2hdr_s005_raw_linear_pq.hdr 46.5265 55.4506 9.5564
+cargo_boat_aug_2_exr2hdr_s005_raw_linear_pu.hdr 44.3444 50.5629 9.4098
+cargo_boat_aug_2_exr2hdr_s005_raw_linear_smape.hdr 46.8476 55.9161 9.5654
+cargo_boat_aug_2_exr2hdr_s005_raw_linear_mu.hdr 46.8476 55.9161 9.5654
+
+cargo_boat_aug_2_exr2hdr_s006_raw_linear_l1.hdr 40.2666 49.3017 9.3196
+cargo_boat_aug_2_exr2hdr_s006_raw_pu_l1.hdr 48.2943 57.4727 9.6133
+cargo_boat_aug_2_exr2hdr_s006_raw_pq_l1.hdr 47.5179 57.4377 9.6131
+cargo_boat_aug_2_exr2hdr_s006_raw_linear_pq.hdr 47.9676 56.8704 9.6039
+cargo_boat_aug_2_exr2hdr_s006_raw_linear_pu.hdr 45.0851 50.8814 9.4321
+cargo_boat_aug_2_exr2hdr_s006_raw_linear_smape.hdr 48.4376 57.4787 9.6135
+cargo_boat_aug_2_exr2hdr_s006_raw_linear_mu.hdr 48.4371 57.4748 9.6135
+
+cargo_boat_aug_3_exr2hdr_s001_raw_linear_l1.hdr 40.4848 49.3413 9.3331
+cargo_boat_aug_3_exr2hdr_s001_raw_pu_l1.hdr 50.2063 59.4646 9.6816
+cargo_boat_aug_3_exr2hdr_s001_raw_pq_l1.hdr 49.8465 59.4485 9.6814
+cargo_boat_aug_3_exr2hdr_s001_raw_linear_pq.hdr 49.5503 58.3718 9.6629
+cargo_boat_aug_3_exr2hdr_s001_raw_linear_pu.hdr 45.5130 50.7174 9.4396
+cargo_boat_aug_3_exr2hdr_s001_raw_linear_smape.hdr 50.2510 59.4665 9.6817
+cargo_boat_aug_3_exr2hdr_s001_raw_linear_mu.hdr 50.2510 59.4665 9.6817
+
+cargo_boat_aug_3_exr2hdr_s002_raw_linear_l1.hdr 39.7479 48.6663 9.2816
+cargo_boat_aug_3_exr2hdr_s002_raw_pu_l1.hdr 46.7894 55.9131 9.5654
+cargo_boat_aug_3_exr2hdr_s002_raw_pq_l1.hdr 46.2914 55.8913 9.5652
+cargo_boat_aug_3_exr2hdr_s002_raw_linear_pq.hdr 46.5330 55.3851 9.5537
+cargo_boat_aug_3_exr2hdr_s002_raw_linear_pu.hdr 44.1839 50.1364 9.3901
+cargo_boat_aug_3_exr2hdr_s002_raw_linear_smape.hdr 46.8471 55.9155 9.5654
+cargo_boat_aug_3_exr2hdr_s002_raw_linear_mu.hdr 46.8471 55.9155 9.5654
+
+cargo_boat_aug_3_exr2hdr_s003_raw_linear_l1.hdr 39.6490 48.5223 9.2723
+cargo_boat_aug_3_exr2hdr_s003_raw_pu_l1.hdr 48.3667 57.4762 9.6135
+cargo_boat_aug_3_exr2hdr_s003_raw_pq_l1.hdr 47.8006 57.4513 9.6132
+cargo_boat_aug_3_exr2hdr_s003_raw_linear_pq.hdr 47.9995 56.7589 9.5995
+cargo_boat_aug_3_exr2hdr_s003_raw_linear_pu.hdr 44.9023 50.4523 9.4128
+cargo_boat_aug_3_exr2hdr_s003_raw_linear_smape.hdr 48.4371 57.4791 9.6135
+cargo_boat_aug_3_exr2hdr_s003_raw_linear_mu.hdr 48.4371 57.4791 9.6135
+
+cargo_boat_aug_3_exr2hdr_s004_raw_linear_l1.hdr 40.5336 49.4329 9.3385
+cargo_boat_aug_3_exr2hdr_s004_raw_pu_l1.hdr 50.2048 59.4645 9.6816
+cargo_boat_aug_3_exr2hdr_s004_raw_pq_l1.hdr 49.8465 59.4485 9.6814
+cargo_boat_aug_3_exr2hdr_s004_raw_linear_pq.hdr 49.5375 58.3275 9.6612
+cargo_boat_aug_3_exr2hdr_s004_raw_linear_pu.hdr 45.5301 50.7494 9.4418
+cargo_boat_aug_3_exr2hdr_s004_raw_linear_smape.hdr 50.2510 59.4665 9.6817
+cargo_boat_aug_3_exr2hdr_s004_raw_linear_mu.hdr 50.2510 59.4665 9.6817
+
+cargo_boat_aug_3_exr2hdr_s005_raw_linear_l1.hdr 39.7900 48.7805 9.2882
+cargo_boat_aug_3_exr2hdr_s005_raw_pu_l1.hdr 46.7894 55.9131 9.5654
+cargo_boat_aug_3_exr2hdr_s005_raw_pq_l1.hdr 46.2914 55.8913 9.5652
+cargo_boat_aug_3_exr2hdr_s005_raw_linear_pq.hdr 46.5317 55.4201 9.5549
+cargo_boat_aug_3_exr2hdr_s005_raw_linear_pu.hdr 44.1911 50.1471 9.3907
+cargo_boat_aug_3_exr2hdr_s005_raw_linear_smape.hdr 46.8471 55.9155 9.5654
+cargo_boat_aug_3_exr2hdr_s005_raw_linear_mu.hdr 46.8471 55.9155 9.5654
+
+cargo_boat_aug_3_exr2hdr_s006_raw_linear_l1.hdr 39.6782 48.5822 9.2766
+cargo_boat_aug_3_exr2hdr_s006_raw_pu_l1.hdr 48.3672 57.4762 9.6135
+cargo_boat_aug_3_exr2hdr_s006_raw_pq_l1.hdr 47.8006 57.4513 9.6132
+cargo_boat_aug_3_exr2hdr_s006_raw_linear_pq.hdr 47.9959 56.7880 9.6006
+cargo_boat_aug_3_exr2hdr_s006_raw_linear_pu.hdr 44.9027 50.4381 9.4109
+cargo_boat_aug_3_exr2hdr_s006_raw_linear_smape.hdr 48.4371 57.4791 9.6135
+cargo_boat_aug_3_exr2hdr_s006_raw_linear_mu.hdr 48.4371 57.4791 9.6135
+
+cargo_boat_aug_4_exr2hdr_s001_raw_linear_l1.hdr 38.6970 47.3990 9.2146
+cargo_boat_aug_4_exr2hdr_s001_raw_pu_l1.hdr 50.2469 59.4670 9.6816
+cargo_boat_aug_4_exr2hdr_s001_raw_pq_l1.hdr 50.2439 59.4669 9.6816
+cargo_boat_aug_4_exr2hdr_s001_raw_linear_pq.hdr 49.6173 58.3545 9.6606
+cargo_boat_aug_4_exr2hdr_s001_raw_linear_pu.hdr 45.2249 50.1291 9.4095
+cargo_boat_aug_4_exr2hdr_s001_raw_linear_smape.hdr 50.2514 59.4672 9.6816
+cargo_boat_aug_4_exr2hdr_s001_raw_linear_mu.hdr 50.2506 59.4611 9.6815
+
+cargo_boat_aug_4_exr2hdr_s002_raw_linear_l1.hdr 38.4420 47.1788 9.1925
+cargo_boat_aug_4_exr2hdr_s002_raw_pu_l1.hdr 46.8452 55.9157 9.5654
+cargo_boat_aug_4_exr2hdr_s002_raw_pq_l1.hdr 46.8336 55.9152 9.5654
+cargo_boat_aug_4_exr2hdr_s002_raw_linear_pq.hdr 46.5778 55.4961 9.5572
+cargo_boat_aug_4_exr2hdr_s002_raw_linear_pu.hdr 43.9200 49.6570 9.3707
+cargo_boat_aug_4_exr2hdr_s002_raw_linear_smape.hdr 46.8476 55.9158 9.5654
+cargo_boat_aug_4_exr2hdr_s002_raw_linear_mu.hdr 46.8476 55.9158 9.5654
+
+cargo_boat_aug_4_exr2hdr_s003_raw_linear_l1.hdr 38.5183 47.1624 9.1933
+cargo_boat_aug_4_exr2hdr_s003_raw_pu_l1.hdr 48.4327 57.4781 9.6135
+cargo_boat_aug_4_exr2hdr_s003_raw_pq_l1.hdr 48.4190 57.4776 9.6135
+cargo_boat_aug_4_exr2hdr_s003_raw_linear_pq.hdr 48.0542 56.9039 9.6037
+cargo_boat_aug_4_exr2hdr_s003_raw_linear_pu.hdr 44.6024 49.9303 9.3944
+cargo_boat_aug_4_exr2hdr_s003_raw_linear_smape.hdr 48.4377 57.4783 9.6135
+cargo_boat_aug_4_exr2hdr_s003_raw_linear_mu.hdr 48.4372 57.4745 9.6134
+
+cargo_boat_aug_4_exr2hdr_s004_raw_linear_l1.hdr 38.7228 47.4177 9.2179
+cargo_boat_aug_4_exr2hdr_s004_raw_pu_l1.hdr 50.2447 59.4669 9.6816
+cargo_boat_aug_4_exr2hdr_s004_raw_pq_l1.hdr 50.2439 59.4669 9.6816
+cargo_boat_aug_4_exr2hdr_s004_raw_linear_pq.hdr 49.6141 58.3423 9.6604
+cargo_boat_aug_4_exr2hdr_s004_raw_linear_pu.hdr 45.2076 50.0983 9.4087
+cargo_boat_aug_4_exr2hdr_s004_raw_linear_smape.hdr 50.2514 59.4672 9.6816
+cargo_boat_aug_4_exr2hdr_s004_raw_linear_mu.hdr 50.2506 59.4611 9.6815
+
+cargo_boat_aug_4_exr2hdr_s005_raw_linear_l1.hdr 38.4476 47.2064 9.1951
+cargo_boat_aug_4_exr2hdr_s005_raw_pu_l1.hdr 46.8448 55.9157 9.5654
+cargo_boat_aug_4_exr2hdr_s005_raw_pq_l1.hdr 46.8336 55.9152 9.5654
+cargo_boat_aug_4_exr2hdr_s005_raw_linear_pq.hdr 46.5791 55.5037 9.5569
+cargo_boat_aug_4_exr2hdr_s005_raw_linear_pu.hdr 43.9150 49.6255 9.3694
+cargo_boat_aug_4_exr2hdr_s005_raw_linear_smape.hdr 46.8476 55.9158 9.5654
+cargo_boat_aug_4_exr2hdr_s005_raw_linear_mu.hdr 46.8476 55.9158 9.5654
+
+cargo_boat_aug_4_exr2hdr_s006_raw_linear_l1.hdr 38.5067 47.1752 9.1929
+cargo_boat_aug_4_exr2hdr_s006_raw_pu_l1.hdr 48.4332 57.4782 9.6135
+cargo_boat_aug_4_exr2hdr_s006_raw_pq_l1.hdr 48.4190 57.4776 9.6135
+cargo_boat_aug_4_exr2hdr_s006_raw_linear_pq.hdr 48.0506 56.9177 9.6037
+cargo_boat_aug_4_exr2hdr_s006_raw_linear_pu.hdr 44.6133 49.9455 9.3953
+cargo_boat_aug_4_exr2hdr_s006_raw_linear_smape.hdr 48.4377 57.4783 9.6135
+cargo_boat_aug_4_exr2hdr_s006_raw_linear_mu.hdr 48.4377 57.4783 9.6135
+
+cargo_boat_aug_5_exr2hdr_s001_raw_linear_l1.hdr 38.3295 46.9272 9.1867
+cargo_boat_aug_5_exr2hdr_s001_raw_pu_l1.hdr 50.2456 59.4663 9.6816
+cargo_boat_aug_5_exr2hdr_s001_raw_pq_l1.hdr 50.2471 59.4664 9.6816
+cargo_boat_aug_5_exr2hdr_s001_raw_linear_pq.hdr 49.6123 58.4677 9.6651
+cargo_boat_aug_5_exr2hdr_s001_raw_linear_pu.hdr 45.0651 49.8746 9.3988
+cargo_boat_aug_5_exr2hdr_s001_raw_linear_smape.hdr 50.2471 59.4664 9.6816
+cargo_boat_aug_5_exr2hdr_s001_raw_linear_mu.hdr 50.2471 59.4664 9.6816
+
+cargo_boat_aug_5_exr2hdr_s002_raw_linear_l1.hdr 38.0439 46.6946 9.1599
+cargo_boat_aug_5_exr2hdr_s002_raw_pu_l1.hdr 46.8346 55.9115 9.5654
+cargo_boat_aug_5_exr2hdr_s002_raw_pq_l1.hdr 46.8385 55.9116 9.5654
+cargo_boat_aug_5_exr2hdr_s002_raw_linear_pq.hdr 46.5606 55.4736 9.5568
+cargo_boat_aug_5_exr2hdr_s002_raw_linear_pu.hdr 43.8088 49.4615 9.3577
+cargo_boat_aug_5_exr2hdr_s002_raw_linear_smape.hdr 46.8392 55.9116 9.5654
+cargo_boat_aug_5_exr2hdr_s002_raw_linear_mu.hdr 46.8388 55.9089 9.5653
+
+cargo_boat_aug_5_exr2hdr_s003_raw_linear_l1.hdr 38.0903 46.5563 9.1462
+cargo_boat_aug_5_exr2hdr_s003_raw_pu_l1.hdr 48.4190 57.4732 9.6134
+cargo_boat_aug_5_exr2hdr_s003_raw_pq_l1.hdr 48.4261 57.4734 9.6134
+cargo_boat_aug_5_exr2hdr_s003_raw_linear_pq.hdr 47.9945 56.7572 9.5998
+cargo_boat_aug_5_exr2hdr_s003_raw_linear_pu.hdr 44.4883 49.7119 9.3775
+cargo_boat_aug_5_exr2hdr_s003_raw_linear_smape.hdr 48.4271 57.4735 9.6134
+cargo_boat_aug_5_exr2hdr_s003_raw_linear_mu.hdr 48.4266 57.4696 9.6134
+
+cargo_boat_aug_5_exr2hdr_s004_raw_linear_l1.hdr 38.3376 46.9275 9.1864
+cargo_boat_aug_5_exr2hdr_s004_raw_pu_l1.hdr 50.2456 59.4663 9.6816
+cargo_boat_aug_5_exr2hdr_s004_raw_pq_l1.hdr 50.2471 59.4664 9.6816
+cargo_boat_aug_5_exr2hdr_s004_raw_linear_pq.hdr 49.6136 58.4872 9.6653
+cargo_boat_aug_5_exr2hdr_s004_raw_linear_pu.hdr 45.0577 49.8434 9.3973
+cargo_boat_aug_5_exr2hdr_s004_raw_linear_smape.hdr 50.2471 59.4664 9.6816
+cargo_boat_aug_5_exr2hdr_s004_raw_linear_mu.hdr 50.2471 59.4664 9.6816
+
+cargo_boat_aug_5_exr2hdr_s005_raw_linear_l1.hdr 38.0435 46.6844 9.1597
+cargo_boat_aug_5_exr2hdr_s005_raw_pu_l1.hdr 46.8346 55.9115 9.5654
+cargo_boat_aug_5_exr2hdr_s005_raw_pq_l1.hdr 46.8385 55.9116 9.5654
+cargo_boat_aug_5_exr2hdr_s005_raw_linear_pq.hdr 46.5616 55.4823 9.5568
+cargo_boat_aug_5_exr2hdr_s005_raw_linear_pu.hdr 43.8120 49.4609 9.3582
+cargo_boat_aug_5_exr2hdr_s005_raw_linear_smape.hdr 46.8392 55.9116 9.5654
+cargo_boat_aug_5_exr2hdr_s005_raw_linear_mu.hdr 46.8388 55.9089 9.5653
+
+cargo_boat_aug_5_exr2hdr_s006_raw_linear_l1.hdr 38.0880 46.5420 9.1462
+cargo_boat_aug_5_exr2hdr_s006_raw_pu_l1.hdr 48.4190 57.4732 9.6134
+cargo_boat_aug_5_exr2hdr_s006_raw_pq_l1.hdr 48.4261 57.4734 9.6134
+cargo_boat_aug_5_exr2hdr_s006_raw_linear_pq.hdr 48.0025 56.7737 9.5999
+cargo_boat_aug_5_exr2hdr_s006_raw_linear_pu.hdr 44.4987 49.7334 9.3787
+cargo_boat_aug_5_exr2hdr_s006_raw_linear_smape.hdr 48.4271 57.4735 9.6134
+cargo_boat_aug_5_exr2hdr_s006_raw_linear_mu.hdr 48.4266 57.4696 9.6134
+
+cargo_boat_exr2hdr_s001_raw_linear_l1.hdr 51.3012 60.7100 9.7144
+cargo_boat_exr2hdr_s001_raw_pu_l1.hdr 51.5895 60.7517 9.7145
+cargo_boat_exr2hdr_s001_raw_pq_l1.hdr 51.6904 60.7559 9.7153
+cargo_boat_exr2hdr_s001_raw_linear_pq.hdr 51.4317 60.7249 9.7147
+cargo_boat_exr2hdr_s001_raw_linear_pu.hdr 50.3176 56.1161 9.5886
+cargo_boat_exr2hdr_s001_raw_linear_smape.hdr 51.5029 60.7480 9.7143
+cargo_boat_exr2hdr_s001_raw_linear_mu.hdr 51.4949 60.7477 9.7143
+
+cargo_boat_exr2hdr_s002_raw_linear_l1.hdr 47.8183 57.0313 9.6072
+cargo_boat_exr2hdr_s002_raw_pu_l1.hdr 48.1111 57.0589 9.6068
+cargo_boat_exr2hdr_s002_raw_pq_l1.hdr 48.2283 57.0635 9.6077
+cargo_boat_exr2hdr_s002_raw_linear_pq.hdr 47.9585 57.0343 9.6071
+cargo_boat_exr2hdr_s002_raw_linear_pu.hdr 46.7483 52.3149 9.4364
+cargo_boat_exr2hdr_s002_raw_linear_smape.hdr 48.0118 57.0549 9.6067
+cargo_boat_exr2hdr_s002_raw_linear_mu.hdr 48.0037 57.0546 9.6067
+
+cargo_boat_exr2hdr_s003_raw_linear_l1.hdr 49.3635 58.5609 9.6501
+cargo_boat_exr2hdr_s003_raw_pu_l1.hdr 49.6503 58.5827 9.6496
+cargo_boat_exr2hdr_s003_raw_pq_l1.hdr 49.7698 58.5874 9.6502
+cargo_boat_exr2hdr_s003_raw_linear_pq.hdr 49.5195 58.5610 9.6499
+cargo_boat_exr2hdr_s003_raw_linear_pu.hdr 48.2446 53.6613 9.4941
+cargo_boat_exr2hdr_s003_raw_linear_smape.hdr 49.5626 58.5792 9.6495
+cargo_boat_exr2hdr_s003_raw_linear_mu.hdr 49.5537 58.5788 9.6495
+
+cargo_boat_exr2hdr_s004_raw_linear_l1.hdr 51.3012 60.7100 9.7144
+cargo_boat_exr2hdr_s004_raw_pu_l1.hdr 51.5895 60.7517 9.7145
+cargo_boat_exr2hdr_s004_raw_pq_l1.hdr 51.6904 60.7559 9.7153
+cargo_boat_exr2hdr_s004_raw_linear_pq.hdr 51.4317 60.7249 9.7147
+cargo_boat_exr2hdr_s004_raw_linear_pu.hdr 50.3176 56.1161 9.5886
+cargo_boat_exr2hdr_s004_raw_linear_smape.hdr 51.5029 60.7480 9.7143
+cargo_boat_exr2hdr_s004_raw_linear_mu.hdr 51.4949 60.7477 9.7143
+
+cargo_boat_exr2hdr_s005_raw_linear_l1.hdr 47.8183 57.0313 9.6072
+cargo_boat_exr2hdr_s005_raw_pu_l1.hdr 48.1111 57.0589 9.6068
+cargo_boat_exr2hdr_s005_raw_pq_l1.hdr 48.2283 57.0635 9.6077
+cargo_boat_exr2hdr_s005_raw_linear_pq.hdr 47.9585 57.0343 9.6071
+cargo_boat_exr2hdr_s005_raw_linear_pu.hdr 46.7483 52.3149 9.4364
+cargo_boat_exr2hdr_s005_raw_linear_smape.hdr 48.0118 57.0549 9.6067
+cargo_boat_exr2hdr_s005_raw_linear_mu.hdr 48.0037 57.0546 9.6067
+
+cargo_boat_exr2hdr_s006_raw_linear_l1.hdr 49.3635 58.5609 9.6501
+cargo_boat_exr2hdr_s006_raw_pu_l1.hdr 49.6503 58.5827 9.6496
+cargo_boat_exr2hdr_s006_raw_pq_l1.hdr 49.7698 58.5874 9.6502
+cargo_boat_exr2hdr_s006_raw_linear_pq.hdr 49.5195 58.5610 9.6499
+cargo_boat_exr2hdr_s006_raw_linear_pu.hdr 48.2446 53.6613 9.4941
+cargo_boat_exr2hdr_s006_raw_linear_smape.hdr 49.5626 58.5792 9.6495
+cargo_boat_exr2hdr_s006_raw_linear_mu.hdr 49.5537 58.5788 9.6495
+
+skyscraper_aug_1_exr2hdr_s001_raw_linear_l1.hdr 51.5007 74.3433 9.8373
+skyscraper_aug_1_exr2hdr_s001_raw_pu_l1.hdr 51.5359 74.3778 9.8373
+skyscraper_aug_1_exr2hdr_s001_raw_pq_l1.hdr 51.5348 74.3768 9.8373
+skyscraper_aug_1_exr2hdr_s001_raw_linear_pq.hdr 51.5278 74.3699 9.8373
+skyscraper_aug_1_exr2hdr_s001_raw_linear_pu.hdr 51.5409 74.3827 9.8373
+skyscraper_aug_1_exr2hdr_s001_raw_linear_smape.hdr 51.5429 74.3847 9.8373
+skyscraper_aug_1_exr2hdr_s001_raw_linear_mu.hdr 51.5419 74.3837 9.8373
+
+skyscraper_aug_1_exr2hdr_s002_raw_linear_l1.hdr 51.3942 71.3634 9.8124
+skyscraper_aug_1_exr2hdr_s002_raw_pu_l1.hdr 51.4557 74.2979 9.8367
+skyscraper_aug_1_exr2hdr_s002_raw_pq_l1.hdr 51.4567 74.2988 9.8367
+skyscraper_aug_1_exr2hdr_s002_raw_linear_pq.hdr 51.4149 74.1905 9.8365
+skyscraper_aug_1_exr2hdr_s002_raw_linear_pu.hdr 51.4577 74.2797 9.8367
+skyscraper_aug_1_exr2hdr_s002_raw_linear_smape.hdr 51.4626 74.3046 9.8367
+skyscraper_aug_1_exr2hdr_s002_raw_linear_mu.hdr 51.4603 73.6887 9.8338
+
+skyscraper_aug_1_exr2hdr_s003_raw_linear_l1.hdr 63.4447 69.6963 9.8053
+skyscraper_aug_1_exr2hdr_s003_raw_pu_l1.hdr 65.0893 87.8829 9.9811
+skyscraper_aug_1_exr2hdr_s003_raw_pq_l1.hdr 65.0893 87.8829 9.9811
+skyscraper_aug_1_exr2hdr_s003_raw_linear_pq.hdr 63.4400 80.0764 9.9457
+skyscraper_aug_1_exr2hdr_s003_raw_linear_pu.hdr 64.2246 74.5783 9.9156
+skyscraper_aug_1_exr2hdr_s003_raw_linear_smape.hdr 65.0893 87.8829 9.9811
+skyscraper_aug_1_exr2hdr_s003_raw_linear_mu.hdr 64.9493 77.8429 9.9137
+
+skyscraper_aug_1_exr2hdr_s004_raw_linear_l1.hdr 45.7823 68.5997 9.7591
+skyscraper_aug_1_exr2hdr_s004_raw_pu_l1.hdr 45.8029 68.6198 9.7591
+skyscraper_aug_1_exr2hdr_s004_raw_pq_l1.hdr 45.8010 68.6179 9.7591
+skyscraper_aug_1_exr2hdr_s004_raw_linear_pq.hdr 45.7983 68.6153 9.7591
+skyscraper_aug_1_exr2hdr_s004_raw_linear_pu.hdr 45.8026 68.6195 9.7591
+skyscraper_aug_1_exr2hdr_s004_raw_linear_smape.hdr 45.8029 68.6198 9.7591
+skyscraper_aug_1_exr2hdr_s004_raw_linear_mu.hdr 45.8037 68.6206 9.7591
+
+skyscraper_aug_1_exr2hdr_s005_raw_linear_l1.hdr 45.7299 67.5690 9.7440
+skyscraper_aug_1_exr2hdr_s005_raw_pu_l1.hdr 45.7509 68.5699 9.7548
+skyscraper_aug_1_exr2hdr_s005_raw_pq_l1.hdr 45.7512 68.5702 9.7548
+skyscraper_aug_1_exr2hdr_s005_raw_linear_pq.hdr 45.7269 68.5194 9.7545
+skyscraper_aug_1_exr2hdr_s005_raw_linear_pu.hdr 45.7515 68.5597 9.7548
+skyscraper_aug_1_exr2hdr_s005_raw_linear_smape.hdr 45.7525 68.5715 9.7548
+skyscraper_aug_1_exr2hdr_s005_raw_linear_mu.hdr 45.7519 68.3871 9.7535
+
+skyscraper_aug_1_exr2hdr_s006_raw_linear_l1.hdr 53.7379 68.9452 9.7898
+skyscraper_aug_1_exr2hdr_s006_raw_pu_l1.hdr 53.9059 76.6198 9.8603
+skyscraper_aug_1_exr2hdr_s006_raw_pq_l1.hdr 53.9059 76.6198 9.8603
+skyscraper_aug_1_exr2hdr_s006_raw_linear_pq.hdr 53.6211 75.0738 9.8583
+skyscraper_aug_1_exr2hdr_s006_raw_linear_pu.hdr 53.8320 72.5824 9.8555
+skyscraper_aug_1_exr2hdr_s006_raw_linear_smape.hdr 53.9059 76.6198 9.8603
+skyscraper_aug_1_exr2hdr_s006_raw_linear_mu.hdr 53.8905 73.8507 9.8532
+
+skyscraper_aug_2_exr2hdr_s001_raw_linear_l1.hdr 43.9863 55.2038 9.5806
+skyscraper_aug_2_exr2hdr_s001_raw_pu_l1.hdr 51.3039 74.1431 9.8371
+skyscraper_aug_2_exr2hdr_s001_raw_pq_l1.hdr 46.4027 69.3150 9.8368
+skyscraper_aug_2_exr2hdr_s001_raw_linear_pq.hdr 50.9141 67.2504 9.8232
+skyscraper_aug_2_exr2hdr_s001_raw_linear_pu.hdr 48.8977 57.0493 9.6785
+skyscraper_aug_2_exr2hdr_s001_raw_linear_smape.hdr 51.5198 74.3534 9.8371
+skyscraper_aug_2_exr2hdr_s001_raw_linear_mu.hdr 51.5198 74.3534 9.8371
+
+skyscraper_aug_2_exr2hdr_s002_raw_linear_l1.hdr 41.1875 52.0923 9.4553
+skyscraper_aug_2_exr2hdr_s002_raw_pu_l1.hdr 51.3210 74.1578 9.8365
+skyscraper_aug_2_exr2hdr_s002_raw_pq_l1.hdr 48.7360 71.6222 9.8364
+skyscraper_aug_2_exr2hdr_s002_raw_linear_pq.hdr 50.7904 66.7582 9.8183
+skyscraper_aug_2_exr2hdr_s002_raw_linear_pu.hdr 48.2983 56.0924 9.6550
+skyscraper_aug_2_exr2hdr_s002_raw_linear_smape.hdr 51.4394 74.2732 9.8365
+skyscraper_aug_2_exr2hdr_s002_raw_linear_mu.hdr 51.4394 74.2732 9.8365
+
+skyscraper_aug_2_exr2hdr_s003_raw_linear_l1.hdr 41.7458 51.6351 9.4377
+skyscraper_aug_2_exr2hdr_s003_raw_pu_l1.hdr 64.7693 87.5615 9.9809
+skyscraper_aug_2_exr2hdr_s003_raw_pq_l1.hdr 62.7041 85.2937 9.9803
+skyscraper_aug_2_exr2hdr_s003_raw_linear_pq.hdr 53.7633 62.5053 9.7992
+skyscraper_aug_2_exr2hdr_s003_raw_linear_pu.hdr 48.2818 53.0917 9.5590
+skyscraper_aug_2_exr2hdr_s003_raw_linear_smape.hdr 65.0772 87.8589 9.9810
+skyscraper_aug_2_exr2hdr_s003_raw_linear_mu.hdr 65.0772 87.8589 9.9810
+
+skyscraper_aug_2_exr2hdr_s004_raw_linear_l1.hdr 41.9955 54.4379 9.5447
+skyscraper_aug_2_exr2hdr_s004_raw_pu_l1.hdr 45.7275 68.5374 9.7587
+skyscraper_aug_2_exr2hdr_s004_raw_pq_l1.hdr 44.0087 66.8632 9.7586
+skyscraper_aug_2_exr2hdr_s004_raw_linear_pq.hdr 45.5996 65.2756 9.7527
+skyscraper_aug_2_exr2hdr_s004_raw_linear_pu.hdr 44.8877 56.6966 9.6600
+skyscraper_aug_2_exr2hdr_s004_raw_linear_smape.hdr 45.7753 68.5836 9.7587
+skyscraper_aug_2_exr2hdr_s004_raw_linear_mu.hdr 45.7753 68.5836 9.7587
+
+skyscraper_aug_2_exr2hdr_s005_raw_linear_l1.hdr 39.7955 51.3784 9.4171
+skyscraper_aug_2_exr2hdr_s005_raw_pu_l1.hdr 45.7049 68.5170 9.7544
+skyscraper_aug_2_exr2hdr_s005_raw_pq_l1.hdr 45.0960 67.9256 9.7544
+skyscraper_aug_2_exr2hdr_s005_raw_linear_pq.hdr 45.5320 64.8015 9.7471
+skyscraper_aug_2_exr2hdr_s005_raw_linear_pu.hdr 44.5867 55.7309 9.6376
+skyscraper_aug_2_exr2hdr_s005_raw_linear_smape.hdr 45.7262 68.5377 9.7544
+skyscraper_aug_2_exr2hdr_s005_raw_linear_mu.hdr 45.7262 68.5377 9.7544
+
+skyscraper_aug_2_exr2hdr_s006_raw_linear_l1.hdr 40.9844 51.1129 9.4105
+skyscraper_aug_2_exr2hdr_s006_raw_pu_l1.hdr 53.8641 76.5671 9.8600
+skyscraper_aug_2_exr2hdr_s006_raw_pq_l1.hdr 53.6956 76.3752 9.8600
+skyscraper_aug_2_exr2hdr_s006_raw_linear_pq.hdr 51.0191 62.3460 9.7905
+skyscraper_aug_2_exr2hdr_s006_raw_linear_pu.hdr 47.3207 53.1210 9.5593
+skyscraper_aug_2_exr2hdr_s006_raw_linear_smape.hdr 53.8883 76.5900 9.8600
+skyscraper_aug_2_exr2hdr_s006_raw_linear_mu.hdr 53.8883 76.5900 9.8600
+
+skyscraper_aug_3_exr2hdr_s001_raw_linear_l1.hdr 45.5105 59.3682 9.6981
+skyscraper_aug_3_exr2hdr_s001_raw_pu_l1.hdr 51.2931 74.1385 9.8370
+skyscraper_aug_3_exr2hdr_s001_raw_pq_l1.hdr 46.1495 69.0657 9.8367
+skyscraper_aug_3_exr2hdr_s001_raw_linear_pq.hdr 51.0992 68.8481 9.8314
+skyscraper_aug_3_exr2hdr_s001_raw_linear_pu.hdr 50.3420 62.9670 9.7949
+skyscraper_aug_3_exr2hdr_s001_raw_linear_smape.hdr 51.5158 74.3560 9.8370
+skyscraper_aug_3_exr2hdr_s001_raw_linear_mu.hdr 51.5158 74.3560 9.8370
+
+skyscraper_aug_3_exr2hdr_s002_raw_linear_l1.hdr 42.5998 55.3975 9.5679
+skyscraper_aug_3_exr2hdr_s002_raw_pu_l1.hdr 51.2965 74.1399 9.8364
+skyscraper_aug_3_exr2hdr_s002_raw_pq_l1.hdr 48.6480 71.5388 9.8363
+skyscraper_aug_3_exr2hdr_s002_raw_linear_pq.hdr 50.8755 68.1999 9.8268
+skyscraper_aug_3_exr2hdr_s002_raw_linear_pu.hdr 50.0347 62.0561 9.7835
+skyscraper_aug_3_exr2hdr_s002_raw_linear_smape.hdr 51.4350 74.2752 9.8364
+skyscraper_aug_3_exr2hdr_s002_raw_linear_mu.hdr 51.4350 74.2752 9.8364
+
+skyscraper_aug_3_exr2hdr_s003_raw_linear_l1.hdr 43.1330 54.8857 9.5478
+skyscraper_aug_3_exr2hdr_s003_raw_pu_l1.hdr 64.4878 87.2768 9.9807
+skyscraper_aug_3_exr2hdr_s003_raw_pq_l1.hdr 58.4187 77.5160 9.9052
+skyscraper_aug_3_exr2hdr_s003_raw_linear_pq.hdr 52.4105 61.8469 9.7901
+skyscraper_aug_3_exr2hdr_s003_raw_linear_pu.hdr 50.1807 56.2823 9.6639
+skyscraper_aug_3_exr2hdr_s003_raw_linear_smape.hdr 65.0428 87.8133 9.9810
+skyscraper_aug_3_exr2hdr_s003_raw_linear_mu.hdr 65.0428 87.8133 9.9810
+
+skyscraper_aug_3_exr2hdr_s004_raw_linear_l1.hdr 42.9693 58.3294 9.6585
+skyscraper_aug_3_exr2hdr_s004_raw_pu_l1.hdr 45.7155 68.5325 9.7585
+skyscraper_aug_3_exr2hdr_s004_raw_pq_l1.hdr 43.7443 66.6086 9.7583
+skyscraper_aug_3_exr2hdr_s004_raw_linear_pq.hdr 45.6586 66.3889 9.7565
+skyscraper_aug_3_exr2hdr_s004_raw_linear_pu.hdr 45.4255 62.2944 9.7447
+skyscraper_aug_3_exr2hdr_s004_raw_linear_smape.hdr 45.7704 68.5858 9.7585
+skyscraper_aug_3_exr2hdr_s004_raw_linear_mu.hdr 45.7704 68.5858 9.7585
+
+skyscraper_aug_3_exr2hdr_s005_raw_linear_l1.hdr 40.8647 54.5867 9.5321
+skyscraper_aug_3_exr2hdr_s005_raw_pu_l1.hdr 45.6922 68.5014 9.7542
+skyscraper_aug_3_exr2hdr_s005_raw_pq_l1.hdr 44.9794 67.8093 9.7542
+skyscraper_aug_3_exr2hdr_s005_raw_linear_pq.hdr 45.5634 65.8867 9.7508
+skyscraper_aug_3_exr2hdr_s005_raw_linear_pu.hdr 45.2838 61.3218 9.7357
+skyscraper_aug_3_exr2hdr_s005_raw_linear_smape.hdr 45.7220 68.5302 9.7542
+skyscraper_aug_3_exr2hdr_s005_raw_linear_mu.hdr 45.7220 68.5302 9.7542
+
+skyscraper_aug_3_exr2hdr_s006_raw_linear_l1.hdr 42.2310 54.2652 9.5221
+skyscraper_aug_3_exr2hdr_s006_raw_pu_l1.hdr 53.8405 76.4882 9.8599
+skyscraper_aug_3_exr2hdr_s006_raw_pq_l1.hdr 53.0140 74.2557 9.8544
+skyscraper_aug_3_exr2hdr_s006_raw_linear_pq.hdr 50.2623 61.7874 9.7843
+skyscraper_aug_3_exr2hdr_s006_raw_linear_pu.hdr 48.8004 56.3368 9.6657
+skyscraper_aug_3_exr2hdr_s006_raw_linear_smape.hdr 53.8822 76.5272 9.8599
+skyscraper_aug_3_exr2hdr_s006_raw_linear_mu.hdr 53.8822 76.5272 9.8599
+
+skyscraper_aug_4_exr2hdr_s001_raw_linear_l1.hdr 41.4768 51.2773 9.4354
+skyscraper_aug_4_exr2hdr_s001_raw_pu_l1.hdr 51.4937 74.3319 9.8372
+skyscraper_aug_4_exr2hdr_s001_raw_pq_l1.hdr 51.3373 74.1793 9.8372
+skyscraper_aug_4_exr2hdr_s001_raw_linear_pq.hdr 50.8716 66.4146 9.8224
+skyscraper_aug_4_exr2hdr_s001_raw_linear_pu.hdr 46.7475 52.2996 9.5212
+skyscraper_aug_4_exr2hdr_s001_raw_linear_smape.hdr 51.5327 74.3699 9.8372
+skyscraper_aug_4_exr2hdr_s001_raw_linear_mu.hdr 51.5327 74.3699 9.8372
+
+skyscraper_aug_4_exr2hdr_s002_raw_linear_l1.hdr 39.5028 48.6279 9.2898
+skyscraper_aug_4_exr2hdr_s002_raw_pu_l1.hdr 51.4328 74.2707 9.8366
+skyscraper_aug_4_exr2hdr_s002_raw_pq_l1.hdr 51.3550 74.1948 9.8366
+skyscraper_aug_4_exr2hdr_s002_raw_linear_pq.hdr 50.7260 65.4328 9.8103
+skyscraper_aug_4_exr2hdr_s002_raw_linear_pu.hdr 46.2387 51.6535 9.4922
+skyscraper_aug_4_exr2hdr_s002_raw_linear_smape.hdr 51.4525 74.2899 9.8366
+skyscraper_aug_4_exr2hdr_s002_raw_linear_mu.hdr 51.4525 74.2899 9.8366
+
+skyscraper_aug_4_exr2hdr_s003_raw_linear_l1.hdr 39.6827 48.1986 9.2713
+skyscraper_aug_4_exr2hdr_s003_raw_pu_l1.hdr 64.9737 87.7599 9.9811
+skyscraper_aug_4_exr2hdr_s003_raw_pq_l1.hdr 65.0407 87.8245 9.9811
+skyscraper_aug_4_exr2hdr_s003_raw_linear_pq.hdr 56.9616 64.7892 9.8245
+skyscraper_aug_4_exr2hdr_s003_raw_linear_pu.hdr 46.8735 50.8687 9.4593
+skyscraper_aug_4_exr2hdr_s003_raw_linear_smape.hdr 65.0860 87.8681 9.9811
+skyscraper_aug_4_exr2hdr_s003_raw_linear_mu.hdr 65.0633 84.9121 9.9641
+
+skyscraper_aug_4_exr2hdr_s004_raw_linear_l1.hdr 40.2468 50.8712 9.4143
+skyscraper_aug_4_exr2hdr_s004_raw_pu_l1.hdr 45.7784 68.5896 9.7590
+skyscraper_aug_4_exr2hdr_s004_raw_pq_l1.hdr 45.7524 68.5643 9.7590
+skyscraper_aug_4_exr2hdr_s004_raw_linear_pq.hdr 45.5932 64.7474 9.7535
+skyscraper_aug_4_exr2hdr_s004_raw_linear_pu.hdr 43.8920 52.1431 9.5125
+skyscraper_aug_4_exr2hdr_s004_raw_linear_smape.hdr 45.7881 68.5989 9.7590
+skyscraper_aug_4_exr2hdr_s004_raw_linear_mu.hdr 45.7881 68.5989 9.7590
+
+skyscraper_aug_4_exr2hdr_s005_raw_linear_l1.hdr 38.5772 48.2151 9.2639
+skyscraper_aug_4_exr2hdr_s005_raw_pu_l1.hdr 45.7332 68.5468 9.7547
+skyscraper_aug_4_exr2hdr_s005_raw_pq_l1.hdr 45.7253 68.5391 9.7547
+skyscraper_aug_4_exr2hdr_s005_raw_linear_pq.hdr 45.5198 63.9344 9.7449
+skyscraper_aug_4_exr2hdr_s005_raw_linear_pu.hdr 43.5644 51.4235 9.4803
+skyscraper_aug_4_exr2hdr_s005_raw_linear_smape.hdr 45.7375 68.5509 9.7547
+skyscraper_aug_4_exr2hdr_s005_raw_linear_mu.hdr 45.7375 68.5509 9.7547
+
+skyscraper_aug_4_exr2hdr_s006_raw_linear_l1.hdr 39.3151 47.9554 9.2547
+skyscraper_aug_4_exr2hdr_s006_raw_pu_l1.hdr 53.8844 76.5874 9.8601
+skyscraper_aug_4_exr2hdr_s006_raw_pq_l1.hdr 53.8878 76.5906 9.8601
+skyscraper_aug_4_exr2hdr_s006_raw_linear_pq.hdr 52.3916 64.4568 9.8114
+skyscraper_aug_4_exr2hdr_s006_raw_linear_pu.hdr 46.1195 50.8464 9.4571
+skyscraper_aug_4_exr2hdr_s006_raw_linear_smape.hdr 53.8930 76.5955 9.8601
+skyscraper_aug_4_exr2hdr_s006_raw_linear_mu.hdr 53.8913 76.2906 9.8600
+
+skyscraper_aug_5_exr2hdr_s001_raw_linear_l1.hdr 39.5408 48.8507 9.3066
+skyscraper_aug_5_exr2hdr_s001_raw_pu_l1.hdr 51.5025 74.3447 9.8369
+skyscraper_aug_5_exr2hdr_s001_raw_pq_l1.hdr 51.5053 74.3477 9.8369
+skyscraper_aug_5_exr2hdr_s001_raw_linear_pq.hdr 50.8019 65.8966 9.8148
+skyscraper_aug_5_exr2hdr_s001_raw_linear_pu.hdr 46.0485 51.2830 9.4794
+skyscraper_aug_5_exr2hdr_s001_raw_linear_smape.hdr 51.5113 74.3535 9.8369
+skyscraper_aug_5_exr2hdr_s001_raw_linear_mu.hdr 51.5113 74.3535 9.8369
+
+skyscraper_aug_5_exr2hdr_s002_raw_linear_l1.hdr 38.6527 47.5130 9.2206
+skyscraper_aug_5_exr2hdr_s002_raw_pu_l1.hdr 51.4259 74.2679 9.8363
+skyscraper_aug_5_exr2hdr_s002_raw_pq_l1.hdr 51.4286 74.2708 9.8363
+skyscraper_aug_5_exr2hdr_s002_raw_linear_pq.hdr 50.6760 65.0357 9.8067
+skyscraper_aug_5_exr2hdr_s002_raw_linear_pu.hdr 45.6944 50.8136 9.4536
+skyscraper_aug_5_exr2hdr_s002_raw_linear_smape.hdr 51.4306 74.2728 9.8363
+skyscraper_aug_5_exr2hdr_s002_raw_linear_mu.hdr 51.4286 73.9176 9.8363
+
+skyscraper_aug_5_exr2hdr_s003_raw_linear_l1.hdr 38.7460 47.1996 9.2049
+skyscraper_aug_5_exr2hdr_s003_raw_pu_l1.hdr 64.9308 87.7239 9.9810
+skyscraper_aug_5_exr2hdr_s003_raw_pq_l1.hdr 65.0439 87.8343 9.9810
+skyscraper_aug_5_exr2hdr_s003_raw_linear_pq.hdr 57.2370 64.8349 9.8248
+skyscraper_aug_5_exr2hdr_s003_raw_linear_pu.hdr 46.5865 50.4192 9.4366
+skyscraper_aug_5_exr2hdr_s003_raw_linear_smape.hdr 65.0439 87.8343 9.9810
+skyscraper_aug_5_exr2hdr_s003_raw_linear_mu.hdr 64.9991 83.1580 9.9657
+
+skyscraper_aug_5_exr2hdr_s004_raw_linear_l1.hdr 38.7541 48.6200 9.2917
+skyscraper_aug_5_exr2hdr_s004_raw_pu_l1.hdr 45.7655 68.5845 9.7585
+skyscraper_aug_5_exr2hdr_s004_raw_pq_l1.hdr 45.7668 68.5858 9.7585
+skyscraper_aug_5_exr2hdr_s004_raw_linear_pq.hdr 45.5649 64.3013 9.7500
+skyscraper_aug_5_exr2hdr_s004_raw_linear_pu.hdr 43.5080 51.1969 9.4745
+skyscraper_aug_5_exr2hdr_s004_raw_linear_smape.hdr 45.7681 68.5871 9.7585
+skyscraper_aug_5_exr2hdr_s004_raw_linear_mu.hdr 45.7681 68.5871 9.7585
+
+skyscraper_aug_5_exr2hdr_s005_raw_linear_l1.hdr 37.9745 47.2452 9.2005
+skyscraper_aug_5_exr2hdr_s005_raw_pu_l1.hdr 45.7194 68.5314 9.7543
+skyscraper_aug_5_exr2hdr_s005_raw_pq_l1.hdr 45.7213 68.5333 9.7543
+skyscraper_aug_5_exr2hdr_s005_raw_linear_pq.hdr 45.5051 63.6656 9.7433
+skyscraper_aug_5_exr2hdr_s005_raw_linear_pu.hdr 43.2890 50.6761 9.4461
+skyscraper_aug_5_exr2hdr_s005_raw_linear_smape.hdr 45.7215 68.5336 9.7543
+skyscraper_aug_5_exr2hdr_s005_raw_linear_mu.hdr 45.7210 68.4360 9.7543
+
+skyscraper_aug_5_exr2hdr_s006_raw_linear_l1.hdr 38.5545 47.0775 9.1960
+skyscraper_aug_5_exr2hdr_s006_raw_pu_l1.hdr 53.8711 76.5360 9.8601
+skyscraper_aug_5_exr2hdr_s006_raw_pq_l1.hdr 53.8855 76.5497 9.8601
+skyscraper_aug_5_exr2hdr_s006_raw_linear_pq.hdr 52.4978 64.5787 9.8121
+skyscraper_aug_5_exr2hdr_s006_raw_linear_pu.hdr 45.8978 50.4066 9.4362
+skyscraper_aug_5_exr2hdr_s006_raw_linear_smape.hdr 53.8855 76.5497 9.8601
+skyscraper_aug_5_exr2hdr_s006_raw_linear_mu.hdr 53.8821 75.9656 9.8601
+
+skyscraper_exr2hdr_s001_raw_linear_l1.hdr 52.3603 75.1455 9.8452
+skyscraper_exr2hdr_s001_raw_pu_l1.hdr 52.4192 75.2023 9.8452
+skyscraper_exr2hdr_s001_raw_pq_l1.hdr 52.4254 75.2083 9.8452
+skyscraper_exr2hdr_s001_raw_linear_pq.hdr 52.4008 75.1846 9.8452
+skyscraper_exr2hdr_s001_raw_linear_pu.hdr 52.4118 75.1705 9.8452
+skyscraper_exr2hdr_s001_raw_linear_smape.hdr 52.4229 75.2059 9.8452
+skyscraper_exr2hdr_s001_raw_linear_mu.hdr 52.4180 75.2011 9.8452
+
+skyscraper_exr2hdr_s002_raw_linear_l1.hdr 52.3506 75.1345 9.8445
+skyscraper_exr2hdr_s002_raw_pu_l1.hdr 52.4070 75.1889 9.8445
+skyscraper_exr2hdr_s002_raw_pq_l1.hdr 52.4156 75.1972 9.8445
+skyscraper_exr2hdr_s002_raw_linear_pq.hdr 52.3857 75.1642 9.8445
+skyscraper_exr2hdr_s002_raw_linear_pu.hdr 52.4008 75.1583 9.8445
+skyscraper_exr2hdr_s002_raw_linear_smape.hdr 52.4107 75.1924 9.8445
+skyscraper_exr2hdr_s002_raw_linear_mu.hdr 52.4057 75.1852 9.8445
+
+skyscraper_exr2hdr_s003_raw_linear_l1.hdr 69.6266 92.2696 9.9883
+skyscraper_exr2hdr_s003_raw_pu_l1.hdr 69.9637 92.5834 9.9884
+skyscraper_exr2hdr_s003_raw_pq_l1.hdr 70.1059 92.7152 9.9884
+skyscraper_exr2hdr_s003_raw_linear_pq.hdr 68.5299 90.6408 9.9866
+skyscraper_exr2hdr_s003_raw_linear_pu.hdr 67.7608 73.5290 9.8968
+skyscraper_exr2hdr_s003_raw_linear_smape.hdr 69.9637 92.5834 9.9884
+skyscraper_exr2hdr_s003_raw_linear_mu.hdr 69.9631 92.4487 9.9884
+
+skyscraper_exr2hdr_s004_raw_linear_l1.hdr 46.5635 69.3119 9.7711
+skyscraper_exr2hdr_s004_raw_pu_l1.hdr 46.5927 69.3463 9.7711
+skyscraper_exr2hdr_s004_raw_pq_l1.hdr 46.5920 69.3457 9.7711
+skyscraper_exr2hdr_s004_raw_linear_pq.hdr 46.5856 69.3395 9.7711
+skyscraper_exr2hdr_s004_raw_linear_pu.hdr 46.5907 69.3380 9.7711
+skyscraper_exr2hdr_s004_raw_linear_smape.hdr 46.5927 69.3463 9.7711
+skyscraper_exr2hdr_s004_raw_linear_mu.hdr 46.5917 69.3454 9.7711
+
+skyscraper_exr2hdr_s005_raw_linear_l1.hdr 46.4433 69.2013 9.7650
+skyscraper_exr2hdr_s005_raw_pu_l1.hdr 46.4614 69.2190 9.7650
+skyscraper_exr2hdr_s005_raw_pq_l1.hdr 46.4636 69.2211 9.7650
+skyscraper_exr2hdr_s005_raw_linear_pq.hdr 46.4511 69.1982 9.7650
+skyscraper_exr2hdr_s005_raw_linear_pu.hdr 46.4580 69.1783 9.7650
+skyscraper_exr2hdr_s005_raw_linear_smape.hdr 46.4624 69.2199 9.7650
+skyscraper_exr2hdr_s005_raw_linear_mu.hdr 46.4611 69.2154 9.7650
+
+skyscraper_exr2hdr_s006_raw_linear_l1.hdr 54.4423 77.1185 9.8632
+skyscraper_exr2hdr_s006_raw_pu_l1.hdr 54.4679 77.1434 9.8632
+skyscraper_exr2hdr_s006_raw_pq_l1.hdr 54.4718 77.1471 9.8632
+skyscraper_exr2hdr_s006_raw_linear_pq.hdr 54.3209 76.8847 9.8629
+skyscraper_exr2hdr_s006_raw_linear_pu.hdr 54.3780 71.9363 9.8535
+skyscraper_exr2hdr_s006_raw_linear_smape.hdr 54.4679 77.1434 9.8632
+skyscraper_exr2hdr_s006_raw_linear_mu.hdr 54.4644 76.4973 9.8624
+
+urban_land_aug_1_exr2hdr_s001_raw_linear_l1.hdr 36.5757 41.6908 8.6115
+urban_land_aug_1_exr2hdr_s001_raw_pu_l1.hdr 40.5406 42.5372 8.6787
+urban_land_aug_1_exr2hdr_s001_raw_pq_l1.hdr 40.5882 42.6023 8.6903
+urban_land_aug_1_exr2hdr_s001_raw_linear_pq.hdr 40.5500 42.5290 8.6793
+urban_land_aug_1_exr2hdr_s001_raw_linear_pu.hdr 40.3865 42.4323 8.6775
+urban_land_aug_1_exr2hdr_s001_raw_linear_smape.hdr 40.6776 42.5351 8.6794
+urban_land_aug_1_exr2hdr_s001_raw_linear_mu.hdr 40.6523 42.5346 8.6794
+
+urban_land_aug_1_exr2hdr_s002_raw_linear_l1.hdr 35.2928 39.0883 8.2650
+urban_land_aug_1_exr2hdr_s002_raw_pu_l1.hdr 37.9425 39.4770 8.3246
+urban_land_aug_1_exr2hdr_s002_raw_pq_l1.hdr 38.7108 40.1991 8.4191
+urban_land_aug_1_exr2hdr_s002_raw_linear_pq.hdr 37.6356 39.2944 8.2682
+urban_land_aug_1_exr2hdr_s002_raw_linear_pu.hdr 37.5080 39.2332 8.2672
+urban_land_aug_1_exr2hdr_s002_raw_linear_smape.hdr 37.6590 39.2730 8.2628
+urban_land_aug_1_exr2hdr_s002_raw_linear_mu.hdr 37.6557 39.2742 8.2632
+
+urban_land_aug_1_exr2hdr_s003_raw_linear_l1.hdr 35.0775 38.6241 8.2030
+urban_land_aug_1_exr2hdr_s003_raw_pu_l1.hdr 37.3963 38.9533 8.2584
+urban_land_aug_1_exr2hdr_s003_raw_pq_l1.hdr 38.0417 39.5560 8.3363
+urban_land_aug_1_exr2hdr_s003_raw_linear_pq.hdr 37.1165 38.7914 8.2066
+urban_land_aug_1_exr2hdr_s003_raw_linear_pu.hdr 36.9930 38.7352 8.2062
+urban_land_aug_1_exr2hdr_s003_raw_linear_smape.hdr 37.1250 38.7731 8.2015
+urban_land_aug_1_exr2hdr_s003_raw_linear_mu.hdr 37.1254 38.7741 8.2019
+
+urban_land_aug_1_exr2hdr_s004_raw_linear_l1.hdr 36.5195 41.5209 8.5873
+urban_land_aug_1_exr2hdr_s004_raw_pu_l1.hdr 40.1830 42.2786 8.6487
+urban_land_aug_1_exr2hdr_s004_raw_pq_l1.hdr 40.2364 42.3408 8.6603
+urban_land_aug_1_exr2hdr_s004_raw_linear_pq.hdr 40.2012 42.2719 8.6495
+urban_land_aug_1_exr2hdr_s004_raw_linear_pu.hdr 40.0604 42.1810 8.6479
+urban_land_aug_1_exr2hdr_s004_raw_linear_smape.hdr 40.3326 42.2768 8.6496
+urban_land_aug_1_exr2hdr_s004_raw_linear_mu.hdr 40.3028 42.2763 8.6495
+
+urban_land_aug_1_exr2hdr_s005_raw_linear_l1.hdr 35.2308 38.9293 8.2381
+urban_land_aug_1_exr2hdr_s005_raw_pu_l1.hdr 37.6951 39.2775 8.2933
+urban_land_aug_1_exr2hdr_s005_raw_pq_l1.hdr 38.4153 39.9632 8.3849
+urban_land_aug_1_exr2hdr_s005_raw_linear_pq.hdr 37.3962 39.1007 8.2389
+urban_land_aug_1_exr2hdr_s005_raw_linear_pu.hdr 37.2713 39.0343 8.2379
+urban_land_aug_1_exr2hdr_s005_raw_linear_smape.hdr 37.4338 39.0826 8.2338
+urban_land_aug_1_exr2hdr_s005_raw_linear_mu.hdr 37.4281 39.0836 8.2342
+
+urban_land_aug_1_exr2hdr_s006_raw_linear_l1.hdr 35.0591 38.4983 8.1803
+urban_land_aug_1_exr2hdr_s006_raw_pu_l1.hdr 37.2308 38.7964 8.2319
+urban_land_aug_1_exr2hdr_s006_raw_pq_l1.hdr 37.8460 39.3752 8.3084
+urban_land_aug_1_exr2hdr_s006_raw_linear_pq.hdr 36.9495 38.6378 8.1813
+urban_land_aug_1_exr2hdr_s006_raw_linear_pu.hdr 36.8238 38.5749 8.1809
+urban_land_aug_1_exr2hdr_s006_raw_linear_smape.hdr 36.9694 38.6226 8.1765
+urban_land_aug_1_exr2hdr_s006_raw_linear_mu.hdr 36.9699 38.6235 8.1769
+
+urban_land_aug_2_exr2hdr_s001_raw_linear_l1.hdr 36.3206 41.2211 8.5929
+urban_land_aug_2_exr2hdr_s001_raw_pu_l1.hdr 40.9318 42.6481 8.6900
+urban_land_aug_2_exr2hdr_s001_raw_pq_l1.hdr 40.9477 42.6664 8.6932
+urban_land_aug_2_exr2hdr_s001_raw_linear_pq.hdr 40.8382 42.6322 8.6895
+urban_land_aug_2_exr2hdr_s001_raw_linear_pu.hdr 39.9705 42.0229 8.6633
+urban_land_aug_2_exr2hdr_s001_raw_linear_smape.hdr 40.9448 42.6481 8.6901
+urban_land_aug_2_exr2hdr_s001_raw_linear_mu.hdr 40.9441 42.6479 8.6901
+
+urban_land_aug_2_exr2hdr_s002_raw_linear_l1.hdr 35.0199 38.6542 8.2273
+urban_land_aug_2_exr2hdr_s002_raw_pu_l1.hdr 37.7643 39.3562 8.2740
+urban_land_aug_2_exr2hdr_s002_raw_pq_l1.hdr 37.9530 39.5358 8.3333
+urban_land_aug_2_exr2hdr_s002_raw_linear_pq.hdr 37.7236 39.3690 8.2797
+urban_land_aug_2_exr2hdr_s002_raw_linear_pu.hdr 37.2721 39.0749 8.2705
+urban_land_aug_2_exr2hdr_s002_raw_linear_smape.hdr 37.7667 39.3558 8.2739
+urban_land_aug_2_exr2hdr_s002_raw_linear_mu.hdr 37.7675 39.3559 8.2740
+
+urban_land_aug_2_exr2hdr_s003_raw_linear_l1.hdr 34.7904 38.2550 8.1707
+urban_land_aug_2_exr2hdr_s003_raw_pu_l1.hdr 37.2102 38.8645 8.2147
+urban_land_aug_2_exr2hdr_s003_raw_pq_l1.hdr 37.3572 39.0166 8.2671
+urban_land_aug_2_exr2hdr_s003_raw_linear_pq.hdr 37.1844 38.8755 8.2199
+urban_land_aug_2_exr2hdr_s003_raw_linear_pu.hdr 36.7864 38.6179 8.2118
+urban_land_aug_2_exr2hdr_s003_raw_linear_smape.hdr 37.2124 38.8642 8.2147
+urban_land_aug_2_exr2hdr_s003_raw_linear_mu.hdr 37.2134 38.8642 8.2147
+
+urban_land_aug_2_exr2hdr_s004_raw_linear_l1.hdr 36.2323 41.0640 8.5690
+urban_land_aug_2_exr2hdr_s004_raw_pu_l1.hdr 40.6072 42.3995 8.6617
+urban_land_aug_2_exr2hdr_s004_raw_pq_l1.hdr 40.6214 42.4167 8.6647
+urban_land_aug_2_exr2hdr_s004_raw_linear_pq.hdr 40.5168 42.3837 8.6612
+urban_land_aug_2_exr2hdr_s004_raw_linear_pu.hdr 39.7114 41.8083 8.6358
+urban_land_aug_2_exr2hdr_s004_raw_linear_smape.hdr 40.6188 42.3994 8.6618
+urban_land_aug_2_exr2hdr_s004_raw_linear_mu.hdr 40.6182 42.3993 8.6618
+
+urban_land_aug_2_exr2hdr_s005_raw_linear_l1.hdr 34.9309 38.5091 8.2018
+urban_land_aug_2_exr2hdr_s005_raw_pu_l1.hdr 37.5519 39.1703 8.2457
+urban_land_aug_2_exr2hdr_s005_raw_pq_l1.hdr 37.7309 39.3420 8.3031
+urban_land_aug_2_exr2hdr_s005_raw_linear_pq.hdr 37.5114 39.1825 8.2513
+urban_land_aug_2_exr2hdr_s005_raw_linear_pu.hdr 37.0801 38.9021 8.2426
+urban_land_aug_2_exr2hdr_s005_raw_linear_smape.hdr 37.5540 39.1699 8.2457
+urban_land_aug_2_exr2hdr_s005_raw_linear_mu.hdr 37.5547 39.1699 8.2457
+
+urban_land_aug_2_exr2hdr_s006_raw_linear_l1.hdr 34.7224 38.1346 8.1487
+urban_land_aug_2_exr2hdr_s006_raw_pu_l1.hdr 37.0585 38.7170 8.1903
+urban_land_aug_2_exr2hdr_s006_raw_pq_l1.hdr 37.2001 38.8637 8.2415
+urban_land_aug_2_exr2hdr_s006_raw_linear_pq.hdr 37.0331 38.7277 8.1955
+urban_land_aug_2_exr2hdr_s006_raw_linear_pu.hdr 36.6487 38.4809 8.1880
+urban_land_aug_2_exr2hdr_s006_raw_linear_smape.hdr 37.0606 38.7167 8.1903
+urban_land_aug_2_exr2hdr_s006_raw_linear_mu.hdr 37.0614 38.7167 8.1903
+
+urban_land_aug_3_exr2hdr_s001_raw_linear_l1.hdr 36.3577 41.2619 8.5907
+urban_land_aug_3_exr2hdr_s001_raw_pu_l1.hdr 40.9764 42.6475 8.6894
+urban_land_aug_3_exr2hdr_s001_raw_pq_l1.hdr 41.0040 42.6690 8.6926
+urban_land_aug_3_exr2hdr_s001_raw_linear_pq.hdr 40.8949 42.6292 8.6891
+urban_land_aug_3_exr2hdr_s001_raw_linear_pu.hdr 40.1158 42.1038 8.6669
+urban_land_aug_3_exr2hdr_s001_raw_linear_smape.hdr 41.0161 42.6478 8.6897
+urban_land_aug_3_exr2hdr_s001_raw_linear_mu.hdr 41.0131 42.6475 8.6897
+
+urban_land_aug_3_exr2hdr_s002_raw_linear_l1.hdr 35.0259 38.6962 8.2293
+urban_land_aug_3_exr2hdr_s002_raw_pu_l1.hdr 37.7998 39.3932 8.2806
+urban_land_aug_3_exr2hdr_s002_raw_pq_l1.hdr 38.2616 39.8750 8.3818
+urban_land_aug_3_exr2hdr_s002_raw_linear_pq.hdr 37.7550 39.3823 8.2809
+urban_land_aug_3_exr2hdr_s002_raw_linear_pu.hdr 37.3378 39.1203 8.2732
+urban_land_aug_3_exr2hdr_s002_raw_linear_smape.hdr 37.7883 39.3730 8.2765
+urban_land_aug_3_exr2hdr_s002_raw_linear_mu.hdr 37.7917 39.3769 8.2776
+
+urban_land_aug_3_exr2hdr_s003_raw_linear_l1.hdr 34.7673 38.2781 8.1712
+urban_land_aug_3_exr2hdr_s003_raw_pu_l1.hdr 37.2325 38.8973 8.2210
+urban_land_aug_3_exr2hdr_s003_raw_pq_l1.hdr 37.6090 39.3153 8.3109
+urban_land_aug_3_exr2hdr_s003_raw_linear_pq.hdr 37.1968 38.8873 8.2211
+urban_land_aug_3_exr2hdr_s003_raw_linear_pu.hdr 36.8288 38.6530 8.2137
+urban_land_aug_3_exr2hdr_s003_raw_linear_smape.hdr 37.2192 38.8792 8.2173
+urban_land_aug_3_exr2hdr_s003_raw_linear_mu.hdr 37.2232 38.8828 8.2183
+
+urban_land_aug_3_exr2hdr_s004_raw_linear_l1.hdr 36.2676 41.1066 8.5685
+urban_land_aug_3_exr2hdr_s004_raw_pu_l1.hdr 40.6606 42.3986 8.6609
+urban_land_aug_3_exr2hdr_s004_raw_pq_l1.hdr 40.6865 42.4190 8.6639
+urban_land_aug_3_exr2hdr_s004_raw_linear_pq.hdr 40.5811 42.3817 8.6605
+urban_land_aug_3_exr2hdr_s004_raw_linear_pu.hdr 39.8686 41.8905 8.6393
+urban_land_aug_3_exr2hdr_s004_raw_linear_smape.hdr 40.6985 42.3989 8.6613
+urban_land_aug_3_exr2hdr_s004_raw_linear_mu.hdr 40.6957 42.3987 8.6612
+
+urban_land_aug_3_exr2hdr_s005_raw_linear_l1.hdr 34.9472 38.5431 8.2025
+urban_land_aug_3_exr2hdr_s005_raw_pu_l1.hdr 37.5900 39.2056 8.2520
+urban_land_aug_3_exr2hdr_s005_raw_pq_l1.hdr 38.0293 39.6662 8.3498
+urban_land_aug_3_exr2hdr_s005_raw_linear_pq.hdr 37.5440 39.1953 8.2524
+urban_land_aug_3_exr2hdr_s005_raw_linear_pu.hdr 37.1493 38.9438 8.2446
+urban_land_aug_3_exr2hdr_s005_raw_linear_smape.hdr 37.5796 39.1863 8.2481
+urban_land_aug_3_exr2hdr_s005_raw_linear_mu.hdr 37.5829 39.1900 8.2492
+
+urban_land_aug_3_exr2hdr_s006_raw_linear_l1.hdr 34.7154 38.1536 8.1483
+urban_land_aug_3_exr2hdr_s006_raw_pu_l1.hdr 37.0796 38.7485 8.1964
+urban_land_aug_3_exr2hdr_s006_raw_pq_l1.hdr 37.4428 39.1520 8.2842
+urban_land_aug_3_exr2hdr_s006_raw_linear_pq.hdr 37.0445 38.7388 8.1966
+urban_land_aug_3_exr2hdr_s006_raw_linear_pu.hdr 36.6877 38.5108 8.1892
+urban_land_aug_3_exr2hdr_s006_raw_linear_smape.hdr 37.0669 38.7311 8.1928
+urban_land_aug_3_exr2hdr_s006_raw_linear_mu.hdr 37.0709 38.7345 8.1938
+
+urban_land_aug_4_exr2hdr_s001_raw_linear_l1.hdr 36.2468 41.0819 8.5787
+urban_land_aug_4_exr2hdr_s001_raw_pu_l1.hdr 40.7346 42.5349 8.6792
+urban_land_aug_4_exr2hdr_s001_raw_pq_l1.hdr 40.7331 42.5349 8.6792
+urban_land_aug_4_exr2hdr_s001_raw_linear_pq.hdr 40.6669 42.5191 8.6786
+urban_land_aug_4_exr2hdr_s001_raw_linear_pu.hdr 39.7825 41.8957 8.6519
+urban_land_aug_4_exr2hdr_s001_raw_linear_smape.hdr 40.7357 42.5349 8.6792
+urban_land_aug_4_exr2hdr_s001_raw_linear_mu.hdr 40.7356 42.5350 8.6792
+
+urban_land_aug_4_exr2hdr_s002_raw_linear_l1.hdr 34.9540 38.5861 8.2188
+urban_land_aug_4_exr2hdr_s002_raw_pu_l1.hdr 37.6753 39.2854 8.2648
+urban_land_aug_4_exr2hdr_s002_raw_pq_l1.hdr 37.6819 39.2967 8.2684
+urban_land_aug_4_exr2hdr_s002_raw_linear_pq.hdr 37.6493 39.2934 8.2683
+urban_land_aug_4_exr2hdr_s002_raw_linear_pu.hdr 37.1943 39.0026 8.2590
+urban_land_aug_4_exr2hdr_s002_raw_linear_smape.hdr 37.6759 39.2854 8.2648
+urban_land_aug_4_exr2hdr_s002_raw_linear_mu.hdr 37.6757 39.2856 8.2650
+
+urban_land_aug_4_exr2hdr_s003_raw_linear_l1.hdr 34.6776 38.1569 8.1570
+urban_land_aug_4_exr2hdr_s003_raw_pu_l1.hdr 37.1309 38.7854 8.2036
+urban_land_aug_4_exr2hdr_s003_raw_pq_l1.hdr 37.1349 38.7954 8.2069
+urban_land_aug_4_exr2hdr_s003_raw_linear_pq.hdr 37.1095 38.7917 8.2068
+urban_land_aug_4_exr2hdr_s003_raw_linear_pu.hdr 36.7030 38.5335 8.1977
+urban_land_aug_4_exr2hdr_s003_raw_linear_smape.hdr 37.1319 38.7854 8.2036
+urban_land_aug_4_exr2hdr_s003_raw_linear_mu.hdr 37.1317 38.7854 8.2037
+
+urban_land_aug_4_exr2hdr_s004_raw_linear_l1.hdr 36.1392 40.9145 8.5531
+urban_land_aug_4_exr2hdr_s004_raw_pu_l1.hdr 40.3956 42.2783 8.6496
+urban_land_aug_4_exr2hdr_s004_raw_pq_l1.hdr 40.3939 42.2783 8.6496
+urban_land_aug_4_exr2hdr_s004_raw_linear_pq.hdr 40.3337 42.2640 8.6490
+urban_land_aug_4_exr2hdr_s004_raw_linear_pu.hdr 39.5181 41.6828 8.6238
+urban_land_aug_4_exr2hdr_s004_raw_linear_smape.hdr 40.3965 42.2783 8.6496
+urban_land_aug_4_exr2hdr_s004_raw_linear_mu.hdr 40.3964 42.2783 8.6496
+
+urban_land_aug_4_exr2hdr_s005_raw_linear_l1.hdr 34.8470 38.4315 8.1914
+urban_land_aug_4_exr2hdr_s005_raw_pu_l1.hdr 37.4535 39.0945 8.2357
+urban_land_aug_4_exr2hdr_s005_raw_pq_l1.hdr 37.4596 39.1053 8.2392
+urban_land_aug_4_exr2hdr_s005_raw_linear_pq.hdr 37.4281 39.1021 8.2391
+urban_land_aug_4_exr2hdr_s005_raw_linear_pu.hdr 36.9970 38.8252 8.2302
+urban_land_aug_4_exr2hdr_s005_raw_linear_smape.hdr 37.4539 39.0945 8.2357
+urban_land_aug_4_exr2hdr_s005_raw_linear_mu.hdr 37.4538 39.0947 8.2358
+
+urban_land_aug_4_exr2hdr_s006_raw_linear_l1.hdr 34.6127 38.0373 8.1343
+urban_land_aug_4_exr2hdr_s006_raw_pu_l1.hdr 36.9751 38.6344 8.1786
+urban_land_aug_4_exr2hdr_s006_raw_pq_l1.hdr 36.9789 38.6441 8.1818
+urban_land_aug_4_exr2hdr_s006_raw_linear_pq.hdr 36.9533 38.6401 8.1817
+urban_land_aug_4_exr2hdr_s006_raw_linear_pu.hdr 36.5627 38.3924 8.1732
+urban_land_aug_4_exr2hdr_s006_raw_linear_smape.hdr 36.9761 38.6344 8.1786
+urban_land_aug_4_exr2hdr_s006_raw_linear_mu.hdr 36.9759 38.6344 8.1787
+
+urban_land_aug_5_exr2hdr_s001_raw_linear_l1.hdr 36.2688 41.1100 8.5831
+urban_land_aug_5_exr2hdr_s001_raw_pu_l1.hdr 41.0016 42.6414 8.6889
+urban_land_aug_5_exr2hdr_s001_raw_pq_l1.hdr 41.0019 42.6414 8.6889
+urban_land_aug_5_exr2hdr_s001_raw_linear_pq.hdr 40.9232 42.6160 8.6876
+urban_land_aug_5_exr2hdr_s001_raw_linear_pu.hdr 39.9717 41.9839 8.6616
+urban_land_aug_5_exr2hdr_s001_raw_linear_smape.hdr 41.0019 42.6414 8.6889
+urban_land_aug_5_exr2hdr_s001_raw_linear_mu.hdr 41.0019 42.6414 8.6889
+
+urban_land_aug_5_exr2hdr_s002_raw_linear_l1.hdr 34.9405 38.6003 8.2214
+urban_land_aug_5_exr2hdr_s002_raw_pu_l1.hdr 37.7820 39.3656 8.2754
+urban_land_aug_5_exr2hdr_s002_raw_pq_l1.hdr 37.7823 39.3656 8.2754
+urban_land_aug_5_exr2hdr_s002_raw_linear_pq.hdr 37.7477 39.3552 8.2747
+urban_land_aug_5_exr2hdr_s002_raw_linear_pu.hdr 37.2676 39.0480 8.2626
+urban_land_aug_5_exr2hdr_s002_raw_linear_smape.hdr 37.7823 39.3656 8.2754
+urban_land_aug_5_exr2hdr_s002_raw_linear_mu.hdr 37.7823 39.3656 8.2754
+
+urban_land_aug_5_exr2hdr_s003_raw_linear_l1.hdr 34.6694 38.1991 8.1641
+urban_land_aug_5_exr2hdr_s003_raw_pu_l1.hdr 37.2155 38.8731 8.2162
+urban_land_aug_5_exr2hdr_s003_raw_pq_l1.hdr 37.2158 38.8731 8.2162
+urban_land_aug_5_exr2hdr_s003_raw_linear_pq.hdr 37.1843 38.8637 8.2158
+urban_land_aug_5_exr2hdr_s003_raw_linear_pu.hdr 36.7510 38.5785 8.2027
+urban_land_aug_5_exr2hdr_s003_raw_linear_smape.hdr 37.2158 38.8731 8.2162
+urban_land_aug_5_exr2hdr_s003_raw_linear_mu.hdr 37.2157 38.8730 8.2162
+
+urban_land_aug_5_exr2hdr_s004_raw_linear_l1.hdr 36.1617 40.9391 8.5589
+urban_land_aug_5_exr2hdr_s004_raw_pu_l1.hdr 40.6821 42.3920 8.6603
+urban_land_aug_5_exr2hdr_s004_raw_pq_l1.hdr 40.6824 42.3920 8.6603
+urban_land_aug_5_exr2hdr_s004_raw_linear_pq.hdr 40.6074 42.3672 8.6590
+urban_land_aug_5_exr2hdr_s004_raw_linear_pu.hdr 39.7121 41.7661 8.6336
+urban_land_aug_5_exr2hdr_s004_raw_linear_smape.hdr 40.6824 42.3920 8.6603
+urban_land_aug_5_exr2hdr_s004_raw_linear_mu.hdr 40.6824 42.3920 8.6603
+
+urban_land_aug_5_exr2hdr_s005_raw_linear_l1.hdr 34.8365 38.4496 8.1954
+urban_land_aug_5_exr2hdr_s005_raw_pu_l1.hdr 37.5722 39.1787 8.2469
+urban_land_aug_5_exr2hdr_s005_raw_pq_l1.hdr 37.5725 39.1787 8.2469
+urban_land_aug_5_exr2hdr_s005_raw_linear_pq.hdr 37.5394 39.1688 8.2462
+urban_land_aug_5_exr2hdr_s005_raw_linear_pu.hdr 37.0784 38.8726 8.2343
+urban_land_aug_5_exr2hdr_s005_raw_linear_smape.hdr 37.5725 39.1787 8.2469
+urban_land_aug_5_exr2hdr_s005_raw_linear_mu.hdr 37.5724 39.1786 8.2469
+
+urban_land_aug_5_exr2hdr_s006_raw_linear_l1.hdr 34.5906 38.0768 8.1416
+urban_land_aug_5_exr2hdr_s006_raw_pu_l1.hdr 37.0632 38.7247 8.1917
+urban_land_aug_5_exr2hdr_s006_raw_pq_l1.hdr 37.0634 38.7247 8.1917
+urban_land_aug_5_exr2hdr_s006_raw_linear_pq.hdr 37.0331 38.7160 8.1913
+urban_land_aug_5_exr2hdr_s006_raw_linear_pu.hdr 36.6125 38.4390 8.1784
+urban_land_aug_5_exr2hdr_s006_raw_linear_smape.hdr 37.0634 38.7247 8.1917
+urban_land_aug_5_exr2hdr_s006_raw_linear_mu.hdr 37.0633 38.7246 8.1917
+
+urban_land_exr2hdr_s001_raw_linear_l1.hdr 39.6952 42.5766 8.6829
+urban_land_exr2hdr_s001_raw_pu_l1.hdr 40.8535 42.7375 8.7029
+urban_land_exr2hdr_s001_raw_pq_l1.hdr 40.9301 42.8161 8.7153
+urban_land_exr2hdr_s001_raw_linear_pq.hdr 40.8457 42.6636 8.6922
+urban_land_exr2hdr_s001_raw_linear_pu.hdr 40.9582 42.6678 8.6944
+urban_land_exr2hdr_s001_raw_linear_smape.hdr 41.0487 42.6650 8.6921
+urban_land_exr2hdr_s001_raw_linear_mu.hdr 40.9984 42.6655 8.6922
+
+urban_land_exr2hdr_s002_raw_linear_l1.hdr 37.2757 39.9898 8.3583
+urban_land_exr2hdr_s002_raw_pu_l1.hdr 38.8030 40.4103 8.4559
+urban_land_exr2hdr_s002_raw_pq_l1.hdr 39.4428 40.9406 8.4999
+urban_land_exr2hdr_s002_raw_linear_pq.hdr 37.8427 39.6923 8.3049
+urban_land_exr2hdr_s002_raw_linear_pu.hdr 37.8516 39.6968 8.3093
+urban_land_exr2hdr_s002_raw_linear_smape.hdr 37.8939 39.6913 8.3034
+urban_land_exr2hdr_s002_raw_linear_mu.hdr 37.8857 39.6922 8.3037
+
+urban_land_exr2hdr_s003_raw_linear_l1.hdr 36.8173 39.4199 8.2927
+urban_land_exr2hdr_s003_raw_pu_l1.hdr 38.1195 39.7606 8.3729
+urban_land_exr2hdr_s003_raw_pq_l1.hdr 38.6306 40.1731 8.4055
+urban_land_exr2hdr_s003_raw_linear_pq.hdr 37.2992 39.1683 8.2444
+urban_land_exr2hdr_s003_raw_linear_pu.hdr 37.2843 39.1691 8.2495
+urban_land_exr2hdr_s003_raw_linear_smape.hdr 37.3125 39.1670 8.2428
+urban_land_exr2hdr_s003_raw_linear_mu.hdr 37.3127 39.1673 8.2431
+
+urban_land_exr2hdr_s004_raw_linear_l1.hdr 39.5008 42.3364 8.6553
+urban_land_exr2hdr_s004_raw_pu_l1.hdr 40.5061 42.4843 8.6735
+urban_land_exr2hdr_s004_raw_pq_l1.hdr 40.5919 42.5589 8.6859
+urban_land_exr2hdr_s004_raw_linear_pq.hdr 40.5169 42.4147 8.6639
+urban_land_exr2hdr_s004_raw_linear_pu.hdr 40.6309 42.4182 8.6660
+urban_land_exr2hdr_s004_raw_linear_smape.hdr 40.7319 42.4161 8.6636
+urban_land_exr2hdr_s004_raw_linear_mu.hdr 40.6746 42.4165 8.6636
+
+urban_land_exr2hdr_s005_raw_linear_l1.hdr 37.1206 39.7788 8.3282
+urban_land_exr2hdr_s005_raw_pu_l1.hdr 38.5241 40.1753 8.4212
+urban_land_exr2hdr_s005_raw_pq_l1.hdr 39.1172 40.6702 8.4632
+urban_land_exr2hdr_s005_raw_linear_pq.hdr 37.6150 39.4907 8.2757
+urban_land_exr2hdr_s005_raw_linear_pu.hdr 37.6264 39.4888 8.2797
+urban_land_exr2hdr_s005_raw_linear_smape.hdr 37.6817 39.4914 8.2743
+urban_land_exr2hdr_s005_raw_linear_mu.hdr 37.6708 39.4924 8.2745
+
+urban_land_exr2hdr_s006_raw_linear_l1.hdr 36.7131 39.2567 8.2676
+urban_land_exr2hdr_s006_raw_pu_l1.hdr 37.9334 39.5804 8.3449
+urban_land_exr2hdr_s006_raw_pq_l1.hdr 38.4136 39.9704 8.3763
+urban_land_exr2hdr_s006_raw_linear_pq.hdr 37.1353 39.0091 8.2194
+urban_land_exr2hdr_s006_raw_linear_pu.hdr 37.1206 39.0045 8.2243
+urban_land_exr2hdr_s006_raw_linear_smape.hdr 37.1575 39.0095 8.2179
+urban_land_exr2hdr_s006_raw_linear_mu.hdr 37.1577 39.0098 8.2182
+
+navie_psnr_rgb_extra = []
+linear_psnr_rgb_extra = [50.1437, 46.6999, 48.1965, 50.1437, 46.6999, 48.1965, 41.5753, 40.4641, 40.2323, 41.636, 40.5171, 40.2666, 40.4848, 39.7479, 39.649, 40.5336, 39.79, 39.6782, 38.697, 38.442, 38.5183, 38.7228, 38.4476, 38.5067, 38.3295, 38.0439, 38.0903, 38.3376, 38.0435, 38.088, 51.3012, 47.8183, 49.3635, 51.3012, 47.8183, 49.3635, 51.5007, 51.3942, 63.4447, 45.7823, 45.7299, 53.7379, 43.9863, 41.1875, 41.7458, 41.9955, 39.7955, 40.9844, 45.5105, 42.5998, 43.133, 42.9693, 40.8647, 42.231, 41.4768, 39.5028, 39.6827, 40.2468, 38.5772, 39.3151, 39.5408, 38.6527, 38.746, 38.7541, 37.9745, 38.5545, 52.3603, 52.3506, 69.6266, 46.5635, 46.4433, 54.4423, 36.5757, 35.2928, 35.0775, 36.5195, 35.2308, 35.0591, 36.3206, 35.0199, 34.7904, 36.2323, 34.9309, 34.7224, 36.3577, 35.0259, 34.7673, 36.2676, 34.9472, 34.7154, 36.2468, 34.954, 34.6776, 36.1392, 34.847, 34.6127, 36.2688, 34.9405, 34.6694, 36.1617, 34.8365, 34.5906, 39.6952, 37.2757, 36.8173, 39.5008, 37.1206, 36.7131]
+log_psnr_rgb_extra = []
+pu_psnr_rgb_extra = [50.2561, 46.8436, 48.4242, 50.2561, 46.8436, 48.4242, 50.154, 46.7214, 48.2947, 50.154, 46.7214, 48.2943, 50.2063, 46.7894, 48.3667, 50.2048, 46.7894, 48.3672, 50.2469, 46.8452, 48.4327, 50.2447, 46.8448, 48.4332, 50.2456, 46.8346, 48.419, 50.2456, 46.8346, 48.419, 51.5895, 48.1111, 49.6503, 51.5895, 48.1111, 49.6503, 51.5359, 51.4557, 65.0893, 45.8029, 45.7509, 53.9059, 51.3039, 51.321, 64.7693, 45.7275, 45.7049, 53.8641, 51.2931, 51.2965, 64.4878, 45.7155, 45.6922, 53.8405, 51.4937, 51.4328, 64.9737, 45.7784, 45.7332, 53.8844, 51.5025, 51.4259, 64.9308, 45.7655, 45.7194, 53.8711, 52.4192, 52.407, 69.9637, 46.5927, 46.4614, 54.4679, 40.5406, 37.9425, 37.3963, 40.183, 37.6951, 37.2308, 40.9318, 37.7643, 37.2102, 40.6072, 37.5519, 37.0585, 40.9764, 37.7998, 37.2325, 40.6606, 37.59, 37.0796, 40.7346, 37.6753, 37.1309, 40.3956, 37.4535, 36.9751, 41.0016, 37.782, 37.2155, 40.6821, 37.5722, 37.0632, 40.8535, 38.803, 38.1195, 40.5061, 38.5241, 37.9334]
+pq_psnr_rgb_extra = [50.111, 46.6878, 48.2547, 50.111, 46.6878, 48.2547, 49.6123, 46.0318, 47.5179, 49.6129, 46.0318, 47.5179, 49.8465, 46.2914, 47.8006, 49.8465, 46.2914, 47.8006, 50.2439, 46.8336, 48.419, 50.2439, 46.8336, 48.419, 50.2471, 46.8385, 48.4261, 50.2471, 46.8385, 48.4261, 51.6904, 48.2283, 49.7698, 51.6904, 48.2283, 49.7698, 51.5348, 51.4567, 65.0893, 45.801, 45.7512, 53.9059, 46.4027, 48.736, 62.7041, 44.0087, 45.096, 53.6956, 46.1495, 48.648, 58.4187, 43.7443, 44.9794, 53.014, 51.3373, 51.355, 65.0407, 45.7524, 45.7253, 53.8878, 51.5053, 51.4286, 65.0439, 45.7668, 45.7213, 53.8855, 52.4254, 52.4156, 70.1059, 46.592, 46.4636, 54.4718, 40.5882, 38.7108, 38.0417, 40.2364, 38.4153, 37.846, 40.9477, 37.953, 37.3572, 40.6214, 37.7309, 37.2001, 41.004, 38.2616, 37.609, 40.6865, 38.0293, 37.4428, 40.7331, 37.6819, 37.1349, 40.3939, 37.4596, 36.9789, 41.0019, 37.7823, 37.2158, 40.6824, 37.5725, 37.0634, 40.9301, 39.4428, 38.6306, 40.5919, 39.1172, 38.4136]
+linear_smape_psnr_rgb_extra = [50.2516, 46.8477, 48.438, 50.2516, 46.8477, 48.438, 50.2516, 46.8476, 48.4376, 50.2516, 46.8476, 48.4376, 50.251, 46.8471, 48.4371, 50.251, 46.8471, 48.4371, 50.2514, 46.8476, 48.4377, 50.2514, 46.8476, 48.4377, 50.2471, 46.8392, 48.4271, 50.2471, 46.8392, 48.4271, 51.5029, 48.0118, 49.5626, 51.5029, 48.0118, 49.5626, 51.5429, 51.4626, 65.0893, 45.8029, 45.7525, 53.9059, 51.5198, 51.4394, 65.0772, 45.7753, 45.7262, 53.8883, 51.5158, 51.435, 65.0428, 45.7704, 45.722, 53.8822, 51.5327, 51.4525, 65.086, 45.7881, 45.7375, 53.893, 51.5113, 51.4306, 65.0439, 45.7681, 45.7215, 53.8855, 52.4229, 52.4107, 69.9637, 46.5927, 46.4624, 54.4679, 40.6776, 37.659, 37.125, 40.3326, 37.4338, 36.9694, 40.9448, 37.7667, 37.2124, 40.6188, 37.554, 37.0606, 41.0161, 37.7883, 37.2192, 40.6985, 37.5796, 37.0669, 40.7357, 37.6759, 37.1319, 40.3965, 37.4539, 36.9761, 41.0019, 37.7823, 37.2158, 40.6824, 37.5725, 37.0634, 41.0487, 37.8939, 37.3125, 40.7319, 37.6817, 37.1575]
+linear_pu_psnr_rgb_extra = [49.4561, 45.9979, 47.5559, 49.4561, 45.9979, 47.5559, 45.717, 44.3389, 45.0884, 45.7285, 44.3444, 45.0851, 45.513, 44.1839, 44.9023, 45.5301, 44.1911, 44.9027, 45.2249, 43.92, 44.6024, 45.2076, 43.915, 44.6133, 45.0651, 43.8088, 44.4883, 45.0577, 43.812, 44.4987, 50.3176, 46.7483, 48.2446, 50.3176, 46.7483, 48.2446, 51.5409, 51.4577, 64.2246, 45.8026, 45.7515, 53.832, 48.8977, 48.2983, 48.2818, 44.8877, 44.5867, 47.3207, 50.342, 50.0347, 50.1807, 45.4255, 45.2838, 48.8004, 46.7475, 46.2387, 46.8735, 43.892, 43.5644, 46.1195, 46.0485, 45.6944, 46.5865, 43.508, 43.289, 45.8978, 52.4118, 52.4008, 67.7608, 46.5907, 46.458, 54.378, 40.3865, 37.508, 36.993, 40.0604, 37.2713, 36.8238, 39.9705, 37.2721, 36.7864, 39.7114, 37.0801, 36.6487, 40.1158, 37.3378, 36.8288, 39.8686, 37.1493, 36.6877, 39.7825, 37.1943, 36.703, 39.5181, 36.997, 36.5627, 39.9717, 37.2676, 36.751, 39.7121, 37.0784, 36.6125, 40.9582, 37.8516, 37.2843, 40.6309, 37.6264, 37.1206]
+linear_pq_psnr_rgb_extra = [50.195, 46.7991, 48.3889, 50.195, 46.7991, 48.3889, 49.5419, 46.5294, 47.9552, 49.5254, 46.5265, 47.9676, 49.5503, 46.533, 47.9995, 49.5375, 46.5317, 47.9959, 49.6173, 46.5778, 48.0542, 49.6141, 46.5791, 48.0506, 49.6123, 46.5606, 47.9945, 49.6136, 46.5616, 48.0025, 51.4317, 47.9585, 49.5195, 51.4317, 47.9585, 49.5195, 51.5278, 51.4149, 63.44, 45.7983, 45.7269, 53.6211, 50.9141, 50.7904, 53.7633, 45.5996, 45.532, 51.0191, 51.0992, 50.8755, 52.4105, 45.6586, 45.5634, 50.2623, 50.8716, 50.726, 56.9616, 45.5932, 45.5198, 52.3916, 50.8019, 50.676, 57.237, 45.5649, 45.5051, 52.4978, 52.4008, 52.3857, 68.5299, 46.5856, 46.4511, 54.3209, 40.55, 37.6356, 37.1165, 40.2012, 37.3962, 36.9495, 40.8382, 37.7236, 37.1844, 40.5168, 37.5114, 37.0331, 40.8949, 37.755, 37.1968, 40.5811, 37.544, 37.0445, 40.6669, 37.6493, 37.1095, 40.3337, 37.4281, 36.9533, 40.9232, 37.7477, 37.1843, 40.6074, 37.5394, 37.0331, 40.8457, 37.8427, 37.2992, 40.5169, 37.615, 37.1353]
+linear_mu_psnr_rgb_extra = [50.2471, 46.8426, 48.432, 50.2471, 46.8426, 48.432, 50.2516, 46.8476, 48.4371, 50.2516, 46.8476, 48.4371, 50.251, 46.8471, 48.4371, 50.251, 46.8471, 48.4371, 50.2506, 46.8476, 48.4372, 50.2506, 46.8476, 48.4377, 50.2471, 46.8388, 48.4266, 50.2471, 46.8388, 48.4266, 51.4949, 48.0037, 49.5537, 51.4949, 48.0037, 49.5537, 51.5419, 51.4603, 64.9493, 45.8037, 45.7519, 53.8905, 51.5198, 51.4394, 65.0772, 45.7753, 45.7262, 53.8883, 51.5158, 51.435, 65.0428, 45.7704, 45.722, 53.8822, 51.5327, 51.4525, 65.0633, 45.7881, 45.7375, 53.8913, 51.5113, 51.4286, 64.9991, 45.7681, 45.721, 53.8821, 52.418, 52.4057, 69.9631, 46.5917, 46.4611, 54.4644, 40.6523, 37.6557, 37.1254, 40.3028, 37.4281, 36.9699, 40.9441, 37.7675, 37.2134, 40.6182, 37.5547, 37.0614, 41.0131, 37.7917, 37.2232, 40.6957, 37.5829, 37.0709, 40.7356, 37.6757, 37.1317, 40.3964, 37.4538, 36.9759, 41.0019, 37.7823, 37.2157, 40.6824, 37.5724, 37.0633, 40.9984, 37.8857, 37.3127, 40.6746, 37.6708, 37.1577]
+navie_psnr_y_extra = []
+linear_psnr_y_extra = [59.4478, 55.7507, 56.8769, 59.4478, 55.7507, 56.8769, 50.7361, 49.5299, 49.2317, 50.8304, 49.6122, 49.3017, 49.3413, 48.6663, 48.5223, 49.4329, 48.7805, 48.5822, 47.399, 47.1788, 47.1624, 47.4177, 47.2064, 47.1752, 46.9272, 46.6946, 46.5563, 46.9275, 46.6844, 46.542, 60.71, 57.0313, 58.5609, 60.71, 57.0313, 58.5609, 74.3433, 71.3634, 69.6963, 68.5997, 67.569, 68.9452, 55.2038, 52.0923, 51.6351, 54.4379, 51.3784, 51.1129, 59.3682, 55.3975, 54.8857, 58.3294, 54.5867, 54.2652, 51.2773, 48.6279, 48.1986, 50.8712, 48.2151, 47.9554, 48.8507, 47.513, 47.1996, 48.62, 47.2452, 47.0775, 75.1455, 75.1345, 92.2696, 69.3119, 69.2013, 77.1185, 41.6908, 39.0883, 38.6241, 41.5209, 38.9293, 38.4983, 41.2211, 38.6542, 38.255, 41.064, 38.5091, 38.1346, 41.2619, 38.6962, 38.2781, 41.1066, 38.5431, 38.1536, 41.0819, 38.5861, 38.1569, 40.9145, 38.4315, 38.0373, 41.11, 38.6003, 38.1991, 40.9391, 38.4496, 38.0768, 42.5766, 39.9898, 39.4199, 42.3364, 39.7788, 39.2567]
+log_psnr_y_extra = []
+pu_psnr_y_extra = [59.4689, 55.9164, 57.479, 59.4689, 55.9164, 57.479, 59.4646, 55.9108, 57.4728, 59.4646, 55.9108, 57.4727, 59.4646, 55.9131, 57.4762, 59.4645, 55.9131, 57.4762, 59.467, 55.9157, 57.4781, 59.4669, 55.9157, 57.4782, 59.4663, 55.9115, 57.4732, 59.4663, 55.9115, 57.4732, 60.7517, 57.0589, 58.5827, 60.7517, 57.0589, 58.5827, 74.3778, 74.2979, 87.8829, 68.6198, 68.5699, 76.6198, 74.1431, 74.1578, 87.5615, 68.5374, 68.517, 76.5671, 74.1385, 74.1399, 87.2768, 68.5325, 68.5014, 76.4882, 74.3319, 74.2707, 87.7599, 68.5896, 68.5468, 76.5874, 74.3447, 74.2679, 87.7239, 68.5845, 68.5314, 76.536, 75.2023, 75.1889, 92.5834, 69.3463, 69.219, 77.1434, 42.5372, 39.477, 38.9533, 42.2786, 39.2775, 38.7964, 42.6481, 39.3562, 38.8645, 42.3995, 39.1703, 38.717, 42.6475, 39.3932, 38.8973, 42.3986, 39.2056, 38.7485, 42.5349, 39.2854, 38.7854, 42.2783, 39.0945, 38.6344, 42.6414, 39.3656, 38.8731, 42.392, 39.1787, 38.7247, 42.7375, 40.4103, 39.7606, 42.4843, 40.1753, 39.5804]
+pq_psnr_y_extra = [59.4627, 55.9099, 57.472, 59.4627, 55.9099, 57.472, 59.4393, 55.8797, 57.4377, 59.4393, 55.8797, 57.4377, 59.4485, 55.8913, 57.4513, 59.4485, 55.8913, 57.4513, 59.4669, 55.9152, 57.4776, 59.4669, 55.9152, 57.4776, 59.4664, 55.9116, 57.4734, 59.4664, 55.9116, 57.4734, 60.7559, 57.0635, 58.5874, 60.7559, 57.0635, 58.5874, 74.3768, 74.2988, 87.8829, 68.6179, 68.5702, 76.6198, 69.315, 71.6222, 85.2937, 66.8632, 67.9256, 76.3752, 69.0657, 71.5388, 77.516, 66.6086, 67.8093, 74.2557, 74.1793, 74.1948, 87.8245, 68.5643, 68.5391, 76.5906, 74.3477, 74.2708, 87.8343, 68.5858, 68.5333, 76.5497, 75.2083, 75.1972, 92.7152, 69.3457, 69.2211, 77.1471, 42.6023, 40.1991, 39.556, 42.3408, 39.9632, 39.3752, 42.6664, 39.5358, 39.0166, 42.4167, 39.342, 38.8637, 42.669, 39.875, 39.3153, 42.419, 39.6662, 39.152, 42.5349, 39.2967, 38.7954, 42.2783, 39.1053, 38.6441, 42.6414, 39.3656, 38.8731, 42.392, 39.1787, 38.7247, 42.8161, 40.9406, 40.1731, 42.5589, 40.6702, 39.9704]
+linear_smape_psnr_y_extra = [59.4687, 55.9166, 57.4796, 59.4687, 55.9166, 57.4796, 59.4687, 55.9161, 57.4787, 59.4687, 55.9161, 57.4787, 59.4665, 55.9155, 57.4791, 59.4665, 55.9155, 57.4791, 59.4672, 55.9158, 57.4783, 59.4672, 55.9158, 57.4783, 59.4664, 55.9116, 57.4735, 59.4664, 55.9116, 57.4735, 60.748, 57.0549, 58.5792, 60.748, 57.0549, 58.5792, 74.3847, 74.3046, 87.8829, 68.6198, 68.5715, 76.6198, 74.3534, 74.2732, 87.8589, 68.5836, 68.5377, 76.59, 74.356, 74.2752, 87.8133, 68.5858, 68.5302, 76.5272, 74.3699, 74.2899, 87.8681, 68.5989, 68.5509, 76.5955, 74.3535, 74.2728, 87.8343, 68.5871, 68.5336, 76.5497, 75.2059, 75.1924, 92.5834, 69.3463, 69.2199, 77.1434, 42.5351, 39.273, 38.7731, 42.2768, 39.0826, 38.6226, 42.6481, 39.3558, 38.8642, 42.3994, 39.1699, 38.7167, 42.6478, 39.373, 38.8792, 42.3989, 39.1863, 38.7311, 42.5349, 39.2854, 38.7854, 42.2783, 39.0945, 38.6344, 42.6414, 39.3656, 38.8731, 42.392, 39.1787, 38.7247, 42.665, 39.6913, 39.167, 42.4161, 39.4914, 39.0095]
+linear_pu_psnr_y_extra = [55.898, 52.2744, 53.7419, 55.898, 52.2744, 53.7419, 51.2389, 50.5733, 50.9129, 51.2429, 50.5629, 50.8814, 50.7174, 50.1364, 50.4523, 50.7494, 50.1471, 50.4381, 50.1291, 49.657, 49.9303, 50.0983, 49.6255, 49.9455, 49.8746, 49.4615, 49.7119, 49.8434, 49.4609, 49.7334, 56.1161, 52.3149, 53.6613, 56.1161, 52.3149, 53.6613, 74.3827, 74.2797, 74.5783, 68.6195, 68.5597, 72.5824, 57.0493, 56.0924, 53.0917, 56.6966, 55.7309, 53.121, 62.967, 62.0561, 56.2823, 62.2944, 61.3218, 56.3368, 52.2996, 51.6535, 50.8687, 52.1431, 51.4235, 50.8464, 51.283, 50.8136, 50.4192, 51.1969, 50.6761, 50.4066, 75.1705, 75.1583, 73.529, 69.338, 69.1783, 71.9363, 42.4323, 39.2332, 38.7352, 42.181, 39.0343, 38.5749, 42.0229, 39.0749, 38.6179, 41.8083, 38.9021, 38.4809, 42.1038, 39.1203, 38.653, 41.8905, 38.9438, 38.5108, 41.8957, 39.0026, 38.5335, 41.6828, 38.8252, 38.3924, 41.9839, 39.048, 38.5785, 41.7661, 38.8726, 38.439, 42.6678, 39.6968, 39.1691, 42.4182, 39.4888, 39.0045]
+linear_pq_psnr_y_extra = [59.4474, 55.883, 57.4262, 59.4474, 55.883, 57.4262, 58.3489, 55.4682, 56.8597, 58.3225, 55.4506, 56.8704, 58.3718, 55.3851, 56.7589, 58.3275, 55.4201, 56.788, 58.3545, 55.4961, 56.9039, 58.3423, 55.5037, 56.9177, 58.4677, 55.4736, 56.7572, 58.4872, 55.4823, 56.7737, 60.7249, 57.0343, 58.561, 60.7249, 57.0343, 58.561, 74.3699, 74.1905, 80.0764, 68.6153, 68.5194, 75.0738, 67.2504, 66.7582, 62.5053, 65.2756, 64.8015, 62.346, 68.8481, 68.1999, 61.8469, 66.3889, 65.8867, 61.7874, 66.4146, 65.4328, 64.7892, 64.7474, 63.9344, 64.4568, 65.8966, 65.0357, 64.8349, 64.3013, 63.6656, 64.5787, 75.1846, 75.1642, 90.6408, 69.3395, 69.1982, 76.8847, 42.529, 39.2944, 38.7914, 42.2719, 39.1007, 38.6378, 42.6322, 39.369, 38.8755, 42.3837, 39.1825, 38.7277, 42.6292, 39.3823, 38.8873, 42.3817, 39.1953, 38.7388, 42.5191, 39.2934, 38.7917, 42.264, 39.1021, 38.6401, 42.616, 39.3552, 38.8637, 42.3672, 39.1688, 38.716, 42.6636, 39.6923, 39.1683, 42.4147, 39.4907, 39.0091]
+linear_mu_psnr_y_extra = [59.4686, 55.9164, 57.4793, 59.4686, 55.9164, 57.4793, 59.4687, 55.9161, 57.4748, 59.4687, 55.9161, 57.4748, 59.4665, 55.9155, 57.4791, 59.4665, 55.9155, 57.4791, 59.4611, 55.9158, 57.4745, 59.4611, 55.9158, 57.4783, 59.4664, 55.9089, 57.4696, 59.4664, 55.9089, 57.4696, 60.7477, 57.0546, 58.5788, 60.7477, 57.0546, 58.5788, 74.3837, 73.6887, 77.8429, 68.6206, 68.3871, 73.8507, 74.3534, 74.2732, 87.8589, 68.5836, 68.5377, 76.59, 74.356, 74.2752, 87.8133, 68.5858, 68.5302, 76.5272, 74.3699, 74.2899, 84.9121, 68.5989, 68.5509, 76.2906, 74.3535, 73.9176, 83.158, 68.5871, 68.436, 75.9656, 75.2011, 75.1852, 92.4487, 69.3454, 69.2154, 76.4973, 42.5346, 39.2742, 38.7741, 42.2763, 39.0836, 38.6235, 42.6479, 39.3559, 38.8642, 42.3993, 39.1699, 38.7167, 42.6475, 39.3769, 38.8828, 42.3987, 39.19, 38.7345, 42.535, 39.2856, 38.7854, 42.2783, 39.0947, 38.6344, 42.6414, 39.3656, 38.873, 42.392, 39.1786, 38.7246, 42.6655, 39.6922, 39.1673, 42.4165, 39.4924, 39.0098]
+navie_cvvdp_extra = []
+linear_cvvdp_extra = [9.6819, 9.5575, 9.5804, 9.6819, 9.5575, 9.5804, 9.4112, 9.3282, 9.3142, 9.4166, 9.3326, 9.3196, 9.3331, 9.2816, 9.2723, 9.3385, 9.2882, 9.2766, 9.2146, 9.1925, 9.1933, 9.2179, 9.1951, 9.1929, 9.1867, 9.1599, 9.1462, 9.1864, 9.1597, 9.1462, 9.7144, 9.6072, 9.6501, 9.7144, 9.6072, 9.6501, 9.8373, 9.8124, 9.8053, 9.7591, 9.744, 9.7898, 9.5806, 9.4553, 9.4377, 9.5447, 9.4171, 9.4105, 9.6981, 9.5679, 9.5478, 9.6585, 9.5321, 9.5221, 9.4354, 9.2898, 9.2713, 9.4143, 9.2639, 9.2547, 9.3066, 9.2206, 9.2049, 9.2917, 9.2005, 9.196, 9.8452, 9.8445, 9.9883, 9.7711, 9.765, 9.8632, 8.6115, 8.265, 8.203, 8.5873, 8.2381, 8.1803, 8.5929, 8.2273, 8.1707, 8.569, 8.2018, 8.1487, 8.5907, 8.2293, 8.1712, 8.5685, 8.2025, 8.1483, 8.5787, 8.2188, 8.157, 8.5531, 8.1914, 8.1343, 8.5831, 8.2214, 8.1641, 8.5589, 8.1954, 8.1416, 8.6829, 8.3583, 8.2927, 8.6553, 8.3282, 8.2676]
+log_cvvdp_extra = []
+pu_cvvdp_extra = [9.6817, 9.5655, 9.6135, 9.6817, 9.5655, 9.6135, 9.6816, 9.5653, 9.6133, 9.6816, 9.5653, 9.6133, 9.6816, 9.5654, 9.6135, 9.6816, 9.5654, 9.6135, 9.6816, 9.5654, 9.6135, 9.6816, 9.5654, 9.6135, 9.6816, 9.5654, 9.6134, 9.6816, 9.5654, 9.6134, 9.7145, 9.6068, 9.6496, 9.7145, 9.6068, 9.6496, 9.8373, 9.8367, 9.9811, 9.7591, 9.7548, 9.8603, 9.8371, 9.8365, 9.9809, 9.7587, 9.7544, 9.86, 9.837, 9.8364, 9.9807, 9.7585, 9.7542, 9.8599, 9.8372, 9.8366, 9.9811, 9.759, 9.7547, 9.8601, 9.8369, 9.8363, 9.981, 9.7585, 9.7543, 9.8601, 9.8452, 9.8445, 9.9884, 9.7711, 9.765, 9.8632, 8.6787, 8.3246, 8.2584, 8.6487, 8.2933, 8.2319, 8.69, 8.274, 8.2147, 8.6617, 8.2457, 8.1903, 8.6894, 8.2806, 8.221, 8.6609, 8.252, 8.1964, 8.6792, 8.2648, 8.2036, 8.6496, 8.2357, 8.1786, 8.6889, 8.2754, 8.2162, 8.6603, 8.2469, 8.1917, 8.7029, 8.4559, 8.3729, 8.6735, 8.4212, 8.3449]
+pq_cvvdp_extra = [9.6826, 9.5664, 9.6144, 9.6826, 9.5664, 9.6144, 9.6814, 9.565, 9.6131, 9.6814, 9.565, 9.6131, 9.6814, 9.5652, 9.6132, 9.6814, 9.5652, 9.6132, 9.6816, 9.5654, 9.6135, 9.6816, 9.5654, 9.6135, 9.6816, 9.5654, 9.6134, 9.6816, 9.5654, 9.6134, 9.7153, 9.6077, 9.6502, 9.7153, 9.6077, 9.6502, 9.8373, 9.8367, 9.9811, 9.7591, 9.7548, 9.8603, 9.8368, 9.8364, 9.9803, 9.7586, 9.7544, 9.86, 9.8367, 9.8363, 9.9052, 9.7583, 9.7542, 9.8544, 9.8372, 9.8366, 9.9811, 9.759, 9.7547, 9.8601, 9.8369, 9.8363, 9.981, 9.7585, 9.7543, 9.8601, 9.8452, 9.8445, 9.9884, 9.7711, 9.765, 9.8632, 8.6903, 8.4191, 8.3363, 8.6603, 8.3849, 8.3084, 8.6932, 8.3333, 8.2671, 8.6647, 8.3031, 8.2415, 8.6926, 8.3818, 8.3109, 8.6639, 8.3498, 8.2842, 8.6792, 8.2684, 8.2069, 8.6496, 8.2392, 8.1818, 8.6889, 8.2754, 8.2162, 8.6603, 8.2469, 8.1917, 8.7153, 8.4999, 8.4055, 8.6859, 8.4632, 8.3763]
+linear_smape_cvvdp_extra = [9.6817, 9.5655, 9.6135, 9.6817, 9.5655, 9.6135, 9.6817, 9.5654, 9.6135, 9.6817, 9.5654, 9.6135, 9.6817, 9.5654, 9.6135, 9.6817, 9.5654, 9.6135, 9.6816, 9.5654, 9.6135, 9.6816, 9.5654, 9.6135, 9.6816, 9.5654, 9.6134, 9.6816, 9.5654, 9.6134, 9.7143, 9.6067, 9.6495, 9.7143, 9.6067, 9.6495, 9.8373, 9.8367, 9.9811, 9.7591, 9.7548, 9.8603, 9.8371, 9.8365, 9.981, 9.7587, 9.7544, 9.86, 9.837, 9.8364, 9.981, 9.7585, 9.7542, 9.8599, 9.8372, 9.8366, 9.9811, 9.759, 9.7547, 9.8601, 9.8369, 9.8363, 9.981, 9.7585, 9.7543, 9.8601, 9.8452, 9.8445, 9.9884, 9.7711, 9.765, 9.8632, 8.6794, 8.2628, 8.2015, 8.6496, 8.2338, 8.1765, 8.6901, 8.2739, 8.2147, 8.6618, 8.2457, 8.1903, 8.6897, 8.2765, 8.2173, 8.6613, 8.2481, 8.1928, 8.6792, 8.2648, 8.2036, 8.6496, 8.2357, 8.1786, 8.6889, 8.2754, 8.2162, 8.6603, 8.2469, 8.1917, 8.6921, 8.3034, 8.2428, 8.6636, 8.2743, 8.2179]
+linear_pu_cvvdp_extra = [9.5817, 9.4325, 9.4942, 9.5817, 9.4325, 9.4942, 9.4634, 9.4099, 9.4334, 9.4639, 9.4098, 9.4321, 9.4396, 9.3901, 9.4128, 9.4418, 9.3907, 9.4109, 9.4095, 9.3707, 9.3944, 9.4087, 9.3694, 9.3953, 9.3988, 9.3577, 9.3775, 9.3973, 9.3582, 9.3787, 9.5886, 9.4364, 9.4941, 9.5886, 9.4364, 9.4941, 9.8373, 9.8367, 9.9156, 9.7591, 9.7548, 9.8555, 9.6785, 9.655, 9.559, 9.66, 9.6376, 9.5593, 9.7949, 9.7835, 9.6639, 9.7447, 9.7357, 9.6657, 9.5212, 9.4922, 9.4593, 9.5125, 9.4803, 9.4571, 9.4794, 9.4536, 9.4366, 9.4745, 9.4461, 9.4362, 9.8452, 9.8445, 9.8968, 9.7711, 9.765, 9.8535, 8.6775, 8.2672, 8.2062, 8.6479, 8.2379, 8.1809, 8.6633, 8.2705, 8.2118, 8.6358, 8.2426, 8.188, 8.6669, 8.2732, 8.2137, 8.6393, 8.2446, 8.1892, 8.6519, 8.259, 8.1977, 8.6238, 8.2302, 8.1732, 8.6616, 8.2626, 8.2027, 8.6336, 8.2343, 8.1784, 8.6944, 8.3093, 8.2495, 8.666, 8.2797, 8.2243]
+linear_pq_cvvdp_extra = [9.6827, 9.5657, 9.6131, 9.6827, 9.5657, 9.6131, 9.6651, 9.5575, 9.6037, 9.6634, 9.5564, 9.6039, 9.6629, 9.5537, 9.5995, 9.6612, 9.5549, 9.6006, 9.6606, 9.5572, 9.6037, 9.6604, 9.5569, 9.6037, 9.6651, 9.5568, 9.5998, 9.6653, 9.5568, 9.5999, 9.7147, 9.6071, 9.6499, 9.7147, 9.6071, 9.6499, 9.8373, 9.8365, 9.9457, 9.7591, 9.7545, 9.8583, 9.8232, 9.8183, 9.7992, 9.7527, 9.7471, 9.7905, 9.8314, 9.8268, 9.7901, 9.7565, 9.7508, 9.7843, 9.8224, 9.8103, 9.8245, 9.7535, 9.7449, 9.8114, 9.8148, 9.8067, 9.8248, 9.75, 9.7433, 9.8121, 9.8452, 9.8445, 9.9866, 9.7711, 9.765, 9.8629, 8.6793, 8.2682, 8.2066, 8.6495, 8.2389, 8.1813, 8.6895, 8.2797, 8.2199, 8.6612, 8.2513, 8.1955, 8.6891, 8.2809, 8.2211, 8.6605, 8.2524, 8.1966, 8.6786, 8.2683, 8.2068, 8.649, 8.2391, 8.1817, 8.6876, 8.2747, 8.2158, 8.659, 8.2462, 8.1913, 8.6922, 8.3049, 8.2444, 8.6639, 8.2757, 8.2194]
+linear_mu_cvvdp_extra = [9.6817, 9.5655, 9.6135, 9.6817, 9.5655, 9.6135, 9.6817, 9.5654, 9.6135, 9.6817, 9.5654, 9.6135, 9.6817, 9.5654, 9.6135, 9.6817, 9.5654, 9.6135, 9.6815, 9.5654, 9.6134, 9.6815, 9.5654, 9.6135, 9.6816, 9.5653, 9.6134, 9.6816, 9.5653, 9.6134, 9.7143, 9.6067, 9.6495, 9.7143, 9.6067, 9.6495, 9.8373, 9.8338, 9.9137, 9.7591, 9.7535, 9.8532, 9.8371, 9.8365, 9.981, 9.7587, 9.7544, 9.86, 9.837, 9.8364, 9.981, 9.7585, 9.7542, 9.8599, 9.8372, 9.8366, 9.9641, 9.759, 9.7547, 9.86, 9.8369, 9.8363, 9.9657, 9.7585, 9.7543, 9.8601, 9.8452, 9.8445, 9.9884, 9.7711, 9.765, 9.8624, 8.6794, 8.2632, 8.2019, 8.6495, 8.2342, 8.1769, 8.6901, 8.274, 8.2147, 8.6618, 8.2457, 8.1903, 8.6897, 8.2776, 8.2183, 8.6612, 8.2492, 8.1938, 8.6792, 8.265, 8.2037, 8.6496, 8.2358, 8.1787, 8.6889, 8.2754, 8.2162, 8.6603, 8.2469, 8.1917, 8.6922, 8.3037, 8.2431, 8.6636, 8.2745, 8.2182]
