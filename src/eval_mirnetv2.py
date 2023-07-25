@@ -166,6 +166,10 @@ def evaluate(cfg: DictConfig):
         file_list = os.listdir(cfg.data.hq_path)
         file_list.sort()
 
+        file_list = ['The_Grotto_aug_1.hdr', 'The_Grotto_aug_2.hdr', 'The_Grotto_aug_3.hdr', 'The_Grotto_aug_4.hdr', 'The_Grotto_aug_5.hdr', 'Zentrum.hdr', 'Zentrum_aug_1.hdr', 'Zentrum_aug_2.hdr', 'Zentrum_aug_3.hdr', 'Zentrum_aug_4.hdr', 'Zentrum_aug_5.hdr']
+
+        print(file_list)
+
         transform_fn, inverse_fn = get_transform(experiment)
         transform_hdr = transforms.Compose([
             transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),

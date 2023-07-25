@@ -304,6 +304,23 @@ if 1:
     plt.savefig('real_cvvdp.png')
     plt.clf()
 
+    df_melt = cvvdp_df.melt(var_name='groups', value_name='values')
+
+    plt.figure(figsize=(10, 6))
+    violin_plot = sns.violinplot(data=cvvdp_df,cut = 0)  # remove the bars inside the violins
+
+    for i in range(len(cvvdp_df.columns)):
+        median_val = cvvdp_df.iloc[:, i].median()
+        plt.text(i+0.13, median_val, f'{median_val:.2f}', horizontalalignment='left', size='x-small', color='black', weight='semibold')
+
+    plt.show()
+
+    plt.ylabel('real_cvvdp')
+    plt.savefig('real_cvvdp_bw.png')
+    plt.clf()
+
+    print(np.min(pq_cvvdp), np.min(pu_cvvdp))
+
 
 
 """
