@@ -184,7 +184,7 @@ report += "linear_pq_cvvdp = " + str(linear_pq_cvvdp) + "\n"
 report += "linear_mu_cvvdp = " + str(linear_mu_cvvdp) + "\n"
 
 
-with open("/home/luoleyouluole/Image-Restoration-Experiments/src/real_report.txt", "w") as file:
+with open("/home/luoleyouluole/Image-Restoration-Experiments/src/real_report_extra.txt", "w") as file:
     file.write(report)
 
 

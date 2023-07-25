@@ -20,11 +20,20 @@ data:
 task_name: "eval"
 
 log_path:
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnet_linear_epoch=10-step=12715.ckpt"
+  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnet_linear_epoch=10-step=12715.ckpt"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pq_epoch=384-step=445059.ckpt"
+  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pq_epoch=384-step=445059.ckpt"
 
-  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pu_epoch=165-step=191895.ckpt"
+  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pu_epoch=165-step=191895.ckpt"
+
+  # linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_pu_epoch=151-step=175711.ckpt"
+
+  # linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_pq_epoch=59-step=69359.ckpt"
+
+  # linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_smape_epoch=49-step=57799.ckpt"
+
+  linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_mu_epoch=443-step=513263.ckpt"
+
 
 
 results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_mir/"
