@@ -50,7 +50,7 @@ linear_mu_cvvdp = []
 report  = ""
 
 for filename in imgs:
-    if "Artist_Palette" in filename or "Bigfoot_Pass" in filename:
+    if "Artist_Palette" in filename or "Bigfoot_Pass" in filename or "_aug_" in filename:
         continue
     file_name = filename.split(".")[0]
     if "'" in file_name or "&" in file_name:
@@ -183,7 +183,7 @@ report += "linear_pq_cvvdp = " + str(linear_pq_cvvdp) + "\n"
 report += "linear_mu_cvvdp = " + str(linear_mu_cvvdp) + "\n"
 
 
-with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_mir.txt", "w") as file:
+with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_mir_extra.txt", "w") as file:
     file.write(report)
 
 

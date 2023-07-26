@@ -4,6 +4,19 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
+def plot(df, name):
+
+    plt.figure(figsize=(10, 6))
+    sns.violinplot(data=df,cut = 0)  # remove the bars inside the violins
+
+    for i in range(len(df.columns)):
+        median_val = df.iloc[:, i].median()
+        plt.text(i+0.13, median_val, f'{median_val:.2f}', horizontalalignment='left', size='x-small', color='black', weight='semibold')
+
+    plt.show()
+    plt.ylabel(name)
+    plt.savefig(name + '.png')
+    plt.clf()
 
 
 # ********************************************* EDSR *********************************************
@@ -109,21 +122,11 @@ if 1:
     sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1, color_codes=True, rc=None)
 
 
-    plt.figure(figsize=(10,6))
-    sns.violinplot(data=psnr_rgb_df, cut = 0)
-    plt.ylabel('edsr_psnr_rgb')
-    plt.savefig('edsr_psnr_rgb.png')
-    plt.clf()
+    plot(psnr_rgb_df, "edsr_psnr_rgb")
 
-    sns.violinplot(data=psnr_y_df, cut = 0)
-    plt.ylabel('edsr_psnr_y')
-    plt.savefig('edsr_psnr_y.png')
-    plt.clf()
+    plot(psnr_y_df, "edsr_psnr_y")
 
-    sns.violinplot(data=cvvdp_df, cut = 0)
-    plt.ylabel('edsr_cvvdp')
-    plt.savefig('edsr_cvvdp.png')
-    plt.clf()
+    plot(cvvdp_df, "edsr_cvvdp")
 
 # ********************************************* WDSR *********************************************
 if 0:
@@ -284,40 +287,13 @@ if 1:
     print("linear_l1: {}, linear_smape: {}, linear_pu: {}, linear_pq: {}, linear_mu: {}, pu_l1: {}, pq_l1: {}".format(np.mean(linear_cvvdp), np.mean(linear_smape_cvvdp), np.mean(linear_pu_cvvdp), np.mean(linear_pq_cvvdp), np.mean(linear_mu_cvvdp), np.mean(pu_cvvdp),  np.mean(pq_cvvdp)))
     cvvdp_df = pd.DataFrame({'linear_l1': linear_cvvdp, 'linear_smape': linear_smape_cvvdp, 'linear_pu': linear_pu_cvvdp, 'linear_pq':linear_pq_cvvdp, 'linear_mu': linear_mu_cvvdp, 'pu_l1': pu_cvvdp, 'pq_l1': pq_cvvdp})
 
-
     sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1, color_codes=True, rc=None)
 
+    plot(psnr_rgb_df, "real_psnr_rgb")
 
-    plt.figure(figsize=(10,6))
-    sns.violinplot(data=psnr_rgb_df, cut = 0)
-    plt.ylabel('real_psnr_rgb')
-    plt.savefig('real_psnr_rgb.png')
-    plt.clf()
+    plot(psnr_y_df, "real_psnr_y")
 
-    sns.violinplot(data=psnr_y_df, cut = 0)
-    plt.ylabel('real_psnr_y')
-    plt.savefig('real_psnr_y.png')
-    plt.clf()
-
-    sns.violinplot(data=cvvdp_df, cut = 0)
-    plt.ylabel('real_cvvdp')
-    plt.savefig('real_cvvdp.png')
-    plt.clf()
-
-    df_melt = cvvdp_df.melt(var_name='groups', value_name='values')
-
-    plt.figure(figsize=(10, 6))
-    violin_plot = sns.violinplot(data=cvvdp_df,cut = 0)  # remove the bars inside the violins
-
-    for i in range(len(cvvdp_df.columns)):
-        median_val = cvvdp_df.iloc[:, i].median()
-        plt.text(i+0.13, median_val, f'{median_val:.2f}', horizontalalignment='left', size='x-small', color='black', weight='semibold')
-
-    plt.show()
-
-    plt.ylabel('real_cvvdp')
-    plt.savefig('real_cvvdp_bw.png')
-    plt.clf()
+    plot(cvvdp_df, "real_cvvdp")
 
     print(np.min(pq_cvvdp), np.min(pu_cvvdp))
 
