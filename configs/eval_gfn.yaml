@@ -26,6 +26,10 @@ log_path:
 
   pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pu_epoch=994-step=86564.ckpt"
 
+  mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pu_epoch=994-step=86564.ckpt"
+
+  pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pu_epoch=994-step=86564.ckpt"
+
   linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_smape_epoch=63-step=5567.ckpt"
 
   linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_mu_epoch=953-step=82997.ckpt"

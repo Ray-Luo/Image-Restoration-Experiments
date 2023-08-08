@@ -20,19 +20,23 @@ data:
 task_name: "eval"
 
 log_path:
-  linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_smape_epoch=1883-step=54635.ckpt"
+  # linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_smape_epoch=1883-step=54635.ckpt"
 
-  linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_mu_epoch=1973-step=57245.ckpt"
+  # linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_mu_epoch=1973-step=57245.ckpt"
 
-  linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_pu_epoch=1841-step=53417.ckpt"
+  # linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_pu_epoch=1841-step=53417.ckpt"
 
-  linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_pq_epoch=1994-step=57854.ckpt"
+  # linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_pq_epoch=1994-step=57854.ckpt"
 
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_epoch=1726-step=31085.ckpt"
+  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_linear_epoch=1726-step=31085.ckpt"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_pq_epoch=1998-step=35981.ckpt"
+  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_pq_epoch=1998-step=35981.ckpt"
 
-  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_pu_epoch=1998-step=35981.ckpt"
+  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_pu_epoch=1998-step=35981.ckpt"
+
+  mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_mu_epoch=2985-step=53747.ckpt"
+
+  # pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_pu_epoch=1998-step=35981.ckpt"
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr_mu/"

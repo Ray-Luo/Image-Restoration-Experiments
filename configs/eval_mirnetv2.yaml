@@ -26,13 +26,15 @@ log_path:
 
   # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pu_epoch=165-step=191895.ckpt"
 
-  # linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_pu_epoch=151-step=175711.ckpt"
+  mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pu_epoch=165-step=191895.ckpt"
+
+  pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pu21_epoch=924-step=1069299.ckpt"
+
+  linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_pu_epoch=151-step=175711.ckpt"
 
   # linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_pq_epoch=59-step=69359.ckpt"
 
   # linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_smape_epoch=49-step=57799.ckpt"
-
-  linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_mu_epoch=443-step=513263.ckpt"
 
 
 

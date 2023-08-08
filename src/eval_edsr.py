@@ -56,6 +56,31 @@ C2 = 18.8515625
 C3 = 18.6875
 MAX = 10.8354  # PU(4000)
 
+def original2pu21(x):
+    a = 0.001907888066
+    b = 0.0078
+    l_min = -7.64385618977
+    return a * (x - l_min) ** 2 + b * (x - l_min)
+
+def pu212original(Y):
+    a = 0.001907888066
+    b = 0.0078
+    print(torch.mean(Y), torch.max(Y), "******************")
+    # assert( torch.all(Y>=0) and torch.all(Y<=1) )
+    l_min = -7.64385618977 # torch.log2(torch.as_tensor(0.005, device=Y.device))
+    l = (2*a*l_min - b + torch.sqrt(b**2 + 4*a*Y))/(2*a)
+    return 2**l
+
+def original2mu(x):
+    import math
+    mu = 5000.0
+    x = x / 4000.0
+    return torch.log2(1 + mu * x) / math.log2(1 + mu)
+
+def mu2original(x):
+    min = 12.2880008897
+    return (2**(min*x) - 1) / 5000.0
+
 def original2linear(x):
     return x / 4000.0
 
@@ -132,6 +157,12 @@ def get_transform(experiemnt_signiture: str):
     elif representation == "pq":
         return original2pq, pq2original
 
+    elif representation == "pu21":
+        return original2pu21, pu212original
+
+    elif representation == "mu":
+        return original2mu, mu2original
+
     else:
         raise NotImplementedError
 
@@ -175,8 +206,8 @@ def evaluate(cfg: DictConfig):
             transforms.Lambda(lambda img: transform_fn(img)),
         ])
 
-        for file_name in file_list:
-            if "cargo_boat" not in file_name and "skyscraper" not in file_name and "urban_land" not in file_name:
+        for file_name in tqdm(file_list):
+            if "cargo_boat" in file_name or "skyscraper" in file_name or "urban_land" in file_name:
                 continue
 
             hq_path = os.path.join(cfg.data.hq_path, file_name)

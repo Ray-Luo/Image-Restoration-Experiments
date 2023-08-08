@@ -36,6 +36,7 @@ MANIFEST
 *.png
 *.hdr
 *.ckpt
+*.pt
 
 # Installer logs
 pip-log.txt

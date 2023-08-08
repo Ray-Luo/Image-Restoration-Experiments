@@ -1,0 +1,25 @@
+{
+    "model": {
+      "category": "CNN",
+      "description": "resnet18 test for aibench",
+      "files": {
+        "model": {
+          "filename": "resnet18_scripted.pt",
+          "location": "//manifold/compphoto_data/tree/media_quality/vsr/resnet18_scripted.pt",
+          "md5": "b9c6f02e8f5b3756a20295d3624aceec"
+        }
+      },
+      "format": "pytorch",
+      "framework": "pytorch",
+      "kind": "deployment",
+      "name": "resnet18"
+    },
+    "tests": [
+      {
+        "command": "{program} --model {files.model}  --iter {iters} --model_load_latency 1 --warmup 1 --use_caching_allocator 0",
+        "identifier": "{ID}",
+        "iters": 2,
+        "metric": "latency"
+      }
+    ]
+  }
