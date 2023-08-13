@@ -20,23 +20,23 @@ data:
 task_name: "eval"
 
 log_path:
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_epoch=959-step=83519.ckpt"
+  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_epoch=959-step=83519.ckpt"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pq_epoch=981-step=85433.ckpt"
+  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pq_epoch=981-step=85433.ckpt"
 
-  pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pu_epoch=994-step=86564.ckpt"
+  # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pu_epoch=994-step=86564.ckpt"
 
-  mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pu_epoch=994-step=86564.ckpt"
+  mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_mu_epoch=718-step=277533.ckpt"
 
-  pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pu_epoch=994-step=86564.ckpt"
+  pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pu21_epoch=608-step=235073.ckpt"
 
-  linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_smape_epoch=63-step=5567.ckpt"
+  # linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_smape_epoch=63-step=5567.ckpt"
 
-  linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_mu_epoch=953-step=82997.ckpt"
+  # linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_mu_epoch=953-step=82997.ckpt"
 
-  linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_pu_epoch=0-step=86.ckpt"
+  # linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_pu_epoch=0-step=86.ckpt"
 
-  linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_pq_epoch=16-step=1478.ckpt"
+  # linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_linear_pq_epoch=16-step=1478.ckpt"
 
 
 

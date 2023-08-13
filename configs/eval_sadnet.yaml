@@ -26,9 +26,9 @@ log_path:
 
   # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sadnet_pu_epoch=971-step=68039.ckpt"
 
-  mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sadnet_mu_epoch=893-step=62579.ckpt"
+  # mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sadnet_mu_epoch=893-step=62579.ckpt"
 
-  # pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sadnet_pu_epoch=971-step=68039.ckpt"
+  pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sadnet_pu21_epoch=977-step=68459.ckpt"
 
   # linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sad_linear_smape_epoch=795-step=55719.ckpt"
 

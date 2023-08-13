@@ -38,11 +38,11 @@ log_path:
 
   # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_epoch=943-step=82127.ckpt"
 
-  mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_mu_epoch=1901-step=165473.ckpt"
+  # mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_mu_epoch=1901-step=165473.ckpt"
 
   # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/gfn_pu_epoch=994-step=86564.ckpt"
 
-  # pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu_epoch=873-step=76037.ckpt"
+  pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu21_epoch=1343-step=116927.ckpt"
 
   # linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_smapeepoch=235-step=20531.ckpt"
 
@@ -54,4 +54,4 @@ log_path:
 
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_mu/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_pu21/"
