@@ -3,6 +3,7 @@ import subprocess
 import cv2
 from process_hdr import save_exr
 import numpy as np
+from tqdm import tqdm
 
 # directory containing the images
 test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn'
@@ -61,8 +62,11 @@ pu21_cvvdp = []
 report  = ""
 
 
-for file_name in test_imgs:
+for file_name in tqdm(test_imgs):
     if "Artist_Palette" in file_name or "Bigfoot_Pass" in file_name:
+        continue
+
+    if "cargo_boat" in file_name or "skyscraper" in file_name or "urban_land" in file_name:
         continue
 
     reference_name = file_name
