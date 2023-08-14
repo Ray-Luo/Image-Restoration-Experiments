@@ -37,4 +37,4 @@ log_path:
   # linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/sad_linear_pq_epoch=954-step=66849.ckpt"
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_sad_mu/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_sad_pu21/"

@@ -39,4 +39,4 @@ log_path:
   pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/edsr_pu21_epoch=2996-step=53945.ckpt"
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr_mu/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr_pu21/"

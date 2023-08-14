@@ -65,11 +65,16 @@ def original2pu21(x):
 def pu212original(Y):
     a = 0.001907888066
     b = 0.0078
-    print(torch.mean(Y), torch.max(Y), "******************")
-    # assert( torch.all(Y>=0) and torch.all(Y<=1) )
+    Y = torch.clamp(Y, min=0, max=1)
+    print(torch.mean(Y), torch.max(Y), torch.min(Y), "******* before ***********")
+    # assert( torch.all(Y>=0) and torch.all(Y<=1))
     l_min = -7.64385618977 # torch.log2(torch.as_tensor(0.005, device=Y.device))
     l = (2*a*l_min - b + torch.sqrt(b**2 + 4*a*Y))/(2*a)
-    return 2**l
+    # y_limit = -0.007972165805244909
+    l = 2**l
+    print(torch.mean(l), torch.max(l), torch.min(l), "******* after ***********")
+    assert(torch.all(l>=0))
+    return l
 
 def original2mu(x):
     import math
@@ -79,7 +84,7 @@ def original2mu(x):
 
 def mu2original(x):
     min = 12.2880008897
-    return (2**(min*x) - 1) / 5000.0
+    return ((2**(min*x) - 1) / 5000.0) / 4000.0
 
 def original2linear(x):
     return x / 4000.0
