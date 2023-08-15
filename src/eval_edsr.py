@@ -84,7 +84,7 @@ def original2mu(x):
 
 def mu2original(x):
     min = 12.2880008897
-    return ((2**(min*x) - 1) / 5000.0) / 4000.0
+    return ((2**(min*x) - 1) / 5000.0) * 4000.0
 
 def original2linear(x):
     return x / 4000.0
