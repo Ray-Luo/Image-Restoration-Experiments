@@ -1,0 +1,261 @@
+Bandon_Sunset_2_aug_1_raw_mu_l1.hdr 40.6641 41.0698 8.3846
+
+Bandon_Sunset_2_aug_2_raw_mu_l1.hdr 50.5810 52.0721 9.3520
+
+Bandon_Sunset_2_aug_3_raw_mu_l1.hdr 51.6486 53.3029 9.4378
+
+Bandon_Sunset_2_aug_4_raw_mu_l1.hdr 55.5161 57.4779 9.6191
+
+Bandon_Sunset_2_aug_5_raw_mu_l1.hdr 58.7364 60.5221 9.6118
+
+Bandon_Sunset_2_raw_mu_l1.hdr 37.3154 37.6901 8.0443
+
+Bar_Harbor_Sunrise_aug_1_raw_mu_l1.hdr 35.3013 37.8193 8.3014
+
+Bar_Harbor_Sunrise_aug_2_raw_mu_l1.hdr 41.5405 44.4924 8.9242
+
+Bar_Harbor_Sunrise_aug_3_raw_mu_l1.hdr 42.3714 45.3317 9.0028
+
+Bar_Harbor_Sunrise_aug_4_raw_mu_l1.hdr 45.6278 48.7135 9.2628
+
+Bar_Harbor_Sunrise_aug_5_raw_mu_l1.hdr 48.5040 51.8635 9.4126
+
+Bar_Harbor_Sunrise_raw_mu_l1.hdr 33.3405 35.7165 8.1192
+
+Ben&Jerry's_aug_1_raw_mu_l1.hdr 29.8005 31.4624 7.3430
+
+Ben&Jerry's_aug_2_raw_mu_l1.hdr 35.3791 35.8334 7.9036
+
+Ben&Jerry's_aug_3_raw_mu_l1.hdr 36.3158 36.6748 7.9913
+
+Ben&Jerry's_aug_4_raw_mu_l1.hdr 40.6317 40.7963 8.3955
+
+Ben&Jerry's_aug_5_raw_mu_l1.hdr 45.1207 45.2825 8.8036
+
+Ben&Jerry's_raw_mu_l1.hdr 28.4856 30.5814 7.1834
+
+Blooming_Gorse_1_aug_1_raw_mu_l1.hdr 23.3417 30.4113 7.0654
+
+Blooming_Gorse_1_aug_2_raw_mu_l1.hdr 28.4444 32.2376 7.4321
+
+Blooming_Gorse_1_aug_3_raw_mu_l1.hdr 29.1701 32.5716 7.4934
+
+Blooming_Gorse_1_aug_4_raw_mu_l1.hdr 31.9831 34.2832 7.7510
+
+Blooming_Gorse_1_aug_5_raw_mu_l1.hdr 34.3753 36.4799 8.0110
+
+Blooming_Gorse_1_raw_mu_l1.hdr 21.8818 29.9752 6.9944
+
+Cades_Cove_aug_1_raw_mu_l1.hdr 26.5594 30.9124 6.7285
+
+Cades_Cove_aug_2_raw_mu_l1.hdr 30.7115 33.2152 7.1921
+
+Cades_Cove_aug_3_raw_mu_l1.hdr 31.4190 33.6533 7.2719
+
+Cades_Cove_aug_4_raw_mu_l1.hdr 34.7411 35.9977 7.6508
+
+Cades_Cove_aug_5_raw_mu_l1.hdr 38.3577 39.0300 8.0578
+
+Cades_Cove_raw_mu_l1.hdr 25.5583 30.3698 6.6295
+
+El_Capitan_aug_1_raw_mu_l1.hdr 27.3006 29.2982 6.7089
+
+El_Capitan_aug_2_raw_mu_l1.hdr 30.0102 31.3167 7.1443
+
+El_Capitan_aug_3_raw_mu_l1.hdr 30.5385 31.7195 7.2146
+
+El_Capitan_aug_4_raw_mu_l1.hdr 33.1926 33.8999 7.5405
+
+El_Capitan_aug_5_raw_mu_l1.hdr 36.3523 36.7298 7.8940
+
+El_Capitan_raw_mu_l1.hdr 26.7387 28.8265 6.6140
+
+Flamingo_aug_1_raw_mu_l1.hdr 24.9507 30.4224 7.4866
+
+Flamingo_aug_2_raw_mu_l1.hdr 29.4752 33.4990 8.0839
+
+Flamingo_aug_3_raw_mu_l1.hdr 30.0836 33.9647 8.1410
+
+Flamingo_aug_4_raw_mu_l1.hdr 32.2960 36.0113 8.3646
+
+Flamingo_aug_5_raw_mu_l1.hdr 34.2425 38.1368 8.5468
+
+Flamingo_raw_mu_l1.hdr 23.5430 29.3766 7.1888
+
+Golden_Gate_2_aug_1_raw_mu_l1.hdr 35.0577 36.1081 7.7972
+
+Golden_Gate_2_aug_2_raw_mu_l1.hdr 39.4527 40.7264 8.4803
+
+Golden_Gate_2_aug_3_raw_mu_l1.hdr 40.0517 41.3228 8.5660
+
+Golden_Gate_2_aug_4_raw_mu_l1.hdr 42.6430 43.9459 8.8773
+
+Golden_Gate_2_aug_5_raw_mu_l1.hdr 45.3807 46.6948 9.1030
+
+Golden_Gate_2_raw_mu_l1.hdr 33.8176 34.7935 7.5994
+
+Hancock_Kitchen_Inside_aug_1_raw_mu_l1.hdr 37.0876 38.3740 8.4836
+
+Hancock_Kitchen_Inside_aug_2_raw_mu_l1.hdr 41.1056 42.2262 8.9063
+
+Hancock_Kitchen_Inside_aug_3_raw_mu_l1.hdr 41.7039 42.7891 8.9477
+
+Hancock_Kitchen_Inside_aug_4_raw_mu_l1.hdr 44.2303 45.2460 9.0934
+
+Hancock_Kitchen_Inside_aug_5_raw_mu_l1.hdr 46.7225 47.7055 9.2105
+
+Hancock_Kitchen_Inside_raw_mu_l1.hdr 35.8492 37.1825 8.2869
+
+Lab_Booth_aug_1_raw_mu_l1.hdr 28.5835 34.7557 7.9602
+
+Lab_Booth_aug_2_raw_mu_l1.hdr 33.0356 37.0964 8.4206
+
+Lab_Booth_aug_3_raw_mu_l1.hdr 33.6742 37.4859 8.4812
+
+Lab_Booth_aug_4_raw_mu_l1.hdr 35.7312 39.3392 8.6998
+
+Lab_Booth_aug_5_raw_mu_l1.hdr 37.6167 41.4878 8.8642
+
+Lab_Booth_raw_mu_l1.hdr 27.2051 34.2062 7.8397
+
+Lab_Typwriter_aug_1_raw_mu_l1.hdr 35.0486 38.1639 8.2494
+
+Lab_Typwriter_aug_2_raw_mu_l1.hdr 39.1601 41.5994 8.6787
+
+Lab_Typwriter_aug_3_raw_mu_l1.hdr 39.7616 42.1115 8.7298
+
+Lab_Typwriter_aug_4_raw_mu_l1.hdr 42.3176 44.3728 8.9096
+
+Lab_Typwriter_aug_5_raw_mu_l1.hdr 44.9155 46.7695 9.0582
+
+Lab_Typwriter_raw_mu_l1.hdr 33.9040 37.1438 8.0604
+
+Lab_Window_aug_1_raw_mu_l1.hdr 31.2084 35.6190 8.1051
+
+Lab_Window_aug_2_raw_mu_l1.hdr 35.0941 37.8951 8.4403
+
+Lab_Window_aug_3_raw_mu_l1.hdr 35.5557 38.2078 8.4876
+
+Lab_Window_aug_4_raw_mu_l1.hdr 36.8775 39.5052 8.6555
+
+Lab_Window_aug_5_raw_mu_l1.hdr 37.8117 40.8308 8.7315
+
+Lab_Window_raw_mu_l1.hdr 29.8118 34.9048 8.0051
+
+Las_Vegas_Store_aug_1_raw_mu_l1.hdr 29.0340 34.5655 7.8900
+
+Las_Vegas_Store_aug_2_raw_mu_l1.hdr 33.8865 37.9490 8.5269
+
+Las_Vegas_Store_aug_3_raw_mu_l1.hdr 34.4889 38.4223 8.5876
+
+Las_Vegas_Store_aug_4_raw_mu_l1.hdr 36.6423 40.2899 8.8069
+
+Las_Vegas_Store_aug_5_raw_mu_l1.hdr 38.4499 42.1074 8.9594
+
+Las_Vegas_Store_raw_mu_l1.hdr 27.3261 33.3834 7.5862
+
+McKee's_Pub_aug_1_raw_mu_l1.hdr 35.5578 37.6102 8.3240
+
+McKee's_Pub_aug_2_raw_mu_l1.hdr 40.2153 41.7929 8.9166
+
+McKee's_Pub_aug_3_raw_mu_l1.hdr 40.9593 42.5265 8.9895
+
+McKee's_Pub_aug_4_raw_mu_l1.hdr 44.3248 46.0603 9.2473
+
+McKee's_Pub_aug_5_raw_mu_l1.hdr 47.5070 49.6615 9.4039
+
+McKee's_Pub_raw_mu_l1.hdr 34.3355 36.6191 8.1424
+
+Old_Faithful_Inn_aug_1_raw_mu_l1.hdr 35.0983 36.0532 8.2497
+
+Old_Faithful_Inn_aug_2_raw_mu_l1.hdr 39.2810 40.1253 8.7313
+
+Old_Faithful_Inn_aug_3_raw_mu_l1.hdr 39.9609 40.7935 8.7901
+
+Old_Faithful_Inn_aug_4_raw_mu_l1.hdr 43.0414 43.8686 9.0114
+
+Old_Faithful_Inn_aug_5_raw_mu_l1.hdr 46.2724 47.1153 9.1862
+
+Old_Faithful_Inn_raw_mu_l1.hdr 34.0586 35.0439 8.0810
+
+RIT_Tiger_aug_1_raw_mu_l1.hdr 37.0996 38.7476 8.0131
+
+RIT_Tiger_aug_2_raw_mu_l1.hdr 40.6082 41.6899 8.4866
+
+RIT_Tiger_aug_3_raw_mu_l1.hdr 41.2258 42.2455 8.5582
+
+RIT_Tiger_aug_4_raw_mu_l1.hdr 44.0535 44.9571 8.8641
+
+RIT_Tiger_aug_5_raw_mu_l1.hdr 47.1638 48.0087 9.1274
+
+RIT_Tiger_raw_mu_l1.hdr 36.3988 38.1364 7.9012
+
+Route_66_Museum_aug_1_raw_mu_l1.hdr 35.0297 37.7024 8.1905
+
+Route_66_Museum_aug_2_raw_mu_l1.hdr 39.5795 41.4160 8.6907
+
+Route_66_Museum_aug_3_raw_mu_l1.hdr 40.3229 42.1074 8.7616
+
+Route_66_Museum_aug_4_raw_mu_l1.hdr 43.5903 45.4888 9.0368
+
+Route_66_Museum_aug_5_raw_mu_l1.hdr 46.9458 49.1847 9.2565
+
+Route_66_Museum_raw_mu_l1.hdr 33.8272 36.9160 8.0721
+
+The_Grotto_aug_1_raw_mu_l1.hdr 30.0231 32.9698 7.3775
+
+The_Grotto_aug_2_raw_mu_l1.hdr 34.1652 35.7571 7.9302
+
+The_Grotto_aug_3_raw_mu_l1.hdr 34.8948 36.3124 8.0132
+
+The_Grotto_aug_4_raw_mu_l1.hdr 38.3041 39.1900 8.3680
+
+The_Grotto_aug_5_raw_mu_l1.hdr 42.0178 42.6519 8.7063
+
+The_Grotto_raw_mu_l1.hdr 29.1545 32.3700 7.2400
+
+Zentrum_aug_1_raw_mu_l1.hdr 31.0159 31.9954 7.4289
+
+Zentrum_aug_2_raw_mu_l1.hdr 35.2482 36.0263 8.3779
+
+Zentrum_aug_3_raw_mu_l1.hdr 35.7537 36.4715 8.4522
+
+Zentrum_aug_4_raw_mu_l1.hdr 37.9580 38.4540 8.6794
+
+Zentrum_aug_5_raw_mu_l1.hdr 40.3654 40.6989 8.8352
+
+Zentrum_raw_mu_l1.hdr 29.2793 30.2559 7.0183
+
+navie_psnr_rgb = []
+linear_psnr_rgb = []
+log_psnr_rgb = []
+pu_psnr_rgb = []
+pq_psnr_rgb = []
+linear_smape_psnr_rgb = []
+linear_pu_psnr_rgb = []
+linear_pq_psnr_rgb = []
+linear_mu_psnr_rgb = []
+mu_l1_psnr_rgb = [40.6641, 50.581, 51.6486, 55.5161, 58.7364, 37.3154, 35.3013, 41.5405, 42.3714, 45.6278, 48.504, 33.3405, 29.8005, 35.3791, 36.3158, 40.6317, 45.1207, 28.4856, 23.3417, 28.4444, 29.1701, 31.9831, 34.3753, 21.8818, 26.5594, 30.7115, 31.419, 34.7411, 38.3577, 25.5583, 27.3006, 30.0102, 30.5385, 33.1926, 36.3523, 26.7387, 24.9507, 29.4752, 30.0836, 32.296, 34.2425, 23.543, 35.0577, 39.4527, 40.0517, 42.643, 45.3807, 33.8176, 37.0876, 41.1056, 41.7039, 44.2303, 46.7225, 35.8492, 28.5835, 33.0356, 33.6742, 35.7312, 37.6167, 27.2051, 35.0486, 39.1601, 39.7616, 42.3176, 44.9155, 33.904, 31.2084, 35.0941, 35.5557, 36.8775, 37.8117, 29.8118, 29.034, 33.8865, 34.4889, 36.6423, 38.4499, 27.3261, 35.5578, 40.2153, 40.9593, 44.3248, 47.507, 34.3355, 35.0983, 39.281, 39.9609, 43.0414, 46.2724, 34.0586, 37.0996, 40.6082, 41.2258, 44.0535, 47.1638, 36.3988, 35.0297, 39.5795, 40.3229, 43.5903, 46.9458, 33.8272, 30.0231, 34.1652, 34.8948, 38.3041, 42.0178, 29.1545, 31.0159, 35.2482, 35.7537, 37.958, 40.3654, 29.2793]
+pu21_psnr_rgb = []
+navie_psnr_y = []
+linear_psnr_y = []
+log_psnr_y = []
+pu_psnr_y = []
+pq_psnr_y = []
+linear_smape_psnr_y = []
+linear_pu_psnr_y = []
+linear_pq_psnr_y = []
+linear_mu_psnr_y = []
+mu_l1_psnr_y = [41.0698, 52.0721, 53.3029, 57.4779, 60.5221, 37.6901, 37.8193, 44.4924, 45.3317, 48.7135, 51.8635, 35.7165, 31.4624, 35.8334, 36.6748, 40.7963, 45.2825, 30.5814, 30.4113, 32.2376, 32.5716, 34.2832, 36.4799, 29.9752, 30.9124, 33.2152, 33.6533, 35.9977, 39.03, 30.3698, 29.2982, 31.3167, 31.7195, 33.8999, 36.7298, 28.8265, 30.4224, 33.499, 33.9647, 36.0113, 38.1368, 29.3766, 36.1081, 40.7264, 41.3228, 43.9459, 46.6948, 34.7935, 38.374, 42.2262, 42.7891, 45.246, 47.7055, 37.1825, 34.7557, 37.0964, 37.4859, 39.3392, 41.4878, 34.2062, 38.1639, 41.5994, 42.1115, 44.3728, 46.7695, 37.1438, 35.619, 37.8951, 38.2078, 39.5052, 40.8308, 34.9048, 34.5655, 37.949, 38.4223, 40.2899, 42.1074, 33.3834, 37.6102, 41.7929, 42.5265, 46.0603, 49.6615, 36.6191, 36.0532, 40.1253, 40.7935, 43.8686, 47.1153, 35.0439, 38.7476, 41.6899, 42.2455, 44.9571, 48.0087, 38.1364, 37.7024, 41.416, 42.1074, 45.4888, 49.1847, 36.916, 32.9698, 35.7571, 36.3124, 39.19, 42.6519, 32.37, 31.9954, 36.0263, 36.4715, 38.454, 40.6989, 30.2559]
+pu21_psnr_y = []
+navie_cvvdp = []
+linear_cvvdp = []
+log_cvvdp = []
+pu_cvvdp = []
+pq_cvvdp = []
+linear_smape_cvvdp = []
+linear_pu_cvvdp = []
+linear_pq_cvvdp = []
+linear_mu_cvvdp = []
+mu_l1_psnr_cvvdp = [8.3846, 9.352, 9.4378, 9.6191, 9.6118, 8.0443, 8.3014, 8.9242, 9.0028, 9.2628, 9.4126, 8.1192, 7.343, 7.9036, 7.9913, 8.3955, 8.8036, 7.1834, 7.0654, 7.4321, 7.4934, 7.751, 8.011, 6.9944, 6.7285, 7.1921, 7.2719, 7.6508, 8.0578, 6.6295, 6.7089, 7.1443, 7.2146, 7.5405, 7.894, 6.614, 7.4866, 8.0839, 8.141, 8.3646, 8.5468, 7.1888, 7.7972, 8.4803, 8.566, 8.8773, 9.103, 7.5994, 8.4836, 8.9063, 8.9477, 9.0934, 9.2105, 8.2869, 7.9602, 8.4206, 8.4812, 8.6998, 8.8642, 7.8397, 8.2494, 8.6787, 8.7298, 8.9096, 9.0582, 8.0604, 8.1051, 8.4403, 8.4876, 8.6555, 8.7315, 8.0051, 7.89, 8.5269, 8.5876, 8.8069, 8.9594, 7.5862, 8.324, 8.9166, 8.9895, 9.2473, 9.4039, 8.1424, 8.2497, 8.7313, 8.7901, 9.0114, 9.1862, 8.081, 8.0131, 8.4866, 8.5582, 8.8641, 9.1274, 7.9012, 8.1905, 8.6907, 8.7616, 9.0368, 9.2565, 8.0721, 7.3775, 7.9302, 8.0132, 8.368, 8.7063, 7.24, 7.4289, 8.3779, 8.4522, 8.6794, 8.8352, 7.0183]
+pu21_cvvdp = []
