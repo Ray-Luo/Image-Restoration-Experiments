@@ -71,16 +71,16 @@ for file_name in tqdm(test_imgs):
     reference_name = file_name
     reference_img = os.path.join(test_img_folder, reference_name)
     test_names = [
-        # file_name.replace("_GT", "_naive"),
-        # file_name.replace("_GT", "_linear_l1"),
-        # file_name.replace("_GT", "_pu_l1"),
-        # file_name.replace("_GT", "_pq_l1"),
-        # file_name.replace("_GT", "_linear_pq"),
-        # file_name.replace("_GT", "_linear_pu"),
-        # file_name.replace("_GT", "_linear_smape"),
-        # file_name.replace("_GT", "_linear_mu"),
+        file_name.replace("_GT", "_naive"),
+        file_name.replace("_GT", "_linear_l1"),
+        file_name.replace("_GT", "_pu_l1"),
+        file_name.replace("_GT", "_pq_l1"),
+        file_name.replace("_GT", "_linear_pq"),
+        file_name.replace("_GT", "_linear_pu"),
+        file_name.replace("_GT", "_linear_smape"),
+        file_name.replace("_GT", "_linear_mu"),
         file_name.replace("_GT", "_mu_l1"),
-        # file_name.replace("_GT", "_pu21_l1"),
+        file_name.replace("_GT", "_pu21_l1"),
     ]
     img = cv2.imread(reference_img, cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
     save_exr(img, test_img_folder, reference_name.replace(".hdr", ".exr"))
@@ -90,6 +90,9 @@ for file_name in tqdm(test_imgs):
         test_img = os.path.join(test_img_folder, test_name)
 
         hdr_img = cv2.imread(test_img, cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
+
+        if "_mu_l1" in test_name:
+            hdr_img = hdr_img * 4000.0
 
         save_exr(hdr_img, test_img_folder, test_name.replace(".hdr", ".exr"))
         exr_img = os.path.join(test_img_folder, test_name.replace(".hdr", ".exr"))
@@ -231,7 +234,7 @@ report += "linear_mu_cvvdp = " + str(linear_mu_cvvdp) + "\n"
 report += "mu_l1_psnr_cvvdp = " + str(mu_cvvdp) + "\n"
 report += "pu21_cvvdp = " + str(pu21_cvvdp) + "\n"
 
-with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_edsr_mu.txt", "w") as file:
+with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_edsr_all.txt", "w") as file:
     file.write(report)
 
 
