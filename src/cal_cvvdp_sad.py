@@ -92,10 +92,10 @@ for file_name in tqdm(test_imgs):
         test_img = os.path.join(test_img_folder, test_name)
 
         hdr_img = cv2.imread(test_img, cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
+
         if "mu_l1" in test_img:
             hdr_img *= 4000.0
-        if "pu_21" in test_img:
-            hdr_img = np.clip(hdr_img, 0.005, 4000)
+
         save_exr(hdr_img, test_img_folder, test_name.replace(".hdr", ".exr"))
         exr_img = os.path.join(test_img_folder, test_name.replace(".hdr", ".exr"))
 
