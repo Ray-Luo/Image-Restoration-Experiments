@@ -47,12 +47,12 @@ def draw_histogram(array, mode, save_path):
 
 
 # img /= np.max(img)
-img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/data/res_realesrgan/Artist_Palette_GT.hdr", cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
+img = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/data/inspect/rit_hdr4000/UR_Chapel_1.hdr", cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
 print_min_max(img)
 
-blur = cv2.GaussianBlur(img, (51, 51), 0)
+# blur = cv2.GaussianBlur(img, (51, 51), 0)
 
-save_hdr(blur, "/home/luoleyouluole/Image-Restoration-Experiments/", "Artist_Palette_GT_blur.hdr")
+# save_hdr(blur, "/home/luoleyouluole/Image-Restoration-Experiments/", "Artist_Palette_GT_blur.hdr")
 
 
 # draw_histogram(img, "GT", "./")
