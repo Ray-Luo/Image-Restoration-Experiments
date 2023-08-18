@@ -233,7 +233,7 @@ report += "mu_l1_psnr_cvvdp = " + str(mu_cvvdp) + "\n"
 report += "pu21_cvvdp = " + str(pu21_cvvdp) + "\n"
 
 
-with open("/home/luoleyouluole/Image-Restoration-Experiments/src/real_report_all.txt", "w") as file:
+with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_real_all.txt", "w") as file:
     file.write(report)
 
 
