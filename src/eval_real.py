@@ -56,6 +56,37 @@ C2 = 18.8515625
 C3 = 18.6875
 MAX = 10.8354  # PU(4000)
 
+def original2pu21(x):
+    a = 0.001907888066
+    b = 0.0078
+    l_min = -7.64385618977
+    x =  torch.log2(torch.clamp(x, min=0.005, max=10000))
+    return a * (x - l_min) ** 2 + b * (x - l_min)
+
+def pu212original(Y):
+    a = 0.001907888066
+    b = 0.0078
+    print(torch.min(Y), torch.max(Y), torch.mean(Y), "******* before ***********")
+    Y = torch.clamp(Y, min=0, max=1)
+    # assert( torch.all(Y>=0) and torch.all(Y<=1))
+    l_min = -7.64385618977 # torch.log2(torch.as_tensor(0.005, device=Y.device))
+    l = (2*a*l_min - b + torch.sqrt(b**2 + 4*a*Y))/(2*a)
+    # y_limit = -0.007972165805244909
+    l = 2**l
+    print(torch.min(l), torch.max(l), torch.mean(l), "******* after ***********")
+    assert(torch.all(l>=0))
+    return l
+
+def original2mu(x):
+    import math
+    mu = 5000.0
+    x = x / 4000.0
+    return torch.log2(1 + mu * x) / math.log2(1 + mu)
+
+def mu2original(x):
+    min = 12.2880008897
+    return ((2**(min*x) - 1) / 5000.0) * 4000.0
+
 def original2linear(x):
     return x / 4000.0
 
@@ -132,6 +163,12 @@ def get_transform(experiemnt_signiture: str):
     elif representation == "pq":
         return original2pq, pq2original
 
+    elif representation == "pu21":
+        return original2pu21, pu212original
+
+    elif representation == "mu":
+        return original2mu, mu2original
+
     else:
         raise NotImplementedError
 
@@ -175,7 +212,7 @@ def evaluate(cfg: DictConfig):
             transforms.Lambda(lambda img: transform_fn(img)),
         ])
 
-        for file_name in file_list:
+        for file_name in tqdm(file_list):
             hq_path = os.path.join(cfg.data.hq_path, file_name)
             gt = cv2.imread(hq_path, -1).astype(np.float32)
             file_name = file_name.replace("_4x", "").split('.')[0]

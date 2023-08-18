@@ -15,7 +15,7 @@ import os
 import cv2
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import shutil
 import warnings
 
 
@@ -54,6 +54,37 @@ C1 = 0.8359375
 C2 = 18.8515625
 C3 = 18.6875
 MAX = 10.8354  # PU(4000)
+
+def original2pu21(x):
+    a = 0.001907888066
+    b = 0.0078
+    l_min = -7.64385618977
+    x =  torch.log2(torch.clamp(x, min=0.005, max=10000))
+    return a * (x - l_min) ** 2 + b * (x - l_min)
+
+def pu212original(Y):
+    a = 0.001907888066
+    b = 0.0078
+    print(torch.min(Y), torch.max(Y), torch.mean(Y), "******* before ***********")
+    Y = torch.clamp(Y, min=0, max=1)
+    # assert( torch.all(Y>=0) and torch.all(Y<=1))
+    l_min = -7.64385618977 # torch.log2(torch.as_tensor(0.005, device=Y.device))
+    l = (2*a*l_min - b + torch.sqrt(b**2 + 4*a*Y))/(2*a)
+    # y_limit = -0.007972165805244909
+    l = 2**l
+    print(torch.min(l), torch.max(l), torch.mean(l), "******* after ***********")
+    assert(torch.all(l>=0))
+    return l
+
+def original2mu(x):
+    import math
+    mu = 5000.0
+    x = x / 4000.0
+    return torch.log2(1 + mu * x) / math.log2(1 + mu)
+
+def mu2original(x):
+    min = 12.2880008897
+    return ((2**(min*x) - 1) / 5000.0) * 4000.0
 
 def original2linear(x):
     return x / 4000.0
@@ -131,6 +162,12 @@ def get_transform(experiemnt_signiture: str):
     elif representation == "pq":
         return original2pq, pq2original
 
+    elif representation == "pu21":
+        return original2pu21, pu212original
+
+    elif representation == "mu":
+        return original2mu, mu2original
+
     else:
         raise NotImplementedError
 
@@ -160,15 +197,11 @@ def evaluate(cfg: DictConfig):
         report += "**************************  " + experiment + "  **************************\n"
 
         model = load_model_from_server(model, path)
-        net = model.cpu()
+        net = model.cuda()
         net.eval()
 
         file_list = os.listdir(cfg.data.hq_path)
         file_list.sort()
-
-        file_list = ['The_Grotto_aug_1.hdr', 'The_Grotto_aug_2.hdr', 'The_Grotto_aug_3.hdr', 'The_Grotto_aug_4.hdr', 'The_Grotto_aug_5.hdr', 'Zentrum.hdr', 'Zentrum_aug_1.hdr', 'Zentrum_aug_2.hdr', 'Zentrum_aug_3.hdr', 'Zentrum_aug_4.hdr', 'Zentrum_aug_5.hdr']
-
-        print(file_list)
 
         transform_fn, inverse_fn = get_transform(experiment)
         transform_hdr = transforms.Compose([
@@ -176,7 +209,7 @@ def evaluate(cfg: DictConfig):
             transforms.Lambda(lambda img: transform_fn(img)),
         ])
 
-        for file_name in file_list:
+        for file_name in tqdm(file_list):
             hq_path = os.path.join(cfg.data.hq_path, file_name)
             gt = cv2.imread(hq_path, -1).astype(np.float32)
             file_name = file_name.replace("_4x", "").split('.')[0]
@@ -187,12 +220,12 @@ def evaluate(cfg: DictConfig):
                 draw_histogram(gt, file_name + "_GT", results_save_path)
 
             lq = cv2.GaussianBlur(gt, (51, 51), 0)
-            lq = transform_hdr(lq).unsqueeze(0)#.cuda()
+            lq = transform_hdr(lq).unsqueeze(0).cuda()
             with torch.no_grad():
                 pred = net(lq)
                 res_img = inverse_fn(pred).squeeze(0).cpu().permute(1,2,0).detach().numpy()
 
-                draw_histogram(res_img, file_name + "_nets_" + experiment, results_save_path)
+                # draw_histogram(res_img, file_name + "_nets_" + experiment, results_save_path)
                 save_hdr(res_img, results_save_path, file_name + "_raw_{}.hdr".format(experiment))
                 visualize(res_img, results_save_path, file_name + "_{}.hdr".format(experiment))
 
@@ -215,6 +248,11 @@ def evaluate(cfg: DictConfig):
 
 @hydra.main(version_base="1.3", config_path="../configs", config_name="eval_mirnetv2.yaml")
 def main(cfg: DictConfig) -> None:
+    # if os.path.exists(cfg.results_save_path):
+    #     shutil.rmtree(cfg.results_save_path)
+    #     os.mkdir(cfg.results_save_path)
+    # else:
+    #     os.mkdir(cfg.results_save_path)
     evaluate(cfg)
 
 

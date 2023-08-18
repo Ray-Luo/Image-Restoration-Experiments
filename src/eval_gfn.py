@@ -214,10 +214,10 @@ def evaluate(cfg: DictConfig):
 
     for experiment, path in tqdm(log_path.items()):
         report += "**************************  " + experiment + "  **************************\n"
-        if "pq" in experiment or "pu" in experiment:
-            model = load_model_from_server_strip(model, path)
-        else:
-            model = load_model_from_server(model, path)
+        # if "_pq_" in experiment or "_pu_" in experiment:
+        #     model = load_model_from_server_strip(model, path)
+        # else:
+        model = load_model_from_server(model, path)
         net = model.cuda()
         net.eval()
 

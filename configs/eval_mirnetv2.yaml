@@ -13,8 +13,8 @@ defaults:
 
 
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug_patchify
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug_patchify
   batch_size: 1
 
 task_name: "eval"
@@ -26,11 +26,11 @@ log_path:
 
   # pu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pu_epoch=165-step=191895.ckpt"
 
-  mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pu_epoch=165-step=191895.ckpt"
+  mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_mu_epoch=392-step=454307.ckpt"
 
-  pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pu21_epoch=924-step=1069299.ckpt"
+  # pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_pu21_epoch=18-step=21963.ckpt"
 
-  linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_pu_epoch=151-step=175711.ckpt"
+  # linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_pu_epoch=11-step=13871.ckpt"
 
   # linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/mirnetv2_linear_pq_epoch=59-step=69359.ckpt"
 
@@ -38,4 +38,4 @@ log_path:
 
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_mir/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_mir_extra/"

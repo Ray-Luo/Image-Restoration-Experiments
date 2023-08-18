@@ -55,8 +55,8 @@ def main():
     # opt['thresh_size'] = 0
     # extract_subimages(opt)
 
-    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_l1'
-    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_l1_patchify'
+    opt['input_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_aug'
+    opt['save_folder'] = '/home/luoleyouluole/Image-Restoration-Experiments/data/test_aug_patchify'
     opt['crop_size'] = 2000
     opt['step'] = 1000
     opt['thresh_size'] = 0
@@ -106,8 +106,7 @@ def extract_subimages(opt):
     # img_list = [os.path.join(input_folder, file_name) for file_name in file_list]
     img_list = []
     for file_name in file_list:
-        if "_raw_" in file_name:
-            img_list.append(os.path.join(input_folder, file_name))
+        img_list.append(os.path.join(input_folder, file_name))
 
     pbar = tqdm(total=len(img_list), unit='image', desc='Extract')
     pool = Pool(opt['n_thread'])
