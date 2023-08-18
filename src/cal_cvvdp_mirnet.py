@@ -6,7 +6,7 @@ import numpy as np
 from tqdm import tqdm
 
 
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_mir'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_mir_extra'
 
 imgs = os.listdir(test_img_folder)
 imgs.sort()
@@ -73,15 +73,15 @@ for file_name in tqdm(test_imgs):
     reference_name = file_name
     reference_img = os.path.join(test_img_folder, reference_name)
     test_names = [
-        file_name.replace("_GT", "_linear_l1"),
-        file_name.replace("_GT", "_pu_l1"),
-        file_name.replace("_GT", "_pq_l1"),
-        file_name.replace("_GT", "_linear_pq"),
-        # file_name.replace("_GT", "_linear_pu"),
-        file_name.replace("_GT", "_linear_smape"),
-        file_name.replace("_GT", "_linear_mu"),
-        # file_name.replace("_GT", "_mu_l1"),
-        # file_name.replace("_GT", "_pu21_l1"),
+        # file_name.replace("_GT", "_linear_l1"),
+        # file_name.replace("_GT", "_pu_l1"),
+        # file_name.replace("_GT", "_pq_l1"),
+        # file_name.replace("_GT", "_linear_pq"),
+        file_name.replace("_GT", "_linear_pu"),
+        # file_name.replace("_GT", "_linear_smape"),
+        # file_name.replace("_GT", "_linear_mu"),
+        file_name.replace("_GT", "_mu_l1"),
+        file_name.replace("_GT", "_pu21_l1"),
     ]
 
     img = cv2.imread(reference_img, cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
@@ -233,7 +233,7 @@ report += "mu_l1_psnr_cvvdp = " + str(mu_cvvdp) + "\n"
 report += "pu21_cvvdp = " + str(pu21_cvvdp) + "\n"
 
 
-with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_mir_part1.txt", "w") as file:
+with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_mir_part2.txt", "w") as file:
     file.write(report)
 
 
