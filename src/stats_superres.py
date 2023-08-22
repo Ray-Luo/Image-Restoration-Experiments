@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 def plot(df, name):
 
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(20, 6))
     sns.violinplot(data=df,cut = 0)  # remove the bars inside the violins
 
     for i in range(len(df.columns)):
@@ -14,7 +14,7 @@ def plot(df, name):
         plt.text(i+0.13, median_val, f'{median_val:.2f}', horizontalalignment='left', size='x-small', color='black', weight='semibold')
 
     plt.show()
-    plt.ylabel(name)
+    plt.ylabel(name.split('_')[1])
     plt.savefig(name + '.png')
     plt.clf()
 
@@ -101,7 +101,7 @@ if 1:
     pu21_psnr_rgb = np.array(pu21_psnr_rgb)
     # print(np.mean(navie_psnr_rgb), np.mean(linear_psnr_rgb), np.mean(pu_psnr_rgb), np.mean(pq_psnr_rgb))
     # psnr_rgb_df = pd.DataFrame({'navie_psnr_rgb': navie_psnr_rgb, 'linear_psnr_rgb': linear_psnr_rgb, 'pu_psnr_rgb': pu_psnr_rgb, 'pq_psnr_rgb': pq_psnr_rgb})
-    psnr_rgb_df = pd.DataFrame({'linear_l1': linear_psnr_rgb, 'linear_smape': linear_smape_psnr_rgb, 'linear_pu': linear_pu_psnr_rgb, 'linear_pq': linear_pq_psnr_rgb, 'linear_mu': linear_mu_psnr_rgb, 'pu_l1': pu_psnr_rgb, 'pq_l1': pq_psnr_rgb, 'mu_l1': mu_l1_psnr_rgb, 'pu21_l1': pu21_psnr_rgb})
+    psnr_rgb_df = pd.DataFrame({'pu21-l1': pu21_psnr_rgb, 'pq-l1': pq_psnr_rgb, 'mu-l1': mu_l1_psnr_rgb, 'pu-l1': pu_psnr_rgb, 'linear-pu': linear_pu_psnr_rgb, 'linear-l1': linear_psnr_rgb, 'linear-pq': linear_pq_psnr_rgb,  'linear-smape': linear_smape_psnr_rgb,  'linear-mu': linear_mu_psnr_rgb, })
 
 
     navie_psnr_y = np.array(navie_psnr_y)
@@ -115,7 +115,7 @@ if 1:
     mu_l1_psnr_y = np.array(mu_l1_psnr_y)
     pu21_psnr_y = np.array(pu21_psnr_y)
     # print(np.mean(navie_psnr_y), np.mean(linear_psnr_y), np.mean(pu_psnr_y), np.mean(pq_psnr_y))
-    psnr_y_df = pd.DataFrame({'linear_l1': linear_psnr_y, 'linear_smape': linear_smape_psnr_y, 'linear_pu': linear_pu_psnr_y, 'linear_pq': linear_pq_psnr_y, 'linear_mu': linear_mu_psnr_y, 'pu_l1': pu_psnr_y, 'pq_l1': pq_psnr_y, 'mu_l1': mu_l1_psnr_y, 'pu21_l1': pu21_psnr_y })
+    psnr_y_df = pd.DataFrame({'pu21-l1': pu21_psnr_y,  'mu-l1': mu_l1_psnr_y, 'pq-l1': pq_psnr_y, 'pu-l1': pu_psnr_y, 'linear-pu': linear_pu_psnr_y, 'linear-l1': linear_psnr_y, 'linear-pq': linear_pq_psnr_y,  'linear-smape': linear_smape_psnr_y,  'linear-mu': linear_mu_psnr_y, })
 
     navie_cvvdp = np.array(navie_cvvdp)
     linear_cvvdp = np.array(linear_cvvdp)
@@ -129,14 +129,14 @@ if 1:
     pu21_cvvdp = np.array(pu21_cvvdp)
     # print(np.mean(navie_cvvdp), np.mean(linear_cvvdp), np.mean(pu_cvvdp), np.mean(pq_cvvdp))
     # cvvdp_df = pd.DataFrame({'navie_cvvdp': navie_cvvdp, 'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
-    cvvdp_df = pd.DataFrame({'linear_l1': linear_cvvdp, 'linear_smape': linear_smape_cvvdp, 'linear_pu': linear_pu_cvvdp, 'linear_pq':linear_pq_cvvdp, 'linear_mu': linear_mu_cvvdp, 'pu_l1': pu_cvvdp, 'pq_l1': pq_cvvdp, 'mu_l1': mu_l1_cvvdp, 'pu21_l1': pu21_cvvdp})
+    cvvdp_df = pd.DataFrame({'pu21-l1': pu21_cvvdp, 'mu-l1': mu_l1_cvvdp, 'pq-l1': pq_cvvdp, 'pu-l1': pu_cvvdp, 'linear-pu': linear_pu_cvvdp, 'linear-l1': linear_cvvdp, 'linear-pq': linear_pq_cvvdp,  'linear-smape': linear_smape_cvvdp,  'linear-mu': linear_mu_cvvdp, })
 
-    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1, color_codes=True, rc=None)
+    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.5, color_codes=True, rc=None)
 
 
-    plot(psnr_rgb_df, "edsr_psnr_rgb")
+    plot(psnr_rgb_df, "edsr_psnr-rgb")
 
-    plot(psnr_y_df, "edsr_psnr_y")
+    plot(psnr_y_df, "edsr_psnr-y")
 
     plot(cvvdp_df, "edsr_cvvdp")
 
@@ -288,7 +288,7 @@ if 1:
     pu21_psnr_rgb = np.array(pu21_psnr_rgb)
     # print(np.mean(navie_psnr_rgb), np.mean(linear_psnr_rgb), np.mean(pu_psnr_rgb), np.mean(pq_psnr_rgb))
     # psnr_rgb_df = pd.DataFrame({'navie_psnr_rgb': navie_psnr_rgb, 'linear_psnr_rgb': linear_psnr_rgb, 'pu_psnr_rgb': pu_psnr_rgb, 'pq_psnr_rgb': pq_psnr_rgb})
-    psnr_rgb_df = pd.DataFrame({'linear_l1': linear_psnr_rgb, 'linear_smape': linear_smape_psnr_rgb, 'linear_pu': linear_pu_psnr_rgb, 'linear_pq': linear_pq_psnr_rgb, 'linear_mu': linear_mu_psnr_rgb, 'pu_l1': pu_psnr_rgb, 'pq_l1': pq_psnr_rgb, 'mu_l1': mu_l1_psnr_rgb, 'pu21_l1': pu21_psnr_rgb})
+    psnr_rgb_df = pd.DataFrame({'pu21-l1': pu21_psnr_rgb, 'pq-l1': pq_psnr_rgb, 'mu-l1': mu_l1_psnr_rgb, 'pu-l1': pu_psnr_rgb, 'linear-mu': linear_mu_psnr_rgb, 'linear-pq': linear_pq_psnr_rgb,  'linear-smape': linear_smape_psnr_rgb, 'linear-pu': linear_pu_psnr_rgb, 'linear-l1': linear_psnr_rgb, })
 
 
     navie_psnr_y = np.array(navie_psnr_y)
@@ -302,7 +302,7 @@ if 1:
     mu_l1_psnr_y = np.array(mu_l1_psnr_y)
     pu21_psnr_y = np.array(pu21_psnr_y)
     # print(np.mean(navie_psnr_y), np.mean(linear_psnr_y), np.mean(pu_psnr_y), np.mean(pq_psnr_y))
-    psnr_y_df = pd.DataFrame({'linear_l1': linear_psnr_y, 'linear_smape': linear_smape_psnr_y, 'linear_pu': linear_pu_psnr_y, 'linear_pq': linear_pq_psnr_y, 'linear_mu': linear_mu_psnr_y, 'pu_l1': pu_psnr_y, 'pq_l1': pq_psnr_y, 'mu_l1': mu_l1_psnr_y, 'pu21_l1': pu21_psnr_y })
+    psnr_y_df = pd.DataFrame({'pu21-l1': pu21_psnr_y, 'pu-l1': pu_psnr_y, 'pq-l1': pq_psnr_y, 'mu-l1': mu_l1_psnr_y, 'linear-mu': linear_mu_psnr_y, 'linear-smape': linear_smape_psnr_y, 'linear-pq': linear_pq_psnr_y, 'linear-pu': linear_pu_psnr_y, 'linear-l1': linear_psnr_y, })
 
     navie_cvvdp = np.array(navie_cvvdp)
     linear_cvvdp = np.array(linear_cvvdp)
@@ -316,13 +316,13 @@ if 1:
     pu21_cvvdp = np.array(pu21_cvvdp)
     # print(np.mean(navie_cvvdp), np.mean(linear_cvvdp), np.mean(pu_cvvdp), np.mean(pq_cvvdp))
     # cvvdp_df = pd.DataFrame({'navie_cvvdp': navie_cvvdp, 'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
-    cvvdp_df = pd.DataFrame({'linear_l1': linear_cvvdp, 'linear_smape': linear_smape_cvvdp, 'linear_pu': linear_pu_cvvdp, 'linear_pq':linear_pq_cvvdp, 'linear_mu': linear_mu_cvvdp, 'pu_l1': pu_cvvdp, 'pq_l1': pq_cvvdp, 'mu_l1': mu_l1_cvvdp, 'pu21_l1': pu21_cvvdp})
+    cvvdp_df = pd.DataFrame({ 'mu-l1': mu_l1_cvvdp, 'pu-l1': pu_cvvdp, 'pu21-l1': pu21_cvvdp, 'pq-l1': pq_cvvdp, 'linear-mu': linear_mu_cvvdp, 'linear-pq': linear_pq_cvvdp,  'linear-smape': linear_smape_cvvdp, 'linear-pu': linear_pu_cvvdp, 'linear-l1': linear_cvvdp, })
 
-    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1, color_codes=True, rc=None)
+    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.5, color_codes=True, rc=None)
 
-    plot(psnr_rgb_df, "real_psnr_rgb")
+    plot(psnr_rgb_df, "real_psnr-rgb")
 
-    plot(psnr_y_df, "real_psnr_y")
+    plot(psnr_y_df, "real_psnr-y")
 
     plot(cvvdp_df, "real_cvvdp")
 
