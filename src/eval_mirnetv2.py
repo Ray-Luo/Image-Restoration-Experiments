@@ -197,7 +197,7 @@ def evaluate(cfg: DictConfig):
         report += "**************************  " + experiment + "  **************************\n"
 
         model = load_model_from_server(model, path)
-        net = model.cuda()
+        net = model.cpu()
         net.eval()
 
         file_list = os.listdir(cfg.data.hq_path)
@@ -210,6 +210,12 @@ def evaluate(cfg: DictConfig):
         ])
 
         for file_name in tqdm(file_list):
+            if "cargo_boat" in file_name or "skyscraper" in file_name or "urban_land" in file_name:
+                continue
+
+            if "Artist_Palette" in file_name or "Bandon_Sunset_2" in file_name:
+                continue
+
             hq_path = os.path.join(cfg.data.hq_path, file_name)
             gt = cv2.imread(hq_path, -1).astype(np.float32)
             file_name = file_name.replace("_4x", "").split('.')[0]
@@ -220,7 +226,8 @@ def evaluate(cfg: DictConfig):
                 draw_histogram(gt, file_name + "_GT", results_save_path)
 
             lq = cv2.GaussianBlur(gt, (51, 51), 0)
-            lq = transform_hdr(lq).unsqueeze(0).cuda()
+            save_hdr(lq, results_save_path, file_name + "_raw_blur.hdr")
+            lq = transform_hdr(lq).unsqueeze(0).cpu()
             with torch.no_grad():
                 pred = net(lq)
                 res_img = inverse_fn(pred).squeeze(0).cpu().permute(1,2,0).detach().numpy()
@@ -248,11 +255,11 @@ def evaluate(cfg: DictConfig):
 
 @hydra.main(version_base="1.3", config_path="../configs", config_name="eval_mirnetv2.yaml")
 def main(cfg: DictConfig) -> None:
-    # if os.path.exists(cfg.results_save_path):
-    #     shutil.rmtree(cfg.results_save_path)
-    #     os.mkdir(cfg.results_save_path)
-    # else:
-    #     os.mkdir(cfg.results_save_path)
+    if os.path.exists(cfg.results_save_path):
+        shutil.rmtree(cfg.results_save_path)
+        os.mkdir(cfg.results_save_path)
+    else:
+        os.mkdir(cfg.results_save_path)
     evaluate(cfg)
 
 

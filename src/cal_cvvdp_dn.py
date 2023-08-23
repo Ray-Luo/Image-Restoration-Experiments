@@ -6,7 +6,7 @@ import numpy as np
 from tqdm import tqdm
 
 # directory containing the images
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/export/sad'
 imgs = os.listdir(test_img_folder)
 imgs.sort()
 test_imgs = []
@@ -91,8 +91,8 @@ for file_name in tqdm(test_imgs):
         test_img = os.path.join(test_img_folder, test_name)
 
         hdr_img = cv2.imread(test_img, cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
-        if "mu_l1" in test_img:
-            hdr_img *= 4000.0
+        # if "mu_l1" in test_img:
+        #     hdr_img *= 4000.0
         save_exr(hdr_img, test_img_folder, test_name.replace(".hdr", ".exr"))
         exr_img = os.path.join(test_img_folder, test_name.replace(".hdr", ".exr"))
 
@@ -233,5 +233,5 @@ report += "mu_l1_psnr_cvvdp = " + str(mu_cvvdp) + "\n"
 report += "pu21_cvvdp = " + str(pu21_cvvdp) + "\n"
 
 
-with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_dn_all.txt", "w") as file:
-    file.write(report)
+# with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_dn_all.txt", "w") as file:
+#     file.write(report)

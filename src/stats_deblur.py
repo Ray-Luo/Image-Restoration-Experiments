@@ -7,12 +7,21 @@ import matplotlib.pyplot as plt
 
 def plot(df, name):
 
+    colors={"mu-l1":"red", "pu21-l1":"aquamarine", "pq-l1": "green", "linear-mu":"orange", "linear-pq":"pink", "linear-smape":"brown", "linear-pu":"coral", "linear-l1":"yellow"}
+    palette=[]
+
+    column_names = df.columns.tolist()
+
+    for col_name in column_names:
+        palette.append(colors[col_name])
+
+
     plt.figure(figsize=(20, 6))
-    sns.violinplot(data=df,cut = 0)  # remove the bars inside the violins
+    sns.violinplot(data=df,cut = 0, palette=palette)  # remove the bars inside the violins
 
     for i in range(len(df.columns)):
         median_val = df.iloc[:, i].median()
-        plt.text(i+0.13, median_val, f'{median_val:.3f}', horizontalalignment='left', size='x-small', color='black', weight='semibold')
+        plt.text(i+0.13, median_val, f'{median_val:.2f}', horizontalalignment='left', size='x-small', color='black', weight='semibold')
 
     plt.show()
     plt.ylabel(name.split('_')[1])
@@ -34,7 +43,7 @@ def combine_results(array):
     return res
 
 # ********************************************* GFN *********************************************
-if 0:
+if 1:
     print("********************************************* GFN *********************************************")
     navie_psnr_rgb = []
     linear_psnr_rgb = [34.7551, 32.0219, 31.5381, 29.9432, 29.2595, 33.923, 31.3251, 32.4307, 32.2866, 31.2157, 30.233, 30.0009, 27.446, 31.0585, 31.45, 31.8859, 31.1306, 26.4624, 20.2153, 24.6836, 25.4775, 28.2934, 30.3557, 19.1284, 25.4121, 28.6572, 29.0687, 30.7102, 31.7462, 24.5457, 25.4139, 27.4467, 27.7818, 29.3301, 30.6945, 24.8228, 20.2468, 24.0789, 24.4731, 26.1675, 27.2722, 18.9287, 32.4722, 33.0498, 32.9584, 31.7987, 29.962, 31.768, 32.2643, 30.9673, 30.6702, 29.6326, 28.8515, 32.2285, 21.9922, 26.3916, 27.1646, 29.0157, 29.7399, 19.9763, 31.2415, 30.2964, 30.0802, 29.3408, 28.7328, 31.1857, 22.107, 22.8737, 23.9122, 27.5211, 26.4005, 20.9707, 23.4736, 27.0204, 27.3386, 28.1792, 28.6617, 22.0251, 31.4108, 31.8407, 31.6699, 31.2083, 30.8051, 30.4905, 30.9937, 31.1177, 31.0643, 30.128, 29.398, 30.4651, 33.7932, 34.6368, 34.5479, 34.3206, 33.0529, 33.258, 32.1018, 34.5601, 34.6621, 33.7448, 32.4238, 30.9432, 28.1908, 30.5262, 30.8546, 31.9693, 31.5789, 27.4974, 28.2445, 28.9341, 28.814, 28.3349, 28.0735, 26.9498]
@@ -135,7 +144,7 @@ if 0:
     # cvvdp_df = pd.DataFrame({'linear_l1': linear_cvvdp, 'linear_smape': linear_smape_cvvdp, 'linear_pu': linear_pu_cvvdp, 'linear_pq':linear_pq_cvvdp, 'linear_mu': linear_mu_cvvdp, 'pu_l1': pu_cvvdp, 'pq_l1': pq_cvvdp, 'mu_l1': mu_l1_cvvdp, 'pu21_l1': pu21_cvvdp})
     cvvdp_df = pd.DataFrame({'mu-l1': mu_l1_cvvdp, 'pu-l1': pu_cvvdp, 'pu21-l1': pu21_cvvdp, 'linear-mu': linear_mu_cvvdp, 'pq-l1': pq_cvvdp, 'linear-l1': linear_cvvdp, })
 
-    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.5, color_codes=True, rc=None)
+    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.8, color_codes=True, rc=None)
 
     plot(psnr_rgb_df, "gfn_psnr_rgb")
 
@@ -144,7 +153,7 @@ if 0:
     plot(cvvdp_df, "gfn_cvvdp")
 
 # ********************************************* MIRNET *********************************************
-if 1:
+if 0:
     print("********************************************* MIRNET *********************************************")
     navie_psnr_rgb = []
     linear_psnr_rgb = [37.7787, 48.2282, 49.4231, 53.9671, 58.0545, 34.5349, 30.7456, 37.5106, 38.4954, 42.4782, 46.2635, 28.7975, 27.0754, 32.9208, 33.9324, 38.5988, 43.5354, 25.7233, 20.2987, 25.083, 25.8293, 28.8642, 32.019, 19.0987, 24.8786, 29.0007, 29.7125, 33.0746, 36.8341, 23.9416, 24.6259, 27.376, 27.9172, 30.6588, 33.9507, 24.0867, 18.615, 23.5965, 24.4592, 27.8118, 31.2421, 17.4473, 32.394, 37.72, 38.4677, 41.5233, 44.5994, 31.0411, 33.234, 39.0672, 39.8818, 43.3027, 46.5264, 30.9736, 20.0836, 25.5638, 26.4533, 29.9022, 33.4823, 18.6333, 32.0898, 37.2711, 38.0053, 41.0449, 44.0641, 30.2106, 21.1497, 25.4542, 25.9439, 29.1848, 31.9001, 19.5575, 23.0482, 27.9053, 28.756, 31.9497, 35.3878, 21.8702, 31.1861, 36.6477, 37.5789, 41.6161, 45.6796, 29.9108, 30.806, 35.8896, 36.6996, 40.2652, 43.9095, 29.4591, 32.8031, 36.6707, 37.3826, 40.7468, 44.3713, 32.057, 31.5818, 36.5914, 37.4832, 41.3951, 45.6573, 30.4405, 27.6891, 31.8317, 32.5821, 36.1811, 40.1875, 26.857, 28.041, 32.5663, 33.1429, 35.6642, 38.4019, 26.2781]
@@ -245,7 +254,7 @@ if 1:
 
 
 
-    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.5, color_codes=True, rc=None)
+    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.8, color_codes=True, rc=None)
 
 
     plot(psnr_rgb_df, "mirnetv2_psnr-rgb")

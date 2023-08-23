@@ -6,12 +6,21 @@ import matplotlib.pyplot as plt
 
 def plot(df, name):
 
+    colors={"mu-l1":"red", "pu21-l1":"aquamarine", "pq-l1": "green", "linear-mu":"orange", "linear-pq":"pink", "linear-smape":"brown", "linear-pu":"coral", "linear-l1":"yellow"}
+    palette=[]
+
+    column_names = df.columns.tolist()
+
+    for col_name in column_names:
+        palette.append(colors[col_name])
+
+
     plt.figure(figsize=(20, 6))
-    sns.violinplot(data=df,cut = 0)  # remove the bars inside the violins
+    sns.violinplot(data=df,cut = 0, palette=palette)  # remove the bars inside the violins
 
     for i in range(len(df.columns)):
         median_val = df.iloc[:, i].median()
-        plt.text(i+0.13, median_val, f'{median_val:.3f}', horizontalalignment='left', size='x-small', color='black', weight='semibold')
+        plt.text(i+0.13, median_val, f'{median_val:.2f}', horizontalalignment='left', size='x-small', color='black', weight='semibold')
 
     plt.show()
     plt.ylabel(name.split('_')[1])
@@ -110,7 +119,7 @@ if 1:
 
     cvvdp_df = pd.DataFrame({'pq-l1': pq_cvvdp, 'pu-l1': pu_cvvdp, 'linear-pu': linear_pu_cvvdp, 'linear-l1': linear_cvvdp, 'linear-smape': linear_smape_cvvdp, 'linear-pq': linear_pq_cvvdp, 'linear-mu': linear_mu_cvvdp, 'mu-l1': mu_l1_cvvdp, 'pu21-l1': pu21_cvvdp})
 
-    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.5, color_codes=True, rc=None)
+    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.8, color_codes=True, rc=None)
 
     plot(psnr_rgb_df, "sad_psnr-rgb")
 
@@ -207,7 +216,7 @@ if 1:
     # cvvdp_df = pd.DataFrame({'navie_cvvdp': navie_cvvdp, 'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
     cvvdp_df = pd.DataFrame({'mu_l1': mu_l1_cvvdp, 'pu21_l1': pu21_cvvdp, 'pq_l1': pq_cvvdp, 'pu_l1': pu_cvvdp, 'linear_pu': linear_pu_cvvdp, 'linear_mu': linear_mu_cvvdp, 'linear_pq': linear_pq_cvvdp, 'linear_l1': linear_cvvdp, 'linear_smape': linear_smape_cvvdp,  })
 
-    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.5, color_codes=True, rc=None)
+    sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.8, color_codes=True, rc=None)
 
 
     plot(psnr_rgb_df, "dncnn_psnr-rgb")

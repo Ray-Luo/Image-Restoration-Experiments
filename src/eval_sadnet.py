@@ -85,7 +85,7 @@ def original2mu(x):
 
 def mu2original(x):
     min = 12.2880008897
-    return ((2**(min*x) - 1) / 5000.0) / 4000.0
+    return ((2**(min*x) - 1) / 5000.0) * 4000.0
 
 def original2linear(x):
     return x / 4000.0
@@ -136,7 +136,7 @@ def visualize(img: np.array,root, name):
     img = img / 4000.0
     img = np.clip(img, 0., 1.)
     img = np.power(img, 1/2.2)
-    save_hdr(img, root, name)
+    cv2.imwrite(os.path.join(root, name), img)
 
 
 def check_if_load_correct(experiemnt_signiture: str, tag_file_path: str):
@@ -237,6 +237,8 @@ def evaluate(cfg: DictConfig):
                 draw_histogram(res_img, file_name + "_nets_" + experiment, results_save_path)
                 save_hdr(res_img, results_save_path, file_name + "_raw_{}.hdr".format(experiment))
                 visualize(res_img, results_save_path, file_name + "_{}.hdr".format(experiment))
+
+            break
 
         report += "\n\n"
 
