@@ -23,7 +23,7 @@ def plot(df, name):
         plt.text(i+0.13, median_val, f'{median_val:.2f}', horizontalalignment='left', size='x-small', color='black', weight='semibold')
 
     plt.show()
-    plt.ylabel(name.split('_')[1])
+    plt.ylabel(name)
     plt.savefig(name + '.png')
     plt.clf()
 
@@ -329,11 +329,11 @@ if 1:
 
     sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.8, color_codes=True, rc=None)
 
-    plot(psnr_rgb_df, "real_psnr-rgb")
+    plot(psnr_rgb_df, "RealESRGAN_psnr-rgb")
 
-    plot(psnr_y_df, "real_psnr-y")
+    plot(psnr_y_df, "RealESRGAN_psnr-y")
 
-    plot(cvvdp_df, "real_cvvdp")
+    plot(cvvdp_df, "RealESRGAN_cvvdp")
 
     print(np.min(pq_cvvdp), np.min(pu_cvvdp))
 
