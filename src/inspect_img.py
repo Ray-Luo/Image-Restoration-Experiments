@@ -48,13 +48,12 @@ def draw_histogram(array, mode, save_path):
 def visualize(img: np.array,root, name):
     img = img / 4000.0
     img = np.clip(img, 0., 1.)
-    img = np.power(img, 1/2.2) * 255.0
-    print(np.mean(img), np.min(img), np.max(img))
-    # cv2.imwrite(os.path.join(root, name), img)
+    img = 2.0 * np.power(img, 1/2.2) * 255.0
+    cv2.imwrite(os.path.join(root, name), img)
 
 # folder = "/home/luoleyouluole/text/text_shot"
 # save_folder = "/home/luoleyouluole/text/new_text_shot"
-folder = "/home/luoleyouluole/Image-Restoration-Experiments/data/export/real"
+folder = "/home/luoleyouluole/Image-Restoration-Experiments/data/export/edsr"
 imgs = os.listdir(folder)
 # # img /= np.max(img)
 # for img in imgs:
@@ -66,20 +65,49 @@ imgs = os.listdir(folder)
 
 #     print_min_max(image)
 
-# image = cv2.imread("/home/luoleyouluole/Image-Restoration-Experiments/data/test/Hancock_Kitchen_Inside.hdr", cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
+# image = cv2.imread("/home/luoleyouluole/text/test/9.png")
 
-# blur = cv2.GaussianBlur(image, (51, 51), 0)
+# # blur = cv2.GaussianBlur(image, ksize=(0,0), sigmaX=3.5, sigmaY=3.5)
+
+# height, width = image.shape[:2]
+
+# # Calculate the new dimensions (reduced by half)
+# new_width = int(width / 2)
+# new_height = int(height / 2)
+
+# # Resize the image
+# resized_image = cv2.resize(image, (new_width, new_height), interpolation=cv2.INTER_CUBIC)
+
+# blur = cv2.GaussianBlur(image, ksize=(0,0), sigmaX=3.5, sigmaY=3.5)
 
 # save_hdr(blur, "/home/luoleyouluole/Image-Restoration-Experiments/data/export/gfn", "Hancock_Kitchen_Inside_blur.hdr")
 
 for img in imgs:
     image = cv2.imread(os.path.join(folder, img), cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
 
-    visualize(image, folder, img.split('.')[0] + "_gammma.png")
+    visualize(image, folder, img.split('.')[0] + "_gamma.png")
 
-
+# cv2.imwrite("/home/luoleyouluole/nas/1.png", blur)
 # draw_histogram(img, "GT", "./")
     # print_min_max(img)
+
+# import os
+# import pandas as pd
+
+# # Specify the folder path
+# folder_path = '/home/luoleyouluole/text/test_patchify_1024'
+
+# # List all files in the folder
+# file_names = os.listdir(folder_path)
+
+# # Create a DataFrame from the list of file names
+# df = pd.DataFrame(file_names, columns=['img_name'])
+
+# # Save the DataFrame to a CSV file
+# df.to_csv('/home/luoleyouluole/text/test_patchify_1024.csv', index=False)
+
+# print("File names saved to file_names.csv")
+
 
 """
 607 + 667 + 472 + 495 + 223

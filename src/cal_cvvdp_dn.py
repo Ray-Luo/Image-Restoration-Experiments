@@ -6,7 +6,7 @@ import numpy as np
 from tqdm import tqdm
 
 # directory containing the images
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/export/sad'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/export/real'
 imgs = os.listdir(test_img_folder)
 imgs.sort()
 test_imgs = []
@@ -72,6 +72,7 @@ for file_name in tqdm(test_imgs):
     reference_name = file_name
     reference_img = os.path.join(test_img_folder, reference_name)
     test_names = [
+        # file_name.replace("_GT", "_noise"),
         file_name.replace("_GT", "_linear_l1"),
         file_name.replace("_GT", "_pu_l1"),
         file_name.replace("_GT", "_pq_l1"),
@@ -98,6 +99,8 @@ for file_name in tqdm(test_imgs):
 
         exr_img_name = exr_img.replace("'", "\\'").replace("&", "\\&")
         reference_img_exr_name = reference_img_exr.replace("'", "\\'").replace("&", "\\&")
+        # print(exr_img_name, reference_img_exr_name)
+        # break
         command = f"cvvdp --test {exr_img_name} --ref {reference_img_exr_name} --display standard_hdr_linear_zoom --display standard_hdr_linear_zoom_4000 --config-paths /home/luoleyouluole/Image-Restoration-Experiments/src/display_models.json  --metric pu-psnr-rgb pu-psnr-y cvvdp  --quiet"
 
         ret_value = subprocess.run(command, shell=True, capture_output=True, text=True)
