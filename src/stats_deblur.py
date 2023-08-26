@@ -25,7 +25,7 @@ def plot(df, name):
 
     plt.show()
     plt.ylabel(name)
-    print(name,"********")
+    # print(name,"********")
     plt.savefig(name + '.png')
     plt.clf()
 
@@ -94,7 +94,7 @@ if 1:
 
 
     # Perform t-test
-    t_statistic, p_value = stats.ttest_ind(linear_smape_psnr_rgb, pu_psnr_rgb)
+    t_statistic, p_value = stats.ttest_ind(linear_cvvdp, pq_cvvdp)
     print('t statistic:', t_statistic)
     print('p value:', p_value)
 
@@ -206,7 +206,7 @@ if 1:
     print(len(linear_pu_psnr_rgb), len(linear_pq_psnr_rgb), "**************")
 
     # Perform t-test
-    t_statistic, p_value = stats.ttest_ind(linear_smape_psnr_rgb, pu_psnr_rgb)
+    t_statistic, p_value = stats.ttest_ind(mu_l1_cvvdp, pu21_cvvdp)
     print('t statistic:', t_statistic)
     print('p value:', p_value)
 
