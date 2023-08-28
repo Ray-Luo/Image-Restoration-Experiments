@@ -6,7 +6,7 @@ import numpy as np
 from tqdm import tqdm
 
 
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_mir'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_mir_extra'
 
 imgs = os.listdir(test_img_folder)
 imgs.sort()
@@ -86,13 +86,13 @@ for file_name in tqdm(test_imgs):
         file_name.replace("_GT", "_mu_l1"),
         file_name.replace("_GT", "_pu21_l1"),
         file_name.replace("_GT", "_naive"),
-        file_name.replace("_GT", "_linear_l1"),
-        file_name.replace("_GT", "_pu_l1"),
-        file_name.replace("_GT", "_pq_l1"),
-        file_name.replace("_GT", "_linear_pq"),
+        # file_name.replace("_GT", "_linear_l1"),
+        # file_name.replace("_GT", "_pu_l1"),
+        # file_name.replace("_GT", "_pq_l1"),
+        # file_name.replace("_GT", "_linear_pq"),
         file_name.replace("_GT", "_linear_pu"),
-        file_name.replace("_GT", "_linear_smape"),
-        file_name.replace("_GT", "_linear_mu"),
+        # file_name.replace("_GT", "_linear_smape"),
+        # file_name.replace("_GT", "_linear_mu"),
     ]
 
     img = cv2.imread(reference_img, cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
@@ -291,7 +291,7 @@ report += "linear_mu_ssim = " + str(linear_mu_ssim) + "\n"
 report += "mu_l1_psnr_ssim = " + str(mu_ssim) + "\n"
 report += "pu21_ssim = " + str(pu21_ssim) + "\n"
 
-with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_mir_complete.txt", "w") as file:
+with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_mir_complete_part2.txt", "w") as file:
     file.write(report)
 
 
