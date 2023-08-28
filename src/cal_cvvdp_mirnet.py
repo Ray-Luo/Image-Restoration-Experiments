@@ -12,7 +12,7 @@ imgs = os.listdir(test_img_folder)
 imgs.sort()
 test_imgs = []
 for filename in imgs:
-    if "_raw_GT.hdr" in filename and "_aug_" not in filename:
+    if "_raw_GT.hdr" in filename:
         test_imgs.append(filename)
 
 navie_psnr_rgb = []

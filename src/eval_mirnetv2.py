@@ -197,7 +197,7 @@ def evaluate(cfg: DictConfig):
         report += "**************************  " + experiment + "  **************************\n"
 
         model = load_model_from_server(model, path)
-        net = model.cpu()
+        net = model.cuda()
         net.eval()
 
         file_list = os.listdir(cfg.data.hq_path)
@@ -227,7 +227,7 @@ def evaluate(cfg: DictConfig):
 
             lq = cv2.GaussianBlur(gt, (51, 51), 0)
             save_hdr(lq, results_save_path, file_name + "_raw_blur.hdr")
-            lq = transform_hdr(lq).unsqueeze(0).cpu()
+            lq = transform_hdr(lq).unsqueeze(0).cuda()
             with torch.no_grad():
                 pred = net(lq)
                 res_img = inverse_fn(pred).squeeze(0).cpu().permute(1,2,0).detach().numpy()

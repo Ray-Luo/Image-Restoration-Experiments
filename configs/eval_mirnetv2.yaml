@@ -13,10 +13,10 @@ defaults:
 
 
 data:
-  # hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug_patchify
-  # lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug_patchify
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug_patchify
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_aug_patchify
+  # hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
+  # lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test
   batch_size: 1
 
 task_name: "eval"
