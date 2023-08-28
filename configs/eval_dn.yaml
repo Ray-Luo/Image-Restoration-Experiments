@@ -22,15 +22,15 @@ defaults:
 #   lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_aug_patchify
 #   batch_size: 1
 
-# data:
-  # hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_patchify
-  # lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_patchify
-  # batch_size: 1
-
 data:
-  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr
-  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr
+  hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr_patchify
+  lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr_patchify
   batch_size: 1
+
+# data:
+#   hq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_hdr
+#   lq_path: /home/luoleyouluole/Image-Restoration-Experiments/data/test_noise_hdr
+#   batch_size: 1
 
 task_name: "eval"
 
@@ -39,9 +39,9 @@ tags: ["dev"]
 
 log_path:
 
-  linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_epoch=374-step=32624.ckpt"
+  # linear_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_epoch=374-step=32624.ckpt"
 
-  pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_epoch=943-step=82127.ckpt"
+  # pq_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pq_epoch=943-step=82127.ckpt"
 
   mu_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_mu_epoch=1901-step=165473.ckpt"
 
@@ -49,14 +49,14 @@ log_path:
 
   pu21_l1: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_pu21_epoch=1343-step=116927.ckpt"
 
-  linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_smapeepoch=235-step=20531.ckpt"
+  # linear_smape: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_smapeepoch=235-step=20531.ckpt"
 
-  linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_mu_epoch=916-step=79778.ckpt"
+  # linear_mu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_mu_epoch=916-step=79778.ckpt"
 
-  linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_pu_epoch=677-step=58985.ckpt"
+  # linear_pu: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_pu_epoch=677-step=58985.ckpt"
 
-  linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_pq_epoch=462-step=40280.ckpt"
+  # linear_pq: "/home/luoleyouluole/Image-Restoration-Experiments/logs/dncnn_linear_pq_epoch=462-step=40280.ckpt"
 
 
 
-results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_only_GT/"
+results_save_path: "/home/luoleyouluole/Image-Restoration-Experiments/data/res_dn_pu21_mu/"
