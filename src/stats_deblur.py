@@ -16,7 +16,7 @@ def plot(df, name):
         palette.append(colors[col_name])
 
 
-    plt.figure(figsize=(20, 6))
+    plt.figure(figsize=(26, 8))
     sns.violinplot(data=df,cut = 0, palette=palette)  # remove the bars inside the violins
 
     for i in range(len(df.columns)):
@@ -90,7 +90,7 @@ if 1:
     pu21_ssim = [0.9508, 0.9909, 0.9903, 0.9731, 0.9673, 0.9189, 0.9231, 0.9729, 0.9753, 0.9785, 0.9748, 0.8998, 0.8195, 0.8804, 0.892, 0.9394, 0.9685, 0.8084, 0.7546, 0.7887, 0.7953, 0.8289, 0.8705, 0.7463, 0.7567, 0.8103, 0.8204, 0.8688, 0.9172, 0.7453, 0.716, 0.7598, 0.769, 0.818, 0.875, 0.7076, 0.7999, 0.8856, 0.8904, 0.906, 0.9225, 0.7373, 0.8898, 0.9579, 0.964, 0.9796, 0.9834, 0.8697, 0.9571, 0.9736, 0.9727, 0.969, 0.9582, 0.9443, 0.9073, 0.9378, 0.9417, 0.9536, 0.9629, 0.8962, 0.9403, 0.961, 0.9615, 0.9603, 0.9537, 0.9218, 0.9251, 0.9399, 0.9406, 0.945, 0.9493, 0.9157, 0.8852, 0.9406, 0.9439, 0.9509, 0.9594, 0.8458, 0.9291, 0.9694, 0.9736, 0.9842, 0.9849, 0.9165, 0.9345, 0.9632, 0.9654, 0.9674, 0.9625, 0.921, 0.919, 0.9539, 0.9587, 0.9751, 0.9847, 0.9104, 0.9463, 0.9672, 0.9705, 0.9827, 0.9897, 0.9414, 0.8158, 0.8698, 0.8798, 0.9236, 0.9582, 0.8049, 0.8038, 0.937, 0.9405, 0.9404, 0.9316, 0.7174]
 
     # Perform t-test
-    t_statistic, p_value = stats.ttest_ind(linear_cvvdp, pq_cvvdp)
+    t_statistic, p_value = stats.ttest_ind(linear_ssim, navie_ssim)
     print('t statistic:', t_statistic)
     print('p value:', p_value)
 
@@ -107,7 +107,7 @@ if 1:
 
     # psnr_rgb_df = pd.DataFrame({'linear_l1': linear_psnr_rgb, 'linear_smape': linear_smape_psnr_rgb, 'linear_pu': linear_pu_psnr_rgb, 'linear_pq': linear_pq_psnr_rgb, 'linear_mu': linear_mu_psnr_rgb, 'pu_l1': pu_psnr_rgb, 'pq_l1': pq_psnr_rgb, 'mu_l1': mu_l1_psnr_rgb, 'pu21_l1': pu21_psnr_rgb})
 
-    psnr_rgb_df = pd.DataFrame({"navie": navie_psnr_rgb, 'mu-l1': mu_l1_psnr_rgb, 'pu21-l1': pu21_psnr_rgb,  'linear-mu': linear_mu_psnr_rgb, 'pq-l1': pq_psnr_rgb, 'linear-l1': linear_psnr_rgb, })
+    psnr_rgb_df = pd.DataFrame({'mu-l1': mu_l1_psnr_rgb, 'pu21-l1': pu21_psnr_rgb,  'linear-mu': linear_mu_psnr_rgb, 'pq-l1': pq_psnr_rgb, 'linear-l1': linear_psnr_rgb, "navie": navie_psnr_rgb,})
     # 'linear-smape': linear_smape_psnr_rgb, 'linear-pu': linear_pu_psnr_rgb, 'linear-pq': linear_pq_psnr_rgb,
 
 
@@ -139,7 +139,7 @@ if 1:
     # print(np.mean(navie_cvvdp), np.mean(linear_cvvdp), np.mean(pu_cvvdp), np.mean(pq_cvvdp))
     # cvvdp_df = pd.DataFrame({'navie_cvvdp': navie_cvvdp, 'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
     # cvvdp_df = pd.DataFrame({'linear_l1': linear_cvvdp, 'linear_smape': linear_smape_cvvdp, 'linear_pu': linear_pu_cvvdp, 'linear_pq':linear_pq_cvvdp, 'linear_mu': linear_mu_cvvdp, 'pu_l1': pu_cvvdp, 'pq_l1': pq_cvvdp, 'mu_l1': mu_l1_cvvdp, 'pu21_l1': pu21_cvvdp})
-    cvvdp_df = pd.DataFrame({"navie": navie_cvvdp, 'mu-l1': mu_l1_cvvdp,  'pu21-l1': pu21_cvvdp, 'linear-mu': linear_mu_cvvdp, 'pq-l1': pq_cvvdp, 'linear-l1': linear_cvvdp, })
+    cvvdp_df = pd.DataFrame({ 'mu-l1': mu_l1_cvvdp,  'pu21-l1': pu21_cvvdp, 'linear-mu': linear_mu_cvvdp, 'pq-l1': pq_cvvdp, 'linear-l1': linear_cvvdp, "navie": navie_cvvdp,})
 
     navie_ssim = np.array(navie_ssim)
     linear_ssim = np.array(linear_ssim)
@@ -152,7 +152,7 @@ if 1:
     mu_l1_ssim = np.array(mu_l1_ssim)
     pu21_ssim = np.array(pu21_ssim)
 
-    ssim_df = pd.DataFrame({"navie": navie_ssim, 'mu-l1': mu_l1_ssim,  'pu21-l1': pu21_ssim, 'linear-mu': linear_mu_ssim, 'pq-l1': pq_ssim, 'linear-l1': linear_ssim, })
+    ssim_df = pd.DataFrame({'pu21-l1': pu21_ssim, 'pq-l1': pq_ssim, 'mu-l1': mu_l1_ssim, 'linear-mu': linear_mu_ssim,  "navie": navie_ssim, 'linear-l1': linear_ssim,})
 
     sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.8, color_codes=True, rc=None)
 

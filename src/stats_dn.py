@@ -15,7 +15,7 @@ def plot(df, name):
         palette.append(colors[col_name])
 
 
-    plt.figure(figsize=(20, 6))
+    plt.figure(figsize=(26, 8))
     sns.violinplot(data=df,cut = 0, palette=palette)  # remove the bars inside the violins
 
     for i in range(len(df.columns)):
@@ -81,7 +81,7 @@ if 1:
 
 
     # Perform t-test
-    t_statistic, p_value = stats.ttest_ind(pq_cvvdp, pu21_cvvdp)
+    t_statistic, p_value = stats.ttest_ind(linear_ssim, pu21_ssim)
     print('t statistic:', t_statistic)
     print('p value:', p_value)
 
@@ -96,7 +96,7 @@ if 1:
     mu_l1_psnr_rgb = np.array(mu_l1_psnr_rgb)
     pu21_psnr_rgb = np.array(pu21_psnr_rgb)
 
-    psnr_rgb_df = pd.DataFrame({"navie": navie_psnr_rgb, 'pq-l1': pq_psnr_rgb, 'mu-l1': mu_l1_psnr_rgb, 'linear-mu': linear_mu_psnr_rgb, 'linear-smape': linear_smape_psnr_rgb, 'linear-pu': linear_pu_psnr_rgb, 'linear-pq': linear_pq_psnr_rgb, 'linear-l1': linear_psnr_rgb, 'pu21-l1': pu21_psnr_rgb})
+    psnr_rgb_df = pd.DataFrame({'pq-l1': pq_psnr_rgb, 'mu-l1': mu_l1_psnr_rgb, 'linear-mu': linear_mu_psnr_rgb, 'linear-smape': linear_smape_psnr_rgb, 'linear-pu': linear_pu_psnr_rgb, 'linear-pq': linear_pq_psnr_rgb, 'linear-l1': linear_psnr_rgb, 'pu21-l1': pu21_psnr_rgb, "navie": navie_psnr_rgb,})
 
 
     navie_psnr_y = np.array(navie_psnr_y)
@@ -128,7 +128,7 @@ if 1:
 
     # cvvdp_df = pd.DataFrame({'linear_l1': linear_cvvdp, 'linear_smape': linear_smape_cvvdp, 'linear_pu': linear_pu_cvvdp, 'linear_pq':linear_pq_cvvdp, 'linear_mu': linear_mu_cvvdp, 'pu_l1': pu_cvvdp, 'pq_l1': pq_cvvdp, 'mu_l1': mu_l1_cvvdp, 'pu21_l1': pu21_cvvdp})
 
-    cvvdp_df = pd.DataFrame({"navie": navie_cvvdp, 'pq-l1': pq_cvvdp, 'linear-pu': linear_pu_cvvdp, 'linear-l1': linear_cvvdp, 'linear-smape': linear_smape_cvvdp, 'linear-pq': linear_pq_cvvdp, 'linear-mu': linear_mu_cvvdp, 'mu-l1': mu_l1_cvvdp, 'pu21-l1': pu21_cvvdp})
+    cvvdp_df = pd.DataFrame({'pq-l1': pq_cvvdp, 'linear-pu': linear_pu_cvvdp, 'linear-l1': linear_cvvdp, 'linear-smape': linear_smape_cvvdp, 'linear-pq': linear_pq_cvvdp, 'linear-mu': linear_mu_cvvdp, 'mu-l1': mu_l1_cvvdp, 'pu21-l1': pu21_cvvdp, "navie": navie_cvvdp,})
 
     linear_ssim = np.array(linear_ssim)
     pu_ssim = np.array(pu_ssim)
@@ -140,7 +140,7 @@ if 1:
     mu_l1_ssim = np.array(mu_l1_ssim)
     pu21_ssim = np.array(pu21_ssim)
 
-    ssim_df = pd.DataFrame({'navie': navie_ssim, 'pu21-l1': pu21_ssim, 'mu-l1': mu_l1_ssim, 'pq-l1': pq_ssim, 'linear-pu': linear_pu_ssim, 'linear-l1': linear_ssim, 'linear-pq': linear_pq_ssim,  'linear-smape': linear_smape_ssim,  'linear-mu': linear_mu_ssim, })
+    ssim_df = pd.DataFrame({'pq-l1': pq_ssim, 'pu21-l1': pu21_ssim, 'mu-l1': mu_l1_ssim, 'linear-pu': linear_pu_ssim, 'linear-pq': linear_pq_ssim, 'linear-smape': linear_smape_ssim, 'linear-mu': linear_mu_ssim, 'linear-l1': linear_ssim, 'navie': navie_ssim,})
 
 
     sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.8, color_codes=True, rc=None)
@@ -203,7 +203,7 @@ if 1:
     pu21_ssim = [0.6971, 0.7241, 0.7172, 0.7093, 0.4791, 0.4892, 0.4843, 0.4783, 0.9242, 0.9149, 0.8712, 0.845, 0.6896, 0.6706, 0.6128, 0.58, 0.8856, 0.8717, 0.794, 0.7755, 0.8213, 0.8057, 0.717, 0.7008, 0.9665, 0.962, 0.9474, 0.9391, 0.9287, 0.9405, 0.935, 0.9279, 0.9274, 0.9383, 0.9275, 0.9289, 0.9197, 0.9249, 0.8996, 0.8989, 0.9368, 0.9446, 0.9633, 0.9678, 0.9382, 0.9499, 0.9581, 0.9597, 0.6604, 0.7931, 0.6709, 0.5979, 0.7323, 0.7933, 0.7296, 0.6612, 0.7646, 0.8423, 0.8756, 0.8708, 0.5601, 0.6365, 0.7011, 0.7154, 0.9065, 0.911, 0.8841, 0.8592, 0.8483, 0.8409, 0.7969, 0.7686, 0.8196, 0.8861, 0.9068, 0.9103, 0.7995, 0.8695, 0.9148, 0.9218, 0.7546, 0.8846, 0.8444, 0.7872, 0.729, 0.8653, 0.8368, 0.7764, 0.7388, 0.814, 0.8728, 0.8593, 0.6854, 0.7997, 0.8529, 0.8485, 0.7082, 0.7623, 0.7436, 0.7142, 0.8577, 0.8837, 0.8543, 0.8412, 0.825, 0.8372, 0.8311, 0.8239, 0.721, 0.8054, 0.8402, 0.8355, 0.7755, 0.8837, 0.9317, 0.9362, 0.6827, 0.7607, 0.8137, 0.8187, 0.924, 0.8775, 0.8865, 0.8961, 0.9192, 0.8873, 0.9025, 0.9143, 0.9332, 0.9149, 0.906, 0.9069, 0.894, 0.8714, 0.8754, 0.8829, 0.9508, 0.9391, 0.9187, 0.9094, 0.9213, 0.9101, 0.8986, 0.8956, 0.643, 0.7229, 0.6882, 0.6796, 0.6234, 0.674, 0.6098, 0.6022]
 
     # Perform t-test
-    t_statistic, p_value = stats.ttest_ind(mu_l1_cvvdp, linear_smape_cvvdp)
+    t_statistic, p_value = stats.ttest_ind(linear_ssim, linear_mu_ssim)
     print('t statistic:', t_statistic)
     print('p value:', p_value)
 
@@ -220,7 +220,7 @@ if 1:
     # print(np.mean(navie_psnr_rgb), np.mean(linear_psnr_rgb), np.mean(pu_psnr_rgb), np.mean(pq_psnr_rgb))
     # psnr_rgb_df = pd.DataFrame({'navie_psnr_rgb': navie_psnr_rgb, 'linear_psnr_rgb': linear_psnr_rgb, 'pu_psnr_rgb': pu_psnr_rgb, 'pq_psnr_rgb': pq_psnr_rgb})
 
-    psnr_rgb_df = pd.DataFrame({"navie": navie_psnr_rgb, 'mu-l1': mu_l1_psnr_rgb, 'pu21-l1': pu21_psnr_rgb, 'pq-l1': pq_psnr_rgb,  'linear-pq': linear_pq_psnr_rgb, 'linear-pu': linear_pu_psnr_rgb, 'linear-mu': linear_mu_psnr_rgb, 'linear-smape': linear_smape_psnr_rgb, 'linear-l1': linear_psnr_rgb, })
+    psnr_rgb_df = pd.DataFrame({'mu-l1': mu_l1_psnr_rgb, 'pu21-l1': pu21_psnr_rgb, 'pq-l1': pq_psnr_rgb,  'linear-pq': linear_pq_psnr_rgb, 'linear-pu': linear_pu_psnr_rgb, 'linear-mu': linear_mu_psnr_rgb, 'linear-smape': linear_smape_psnr_rgb, 'linear-l1': linear_psnr_rgb, "navie": navie_psnr_rgb,})
 
 
     navie_psnr_y = np.array(navie_psnr_y)
@@ -249,7 +249,7 @@ if 1:
     pu21_cvvdp = np.array(pu21_cvvdp)
     # print(np.mean(navie_cvvdp), np.mean(linear_cvvdp), np.mean(pu_cvvdp), np.mean(pq_cvvdp))
     # cvvdp_df = pd.DataFrame({'navie_cvvdp': navie_cvvdp, 'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
-    cvvdp_df = pd.DataFrame({"navie": navie_cvvdp, 'mu-l1': mu_l1_cvvdp, 'pu21-l1': pu21_cvvdp, 'pq-l1': pq_cvvdp,  'linear-pu': linear_pu_cvvdp, 'linear-mu': linear_mu_cvvdp, 'linear-pq': linear_pq_cvvdp, 'linear-l1': linear_cvvdp, 'linear-smape': linear_smape_cvvdp,  })
+    cvvdp_df = pd.DataFrame({'mu-l1': mu_l1_cvvdp, 'pu21-l1': pu21_cvvdp, 'pq-l1': pq_cvvdp,  'linear-pu': linear_pu_cvvdp, 'linear-mu': linear_mu_cvvdp, 'linear-pq': linear_pq_cvvdp, 'linear-l1': linear_cvvdp, 'linear-smape': linear_smape_cvvdp, "navie": navie_cvvdp, })
 
     linear_ssim = np.array(linear_ssim)
     pu_ssim = np.array(pu_ssim)
@@ -261,7 +261,7 @@ if 1:
     mu_l1_ssim = np.array(mu_l1_ssim)
     pu21_ssim = np.array(pu21_ssim)
 
-    ssim_df = pd.DataFrame({'navie': navie_ssim, 'pu21-l1': pu21_ssim, 'mu-l1': mu_l1_ssim, 'pq-l1': pq_ssim, 'linear-pu': linear_pu_ssim, 'linear-l1': linear_ssim, 'linear-pq': linear_pq_ssim,  'linear-smape': linear_smape_ssim,  'linear-mu': linear_mu_ssim, })
+    ssim_df = pd.DataFrame({'mu-l1': mu_l1_ssim, 'pu21-l1': pu21_ssim, 'pq-l1': pq_ssim, 'linear-pu': linear_pu_ssim, 'linear-pq': linear_pq_ssim, 'linear-mu': linear_mu_ssim, 'linear-smape': linear_smape_ssim, 'linear-l1': linear_ssim,    'navie': navie_ssim, })
 
 
 

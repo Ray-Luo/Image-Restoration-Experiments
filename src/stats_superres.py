@@ -15,7 +15,7 @@ def plot(df, name):
         palette.append(colors[col_name])
 
 
-    plt.figure(figsize=(20, 6))
+    plt.figure(figsize=(26, 8))
     sns.violinplot(data=df,cut = 0, palette=palette)  # remove the bars inside the violins
 
     for i in range(len(df.columns)):
@@ -103,7 +103,7 @@ if 1:
 
 
     # Perform t-test
-    t_statistic, p_value = stats.ttest_ind(linear_smape_cvvdp, linear_mu_cvvdp)
+    t_statistic, p_value = stats.ttest_ind(navie_ssim, pu21_ssim)
     print('t statistic:', t_statistic)
     print('p value:', p_value)
 
@@ -119,7 +119,7 @@ if 1:
     pu21_psnr_rgb = np.array(pu21_psnr_rgb)
     # print(np.mean(navie_psnr_rgb), np.mean(linear_psnr_rgb), np.mean(pu_psnr_rgb), np.mean(pq_psnr_rgb))
     # psnr_rgb_df = pd.DataFrame({'navie_psnr_rgb': navie_psnr_rgb, 'linear_psnr_rgb': linear_psnr_rgb, 'pu_psnr_rgb': pu_psnr_rgb, 'pq_psnr_rgb': pq_psnr_rgb})
-    psnr_rgb_df = pd.DataFrame({'navie': navie_psnr_rgb, 'pu21-l1': pu21_psnr_rgb, 'pq-l1': pq_psnr_rgb, 'mu-l1': mu_l1_psnr_rgb, 'linear-pu': linear_pu_psnr_rgb, 'linear-l1': linear_psnr_rgb, 'linear-pq': linear_pq_psnr_rgb,  'linear-smape': linear_smape_psnr_rgb,  'linear-mu': linear_mu_psnr_rgb, })
+    psnr_rgb_df = pd.DataFrame({'pu21-l1': pu21_psnr_rgb, 'pq-l1': pq_psnr_rgb, 'mu-l1': mu_l1_psnr_rgb, 'navie': navie_psnr_rgb, 'linear-pu': linear_pu_psnr_rgb, 'linear-l1': linear_psnr_rgb, 'linear-pq': linear_pq_psnr_rgb,  'linear-smape': linear_smape_psnr_rgb,  'linear-mu': linear_mu_psnr_rgb, })
 
 
     navie_psnr_y = np.array(navie_psnr_y)
@@ -133,7 +133,7 @@ if 1:
     mu_l1_psnr_y = np.array(mu_l1_psnr_y)
     pu21_psnr_y = np.array(pu21_psnr_y)
     # print(np.mean(navie_psnr_y), np.mean(linear_psnr_y), np.mean(pu_psnr_y), np.mean(pq_psnr_y))
-    psnr_y_df = pd.DataFrame({'navie': navie_psnr_y, 'pu21-l1': pu21_psnr_y,  'mu-l1': mu_l1_psnr_y, 'pq-l1': pq_psnr_y,  'linear-pu': linear_pu_psnr_y, 'linear-l1': linear_psnr_y, 'linear-pq': linear_pq_psnr_y,  'linear-smape': linear_smape_psnr_y,  'linear-mu': linear_mu_psnr_y, })
+    psnr_y_df = pd.DataFrame({'pu21-l1': pu21_psnr_y,  'mu-l1': mu_l1_psnr_y, 'pq-l1': pq_psnr_y, 'navie': navie_psnr_y,  'linear-pu': linear_pu_psnr_y, 'linear-l1': linear_psnr_y, 'linear-pq': linear_pq_psnr_y,  'linear-smape': linear_smape_psnr_y,  'linear-mu': linear_mu_psnr_y, })
 
     navie_cvvdp = np.array(navie_cvvdp)
     linear_cvvdp = np.array(linear_cvvdp)
@@ -147,7 +147,7 @@ if 1:
     pu21_cvvdp = np.array(pu21_cvvdp)
     # print(np.mean(navie_cvvdp), np.mean(linear_cvvdp), np.mean(pu_cvvdp), np.mean(pq_cvvdp))
     # cvvdp_df = pd.DataFrame({'navie_cvvdp': navie_cvvdp, 'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
-    cvvdp_df = pd.DataFrame({'navie': navie_cvvdp, 'pu21-l1': pu21_cvvdp, 'mu-l1': mu_l1_cvvdp, 'pq-l1': pq_cvvdp, 'linear-pu': linear_pu_cvvdp, 'linear-l1': linear_cvvdp, 'linear-pq': linear_pq_cvvdp,  'linear-smape': linear_smape_cvvdp,  'linear-mu': linear_mu_cvvdp, })
+    cvvdp_df = pd.DataFrame({'pu21-l1': pu21_cvvdp, 'mu-l1': mu_l1_cvvdp, 'pq-l1': pq_cvvdp, 'navie': navie_cvvdp, 'linear-pu': linear_pu_cvvdp, 'linear-l1': linear_cvvdp, 'linear-pq': linear_pq_cvvdp,  'linear-smape': linear_smape_cvvdp,  'linear-mu': linear_mu_cvvdp, })
 
     navie_ssim = np.array(navie_ssim)
     linear_ssim = np.array(linear_ssim)
@@ -160,7 +160,7 @@ if 1:
     mu_l1_ssim = np.array(mu_l1_ssim)
     pu21_ssim = np.array(pu21_ssim)
 
-    ssim_df = pd.DataFrame({'navie': navie_ssim, 'pu21-l1': pu21_ssim, 'mu-l1': mu_l1_ssim, 'pq-l1': pq_ssim, 'linear-pu': linear_pu_ssim, 'linear-l1': linear_ssim, 'linear-pq': linear_pq_ssim,  'linear-smape': linear_smape_ssim,  'linear-mu': linear_mu_ssim, })
+    ssim_df = pd.DataFrame({'pu21-l1': pu21_ssim, 'mu-l1': mu_l1_ssim, 'pq-l1': pq_ssim, 'navie': navie_ssim, 'linear-l1': linear_ssim, 'linear-pu': linear_pu_ssim,  'linear-pq': linear_pq_ssim,  'linear-smape': linear_smape_ssim,  'linear-mu': linear_mu_ssim, })
 
 
     sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.8, color_codes=True, rc=None)
@@ -281,7 +281,7 @@ if 1:
     navie_ssim = [0.9543, 0.9945, 0.9958, 0.9986, 0.9995, 0.9261, 0.9394, 0.982, 0.985, 0.9927, 0.9962, 0.9228, 0.861, 0.9051, 0.9138, 0.9513, 0.9775, 0.8533, 0.8138, 0.8417, 0.8466, 0.8714, 0.9016, 0.8074, 0.8012, 0.8418, 0.8497, 0.8884, 0.9288, 0.7928, 0.7796, 0.8103, 0.817, 0.8531, 0.8968, 0.774, 0.8348, 0.9158, 0.922, 0.9439, 0.9597, 0.7792, 0.9084, 0.9631, 0.9684, 0.9833, 0.9908, 0.8932, 0.9592, 0.9824, 0.9844, 0.9904, 0.9939, 0.948, 0.9286, 0.9547, 0.9579, 0.9697, 0.9786, 0.9201, 0.9457, 0.9756, 0.978, 0.9854, 0.99, 0.9294, 0.9449, 0.9668, 0.9691, 0.9769, 0.9826, 0.9363, 0.9033, 0.9571, 0.9614, 0.9758, 0.9847, 0.8672, 0.948, 0.9773, 0.9805, 0.9901, 0.9948, 0.9394, 0.9433, 0.9724, 0.9754, 0.9851, 0.991, 0.9327, 0.9403, 0.9639, 0.9672, 0.9795, 0.9879, 0.935, 0.9512, 0.9689, 0.9719, 0.9835, 0.9916, 0.9473, 0.8603, 0.8981, 0.9052, 0.9379, 0.9656, 0.8529, 0.8238, 0.9523, 0.9583, 0.9722, 0.9794, 0.7451]
     linear_ssim = [0.9027, 0.7268, 0.6884, 0.626, 0.564, 0.906, 0.8927, 0.7643, 0.7474, 0.7045, 0.6699, 0.9061, 0.8794, 0.8826, 0.8809, 0.8419, 0.7337, 0.8784, 0.8569, 0.873, 0.8739, 0.8728, 0.8635, 0.8499, 0.8229, 0.8442, 0.8477, 0.8542, 0.8387, 0.8092, 0.8349, 0.8414, 0.8426, 0.8488, 0.8299, 0.8275, 0.6636, 0.5846, 0.5678, 0.4832, 0.4101, 0.6676, 0.8886, 0.8709, 0.8477, 0.7618, 0.6888, 0.8817, 0.8827, 0.6842, 0.6536, 0.5286, 0.3875, 0.9104, 0.8667, 0.8618, 0.8582, 0.7915, 0.6835, 0.8716, 0.8237, 0.6557, 0.6228, 0.4583, 0.3554, 0.8532, 0.8654, 0.7537, 0.7332, 0.5854, 0.5026, 0.8864, 0.8022, 0.7541, 0.7409, 0.6424, 0.5028, 0.797, 0.9329, 0.8825, 0.8625, 0.7438, 0.6277, 0.9329, 0.8922, 0.748, 0.7266, 0.6309, 0.5649, 0.9153, 0.9453, 0.9474, 0.9433, 0.8898, 0.7897, 0.9429, 0.9547, 0.95, 0.9469, 0.9285, 0.8704, 0.9539, 0.8829, 0.8989, 0.9013, 0.8953, 0.7796, 0.8789, 0.671, 0.5146, 0.4907, 0.4252, 0.3565, 0.6317]
     pu_ssim = [0.9513, 0.9777, 0.9748, 0.958, 0.9446, 0.926, 0.9478, 0.977, 0.9771, 0.9682, 0.9602, 0.9339, 0.8814, 0.9143, 0.9221, 0.9539, 0.9725, 0.8777, 0.8547, 0.8782, 0.8816, 0.8953, 0.9157, 0.8493, 0.8185, 0.8521, 0.8576, 0.8863, 0.9256, 0.8095, 0.8302, 0.851, 0.8551, 0.8802, 0.9139, 0.8249, 0.8425, 0.9109, 0.9135, 0.9222, 0.9249, 0.7812, 0.9064, 0.9537, 0.958, 0.9671, 0.962, 0.8919, 0.9682, 0.9753, 0.9737, 0.9628, 0.9495, 0.9584, 0.9299, 0.952, 0.9546, 0.9625, 0.9668, 0.9218, 0.9384, 0.9556, 0.955, 0.9479, 0.9368, 0.9201, 0.9424, 0.9499, 0.9501, 0.9471, 0.9395, 0.9351, 0.8958, 0.9463, 0.9485, 0.9549, 0.9561, 0.8555, 0.9505, 0.9743, 0.9765, 0.9808, 0.9751, 0.9426, 0.9576, 0.9679, 0.9677, 0.9613, 0.9505, 0.9521, 0.9522, 0.9681, 0.9705, 0.9792, 0.9827, 0.9487, 0.9625, 0.9742, 0.976, 0.9839, 0.9896, 0.9593, 0.8841, 0.9114, 0.9166, 0.9422, 0.9644, 0.878, 0.788, 0.9371, 0.9398, 0.9308, 0.9151, 0.699]
-    pq_ssim = [0.9511, 0.989, 0.9889, 0.9772, 0.9591, 0.9255, 0.9456, 0.9791, 0.9807, 0.9809, 0.9736, 0.9322, 0.8792, 0.9087, 0.916, 0.9495, 0.9732, 0.8754, 0.8546, 0.8771, 0.8804, 0.8938, 0.9121, 0.8479, 0.8197, 0.8498, 0.8557, 0.8837, 0.9189, 0.8115, 0.8311, 0.8507, 0.8541, 0.8756, 0.9093, 0.8262, 0.8296, 0.9181, 0.9233, 0.9357, 0.9421, 0.772, 0.904, 0.9566, 0.9622, 0.9767, 0.9814, 0.8907, 0.9679, 0.9813, 0.981, 0.9744, 0.9641, 0.9582, 0.9279, 0.9525, 0.9553, 0.9636, 0.9695, 0.9185, 0.9385, 0.9642, 0.9649, 0.9628, 0.9561, 0.92, 0.9436, 0.955, 0.9559, 0.9565, 0.9558, 0.9336, 0.8893, 0.951, 0.955, 0.9647, 0.9689, 0.8498, 0.9495, 0.9741, 0.9769, 0.9857, 0.9872, 0.9417, 0.9587, 0.9753, 0.976, 0.9746, 0.968, 0.9522, 0.9518, 0.9673, 0.9698, 0.9795, 0.9861, 0.9482, 0.9621, 0.9735, 0.9755, 0.9839, 0.9903, 0.9591, 0.8845, 0.9097, 0.9147, 0.94, 0.964, 0.8784, 0.7757, 0.9395, 0.9458, 0.9496, 0.9377, 0.6937]
+    pq_ssim = [0.9521, 0.99, 0.9899, 0.9782, 0.9601, 0.9265, 0.9466, 0.9801, 0.9817, 0.9819, 0.9746, 0.9332, 0.8802, 0.9097, 0.917, 0.9505, 0.9742, 0.8764, 0.8556, 0.8781, 0.8814, 0.8948, 0.9131, 0.8489, 0.8207, 0.8508, 0.8567, 0.8847, 0.9199, 0.8125, 0.8321, 0.8517, 0.8551, 0.8766, 0.9103, 0.8272, 0.8306, 0.9191, 0.9243, 0.9367, 0.9431, 0.773, 0.905, 0.9576, 0.9632000000000001, 0.9777, 0.9824, 0.8917, 0.9689, 0.9823, 0.982, 0.9754, 0.9651, 0.9592, 0.9289, 0.9535, 0.9563, 0.9646, 0.9705, 0.9195, 0.9395, 0.9652, 0.9659, 0.9638, 0.9571, 0.921, 0.9446, 0.956, 0.9569, 0.9575, 0.9568, 0.9346, 0.8903, 0.952, 0.956, 0.9657, 0.9699, 0.8508, 0.9505, 0.9751, 0.9779, 0.9867, 0.9882, 0.9427, 0.9597, 0.9763, 0.977, 0.9756, 0.969, 0.9532, 0.9528, 0.9683, 0.9708, 0.9805, 0.9871, 0.9492, 0.9631, 0.9745, 0.9765, 0.9849, 0.9913, 0.9601, 0.8855, 0.9107, 0.9157, 0.941, 0.965, 0.8794, 0.7767, 0.9405, 0.9468, 0.9506, 0.9387, 0.6947]
     linear_smape_ssim = [0.9425, 0.8974, 0.8632, 0.7069, 0.5839, 0.9157, 0.9138, 0.896, 0.8826, 0.7937, 0.7042, 0.9119, 0.8781, 0.898, 0.904, 0.9266, 0.9197, 0.8763, 0.851, 0.8697, 0.8716, 0.8786, 0.8885, 0.8465, 0.8185, 0.8392, 0.8449, 0.8759, 0.9071, 0.8027, 0.8292, 0.8349, 0.8368, 0.8546, 0.8868, 0.821, 0.756, 0.6701, 0.6548, 0.6004, 0.5352, 0.7106, 0.8947, 0.9349, 0.9351, 0.9137, 0.8339, 0.8836, 0.939, 0.8503, 0.8262, 0.6822, 0.5757, 0.936, 0.8788, 0.8906, 0.8906, 0.8781, 0.8494, 0.8703, 0.9013, 0.7964, 0.7699, 0.6532, 0.54, 0.8977, 0.8976, 0.8277, 0.8128, 0.7472, 0.6714, 0.9036, 0.8568, 0.8197, 0.8071, 0.7652, 0.7161, 0.8235, 0.9419, 0.9523, 0.9506, 0.9228, 0.846, 0.935, 0.9378, 0.8755, 0.8566, 0.7549, 0.6611, 0.9373, 0.9429, 0.9604, 0.9621, 0.9668, 0.9539, 0.941, 0.9538, 0.9639, 0.9658, 0.9702, 0.9623, 0.9521, 0.8809, 0.9018, 0.9065, 0.9294, 0.9453, 0.8764, 0.7526, 0.7698, 0.7407, 0.5571, 0.3984, 0.6705]
     linear_pu_ssim = [0.9344, 0.7669, 0.736, 0.5962, 0.525, 0.9112, 0.9081, 0.8239, 0.8011, 0.7017, 0.643, 0.9098, 0.8762, 0.8931, 0.8979, 0.9002, 0.8577, 0.876, 0.8567, 0.8713, 0.8736, 0.8823, 0.8894, 0.8492, 0.8162, 0.8372, 0.8429, 0.8665, 0.8837, 0.8091, 0.8295, 0.8308, 0.8325, 0.8489, 0.8779, 0.8242, 0.7156, 0.6238, 0.6124, 0.5404, 0.4595, 0.6987, 0.8953, 0.916, 0.9111, 0.8178, 0.6872, 0.8832, 0.9267, 0.7761, 0.728, 0.6069, 0.4815, 0.9341, 0.8759, 0.8791, 0.8755, 0.8648, 0.8133, 0.8748, 0.8745, 0.7363, 0.7041, 0.5753, 0.4043, 0.8902, 0.8836, 0.7853, 0.7697, 0.6946, 0.5111, 0.8977, 0.8337, 0.7764, 0.7704, 0.7289, 0.65, 0.8118, 0.9409, 0.9388, 0.932, 0.8664, 0.7144, 0.9335, 0.9249, 0.8179, 0.7896, 0.6745, 0.5446, 0.9344, 0.9421, 0.9587, 0.9597, 0.9567, 0.9103, 0.9392, 0.9536, 0.9631, 0.9643, 0.9635, 0.9461, 0.9519, 0.8798, 0.9018, 0.9057, 0.9246, 0.929, 0.8755, 0.7164, 0.6346, 0.5887, 0.3912, 0.3244, 0.6498]
     linear_pq_ssim = [0.9334, 0.8227, 0.7938, 0.6841, 0.6105, 0.9174, 0.922, 0.8777, 0.8614, 0.7856, 0.7235, 0.9191, 0.8821, 0.9023, 0.906, 0.9108, 0.8723, 0.8788, 0.855, 0.8742, 0.876, 0.8831, 0.8916, 0.8506, 0.8262, 0.8505, 0.8553, 0.8772, 0.8911, 0.8148, 0.8356, 0.8458, 0.8481, 0.8636, 0.8808, 0.8291, 0.7443, 0.6846, 0.673, 0.6234, 0.5721, 0.7147, 0.9005, 0.9187, 0.9124, 0.849, 0.7553, 0.8895, 0.9256, 0.807, 0.7819, 0.6653, 0.547, 0.9323, 0.8736, 0.8787, 0.8816, 0.8567, 0.8001, 0.8721, 0.8806, 0.7606, 0.7368, 0.6229, 0.5114, 0.889, 0.8852, 0.8107, 0.794, 0.7025, 0.6013, 0.8919, 0.8529, 0.819, 0.8098, 0.7586, 0.6772, 0.8272, 0.9433, 0.9368, 0.9288, 0.8628, 0.7538, 0.9369, 0.9255, 0.841, 0.8218, 0.7322, 0.6495, 0.9331, 0.9484, 0.9595, 0.9592, 0.9439, 0.8952, 0.9448, 0.9568, 0.9641, 0.9649, 0.9606, 0.9279, 0.9545, 0.8851, 0.9056, 0.9089, 0.9189, 0.9013, 0.8801, 0.7567, 0.7235, 0.6927, 0.5553, 0.4594, 0.6902]
@@ -316,7 +316,7 @@ if 1:
     # linear_pq_cvvdp = linear_pq_cvvdp[0:-18]
     # linear_mu_cvvdp = linear_mu_cvvdp[0:-18]
 
-    t_statistic, p_value = stats.ttest_ind(linear_smape_cvvdp, linear_pu_cvvdp)
+    t_statistic, p_value = stats.ttest_ind(linear_ssim, linear_pq_ssim)
     print('t statistic:', t_statistic)
     print('p value:', p_value)
 
@@ -332,7 +332,7 @@ if 1:
     pu21_psnr_rgb = np.array(pu21_psnr_rgb)
     # print(np.mean(navie_psnr_rgb), np.mean(linear_psnr_rgb), np.mean(pu_psnr_rgb), np.mean(pq_psnr_rgb))
     # psnr_rgb_df = pd.DataFrame({'navie_psnr_rgb': navie_psnr_rgb, 'linear_psnr_rgb': linear_psnr_rgb, 'pu_psnr_rgb': pu_psnr_rgb, 'pq_psnr_rgb': pq_psnr_rgb})
-    psnr_rgb_df = pd.DataFrame({'navie': navie_psnr_rgb, 'pu21-l1': pu21_psnr_rgb, 'pq-l1': pq_psnr_rgb, 'mu-l1': mu_l1_psnr_rgb, 'linear-mu': linear_mu_psnr_rgb, 'linear-pq': linear_pq_psnr_rgb,  'linear-smape': linear_smape_psnr_rgb, 'linear-pu': linear_pu_psnr_rgb, 'linear-l1': linear_psnr_rgb, })
+    psnr_rgb_df = pd.DataFrame({'pu21-l1': pu21_psnr_rgb, 'pq-l1': pq_psnr_rgb, 'mu-l1': mu_l1_psnr_rgb, 'navie': navie_psnr_rgb, 'linear-mu': linear_mu_psnr_rgb, 'linear-pq': linear_pq_psnr_rgb,  'linear-smape': linear_smape_psnr_rgb, 'linear-pu': linear_pu_psnr_rgb, 'linear-l1': linear_psnr_rgb, })
 
 
     navie_psnr_y = np.array(navie_psnr_y)
@@ -346,7 +346,7 @@ if 1:
     mu_l1_psnr_y = np.array(mu_l1_psnr_y)
     pu21_psnr_y = np.array(pu21_psnr_y)
     # print(np.mean(navie_psnr_y), np.mean(linear_psnr_y), np.mean(pu_psnr_y), np.mean(pq_psnr_y))
-    psnr_y_df = pd.DataFrame({'navie': navie_psnr_y, 'pu21-l1': pu21_psnr_y,  'pq-l1': pq_psnr_y, 'mu-l1': mu_l1_psnr_y, 'linear-mu': linear_mu_psnr_y, 'linear-smape': linear_smape_psnr_y, 'linear-pq': linear_pq_psnr_y, 'linear-pu': linear_pu_psnr_y, 'linear-l1': linear_psnr_y, })
+    psnr_y_df = pd.DataFrame({'pu21-l1': pu21_psnr_y,  'pq-l1': pq_psnr_y, 'mu-l1': mu_l1_psnr_y, 'navie': navie_psnr_y, 'linear-mu': linear_mu_psnr_y, 'linear-smape': linear_smape_psnr_y, 'linear-pq': linear_pq_psnr_y, 'linear-pu': linear_pu_psnr_y, 'linear-l1': linear_psnr_y, })
 
     navie_cvvdp = np.array(navie_cvvdp)
     linear_cvvdp = np.array(linear_cvvdp)
@@ -360,7 +360,7 @@ if 1:
     pu21_cvvdp = np.array(pu21_cvvdp)
     # print(np.mean(navie_cvvdp), np.mean(linear_cvvdp), np.mean(pu_cvvdp), np.mean(pq_cvvdp))
     # cvvdp_df = pd.DataFrame({'navie_cvvdp': navie_cvvdp, 'linear_cvvdp': linear_cvvdp, 'pu_cvvdp': pu_cvvdp, 'pq_cvvdp': pq_cvvdp})
-    cvvdp_df = pd.DataFrame({'navie': navie_cvvdp, 'mu-l1': mu_l1_cvvdp,  'pu21-l1': pu21_cvvdp, 'pq-l1': pq_cvvdp, 'linear-mu': linear_mu_cvvdp, 'linear-pq': linear_pq_cvvdp,  'linear-smape': linear_smape_cvvdp, 'linear-pu': linear_pu_cvvdp, 'linear-l1': linear_cvvdp, })
+    cvvdp_df = pd.DataFrame({'mu-l1': mu_l1_cvvdp,  'pu21-l1': pu21_cvvdp, 'pq-l1': pq_cvvdp, 'navie': navie_cvvdp, 'linear-mu': linear_mu_cvvdp, 'linear-pq': linear_pq_cvvdp,  'linear-smape': linear_smape_cvvdp, 'linear-pu': linear_pu_cvvdp, 'linear-l1': linear_cvvdp, })
 
     navie_ssim = np.array(navie_ssim)
     linear_ssim = np.array(linear_ssim)
@@ -373,7 +373,7 @@ if 1:
     mu_l1_ssim = np.array(mu_l1_ssim)
     pu21_ssim = np.array(pu21_ssim)
 
-    ssim_df = pd.DataFrame({'navie': navie_ssim, 'pu21-l1': pu21_ssim, 'mu-l1': mu_l1_ssim, 'pq-l1': pq_ssim, 'linear-pu': linear_pu_ssim, 'linear-l1': linear_ssim, 'linear-pq': linear_pq_ssim,  'linear-smape': linear_smape_ssim,  'linear-mu': linear_mu_ssim, })
+    ssim_df = pd.DataFrame({ 'mu-l1': mu_l1_ssim, 'pu21-l1': pu21_ssim, 'pq-l1': pq_ssim, 'navie': navie_ssim, 'linear-smape': linear_smape_ssim,  'linear-mu': linear_mu_ssim, 'linear-pq': linear_pq_ssim, 'linear-pu': linear_pu_ssim, 'linear-l1': linear_ssim,    })
 
 
     sns.set_theme(context='notebook', style='darkgrid', palette='deep', font='sans-serif', font_scale=1.8, color_codes=True, rc=None)
