@@ -16,7 +16,16 @@ def plot(df, name):
 
 
     plt.figure(figsize=(26, 8))
-    sns.violinplot(data=df,cut = 0, palette=palette)  # remove the bars inside the violins
+    ax = sns.violinplot(data=df,cut = 0, palette=palette)  # remove the bars inside the violins
+
+    if "psnr" in name:
+        ax.set_ylim(10, 60)
+
+    if "cvvdp" in name:
+        ax.set_ylim(3.5, 10)
+
+    if "ssim" in name:
+        ax.set_ylim(0, 1.05)
 
     for i in range(len(df.columns)):
         median_val = df.iloc[:, i].median()
