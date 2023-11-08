@@ -27,12 +27,13 @@ def plot(df, name):
     if "ssim" in name:
         ax.set_ylim(0, 1.05)
 
-    for i in range(len(df.columns)):
-        median_val = df.iloc[:, i].median()
-        plt.text(i+0.13, median_val, f'{median_val:.3f}', horizontalalignment='left', size='x-small', color='black', weight='semibold')
+    # for i in range(len(df.columns)):
+    #     median_val = df.iloc[:, i].median()
+    #     plt.text(i+0.13, median_val, f'{median_val:.3f}', horizontalalignment='left', size='large', color='black', weight='semibold')
 
+    plt.xticks(column_names, fontsize=48, rotation=20)
     plt.show()
-    plt.ylabel(name)
+    plt.ylabel(name, fontsize=72)
     plt.savefig(name + '.png')
     plt.clf()
 

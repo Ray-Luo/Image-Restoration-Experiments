@@ -28,9 +28,9 @@ def plot(df, name):
     if "ssim" in name:
         ax.set_ylim(0, 1.05)
 
-    for i in range(len(df.columns)):
-        median_val = df.iloc[:, i].median()
-        plt.text(i+0.13, median_val, f'{median_val:.3f}', horizontalalignment='left', size='large', color='black', weight='semibold')
+    # for i in range(len(df.columns)):
+    #     median_val = df.iloc[:, i].median()
+    #     plt.text(i+0.13, median_val, f'{median_val:.3f}', horizontalalignment='left', size='large', color='black', weight='semibold')
 
     plt.show()
     plt.ylabel(name)
