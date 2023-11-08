@@ -1,0 +1,271 @@
+Bandon_Sunset_2_aug_1_raw_linear_pq.hdr 0.5184 17.8460 18.4874 6.0043
+
+Bandon_Sunset_2_aug_2_raw_linear_pq.hdr 0.3268 15.6643 15.3965 7.2475
+
+Bandon_Sunset_2_aug_3_raw_linear_pq.hdr 0.2737 15.5232 15.3042 7.3235
+
+Bandon_Sunset_2_aug_4_raw_linear_pq.hdr 0.0546 14.5949 14.4454 6.7660
+
+Bandon_Sunset_2_aug_5_raw_linear_pq.hdr 0.0186 13.5993 13.2286 7.1109
+
+Bandon_Sunset_2_raw_linear_pq.hdr 0.6165 20.0059 21.7155 6.0481
+
+Bar_Harbor_Sunrise_aug_1_raw_linear_pq.hdr 0.6673 19.4519 20.7586 5.6385
+
+Bar_Harbor_Sunrise_aug_2_raw_linear_pq.hdr 0.4851 16.8132 16.7031 5.8892
+
+Bar_Harbor_Sunrise_aug_3_raw_linear_pq.hdr 0.4399 16.6537 16.5357 5.9817
+
+Bar_Harbor_Sunrise_aug_4_raw_linear_pq.hdr 0.1850 15.6449 15.7923 6.1885
+
+Bar_Harbor_Sunrise_aug_5_raw_linear_pq.hdr 0.0510 14.3217 14.2960 6.2159
+
+Bar_Harbor_Sunrise_raw_linear_pq.hdr 0.7604 21.6021 23.7790 6.4639
+
+Ben&Jerry's_aug_1_raw_linear_pq.hdr 0.8481 24.6822 28.8864 7.0160
+
+Ben&Jerry's_aug_2_raw_linear_pq.hdr 0.5161 19.3050 21.6643 5.5860
+
+Ben&Jerry's_aug_3_raw_linear_pq.hdr 0.4317 18.4225 20.4019 5.2543
+
+Ben&Jerry's_aug_4_raw_linear_pq.hdr 0.1464 15.6632 16.3316 4.8778
+
+Ben&Jerry's_aug_5_raw_linear_pq.hdr 0.0502 14.2071 14.1291 5.1904
+
+Ben&Jerry's_raw_linear_pq.hdr 0.8624 25.4672 29.1313 6.9274
+
+Blooming_Gorse_1_aug_1_raw_linear_pq.hdr 0.8281 16.8165 29.2324 6.7270
+
+Blooming_Gorse_1_aug_2_raw_linear_pq.hdr 0.8216 23.1475 29.2507 7.0373
+
+Blooming_Gorse_1_aug_3_raw_linear_pq.hdr 0.8080 22.9100 28.7306 7.0422
+
+Blooming_Gorse_1_aug_4_raw_linear_pq.hdr 0.6718 21.0143 25.1308 6.6760
+
+Blooming_Gorse_1_aug_5_raw_linear_pq.hdr 0.3748 17.8484 20.8168 5.4339
+
+Blooming_Gorse_1_raw_linear_pq.hdr 0.8227 15.1853 28.8449 6.6555
+
+Cades_Cove_aug_1_raw_linear_pq.hdr 0.8129 25.2592 30.0365 6.5403
+
+Cades_Cove_aug_2_raw_linear_pq.hdr 0.7152 21.3426 25.8158 6.4681
+
+Cades_Cove_aug_3_raw_linear_pq.hdr 0.6792 20.8763 24.8121 6.3598
+
+Cades_Cove_aug_4_raw_linear_pq.hdr 0.4270 18.3572 20.8555 5.6625
+
+Cades_Cove_aug_5_raw_linear_pq.hdr 0.1677 15.6610 16.9311 4.9641
+
+Cades_Cove_raw_linear_pq.hdr 0.8122 24.5494 29.7374 6.4634
+
+El_Capitan_aug_1_raw_linear_pq.hdr 0.8093 26.2377 28.2472 6.4305
+
+El_Capitan_aug_2_raw_linear_pq.hdr 0.7532 23.7765 28.4692 6.7059
+
+El_Capitan_aug_3_raw_linear_pq.hdr 0.7187 23.1582 27.6385 6.6422
+
+El_Capitan_aug_4_raw_linear_pq.hdr 0.4503 19.0574 21.5833 5.3189
+
+El_Capitan_aug_5_raw_linear_pq.hdr 0.2001 15.9514 16.9743 4.1225
+
+El_Capitan_raw_linear_pq.hdr 0.8064 25.8958 27.8356 6.3436
+
+Flamingo_aug_1_raw_linear_pq.hdr 0.4651 14.0090 17.5391 5.9595
+
+Flamingo_aug_2_raw_linear_pq.hdr 0.2662 13.9384 15.3584 5.6193
+
+Flamingo_aug_3_raw_linear_pq.hdr 0.2396 13.9512 15.1068 5.5134
+
+Flamingo_aug_4_raw_linear_pq.hdr 0.1327 13.7641 14.1360 5.0779
+
+Flamingo_aug_5_raw_linear_pq.hdr 0.0611 13.4505 13.4256 4.8559
+
+Flamingo_raw_linear_pq.hdr 0.5191 13.9883 18.7098 5.9749
+
+Golden_Gate_2_aug_1_raw_linear_pq.hdr 0.7715 24.0107 26.2648 6.7065
+
+Golden_Gate_2_aug_2_raw_linear_pq.hdr 0.4352 17.4977 17.5384 6.1844
+
+Golden_Gate_2_aug_3_raw_linear_pq.hdr 0.3950 17.0030 16.9777 6.3168
+
+Golden_Gate_2_aug_4_raw_linear_pq.hdr 0.1916 15.4376 15.3648 6.7717
+
+Golden_Gate_2_aug_5_raw_linear_pq.hdr 0.0380 14.3101 14.0304 6.7088
+
+Golden_Gate_2_raw_linear_pq.hdr 0.8462 26.7711 28.9999 7.0633
+
+Hancock_Kitchen_Inside_aug_1_raw_linear_pq.hdr 0.4762 17.1800 18.4481 5.8652
+
+Hancock_Kitchen_Inside_aug_2_raw_linear_pq.hdr 0.1207 14.2933 14.4726 5.6875
+
+Hancock_Kitchen_Inside_aug_3_raw_linear_pq.hdr 0.0961 14.0412 14.1125 5.7097
+
+Hancock_Kitchen_Inside_aug_4_raw_linear_pq.hdr 0.0488 13.3784 13.1052 5.8883
+
+Hancock_Kitchen_Inside_aug_5_raw_linear_pq.hdr 0.0337 13.1578 12.7220 6.1786
+
+Hancock_Kitchen_Inside_raw_linear_pq.hdr 0.5989 18.6100 20.9351 6.2860
+
+Lab_Booth_aug_1_raw_linear_pq.hdr 0.7543 12.8255 23.7934 7.0475
+
+Lab_Booth_aug_2_raw_linear_pq.hdr 0.4352 15.1464 19.0341 6.4578
+
+Lab_Booth_aug_3_raw_linear_pq.hdr 0.3957 15.0873 18.2997 6.3552
+
+Lab_Booth_aug_4_raw_linear_pq.hdr 0.2237 14.4290 15.8432 6.0669
+
+Lab_Booth_aug_5_raw_linear_pq.hdr 0.1234 13.7895 14.2987 5.7515
+
+Lab_Booth_raw_linear_pq.hdr 0.8069 11.9257 25.0374 7.0542
+
+Lab_Typwriter_aug_1_raw_linear_pq.hdr 0.4161 16.7285 17.7082 5.8170
+
+Lab_Typwriter_aug_2_raw_linear_pq.hdr 0.1369 14.0828 14.1291 6.1728
+
+Lab_Typwriter_aug_3_raw_linear_pq.hdr 0.1218 13.8939 13.8142 6.3042
+
+Lab_Typwriter_aug_4_raw_linear_pq.hdr 0.0837 13.4797 13.1237 6.5679
+
+Lab_Typwriter_aug_5_raw_linear_pq.hdr 0.0577 13.3017 12.8614 6.5934
+
+Lab_Typwriter_raw_linear_pq.hdr 0.5346 18.0579 19.6101 6.1568
+
+Lab_Window_aug_1_raw_linear_pq.hdr 0.5523 14.7780 19.1703 6.2624
+
+Lab_Window_aug_2_raw_linear_pq.hdr 0.2504 15.0995 15.2514 5.7792
+
+Lab_Window_aug_3_raw_linear_pq.hdr 0.2284 14.8572 14.9500 5.8049
+
+Lab_Window_aug_4_raw_linear_pq.hdr 0.1544 14.0718 13.9282 6.1984
+
+Lab_Window_aug_5_raw_linear_pq.hdr 0.0932 13.7705 13.5139 6.4692
+
+Lab_Window_raw_linear_pq.hdr 0.6722 14.0106 20.4157 6.5904
+
+Las_Vegas_Store_aug_1_raw_linear_pq.hdr 0.6370 17.1739 19.5790 6.9038
+
+Las_Vegas_Store_aug_2_raw_linear_pq.hdr 0.2518 15.3537 16.5439 5.7575
+
+Las_Vegas_Store_aug_3_raw_linear_pq.hdr 0.1986 15.0274 15.9904 5.4898
+
+Las_Vegas_Store_aug_4_raw_linear_pq.hdr 0.0780 13.8115 13.9950 5.1086
+
+Las_Vegas_Store_aug_5_raw_linear_pq.hdr 0.0364 13.2938 13.0237 5.2374
+
+Las_Vegas_Store_raw_linear_pq.hdr 0.6969 17.4399 21.0485 6.8262
+
+McKee's_Pub_aug_1_raw_linear_pq.hdr 0.7947 23.7861 26.2889 7.2049
+
+McKee's_Pub_aug_2_raw_linear_pq.hdr 0.3425 17.0706 17.5203 5.5544
+
+McKee's_Pub_aug_3_raw_linear_pq.hdr 0.2981 16.4921 16.7759 5.5182
+
+McKee's_Pub_aug_4_raw_linear_pq.hdr 0.1857 14.7747 14.5337 5.6161
+
+McKee's_Pub_aug_5_raw_linear_pq.hdr 0.0997 14.0055 13.6813 5.8617
+
+McKee's_Pub_raw_linear_pq.hdr 0.8794 26.2066 29.3182 7.5777
+
+Old_Faithful_Inn_aug_1_raw_linear_pq.hdr 0.6017 19.2228 19.7596 6.2483
+
+Old_Faithful_Inn_aug_2_raw_linear_pq.hdr 0.3760 15.9080 15.7241 5.7694
+
+Old_Faithful_Inn_aug_3_raw_linear_pq.hdr 0.3449 15.6875 15.4994 5.7825
+
+Old_Faithful_Inn_aug_4_raw_linear_pq.hdr 0.1877 14.8781 14.6627 5.9883
+
+Old_Faithful_Inn_aug_5_raw_linear_pq.hdr 0.0708 14.2146 13.9076 6.1981
+
+Old_Faithful_Inn_raw_linear_pq.hdr 0.6973 21.2414 22.2713 6.6245
+
+RIT_Tiger_aug_1_raw_linear_pq.hdr 0.9058 30.5775 34.6077 7.6702
+
+RIT_Tiger_aug_2_raw_linear_pq.hdr 0.6328 20.7783 22.1427 6.6405
+
+RIT_Tiger_aug_3_raw_linear_pq.hdr 0.5910 19.8070 20.8980 6.4416
+
+RIT_Tiger_aug_4_raw_linear_pq.hdr 0.4294 17.1269 17.3866 5.9060
+
+RIT_Tiger_aug_5_raw_linear_pq.hdr 0.2639 15.7253 15.7323 5.6602
+
+RIT_Tiger_raw_linear_pq.hdr 0.9308 32.3402 35.7492 7.6249
+
+Route_66_Museum_aug_1_raw_linear_pq.hdr 0.9267 27.2080 33.1387 7.8235
+
+Route_66_Museum_aug_2_raw_linear_pq.hdr 0.6280 22.0219 25.1869 6.9559
+
+Route_66_Museum_aug_3_raw_linear_pq.hdr 0.5439 20.8168 23.6971 6.6108
+
+Route_66_Museum_aug_4_raw_linear_pq.hdr 0.2032 16.6642 17.8359 5.4801
+
+Route_66_Museum_aug_5_raw_linear_pq.hdr 0.0488 14.4873 14.5985 5.6260
+
+Route_66_Museum_raw_linear_pq.hdr 0.9410 27.1355 33.7586 7.7572
+
+The_Grotto_aug_1_raw_linear_pq.hdr 0.8612 26.3654 31.5811 7.1039
+
+The_Grotto_aug_2_raw_linear_pq.hdr 0.5982 20.8644 25.3904 6.5024
+
+The_Grotto_aug_3_raw_linear_pq.hdr 0.5224 19.7755 23.3911 6.0808
+
+The_Grotto_aug_4_raw_linear_pq.hdr 0.2409 16.1440 17.4012 4.7507
+
+The_Grotto_aug_5_raw_linear_pq.hdr 0.1086 14.4969 14.6775 4.8987
+
+The_Grotto_raw_linear_pq.hdr 0.8662 27.8664 31.4866 6.9889
+
+Zentrum_aug_1_raw_linear_pq.hdr 0.3081 16.0416 17.0383 5.4957
+
+Zentrum_aug_2_raw_linear_pq.hdr 0.1680 14.0022 13.7604 6.1690
+
+Zentrum_aug_3_raw_linear_pq.hdr 0.1572 13.9071 13.6196 6.2896
+
+Zentrum_aug_4_raw_linear_pq.hdr 0.1112 13.6913 13.3177 6.5927
+
+Zentrum_aug_5_raw_linear_pq.hdr 0.0664 13.5176 13.1268 6.4019
+
+Zentrum_raw_linear_pq.hdr 0.4391 17.9292 19.5657 5.9079
+
+navie_psnr_rgb = []
+linear_psnr_rgb = []
+log_psnr_rgb = []
+pu_psnr_rgb = []
+pq_psnr_rgb = []
+linear_smape_psnr_rgb = []
+linear_pu_psnr_rgb = []
+linear_pq_psnr_rgb = [17.846, 15.6643, 15.5232, 14.5949, 13.5993, 20.0059, 19.4519, 16.8132, 16.6537, 15.6449, 14.3217, 21.6021, 24.6822, 19.305, 18.4225, 15.6632, 14.2071, 25.4672, 16.8165, 23.1475, 22.91, 21.0143, 17.8484, 15.1853, 25.2592, 21.3426, 20.8763, 18.3572, 15.661, 24.5494, 26.2377, 23.7765, 23.1582, 19.0574, 15.9514, 25.8958, 14.009, 13.9384, 13.9512, 13.7641, 13.4505, 13.9883, 24.0107, 17.4977, 17.003, 15.4376, 14.3101, 26.7711, 17.18, 14.2933, 14.0412, 13.3784, 13.1578, 18.61, 12.8255, 15.1464, 15.0873, 14.429, 13.7895, 11.9257, 16.7285, 14.0828, 13.8939, 13.4797, 13.3017, 18.0579, 14.778, 15.0995, 14.8572, 14.0718, 13.7705, 14.0106, 17.1739, 15.3537, 15.0274, 13.8115, 13.2938, 17.4399, 23.7861, 17.0706, 16.4921, 14.7747, 14.0055, 26.2066, 19.2228, 15.908, 15.6875, 14.8781, 14.2146, 21.2414, 30.5775, 20.7783, 19.807, 17.1269, 15.7253, 32.3402, 27.208, 22.0219, 20.8168, 16.6642, 14.4873, 27.1355, 26.3654, 20.8644, 19.7755, 16.144, 14.4969, 27.8664, 16.0416, 14.0022, 13.9071, 13.6913, 13.5176, 17.9292]
+linear_mu_psnr_rgb = []
+mu_l1_psnr_rgb = []
+pu21_psnr_rgb = []
+navie_psnr_y = []
+linear_psnr_y = []
+log_psnr_y = []
+pu_psnr_y = []
+pq_psnr_y = []
+linear_smape_psnr_y = []
+linear_pu_psnr_y = []
+linear_pq_psnr_y = [18.4874, 15.3965, 15.3042, 14.4454, 13.2286, 21.7155, 20.7586, 16.7031, 16.5357, 15.7923, 14.296, 23.779, 28.8864, 21.6643, 20.4019, 16.3316, 14.1291, 29.1313, 29.2324, 29.2507, 28.7306, 25.1308, 20.8168, 28.8449, 30.0365, 25.8158, 24.8121, 20.8555, 16.9311, 29.7374, 28.2472, 28.4692, 27.6385, 21.5833, 16.9743, 27.8356, 17.5391, 15.3584, 15.1068, 14.136, 13.4256, 18.7098, 26.2648, 17.5384, 16.9777, 15.3648, 14.0304, 28.9999, 18.4481, 14.4726, 14.1125, 13.1052, 12.722, 20.9351, 23.7934, 19.0341, 18.2997, 15.8432, 14.2987, 25.0374, 17.7082, 14.1291, 13.8142, 13.1237, 12.8614, 19.6101, 19.1703, 15.2514, 14.95, 13.9282, 13.5139, 20.4157, 19.579, 16.5439, 15.9904, 13.995, 13.0237, 21.0485, 26.2889, 17.5203, 16.7759, 14.5337, 13.6813, 29.3182, 19.7596, 15.7241, 15.4994, 14.6627, 13.9076, 22.2713, 34.6077, 22.1427, 20.898, 17.3866, 15.7323, 35.7492, 33.1387, 25.1869, 23.6971, 17.8359, 14.5985, 33.7586, 31.5811, 25.3904, 23.3911, 17.4012, 14.6775, 31.4866, 17.0383, 13.7604, 13.6196, 13.3177, 13.1268, 19.5657]
+linear_mu_psnr_y = []
+mu_l1_psnr_y = []
+pu21_psnr_y = []
+navie_cvvdp = []
+linear_cvvdp = []
+log_cvvdp = []
+pu_cvvdp = []
+pq_cvvdp = []
+linear_smape_cvvdp = []
+linear_pu_cvvdp = []
+linear_pq_cvvdp = [6.0043, 7.2475, 7.3235, 6.766, 7.1109, 6.0481, 5.6385, 5.8892, 5.9817, 6.1885, 6.2159, 6.4639, 7.016, 5.586, 5.2543, 4.8778, 5.1904, 6.9274, 6.727, 7.0373, 7.0422, 6.676, 5.4339, 6.6555, 6.5403, 6.4681, 6.3598, 5.6625, 4.9641, 6.4634, 6.4305, 6.7059, 6.6422, 5.3189, 4.1225, 6.3436, 5.9595, 5.6193, 5.5134, 5.0779, 4.8559, 5.9749, 6.7065, 6.1844, 6.3168, 6.7717, 6.7088, 7.0633, 5.8652, 5.6875, 5.7097, 5.8883, 6.1786, 6.286, 7.0475, 6.4578, 6.3552, 6.0669, 5.7515, 7.0542, 5.817, 6.1728, 6.3042, 6.5679, 6.5934, 6.1568, 6.2624, 5.7792, 5.8049, 6.1984, 6.4692, 6.5904, 6.9038, 5.7575, 5.4898, 5.1086, 5.2374, 6.8262, 7.2049, 5.5544, 5.5182, 5.6161, 5.8617, 7.5777, 6.2483, 5.7694, 5.7825, 5.9883, 6.1981, 6.6245, 7.6702, 6.6405, 6.4416, 5.906, 5.6602, 7.6249, 7.8235, 6.9559, 6.6108, 5.4801, 5.626, 7.7572, 7.1039, 6.5024, 6.0808, 4.7507, 4.8987, 6.9889, 5.4957, 6.169, 6.2896, 6.5927, 6.4019, 5.9079]
+linear_mu_cvvdp = []
+mu_l1_psnr_cvvdp = []
+pu21_cvvdp = []
+navie_ssim = []
+linear_ssim = []
+pu_ssim = []
+pq_ssim = []
+linear_smape_ssim = []
+linear_pu_ssim = []
+linear_pq_ssim = [0.5184, 0.3268, 0.2737, 0.0546, 0.0186, 0.6165, 0.6673, 0.4851, 0.4399, 0.185, 0.051, 0.7604, 0.8481, 0.5161, 0.4317, 0.1464, 0.0502, 0.8624, 0.8281, 0.8216, 0.808, 0.6718, 0.3748, 0.8227, 0.8129, 0.7152, 0.6792, 0.427, 0.1677, 0.8122, 0.8093, 0.7532, 0.7187, 0.4503, 0.2001, 0.8064, 0.4651, 0.2662, 0.2396, 0.1327, 0.0611, 0.5191, 0.7715, 0.4352, 0.395, 0.1916, 0.038, 0.8462, 0.4762, 0.1207, 0.0961, 0.0488, 0.0337, 0.5989, 0.7543, 0.4352, 0.3957, 0.2237, 0.1234, 0.8069, 0.4161, 0.1369, 0.1218, 0.0837, 0.0577, 0.5346, 0.5523, 0.2504, 0.2284, 0.1544, 0.0932, 0.6722, 0.637, 0.2518, 0.1986, 0.078, 0.0364, 0.6969, 0.7947, 0.3425, 0.2981, 0.1857, 0.0997, 0.8794, 0.6017, 0.376, 0.3449, 0.1877, 0.0708, 0.6973, 0.9058, 0.6328, 0.591, 0.4294, 0.2639, 0.9308, 0.9267, 0.628, 0.5439, 0.2032, 0.0488, 0.941, 0.8612, 0.5982, 0.5224, 0.2409, 0.1086, 0.8662, 0.3081, 0.168, 0.1572, 0.1112, 0.0664, 0.4391]
+linear_mu_ssim = []
+mu_l1_psnr_ssim = []
+pu21_ssim = []

@@ -6,7 +6,7 @@ from process_hdr import save_exr
 import numpy as np
 
 # directory containing the images
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr_pq_partitial_8_2'
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_edsr_pq_partitial_2_8'
 imgs = os.listdir(test_img_folder)
 imgs.sort()
 test_imgs = []
@@ -277,7 +277,7 @@ report += "linear_mu_ssim = " + str(linear_mu_ssim) + "\n"
 report += "mu_l1_psnr_ssim = " + str(mu_ssim) + "\n"
 report += "pu21_ssim = " + str(pu21_ssim) + "\n"
 
-with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_edsr_partial_8_2.txt", "w") as file:
+with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_edsr_partial_2_8.txt", "w") as file:
     file.write(report)
 
 
