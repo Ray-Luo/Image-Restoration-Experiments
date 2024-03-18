@@ -42,6 +42,40 @@ pyrootutils.setup_root(__file__, indicator=".project-root", pythonpath=True)
 # more info: https://github.com/ashleve/pyrootutils
 # ------------------------------------------------------------------------------------ #
 
+def raw2srgb(raw):
+    #pack GBRG Bayer raw to 4 channels
+    black_level = 240
+    white_level = 2**12-1
+    raw = np.clip(raw, black_level, white_level).astype(np.int32)
+    im = raw.astype(np.float32)
+    im = np.maximum(im - black_level, 0) / (white_level-black_level)
+
+    im = np.expand_dims(im, axis=2)
+    im = im * 255.0
+    im = cv2.cvtColor(im.astype(np.uint8), cv2.COLOR_BayerGBRG2RGB)
+    return im
+
+def lrgb2srgb(raw):
+    #pack GBRG Bayer raw to 4 channels
+    black_level = 0
+    white_level = 4000.0
+    raw = np.clip(raw, black_level, white_level).astype(np.int32)
+    im = raw.astype(np.float32)
+    im = np.maximum(im - black_level, 0) / (white_level-black_level)
+    im = np.power(im, 1.0 / 2.2)
+    im = im * 255.0
+    return im.astype(np.uint8)
+
+
+def raw2linearRgb(raw):
+    black_level = 240
+    white_level = 2**12-1
+    raw = np.clip(raw, black_level, white_level).astype(np.uint16)
+    linear_rgb = cv2.demosaicing(raw, cv2.COLOR_BayerBG2RGB)
+
+    return linear_rgb
+
+
 from src import utils
 
 log = utils.get_pylogger(__name__)
@@ -81,6 +115,7 @@ def original2mu(x):
     import math
     mu = 5000.0
     x = x / 4000.0
+    # x = np.clip(x, 0., 1.)
     return torch.log2(1 + mu * x) / math.log2(1 + mu)
 
 def mu2original(x):
@@ -136,7 +171,7 @@ def visualize(img: np.array,root, name):
     img = img / 4000.0
     img = np.clip(img, 0., 1.)
     img = np.power(img, 1/2.2)
-    save_hdr(img, root, name)
+    cv2.imwrite(os.path.join(root, name), img)
 
 
 def check_if_load_correct(experiemnt_signiture: str, tag_file_path: str):
@@ -196,60 +231,64 @@ def evaluate(cfg: DictConfig):
     psnr = 0
     ssim = 0
 
-    for experiment, path in tqdm(log_path.items()):
+    for experiment, path in log_path.items():
         report += "**************************  " + experiment + "  **************************\n"
 
         model = load_model_from_server(model, path)
         net = model.cuda()
         net.eval()
 
-        file_list = os.listdir(cfg.data.hq_path)
+        file_list = os.listdir(cfg.data.lq_path)
         file_list.sort()
 
         transform_fn, inverse_fn = get_transform(experiment)
         transform_hdr = transforms.Compose([
-            transforms.Lambda(lambda img: torch.from_numpy(img.transpose((2, 0, 1)))),
+            transforms.Lambda(lambda img: torch.from_numpy(img).permute(2,0,1).unsqueeze(0)),
             transforms.Lambda(lambda img: transform_fn(img)),
         ])
 
         for file_name in tqdm(file_list):
-            if "cargo_boat" in file_name or "skyscraper" in file_name or "urban_land" in file_name:
-                continue
-
+            # lq_path = os.path.join(cfg.data.lq_path, file_name)
             hq_path = os.path.join(cfg.data.hq_path, file_name)
-            gt = cv2.imread(hq_path, -1).astype(np.float32)
-            file_name = file_name.replace("_4x", "").split('.')[0]
+            gt = np.load(hq_path, allow_pickle=True).astype(np.float32)
+            # lq = np.load(lq_path, allow_pickle=True).astype(np.float32)
+
+            # file_name = file_name.replace("_noise", "").split('.')[0]
             report += "*********************  " + file_name + "  *********************\n"
-            if not os.path.exists(os.path.join(results_save_path, file_name + "_GT.hdr")):
-                save_hdr(gt, results_save_path, file_name + "_raw_GT.hdr")
-                visualize(gt, results_save_path, file_name + "_GT.hdr")
-                draw_histogram(gt, file_name + "_GT", results_save_path)
+
+            height, width = gt.shape[:2]
+            height = height - (height % 4)
+            width = width - (width % 4)
+            # Crop the image
+            gt = gt[:height, :width]
+
+            gt_srgb = lrgb2srgb(gt)
+            cv2.imwrite(os.path.join(results_save_path, file_name + "_gt.png"), gt_srgb)
+            save_hdr(gt.astype(np.uint16), results_save_path, file_name + "_gt.tiff")
+
+            lq = cv2.resize(gt, None, fx=0.25, fy=0.25, interpolation=cv2.INTER_LINEAR)
+            lq_naive = cv2.resize(lq, None, fx=4, fy=4, interpolation=cv2.INTER_LINEAR)
+            if gt.shape != lq_naive.shape:
+                print("bad shape")
+                continue
+            tmp_lq = lq_naive
+            tmp_lq = lrgb2srgb(tmp_lq)
+            cv2.imwrite(os.path.join(results_save_path, file_name + "_lq.png"), tmp_lq)
+            save_hdr(lq_naive.astype(np.uint16), results_save_path, file_name + "_lq.tiff")
 
 
-            # res_naive = F.interpolate(lq, size=(lq.shape[2]*4, lq.shape[3]*4), mode='nearest', align_corners=None)
-            # res_naive = inverse_fn(lq).squeeze(0).cpu().permute(1,2,0).detach().numpy()
-            # res_naive = cv2.resize(res_naive, None, fx=4, fy=4, interpolation=cv2.INTER_LINEAR)
-            downscaled = cv2.resize(gt, None, fx=0.25, fy=0.25, interpolation=cv2.INTER_LINEAR)
-            res_naive = cv2.resize(downscaled, None, fx=4, fy=4, interpolation=cv2.INTER_LINEAR)
-            # psnr = pu_psnr(res_naive, gt)
-            # ssim = pu_ssim(res_naive, gt)
-            # report += "navie -- PSNR = {:.5f}, ssim = {:.5f}\n".format(psnr, ssim)
-            if not os.path.exists(os.path.join(results_save_path, file_name + "_naive.hdr")):
-                draw_histogram(res_naive, file_name + "_bilinear", results_save_path)
-                save_hdr(res_naive, results_save_path, file_name + "_raw_naive.hdr")
-                visualize(res_naive, results_save_path, file_name + "_naive.hdr")
 
-            lq = transform_hdr(downscaled).unsqueeze(0).cuda()
+            lq = transform_hdr(lq).cuda()
             with torch.no_grad():
                 pred = net(lq)
                 res_img = inverse_fn(pred).squeeze(0).cpu().permute(1,2,0).detach().numpy()
-                # psnr = pu_psnr(res_img, gt)
-                # ssim = pu_ssim(res_img, gt)
-                # report += "{} -- PSNR = {:.5f}, ssim = {:.5f}\n".format(experiment, psnr, ssim)
-                draw_histogram(res_img, file_name + "_nets_" + experiment, results_save_path)
-                save_hdr(res_img, results_save_path, file_name + "_raw_{}.hdr".format(experiment))
-                visualize(res_img, results_save_path, file_name + "_{}.hdr".format(experiment))
+                # res_img = cv2.resize(res_img, None, fx=4, fy=4, interpolation=cv2.INTER_LINEAR)
+                pred_srgb = lrgb2srgb(res_img)
+                save_hdr(res_img.astype(np.uint16), results_save_path, file_name + "_{}.tiff".format(experiment))
+                cv2.imwrite(os.path.join(results_save_path, file_name + "_{}.png".format(experiment)), pred_srgb)
 
+        #     break
+        # break
         report += "\n\n"
 
     with open(os.path.join(results_save_path, "report.log"), "w") as file:

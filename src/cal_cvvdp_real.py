@@ -1,18 +1,32 @@
 import os
 import subprocess
-from tqdm import tqdm
 import cv2
-from process_hdr import save_exr
+import OpenEXR, Imath
 import numpy as np
+from tqdm import tqdm
+
+def save_exr(img, folder, name):
+    header = OpenEXR.Header(img.shape[1], img.shape[0])
+    header['channels'] = dict([(c, Imath.Channel(Imath.PixelType(OpenEXR.FLOAT))) for c in "RGB"])
+
+    # Create an OpenEXR file
+    file = OpenEXR.OutputFile(os.path.join(folder, name), header)
+
+    # Convert the numpy array data into a string
+    red = (img[:,:,2].astype(np.float32)).tobytes()
+    green = (img[:,:,1].astype(np.float32)).tobytes()
+    blue = (img[:,:,0].astype(np.float32)).tobytes()
+
+    # Write the image data to the exr file
+    file.writePixels({'R': red, 'G': green, 'B': blue})
 
 # directory containing the images
-test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/res_real'
-
+test_img_folder = '/home/luoleyouluole/Image-Restoration-Experiments/data/real'
 imgs = os.listdir(test_img_folder)
 imgs.sort()
 test_imgs = []
 for filename in imgs:
-    if "_raw_GT.hdr" in filename:
+    if "_lq.tiff" in filename:
         test_imgs.append(filename)
 
 navie_psnr_rgb = []
@@ -70,8 +84,8 @@ pu21_psnr_y = []
 pu21_cvvdp = []
 pu21_ssim = []
 
-
 report  = ""
+
 
 for file_name in tqdm(test_imgs):
     if "Artist_Palette" in file_name or "Bigfoot_Pass" in file_name:
@@ -81,35 +95,38 @@ for file_name in tqdm(test_imgs):
         continue
 
     reference_name = file_name
-    reference_img = os.path.join(test_img_folder, reference_name)
+    reference_img = os.path.join(test_img_folder, file_name.replace("_lq", "_gt"))
     test_names = [
-        file_name.replace("_GT", "_naive"),
-        file_name.replace("_GT", "_linear_l1"),
-        file_name.replace("_GT", "_pu_l1"),
-        file_name.replace("_GT", "_pq_l1"),
-        file_name.replace("_GT", "_linear_pq"),
-        file_name.replace("_GT", "_linear_pu"),
-        file_name.replace("_GT", "_linear_smape"),
-        file_name.replace("_GT", "_linear_mu"),
-        file_name.replace("_GT", "_mu_l1"),
-        file_name.replace("_GT", "_pu21_l1"),
+        file_name,
+        file_name.replace("_lq", "_linear_l1"),
+        file_name.replace("_lq", "_pu21_l1"),
+        file_name.replace("_lq", "_pq_l1"),
+        file_name.replace("_lq", "_linear_pq"),
+        file_name.replace("_lq", "_linear_pu21"),
+        file_name.replace("_lq", "_linear_smape"),
+        file_name.replace("_lq", "_linear_mu"),
+        file_name.replace("_lq", "_mu_l1"),
     ]
+
     img = cv2.imread(reference_img, cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
-    save_exr(img, test_img_folder, reference_name.replace(".hdr", ".exr"))
-    reference_img_exr = os.path.join(test_img_folder, reference_name.replace(".hdr", ".exr"))
+    save_exr(img, test_img_folder, reference_img.replace(".tiff", ".exr"))
+    reference_img_exr = os.path.join(test_img_folder, reference_img.replace(".tiff", ".exr"))
 
     for test_name in test_names:
         test_img = os.path.join(test_img_folder, test_name)
 
         hdr_img = cv2.imread(test_img, cv2.IMREAD_ANYCOLOR | cv2.IMREAD_ANYDEPTH).astype(np.float32)
 
-        save_exr(hdr_img, test_img_folder, test_name.replace(".hdr", ".exr"))
-        exr_img = os.path.join(test_img_folder, test_name.replace(".hdr", ".exr"))
+        save_exr(hdr_img, test_img_folder, test_name.replace(".tiff", ".exr"))
+        exr_img = os.path.join(test_img_folder, test_name.replace(".tiff", ".exr"))
 
         exr_img_name = exr_img.replace("'", "\\'").replace("&", "\\&")
-        reference_img_exr_name = reference_img_exr.replace("'", "\\'").replace("&", "\\&")
+        # reference_img_exr_name = reference_img_exr.replace("'", "\\'").replace("&", "\\&")
 
-        command = f"cvvdp --test {exr_img_name} --ref {reference_img_exr_name} --display standard_hdr_linear_zoom --display standard_hdr_linear_zoom_4000 --config-paths /home/luoleyouluole/Image-Restoration-Experiments/src/display_models.json  --metric ssim pu-psnr-rgb pu-psnr-y cvvdp  --quiet"
+        # print(exr_img_name)
+        # print(reference_img_exr)
+
+        command = f"python3 /home/luoleyouluole/ColorVideoVDP-main/pycvvdp/run_cvvdp.py  --test {exr_img_name} --ref {reference_img_exr} --display standard_hdr_linear_zoom_4000 --config-paths /home/luoleyouluole/Image-Restoration-Experiments/src/display_models.json  --metric ssim pu-psnr-rgb pu-psnr-y cvvdp  --quiet"
 
         ret_value = subprocess.run(command, shell=True, capture_output=True, text=True)
         ssim, psnr_rgb, psnr_y, cvvdp = ret_value.stdout.split()
@@ -119,7 +136,7 @@ for file_name in tqdm(test_imgs):
 
         report += test_name + " " + ssim + " " + psnr_rgb + " " + psnr_y + " " + cvvdp + "\n"
 
-        if "naive" in test_name:
+        if "_lq" in test_name:
             navie_psnr_rgb.append(float(psnr_rgb))
             navie_psnr_y.append(float(psnr_y))
             navie_cvvdp.append(float(cvvdp))
@@ -277,9 +294,5 @@ report += "mu_l1_psnr_ssim = " + str(mu_ssim) + "\n"
 report += "pu21_ssim = " + str(pu21_ssim) + "\n"
 
 
-with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_real_complete.txt", "w") as file:
+with open("/home/luoleyouluole/Image-Restoration-Experiments/src/report_real.txt", "w") as file:
     file.write(report)
-
-
-
-# import scipy.stats as stats
